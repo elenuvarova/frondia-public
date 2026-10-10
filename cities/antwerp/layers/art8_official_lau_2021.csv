@@ -1,0 +1,2 @@
+lau_id,name,degurba,population,area_km2_official,area_km2_all,green_all,green_with7_all,green_no_water_all,sealed_all,canopy_wvl_all,tcd_all,tcd_any_all,area_km2_ucuc,green_ucuc,green_with7_ucuc,green_no_water_ucuc,sealed_ucuc,canopy_wvl_ucuc,tcd_ucuc,tcd_any_ucuc,exempt,reason,exempt_with7,exempt_no_water,green_ucuc_statbel,canopy_wvl_ucuc_statbel,exempt_statbel,stable
+BE_11002,Antwerpen / Anvers,1,544759,204.316,200.8968,0.4498,0.4736,0.2948,0.5143,0.1522,0.1015,0.1531,104.3522,0.3969,0.4177,0.3452,0.5766,0.1996,0.1275,0.1998,False,зелень 39.7 % ≤ 45 %,False,False,,,,True

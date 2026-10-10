@@ -1,0 +1,297 @@
+{
+ "slug": "spoor-noord",
+ "osm": "way/4403124",
+ "area_ha": 19.48,
+ "window_before": "2006–2008",
+ "window_after": "2011–2014",
+ "instrument_note": "Прибор — Landsat, 30 м: проект сдан до начала ряда Sentinel-2, и другого снимка на окно «до» не существует.",
+ "image_note": "Сцен: 13 в окне «до», 15 в окне «после».",
+ "calibration_n": "457",
+ "instruments": [
+  {
+   "key": "ndvi_landsat",
+   "label": "Зелёность растительности (NDVI, Landsat 30 м)",
+   "before": 0.251,
+   "after": 0.435,
+   "effect": 0.1478,
+   "threshold": 0.0576,
+   "significant": true,
+   "reading": "щебень и пути → травяное поле"
+  }
+ ],
+ "second_instrument": "Второго прибора у этого дела нет: Dynamic World начинается с середины 2015 года, а окно «до» здесь 2006–2008. Подтверждения сменой классов покрытия предъявить нечем, и это сказано прямо.",
+ "controls": [
+  {
+   "id": "11002S00-",
+   "name": "BORGERHOUT - GEMEENTEHUIS",
+   "ndvi_before": 0.25,
+   "d_ndvi_raw": 0.0444,
+   "dist_km": 2.0
+  },
+  {
+   "id": "11002T39-",
+   "name": "OOSTKWARTIER",
+   "ndvi_before": 0.253,
+   "d_ndvi_raw": 0.0392,
+   "dist_km": 2.9
+  },
+  {
+   "id": "11002D33-",
+   "name": "STADSPARK-ZUID (OOSTWIJK)",
+   "ndvi_before": 0.249,
+   "d_ndvi_raw": 0.0379,
+   "dist_km": 2.5
+  },
+  {
+   "id": "11002F60-",
+   "name": "KIEL - CENTRUM (KIEL)",
+   "ndvi_before": 0.254,
+   "d_ndvi_raw": 0.0238,
+   "dist_km": 5.4
+  },
+  {
+   "id": "11029A232",
+   "name": "AGFA-GEVAERT",
+   "ndvi_before": 0.248,
+   "d_ndvi_raw": 0.0411,
+   "dist_km": 5.9
+  },
+  {
+   "id": "11002S03-",
+   "name": "KROONSTRAAT-WEST",
+   "ndvi_before": 0.247,
+   "d_ndvi_raw": 0.0466,
+   "dist_km": 1.9
+  },
+  {
+   "id": "11002F61-",
+   "name": "BOOMSE STWG-BEERSCHOT (KIEL)",
+   "ndvi_before": 0.247,
+   "d_ndvi_raw": 0.027,
+   "dist_km": 5.6
+  },
+  {
+   "id": "11002E551",
+   "name": "GERECHTSHOF (ZUIDWIJK)",
+   "ndvi_before": 0.246,
+   "d_ndvi_raw": 0.0279,
+   "dist_km": 2.8
+  },
+  {
+   "id": "11002D41-",
+   "name": "STAPPAERTS - KRIJGSHOSPITAAL (OOSTWIJK)",
+   "ndvi_before": 0.257,
+   "d_ndvi_raw": 0.0416,
+   "dist_km": 3.0
+  },
+  {
+   "id": "11002S02-",
+   "name": "DEN BLEEKHOF",
+   "ndvi_before": 0.245,
+   "d_ndvi_raw": 0.0293,
+   "dist_km": 2.4
+  },
+  {
+   "id": "11002S05-",
+   "name": "KATTENBERG",
+   "ndvi_before": 0.259,
+   "d_ndvi_raw": 0.0415,
+   "dist_km": 1.9
+  },
+  {
+   "id": "11002T02-",
+   "name": "HOFVELD",
+   "ndvi_before": 0.26,
+   "d_ndvi_raw": 0.033,
+   "dist_km": 3.8
+  }
+ ],
+ "control_gap": -0.0,
+ "timing_check": {
+  "why": "Проверка на стройку здесь устроена иначе, чем у дел на Sentinel-2. Сдвигать окно «до» ещё раньше некуда без потери качества снимков, зато известно другое: работы шли в 2006–2008 годах, то есть внутри окна «до», а западная часть парка открылась в 2008-м. Значит база захватывает и стройплощадку, и уже открытую половину — два смещения в противоположные стороны.",
+  "rows": [
+   {
+    "window": "2006–2008, окно под проект",
+    "scenes": 13,
+    "ndvi_before": 0.251,
+    "effect": 0.1478,
+    "gap": -0.0
+   }
+  ],
+  "conclusion": "Разрыв подбора контроля −0,0000 — контроль совпал с объектом по исходной зелёности практически точно. Эффект +0,148 при пороге 0,058 держится, и главный довод в его пользу не одно окно, а ряд из пятнадцати сезонов ниже."
+ },
+ "images": {
+  "before": "data/exports/way_4403124_before.png",
+  "after": "data/exports/way_4403124_after.png",
+  "delta": "data/exports/way_4403124_delta_relative.png"
+ },
+ "over_time": {
+  "threshold_audit": 0.0576,
+  "threshold_season": 0.0576,
+  "base": "2006–2008",
+  "seasons": [
+   {
+    "season": 2011,
+    "scenes": 2,
+    "site": 0.346,
+    "control": 0.265,
+    "effect": 0.081
+   },
+   {
+    "season": 2012,
+    "scenes": 3,
+    "site": 0.439,
+    "control": 0.296,
+    "effect": 0.143
+   },
+   {
+    "season": 2013,
+    "scenes": 4,
+    "site": 0.401,
+    "control": 0.281,
+    "effect": 0.12
+   },
+   {
+    "season": 2014,
+    "scenes": 6,
+    "site": 0.456,
+    "control": 0.297,
+    "effect": 0.159
+   },
+   {
+    "season": 2015,
+    "scenes": 6,
+    "site": 0.346,
+    "control": 0.282,
+    "effect": 0.065
+   },
+   {
+    "season": 2016,
+    "scenes": 5,
+    "site": 0.452,
+    "control": 0.304,
+    "effect": 0.148
+   },
+   {
+    "season": 2018,
+    "scenes": 8,
+    "site": 0.275,
+    "control": 0.274,
+    "effect": 0.001
+   },
+   {
+    "season": 2019,
+    "scenes": 6,
+    "site": 0.418,
+    "control": 0.299,
+    "effect": 0.119
+   },
+   {
+    "season": 2020,
+    "scenes": 8,
+    "site": 0.356,
+    "control": 0.288,
+    "effect": 0.068
+   },
+   {
+    "season": 2021,
+    "scenes": 5,
+    "site": 0.461,
+    "control": 0.311,
+    "effect": 0.15
+   },
+   {
+    "season": 2022,
+    "scenes": 15,
+    "site": 0.36,
+    "control": 0.289,
+    "effect": 0.072
+   },
+   {
+    "season": 2023,
+    "scenes": 9,
+    "site": 0.396,
+    "control": 0.309,
+    "effect": 0.088
+   },
+   {
+    "season": 2024,
+    "scenes": 8,
+    "site": 0.491,
+    "control": 0.349,
+    "effect": 0.142
+   },
+   {
+    "season": 2025,
+    "scenes": 5,
+    "site": 0.424,
+    "control": 0.334,
+    "effect": 0.09
+   },
+   {
+    "season": 2026,
+    "scenes": 6,
+    "site": 0.382,
+    "control": 0.323,
+    "effect": 0.059
+   }
+  ],
+  "note": "Единственное лето в шуме — 2018, европейская засуха: травяной парк в засуху теряет преимущество перед контролем целиком. Отдельно стоит видеть спад трёх последних сезонов — +0,142 в 2024-м, +0,090 в 2025-м и +0,059 в 2026-м, на самой границе порога. Причина по документам не проверена: это может быть погода двух лет, а может быть изменение самого парка."
+ },
+ "_ctrl_d": 0.0361,
+ "title": "Аудит · Park Spoor Noord",
+ "name": "Park Spoor Noord, Антверпен",
+ "one_line": "Сортировочная станция площадью 24 га стала парком: зелёность выросла с 0,251 до 0,435, эффект против контроля +0,148 при пороге 0,058 — втрое выше порога и сверх него в 14 летах из 15; в шуме только засушливый 2018-й.",
+ "documents": [
+  {
+   "what": "Что было",
+   "source": "nl.wikipedia.org, degroteverbinding.be",
+   "detail": "Сортировочная станция NMBS, клин 1,6 км между районами Dam, Stuivenberg и Seefhoek; 24 га, из них 18 отданы парку."
+  },
+  {
+   "what": "Когда открыли",
+   "source": "nl.wikipedia.org",
+   "detail": "Западная часть — 2008 год, восточная — лето 2009-го. Год сдачи в реестре AG Vespa взят из события открытия."
+  },
+  {
+   "what": "Кто проектировал",
+   "source": "vai.be, databank.publiekeruimte.info",
+   "detail": "Studio Associato Secchi-Viganò (Бернардо Секки и Паола Виганò) с Meertens & Steffens, Buro Kromwijk, Iris Consulting."
+  },
+  {
+   "what": "Деревьев почти нет — намеренно",
+   "source": "nl.wikipedia.org",
+   "detail": "Открытое травяное поле вместо древесного парка. Это объясняет, почему растёт зелёность, а не крона."
+  },
+  {
+   "what": "Признание",
+   "source": "Vlaamse Overheid, Vlaams Bouwmeester",
+   "detail": "Премия «Thuis in de Stad» 2009, Prijs Bouwheer 2009, европейская UDiTE в категории экологического благополучия."
+  },
+  {
+   "what": "Заказчик",
+   "source": "agvespa.be/projecten/park-spoor-noord",
+   "detail": "AG Vespa, городская компания Антверпена; страница проекта и хронология — источник даты для реестра."
+  }
+ ],
+ "cluster": [],
+ "limits": [
+  "Второго прибора нет: Dynamic World начинается в 2015 году, окно «до» здесь 2006–2008.",
+  "Западная часть открылась в 2008 году, то есть внутри окна «до»: часть участка была зелёной уже в базе, и эффект скорее занижен, чем завышен.",
+  "Landsat, 30 м: измерение по площади надёжно, но контур парка размывается краевыми пикселями.",
+  "Сезонные значения сравниваются с аудитным порогом четырёхлетнего окна только как ориентир: у одного сезона шум выше.",
+  "Реставрационные работы внутри парка после 2009 года не отделены — мы измеряем состояние участка, а не отдельную статью расходов."
+ ],
+ "verdict_line": "Настоящий эффект, крупный по величине и устойчивый во времени, но подтверждённый одним прибором.",
+ "cta": "Так выглядит проверка вмешательства, у которого известны дата, граница и источник. Из 252 проектов застройщика таких пять.",
+ "verdict": "ПОЗЕЛЕНЕЛ",
+ "population_note": "19,5 га между Dam, Stuivenberg и Seefhoek",
+ "reading": "Читать это надо как «щебень и пути стали травой», а не «выросла крона». Парк спроектирован почти без деревьев — это осознанное решение авторов, а не недосмотр. NDVI на такое отвечает уверенно, и ровно поэтому вердикт сформулирован про зелёность, а не про крону.",
+ "city": "Антверпен",
+ "type": "парк на месте сортировочной станции",
+ "commune": "Antwerpen · Dam / Stuivenberg / Seefhoek",
+ "completed": "западная часть 2008, восточная — лето 2009",
+ "budget": "не опубликован",
+ "source_url": "https://www.agvespa.be/projecten/park-spoor-noord",
+ "source_label": "AG Vespa, Park Spoor Noord"
+}

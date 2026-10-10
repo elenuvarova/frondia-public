@@ -1,0 +1,31 @@
+{
+ "id": 72,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "3ed57186e0f2060c",
+ "run_at": "2026-09-26T14:51:43+00:00",
+ "output": {
+  "label": "yes",
+  "measures": [
+   {
+    "quote": "la création de 5 'Pocket Park' et l'intérieur d'îlot L28A",
+    "kind": "new_green_space",
+    "status": "action",
+    "place": "L28A",
+    "verbatim": true
+   },
+   {
+    "quote": "vise à utiliser l'espace en friche en intérieur d'îlot le long de la ligne de chemin de fer L28A en vue de la transformer en espace vert ouvert sur le quartier",
+    "kind": "new_green_space",
+    "status": "action",
+    "place": "intérieur d'îlot le long de la ligne de chemin de fer L28A",
+    "verbatim": true
+   }
+  ],
+  "why": "The contract commits to creating '5 Pocket Park' and to transforming the derelict L28A block interior 'en vue de la transformer en espace vert ouvert sur le quartier', both firm actions that create new green space, so the label is 'yes'."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.06810820000000001,
+ "duration_ms": 25021
+}

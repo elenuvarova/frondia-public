@@ -1,0 +1,52 @@
+{
+ "id": 62,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "9f867f8330da0268",
+ "run_at": "2026-09-26T14:50:51+00:00",
+ "output": {
+  "label": "yes",
+  "measures": [
+   {
+    "quote": "Le projet prévoit le réaménagement d'un grand parc urbain pour en faire un réservoir de biodiversité",
+    "kind": "park_redesign",
+    "status": "action",
+    "place": null,
+    "verbatim": true
+   },
+   {
+    "quote": "créer une nouvelle salle de sport, deux espaces co-accueillants, un jardin, et construire un espace horeca de rencontre et de convivialité dans le pôle Fontainas",
+    "kind": "gardens_agriculture",
+    "status": "action",
+    "place": "pôle Fontainas",
+    "verbatim": true
+   },
+   {
+    "quote": "créer un autre espace co-accueillant, des logements et un jardin dans le pôle Abattoir",
+    "kind": "gardens_agriculture",
+    "status": "action",
+    "place": "pôle Abattoir",
+    "verbatim": true
+   },
+   {
+    "quote": "aménager un jardin collectif sur un terrain en friche, rue Vandenbranden",
+    "kind": "gardens_agriculture",
+    "status": "action",
+    "place": "rue Vandenbranden",
+    "verbatim": true
+   },
+   {
+    "quote": "mener certaines opérations socio-économiques et citoyennes pour verduriser le quartier",
+    "kind": "other_greening",
+    "status": "intention",
+    "place": null,
+    "verbatim": true
+   }
+  ],
+  "why": "The contract commits to concrete greening actions such as \"Le projet prévoit le réaménagement d'un grand parc urbain pour en faire un réservoir de biodiversité\" and the creation of several gardens (jardins) in the Fontainas and Abattoir hubs and on rue Vandenbranden, which are firm commitments changing vegetation/sealed ground, so the contract is labeled \"yes\"."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.0450734,
+ "duration_ms": 15277
+}

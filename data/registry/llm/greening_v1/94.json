@@ -1,0 +1,45 @@
+{
+ "id": 94,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "006c8d93f9a31731",
+ "run_at": "2026-09-26T14:52:44+00:00",
+ "output": {
+  "measures": [
+   {
+    "quote": "Les volumes sont plus articulés et plus librement implantés sur un sol à dominante verte.",
+    "kind": "other_greening",
+    "status": "state",
+    "place": null,
+    "verbatim": true
+   },
+   {
+    "quote": "l’architecture se calme et se pare d’une brique rouge foncé qui tranche avec un sol largement planté.",
+    "kind": "other_greening",
+    "status": "state",
+    "place": null,
+    "verbatim": true
+   },
+   {
+    "quote": "Les parkings disparaissent complètement sous terre, donnant la primauté à un vaste espace vert continu.",
+    "kind": "new_green_space",
+    "status": "state",
+    "place": null,
+    "verbatim": true
+   },
+   {
+    "quote": "L’annulation d’un projet d’autoroute urbaine traversant le périmètre du Nord au Sud a permis le maintien d’un corridor de verdure au centre du site.",
+    "kind": "new_green_space",
+    "status": "state",
+    "place": "au centre du site",
+    "verbatim": true
+   }
+  ],
+  "label": "no",
+  "why": "All green-related mentions, such as \"donnant la primauté à un vaste espace vert continu\", describe the historical, already-existing state of the site (from past construction phases) rather than any current commitment, intention or action in the contract's actual program, which only names building renovation (façades, chauffage) and a generic \"réaménagement d'espace public\" with no vegetation-changing commitment, so the label is \"no\"."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.0740844,
+ "duration_ms": 44119
+}

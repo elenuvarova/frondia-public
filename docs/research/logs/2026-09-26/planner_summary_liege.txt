@@ -1,0 +1,14 @@
+OK liege toilets exit=0 assets=52 demand=1210 coverage=19.4% → 64.2%
+OK liege benches exit=0 assets=1373 demand=1163 coverage=67.7% → 90.6%
+OK liege waste_bins exit=0 assets=708 demand=1575 coverage=55.2% → 82.5%
+OK liege drinking_water exit=0 assets=31 demand=1476 coverage=16.1% → 62.4%
+OK liege fitness_stations exit=0 assets=8 demand=236 coverage=4.8% → 61.8%
+OK liege bike_parking exit=0 assets=653 demand=1210 coverage=55.2% → 83.0%
+OK liege defibrillators exit=0 assets=62 demand=1179 coverage=28.3% → 69.1%
+OK liege dog_areas exit=0 assets=2 demand=127 coverage=1.6% → 57.2%
+OK liege playgrounds exit=0 assets=62 demand=318 coverage=32.5% → 71.5%
+OK liege shelters exit=0 assets=187 demand=1103 coverage=52.6% → 83.4%
+OK liege recycling exit=0 assets=192 demand=440 coverage=61.9% → 84.6%
+OK liege bicycle_repair exit=0 assets=4 demand=1756 coverage=3.9% → 58.1%
+OK liege public_bookcases exit=0 assets=41 demand=404 coverage=24.9% → 67.6%
+OK liege picnic_tables exit=0 assets=127 demand=409 coverage=16.7% → 67.5%

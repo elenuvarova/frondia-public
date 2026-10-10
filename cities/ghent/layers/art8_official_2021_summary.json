@@ -1,0 +1,118 @@
+{
+ "city": "ghent",
+ "computed": "2026-09-26",
+ "rule": "ст. 8(1): зелень > 45 % и крона > 10 % в городских центрах и кластерах (сетка 1 км², 2021)",
+ "inputs": {
+  "lau": "https://gisco-services.ec.europa.eu/distribution/v2/lau/gpkg/LAU_RG_01M_2024_3035.gpkg",
+  "degurba": "https://ec.europa.eu/eurostat/documents/345175/501971/EU-27-LAU-2024-NUTS-2024.xlsx/12971f56-c035-dbab-4d9f-ff1dcc617bb3?t=1737036272863",
+  "clusters": {
+   "hdens": "https://ec.europa.eu/eurostat/documents/7116161/15125332/HDENS-CLST-2021.zip/64d30f03-acf2-c8f5-a530-02bbe62c0c43?t=1731944882446",
+   "urban": "https://ec.europa.eu/eurostat/documents/7116161/15125332/URBAN-CLST-2021.zip/649f23cf-1dcd-c089-9dd0-be4ac372af2f?t=1731944884719"
+  },
+  "clcplus": "https://image.discomap.eea.europa.eu/arcgis/rest/services/CLC_plus/CLMS_CLCplus_RASTER_2021_010m_eu/ImageServer",
+  "wvl": "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_WoodyVegetationLayer_2021/ImageServer",
+  "tcd": "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_TreeCoverDensity_2018/ImageServer"
+ },
+ "green_classes_clcplus": [
+  2,
+  3,
+  4,
+  5,
+  6,
+  8,
+  10
+ ],
+ "bbox_3035": [
+  3870000,
+  3114000,
+  3893000,
+  3140000
+ ],
+ "ucuc_cells": 306,
+ "laus": [
+  {
+   "lau_id": "BE_44021",
+   "name": "Gent / Gand",
+   "degurba": 1,
+   "population": 269597,
+   "area_km2_official": 157.769,
+   "area_km2_all": 158.1489,
+   "green_all": 0.473846,
+   "green_with7_all": 0.547375,
+   "green_no_water_all": 0.421954,
+   "sealed_all": 0.439098,
+   "canopy_wvl_all": 0.180915,
+   "tcd_all": 0.114088,
+   "tcd_any_all": 0.195983,
+   "area_km2_ucuc": 103.113,
+   "green_ucuc": 0.444271,
+   "green_with7_ucuc": 0.489801,
+   "green_no_water_ucuc": 0.409858,
+   "sealed_ucuc": 0.507785,
+   "canopy_wvl_ucuc": 0.188591,
+   "tcd_ucuc": 0.123891,
+   "tcd_any_ucuc": 0.225177,
+   "exempt": false,
+   "reason": "зелень 44.4 % ≤ 45 %",
+   "exempt_with7": true,
+   "exempt_no_water": false,
+   "green_ucuc_statbel": 0.444422,
+   "canopy_wvl_ucuc_statbel": 0.187602,
+   "exempt_statbel": false,
+   "stable": false
+  }
+ ],
+ "region": {
+  "parts": {
+   "all": {
+    "area_km2": 158.1489,
+    "green": 0.473846,
+    "green_with7": 0.547375,
+    "green_no_water": 0.421954,
+    "sealed": 0.439098,
+    "canopy_wvl": 0.180915,
+    "tcd": 0.114088,
+    "tcd_any": 0.195983
+   },
+   "ucuc": {
+    "area_km2": 103.113,
+    "green": 0.444271,
+    "green_with7": 0.489801,
+    "green_no_water": 0.409858,
+    "sealed": 0.507785,
+    "canopy_wvl": 0.188591,
+    "tcd": 0.123891,
+    "tcd_any": 0.225177
+   }
+  },
+  "exempt": false,
+  "reason": "зелень 44.4 % ≤ 45 %"
+ },
+ "checks": {
+  "area_ratio_min": 1.0024,
+  "area_ratio_max": 1.0024,
+  "unstable_laus": [
+   "BE_44021"
+  ]
+ },
+ "correlations_canopy": {
+  "article8_2024": {
+   "r": 0.808,
+   "n": 201,
+   "mean_wvl": 0.1769,
+   "mean_other": 0.1261
+  },
+  "worldcover_2021": {
+   "r": 0.858,
+   "n": 201,
+   "mean_wvl": 0.1769,
+   "mean_other": 0.31
+  },
+  "canopy_probav_2019": {
+   "r": 0.848,
+   "n": 201,
+   "mean_wvl": 0.1769,
+   "mean_other": 0.0945
+  }
+ }
+}

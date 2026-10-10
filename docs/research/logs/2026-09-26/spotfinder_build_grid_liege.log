@@ -1,0 +1,2 @@
+[build_grid] 524 Statbel sectors, 4458 points
+[build_grid] wrote 524 sectors -> /home/user/facta/pipelines/spotfinder/pipeline/data/liege_grid.geojson (393 scorable: n_food_area >= 1)

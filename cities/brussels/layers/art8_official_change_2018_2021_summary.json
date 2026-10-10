@@ -1,0 +1,115 @@
+{
+ "city": "brussels",
+ "computed": "2026-10-09",
+ "units": 686,
+ "comparable": 666,
+ "max_gap": 0.04,
+ "inputs": {
+  "wvl2018": "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_WoodyVegetationLayer_2018/ImageServer",
+  "wvl2021": "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_WoodyVegetationLayer_2021/ImageServer",
+  "clc2018": "https://image.discomap.eea.europa.eu/arcgis/rest/services/CLC_plus/CLMS_CLCplus_RASTER_2018_010m_eu/ImageServer",
+  "clc2021": "https://image.discomap.eea.europa.eu/arcgis/rest/services/CLC_plus/CLMS_CLCplus_RASTER_2021_010m_eu/ImageServer"
+ },
+ "values_present": {
+  "wvl2018": [
+   0,
+   1
+  ],
+  "wvl2021": [
+   0,
+   1
+  ],
+  "clc2018": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   7,
+   9,
+   10
+  ],
+  "clc2021": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   7,
+   9,
+   10
+  ]
+ },
+ "calibration": {
+  "ndvi": {
+   "threshold": 0.037261,
+   "mean": -4.5e-05,
+   "sd": 0.017898,
+   "n": 686,
+   "unbiased": true
+  },
+  "canopy": {
+   "threshold": 0.163624,
+   "mean": 0.000393,
+   "sd": 0.075321,
+   "n": 686,
+   "unbiased": true
+  },
+  "green": {
+   "threshold": 0.029525,
+   "mean": 0.000197,
+   "sd": 0.014724,
+   "n": 686,
+   "unbiased": true
+  }
+ },
+ "city_mean": {
+  "canopy_2018": 0.257087,
+  "canopy_2021": 0.348141,
+  "green_2018": 0.445232,
+  "green_2021": 0.43405
+ },
+ "raw_median": {
+  "ndvi": 0.0327,
+  "canopy": 0.082433,
+  "green": -0.011499
+ },
+ "raw_beyond_threshold": {
+  "ndvi": 222,
+  "canopy": 125,
+  "green": 67
+ },
+ "verdicts": {
+  "ndvi": {
+   "шум": 638,
+   "прирост": 16,
+   "потеря": 12
+  },
+  "canopy": {
+   "шум": 642,
+   "прирост": 16,
+   "потеря": 8
+  },
+  "green": {
+   "шум": 648,
+   "потеря": 18
+  }
+ },
+ "agreement_with_ndvi": {
+  "canopy": {
+   "n": 666,
+   "changed_either": 48,
+   "changed_same": 3,
+   "noise_both": 618,
+   "noise_either": 662
+  },
+  "green": {
+   "n": 666,
+   "changed_either": 42,
+   "changed_same": 4,
+   "noise_both": 624,
+   "noise_either": 662
+  }
+ },
+ "r_canopy_eff_vs_ndvi_eff": 0.149
+}

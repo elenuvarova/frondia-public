@@ -1,0 +1,5 @@
+lau_id,name,reading,green_pct,canopy_pct,exempt
+lau2024.BE.52011,Charleroi,official,48.854,30.1812,True
+lau2024.BE.52011,Charleroi,with_arable,51.2792,30.1812,True
+lau2024.BE.52011,Charleroi,without_water,48.0621,30.1812,True
+lau2024.BE.52011,Charleroi,statbel_sectors,48.7412,30.0082,True

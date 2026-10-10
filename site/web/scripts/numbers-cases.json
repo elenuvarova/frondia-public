@@ -1,0 +1,210 @@
+{
+ "_": "Cases both numbersOf (site/web/scripts/numbers.mjs, tests/catalogues.test.ts) and texts.nums (scripts/site/texts.py, tests/test_texts.py) must give: [text, lang, numbers, why]. One list, so the two rules never drift.",
+ "cases": [
+  [
+   "1,246,136 people, 0.0373",
+   "en",
+   [
+    "0.0373",
+    "1246136"
+   ],
+   "English groups with a comma, decimals with a point"
+  ],
+  [
+   "1.246.136 inwoners, 0,0373",
+   "nl",
+   [
+    "0.0373",
+    "1246136"
+   ],
+   "Dutch groups with a point, decimals with a comma"
+  ],
+  [
+   "1 246 136 habitants, 0,0373",
+   "fr",
+   [
+    "0.0373",
+    "1246136"
+   ],
+   "French groups with U+202F, decimals with a comma"
+  ],
+  [
+   "1 246 136 habitants",
+   "fr",
+   [
+    "1246136"
+   ],
+   "U+00A0 is also read as a French group"
+  ],
+  [
+   "Per 1,000 residents",
+   "en",
+   [
+    "1000"
+   ],
+   "the English catalogue has it twice"
+  ],
+  [
+   "Pour 1 000 habitants",
+   "fr",
+   [
+    "1000"
+   ],
+   "how a French drafter writes it"
+  ],
+  [
+   "Pour 1 000 habitants",
+   "fr",
+   [
+    "000",
+    "1"
+   ],
+   "a plain space is no group: wrong notation, caught"
+  ],
+  [
+   "Per 1.000 inwoners",
+   "nl",
+   [
+    "1000"
+   ],
+   "Dutch group"
+  ],
+  [
+   "2017–2024",
+   "nl",
+   [
+    "2017",
+    "2024"
+   ],
+   "a range is two numbers"
+  ],
+  [
+   "1.5 km",
+   "nl",
+   [
+    "1",
+    "5"
+   ],
+   "an English decimal in Dutch splits: wrong notation, caught"
+  ],
+  [
+   "1,5 km",
+   "nl",
+   [
+    "1.5"
+   ],
+   "the Dutch decimal"
+  ],
+  [
+   "1,5 km",
+   "fr",
+   [
+    "1.5"
+   ],
+   "the French decimal"
+  ],
+  [
+   "3.200 m2",
+   "fr",
+   [
+    "2",
+    "200",
+    "3"
+   ],
+   "a point is no French group"
+  ],
+  [
+   "1.000,5",
+   "nl",
+   [
+    "1000.5"
+   ],
+   "group and decimal together"
+  ],
+  [
+   "10 000 000",
+   "fr",
+   [
+    "10000000"
+   ],
+   "several French groups"
+  ],
+  [
+   "12345 and 0,035",
+   "en",
+   [
+    "0035",
+    "12345"
+   ],
+   "an English comma before exactly three digits is a group, so a misplaced decimal comma reads as another number"
+  ],
+  [
+   "−0.03 and +157.5 ha",
+   "en",
+   [
+    "0.03",
+    "157.5"
+   ],
+   "signs are not part of the number"
+  ],
+  [
+   "−0,03 en +157,5 ha",
+   "nl",
+   [
+    "0.03",
+    "157.5"
+   ],
+   "the same in Dutch"
+  ],
+  [
+   "39 %",
+   "fr",
+   [
+    "39"
+   ],
+   "a percent"
+  ],
+  [
+   "between {a} and 3",
+   "en",
+   [
+    "3"
+   ],
+   "placeholders are dropped"
+  ],
+  [
+   "commits to \"aménager un parc de 3.200 m2\"",
+   "en",
+   [],
+   "a quoted span keeps the source's notation and is not compared"
+  ],
+  [
+   "à « aménager un parc de 3.200 m2 »",
+   "fr",
+   [],
+   "French quotes too"
+  ],
+  [
+   "the ‘3-30-300’ rule",
+   "nl",
+   [],
+   "Dutch quotes too"
+  ],
+  [
+   "the “3-30-300” rule",
+   "en",
+   [],
+   "English quotes too"
+  ],
+  [
+   "3-30-300",
+   "en",
+   [
+    "3",
+    "30",
+    "300"
+   ],
+   "a hyphenated code is its numbers"
+  ]
+ ]
+}

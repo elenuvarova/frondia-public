@@ -1,0 +1,173 @@
+{
+ "city": "antwerp",
+ "computed": "2026-10-09",
+ "units": 457,
+ "dropped": 0,
+ "rule": "Groenkaart 2018 → mean(2021, 2024), 4 m pixels, same 12-place matching, own null distribution",
+ "gk_thresholds": {
+  "hg_d": 0.04833,
+  "gr_d": 0.13105
+ },
+ "gk_unbiased": {
+  "hg_d": true,
+  "gr_d": true
+ },
+ "pairs": {
+  "canopy": {
+   "n": 423,
+   "table_gk_by_ours": {
+    "down": {
+     "down": 4,
+     "noise": 6,
+     "up": 0
+    },
+    "noise": {
+     "down": 6,
+     "noise": 395,
+     "up": 5
+    },
+    "up": {
+     "down": 0,
+     "noise": 6,
+     "up": 1
+    }
+   },
+   "sensitivity": {
+    "k": 5,
+    "n": 17,
+    "value": 0.294,
+    "ci95": [
+     0.133,
+     0.531
+    ]
+   },
+   "specificity": {
+    "k": 395,
+    "n": 406,
+    "value": 0.973,
+    "ci95": [
+     0.952,
+     0.985
+    ]
+   },
+   "agreement_when_ours_changed": {
+    "k": 5,
+    "n": 16,
+    "value": 0.312,
+    "ci95": [
+     0.142,
+     0.556
+    ]
+   },
+   "direction_when_ours_changed": {
+    "k": 11,
+    "n": 16,
+    "value": 0.688,
+    "ci95": [
+     0.444,
+     0.858
+    ]
+   },
+   "opposite": 0,
+   "spearman": 0.306,
+   "examples_missed": [
+    "11001A042",
+    "11002E19-",
+    "11002P6FK",
+    "11002P6PK",
+    "11002Q212",
+    "11002R43-",
+    "11008A091",
+    "11013A21-"
+   ],
+   "examples_unseen": [
+    "11002C29-",
+    "11002Q39-",
+    "11002R180",
+    "11021A081",
+    "11040A091",
+    "11050A091",
+    "11056B053",
+    "46003H081"
+   ]
+  },
+  "green": {
+   "n": 423,
+   "table_gk_by_ours": {
+    "down": {
+     "down": 0,
+     "noise": 3,
+     "up": 0
+    },
+    "noise": {
+     "down": 10,
+     "noise": 396,
+     "up": 2
+    },
+    "up": {
+     "down": 0,
+     "noise": 8,
+     "up": 4
+    }
+   },
+   "sensitivity": {
+    "k": 4,
+    "n": 15,
+    "value": 0.267,
+    "ci95": [
+     0.109,
+     0.52
+    ]
+   },
+   "specificity": {
+    "k": 396,
+    "n": 408,
+    "value": 0.971,
+    "ci95": [
+     0.949,
+     0.983
+    ]
+   },
+   "agreement_when_ours_changed": {
+    "k": 4,
+    "n": 16,
+    "value": 0.25,
+    "ci95": [
+     0.102,
+     0.495
+    ]
+   },
+   "direction_when_ours_changed": {
+    "k": 15,
+    "n": 16,
+    "value": 0.938,
+    "ci95": [
+     0.717,
+     0.989
+    ]
+   },
+   "opposite": 0,
+   "spearman": 0.345,
+   "examples_missed": [
+    "11002B742",
+    "11002B752",
+    "11002R28-",
+    "11002T19-",
+    "11002U60-",
+    "11002U68-",
+    "11002V19-",
+    "11002V29-"
+   ],
+   "examples_unseen": [
+    "11002E19-",
+    "11002J072",
+    "11002P2AN",
+    "11002Q222",
+    "11002Q2AA",
+    "11002Q2PP",
+    "11013A21-",
+    "11029A191"
+   ]
+  }
+ }
+}

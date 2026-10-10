@@ -1,0 +1,14 @@
+# Build context is site/ (see web/Dockerfile). Never send host installs or
+# old builds: node_modules holds macOS native bindings that would break the Linux build.
+**/node_modules
+**/dist
+**/.DS_Store
+**/.next
+**/.parity
+# never into an image (re-check 4): env files and secrets, git, the agents' working notes, logs
+**/.env
+**/.env.*
+**/*.pem
+**/.git
+**/.superpowers
+**/npm-debug.log*

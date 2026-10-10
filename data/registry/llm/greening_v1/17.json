@@ -1,0 +1,16 @@
+{
+ "id": 17,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "bf305a984ee7768e",
+ "run_at": "2026-09-26T14:48:43+00:00",
+ "output": {
+  "label": "no",
+  "measures": [],
+  "why": "The text is only budget figures, copyright notices, and navigation/menu headings (e.g. \"Dimension environnementale\", \"Critères techniques et environnementaux\") with no sentence describing an actual greening action, intention, or state, so no measure can be quoted."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.0315934,
+ "duration_ms": 4791
+}

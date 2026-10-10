@@ -1,0 +1,38 @@
+{
+ "id": 61,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "92e5a283da39f9dc",
+ "run_at": "2026-09-26T14:50:46+00:00",
+ "output": {
+  "measures": [
+   {
+    "quote": "restructurer, réaménager et sécuriser le Parc Petit Scheut avec, entre autres, une plaine de jeux pour les petits",
+    "kind": "park_redesign",
+    "status": "action",
+    "place": "Parc Petit Scheut",
+    "verbatim": true
+   },
+   {
+    "quote": "verduriser et restaurer la Place Desmet ainsi que plusieurs voiries (rues de l'Agrafe, de l'Aguille, Ruquoy et Verdonck, etc.)",
+    "kind": "restoration",
+    "status": "action",
+    "place": "Place Desmet",
+    "verbatim": true
+   },
+   {
+    "quote": "verduriser et restaurer la Place Desmet ainsi que plusieurs voiries (rues de l'Agrafe, de l'Aguille, Ruquoy et Verdonck, etc.)",
+    "kind": "street_greening",
+    "status": "action",
+    "place": "rues de l'Agrafe, de l'Aguille, Ruquoy et Verdonck",
+    "verbatim": true
+   }
+  ],
+  "label": "yes",
+  "why": "The contract commits to greening actions, notably \"verduriser et restaurer la Place Desmet ainsi que plusieurs voiries\", which uses a firm commitment verb to change vegetation cover, meeting the criterion for a \"yes\" label."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.042581400000000005,
+ "duration_ms": 13277
+}

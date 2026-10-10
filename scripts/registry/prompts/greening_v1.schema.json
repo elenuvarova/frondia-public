@@ -1,0 +1,11 @@
+{"type": "object", "additionalProperties": false, "required": ["measures", "label", "why"],
+ "properties": {
+  "measures": {"type": "array", "items": {"type": "object", "additionalProperties": false,
+    "required": ["quote", "kind", "status", "place"],
+    "properties": {
+      "quote": {"type": "string"},
+      "kind": {"type": "string", "enum": ["new_green_space", "park_redesign", "restoration", "unsealing", "street_greening", "gardens_agriculture", "green_roofs_facades", "other_greening"]},
+      "status": {"type": "string", "enum": ["action", "intention", "state"]},
+      "place": {"type": ["string", "null"]}}}},
+  "label": {"type": "string", "enum": ["yes", "weak", "no"]},
+  "why": {"type": "string"}}}

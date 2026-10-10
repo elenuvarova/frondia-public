@@ -1,0 +1,5 @@
+lau_id,name,reading,green_pct,canopy_pct,exempt
+lau2024.BE.62063,Liège / Luik,official,46.0417,34.7636,True
+lau2024.BE.62063,Liège / Luik,with_arable,48.0344,34.7636,True
+lau2024.BE.62063,Liège / Luik,without_water,41.397,34.7636,False
+lau2024.BE.62063,Liège / Luik,statbel_sectors,46.13,34.6629,True

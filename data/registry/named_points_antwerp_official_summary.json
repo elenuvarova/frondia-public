@@ -1,0 +1,164 @@
+{
+ "city": "antwerp",
+ "date": "2026-09-27",
+ "checked_points": 240,
+ "planner_osm": true,
+ "kinds": {
+  "bench": {
+   "points": 20,
+   "named": {
+    "n": 10,
+    "official_at_point": 3,
+    "map_gap_500m": 8
+   },
+   "control": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": 7
+   }
+  },
+  "bicycle_parking": {
+   "points": 20,
+   "named": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": 6
+   },
+   "control": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": 5
+   }
+  },
+  "defibrillator": {
+   "points": 20,
+   "named": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": 4
+   },
+   "control": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": 3
+   }
+  },
+  "dog_park": {
+   "points": 20,
+   "named": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": 1
+   },
+   "control": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": 3
+   }
+  },
+  "drinking_water": {
+   "points": 20,
+   "named": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": 1
+   },
+   "control": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": 0
+   }
+  },
+  "fitness_station": {
+   "points": 20,
+   "named": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": 1
+   },
+   "control": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": 1
+   }
+  },
+  "picnic_table": {
+   "points": 20,
+   "named": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": 3
+   },
+   "control": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": 4
+   }
+  },
+  "playground": {
+   "points": 20,
+   "named": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": 6
+   },
+   "control": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": 6
+   }
+  },
+  "recycling": {
+   "points": 20,
+   "named": {
+    "n": 10,
+    "official_at_point": 4,
+    "map_gap_500m": 8
+   },
+   "control": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": 6
+   }
+  },
+  "shelter": {
+   "points": 20,
+   "named": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": 5
+   },
+   "control": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": 3
+   }
+  },
+  "toilets": {
+   "points": 20,
+   "named": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": 9
+   },
+   "control": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": 5
+   }
+  },
+  "waste_basket": {
+   "points": 20,
+   "named": {
+    "n": 10,
+    "official_at_point": 1,
+    "map_gap_500m": 8
+   },
+   "control": {
+    "n": 10,
+    "official_at_point": 1,
+    "map_gap_500m": 6
+   }
+  }
+ }
+}

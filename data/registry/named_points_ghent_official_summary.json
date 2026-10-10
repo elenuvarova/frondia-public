@@ -1,0 +1,60 @@
+{
+ "city": "ghent",
+ "date": "2026-09-27",
+ "checked_points": 80,
+ "planner_osm": false,
+ "kinds": {
+  "bicycle_parking": {
+   "points": 20,
+   "named": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": null
+   },
+   "control": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": null
+   }
+  },
+  "drinking_water": {
+   "points": 20,
+   "named": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": null
+   },
+   "control": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": null
+   }
+  },
+  "fitness_station": {
+   "points": 20,
+   "named": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": null
+   },
+   "control": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": null
+   }
+  },
+  "playground": {
+   "points": 20,
+   "named": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": null
+   },
+   "control": {
+    "n": 10,
+    "official_at_point": 0,
+    "map_gap_500m": null
+   }
+  }
+ }
+}

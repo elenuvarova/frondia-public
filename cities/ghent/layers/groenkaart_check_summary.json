@@ -1,0 +1,162 @@
+{
+ "city": "ghent",
+ "computed": "2026-10-09",
+ "units": 201,
+ "dropped": 0,
+ "rule": "Groenkaart 2018 → mean(2021, 2024), 4 m pixels, same 12-place matching, own null distribution",
+ "gk_thresholds": {
+  "hg_d": 0.0419,
+  "gr_d": 0.10808
+ },
+ "gk_unbiased": {
+  "hg_d": true,
+  "gr_d": true
+ },
+ "pairs": {
+  "canopy": {
+   "n": 185,
+   "table_gk_by_ours": {
+    "down": {
+     "down": 0,
+     "noise": 2,
+     "up": 1
+    },
+    "noise": {
+     "down": 1,
+     "noise": 174,
+     "up": 2
+    },
+    "up": {
+     "down": 0,
+     "noise": 3,
+     "up": 2
+    }
+   },
+   "sensitivity": {
+    "k": 2,
+    "n": 8,
+    "value": 0.25,
+    "ci95": [
+     0.071,
+     0.591
+    ]
+   },
+   "specificity": {
+    "k": 174,
+    "n": 177,
+    "value": 0.983,
+    "ci95": [
+     0.951,
+     0.994
+    ]
+   },
+   "agreement_when_ours_changed": {
+    "k": 2,
+    "n": 6,
+    "value": 0.333,
+    "ci95": [
+     0.097,
+     0.7
+    ]
+   },
+   "direction_when_ours_changed": {
+    "k": 4,
+    "n": 6,
+    "value": 0.667,
+    "ci95": [
+     0.3,
+     0.903
+    ]
+   },
+   "opposite": 1,
+   "spearman": 0.46,
+   "examples_missed": [
+    "44021A342",
+    "44021E31-",
+    "44021F072",
+    "44021F132",
+    "44021K543"
+   ],
+   "examples_unseen": [
+    "44021D69-",
+    "44021H325",
+    "44021K081"
+   ]
+  },
+  "green": {
+   "n": 185,
+   "table_gk_by_ours": {
+    "down": {
+     "down": 0,
+     "noise": 0,
+     "up": 0
+    },
+    "noise": {
+     "down": 4,
+     "noise": 171,
+     "up": 5
+    },
+    "up": {
+     "down": 0,
+     "noise": 5,
+     "up": 0
+    }
+   },
+   "sensitivity": {
+    "k": 0,
+    "n": 5,
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.434
+    ]
+   },
+   "specificity": {
+    "k": 171,
+    "n": 180,
+    "value": 0.95,
+    "ci95": [
+     0.908,
+     0.973
+    ]
+   },
+   "agreement_when_ours_changed": {
+    "k": 0,
+    "n": 9,
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.299
+    ]
+   },
+   "direction_when_ours_changed": {
+    "k": 4,
+    "n": 9,
+    "value": 0.444,
+    "ci95": [
+     0.189,
+     0.733
+    ]
+   },
+   "opposite": 0,
+   "spearman": 0.364,
+   "examples_missed": [
+    "44021C811",
+    "44021E331",
+    "44021F091",
+    "44021F132",
+    "44021K48-"
+   ],
+   "examples_unseen": [
+    "44021A873",
+    "44021D084",
+    "44021D69-",
+    "44021H310",
+    "44021J280",
+    "44021K081",
+    "44021K40-",
+    "44021L09-"
+   ]
+  }
+ }
+}

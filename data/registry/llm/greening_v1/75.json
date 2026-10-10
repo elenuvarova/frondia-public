@@ -1,0 +1,24 @@
+{
+ "id": 75,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "67894855d276445e",
+ "run_at": "2026-09-26T14:51:38+00:00",
+ "output": {
+  "label": "weak",
+  "measures": [
+   {
+    "quote": "qui dessinaient un fort potentiel de création de logements, d'équipements et d'espaces verts",
+    "kind": "new_green_space",
+    "status": "intention",
+    "place": null,
+    "verbatim": true
+   }
+  ],
+  "why": "The only mention of green space, \\\"un fort potentiel de création de logements, d'équipements et d'espaces verts\\\", describes a potential/opportunity rather than a firm commitment (no budget or action item for espaces verts appears among the listed Infos), so it counts only as an intention, giving the contract a \\\"weak\\\" label."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.0355444,
+ "duration_ms": 10278
+}

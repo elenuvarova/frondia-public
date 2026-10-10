@@ -1,0 +1,58 @@
+/* ── the data download (phase 2b) ─────────────────────────────────────────────
+   The dossier's document layout (dossier.css), with a card per file. Optimal Workshop's downloads:
+   a file per card, its format as a tag, one line on what is inside, the download at hand. The
+   columns as Snowflake's data dictionary: the name in mono, what it holds beside it, hairlines. */
+.data-list { display: grid; gap: var(--s-16); }
+.data-card { background: var(--paper-2); border-radius: 16px; padding: var(--s-20) var(--s-20) var(--s-16); display: flex; flex-direction: column; gap: var(--s-8); min-width: 0; }   /* min-width 0: a grid item, or its widest table (City Planner's points, 373 px) widened the page on a phone once its columns were opened, instead of scrolling in .data-cols-wrap (re-check 1) */
+.data-card-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--s-8) var(--s-20); }
+.data-card-title { font-family: var(--serif); font-size: 24px; line-height: 27px; letter-spacing: .01em; margin: 0; }   /* David 24 / 27 */
+.data-card p.data-tag { color: var(--ink-3); margin: 0; font-size: 12px; line-height: 16.8px; }   /* the document's p is 18: a tag stays a tag */
+.data-card p.data-card-what { font-size: 16px; line-height: 24px; margin: 0; max-width: 62ch; text-wrap: pretty; }
+.data-card p.data-card-meta { display: flex; flex-wrap: wrap; gap: 0 var(--s-20); margin: 0; font-size: 14px; line-height: 20px; color: var(--ink-3); }
+.data-dl { align-self: flex-start; margin-top: var(--s-8); }
+
+/* the details: a 44-px summary row with a mark that turns into ×, as the landing's questions */
+.data-more { margin-top: var(--s-8); border-top: 1px solid var(--rule); }
+.data-more summary { display: flex; align-items: center; justify-content: space-between; gap: var(--s-16); min-height: 44px; cursor: pointer; list-style: none; font-size: 14px; line-height: 20px; }
+.data-more summary::-webkit-details-marker { display: none; }
+.data-more summary:hover span:first-child { text-decoration: underline; text-underline-offset: .2em; text-decoration-thickness: 1px; }
+.data-more-mark { width: 32px; height: 32px; border-radius: 999px; border: 1px solid var(--rule-2); display: grid; place-items: center; font-size: 18px; line-height: 1; transition: transform .3s var(--ease); flex: none; }
+.data-more[open] .data-more-mark { transform: rotate(45deg); }
+.data-facts { margin: var(--s-8) 0 0; }
+.data-facts div { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: var(--s-20); padding: var(--s-12) 0; border-top: 1px solid var(--rule); }
+.data-facts div:first-child { border-top: 0; }
+.data-facts dt { font-size: 14px; line-height: 20px; color: var(--ink-3); }
+.data-facts dd { margin: 0; font-size: 14px; line-height: 20px; }
+.data-facts ul { margin: 0; padding-left: 1.1em; display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; }
+.data-cols-wrap { overflow-x: auto; margin-top: var(--s-16); }
+.data-cols-wrap:focus-visible { outline-offset: 4px; }
+.data-cols { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 20px; }
+.data-cols th, .data-cols td { text-align: left; vertical-align: top; padding: var(--s-8) var(--s-16) var(--s-8) 0; border-top: 1px solid var(--rule); }
+.data-cols thead th { font-family: var(--sans); font-size: 12px; line-height: 18px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); border-top: 0; }
+.data-cols tbody th { font-weight: 400; white-space: nowrap; font-size: 12px; }
+@media (max-width: 560px) {
+  /* minmax(0, …), and the list's column above: with a bare 1fr Safari sized them by the min-content of a Dutch line with
+     soft hyphens, and «Oppervlaktetemperatuur…» ran 24 px past a 320 screen, cut by html's clip (re-check 2 after plan 5) */
+  .data-facts div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .data-card { padding: var(--s-16); }
+}
+@media (prefers-reduced-motion: reduce) { .data-more-mark { transition: none; } }
+
+/* parts joined by " · ", none left at a line's end (the atlas's rule): each part carries its dot in
+   front, and a line's first dot sits outside the column, where the paragraph clips it */
+.data-card .seq-wrap { overflow: hidden; }
+.data-card .seq { --gap: 3ch; display: flex; flex-wrap: wrap; margin-left: calc(-1 * var(--gap)); }
+.data-card .seq > span::before { content: "·"; content: "·" / ""; display: inline-block; width: var(--gap); text-align: center; }
+
+/* the city picker, as in the atlas: a pill with a chevron over a native select; the landing's small
+   pill metrics (34 px, 44 on a phone) */
+.city-pick { position: relative; display: inline-flex; align-items: center; height: 34px; padding: 0 14px; border: 1px solid var(--rule-2); border-radius: 999px; background: rgba(240, 238, 230, .35); color: var(--ink); cursor: pointer; }
+.city-pick:hover { background: rgba(240, 238, 230, .7); }
+.city-pick:focus-within { outline: 2px solid var(--ink); outline-offset: 3px; }
+.city-pick select { appearance: none; -webkit-appearance: none; border: 0; background: transparent; color: inherit; font: 400 14px/14px var(--mono); padding: 0 18px 0 0; margin: 0; height: 100%; cursor: pointer; }
+.city-pick select:focus { outline: none; }
+.city-pick-mark {   /* drawn: the ⌄ glyph fell back to another font and sat low */
+  position: absolute; right: 17px; top: 50%; width: 6px; height: 6px; margin-top: -5px; pointer-events: none;
+  border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg);
+}
+@media (max-width: 720px) { .city-pick { height: 44px; } }

@@ -1,0 +1,10 @@
+{
+ "city": "brussels",
+ "snapshot": "trees_brussels_2026-09-27.csv.gz",
+ "date": "2026-09-27",
+ "trees": 31674,
+ "commune": "21004",
+ "in_sectors": 31674,
+ "previous": null,
+ "licence": "CC BY 4.0 (Ville de Bruxelles)"
+}

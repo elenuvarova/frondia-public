@@ -1,0 +1,5 @@
+{"type": "object", "additionalProperties": false, "required": ["label", "quote", "why"],
+ "properties": {
+  "label": {"type": "string", "enum": ["yes", "weak", "no"]},
+  "quote": {"type": "string"},
+  "why": {"type": "string"}}}

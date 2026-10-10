@@ -1,0 +1,38 @@
+{
+ "id": 60,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "41ff70692692b850",
+ "run_at": "2026-09-26T14:50:45+00:00",
+ "output": {
+  "label": "yes",
+  "measures": [
+   {
+    "quote": "développer un axe vert",
+    "kind": "street_greening",
+    "status": "action",
+    "place": "l'ancien tracé du Maelbeek",
+    "verbatim": true
+   },
+   {
+    "quote": "améliorer la perméabilité des sols de 10 à 20% sur l'ancien tracé du Maelbeek",
+    "kind": "unsealing",
+    "status": "action",
+    "place": "l'ancien tracé du Maelbeek",
+    "verbatim": true
+   },
+   {
+    "quote": "aménager un parc de 3.200 m2 en intérieur d'îlot, entre les rues Potagère, du Moulin et de la Limite",
+    "kind": "new_green_space",
+    "status": "action",
+    "place": "intérieur d'îlot, entre les rues Potagère, du Moulin et de la Limite",
+    "verbatim": true
+   }
+  ],
+  "why": "The contract firmly commits to \"aménager un parc de 3.200 m2 en intérieur d'îlot\" and to \"développer un axe vert\" with improved soil permeability, both stated with commitment verbs (\"va développer\"/\"aménager\"), which change vegetation and sealed ground cover, making the label \"yes\"."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.0422114,
+ "duration_ms": 13924
+}

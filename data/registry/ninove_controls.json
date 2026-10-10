@@ -1,0 +1,86 @@
+[
+ {
+  "id": "21015A101",
+  "name": "GARE",
+  "ndvi_before": 0.28,
+  "d_ndvi_raw": 0.0403,
+  "dist_km": 4.5
+ },
+ {
+  "id": "21004E211",
+  "name": "RUE DE WAND",
+  "ndvi_before": 0.284,
+  "d_ndvi_raw": 0.0024,
+  "dist_km": 5.8
+ },
+ {
+  "id": "21009A22-",
+  "name": "UNIVERSITE",
+  "ndvi_before": 0.28,
+  "d_ndvi_raw": 0.0442,
+  "dist_km": 4.9
+ },
+ {
+  "id": "21015A22-",
+  "name": "MARBOTIN A. (RUE)",
+  "ndvi_before": 0.285,
+  "d_ndvi_raw": 0.03,
+  "dist_km": 4.6
+ },
+ {
+  "id": "21012A63-",
+  "name": "DUBRUCQ-NORD",
+  "ndvi_before": 0.279,
+  "d_ndvi_raw": 0.0358,
+  "dist_km": 2.2
+ },
+ {
+  "id": "21001B321",
+  "name": "ALBERT I- QUARTIER",
+  "ndvi_before": 0.279,
+  "d_ndvi_raw": 0.0364,
+  "dist_km": 1.5
+ },
+ {
+  "id": "21004B43-",
+  "name": "AMBIORIX-NORD (SQUARE)",
+  "ndvi_before": 0.279,
+  "d_ndvi_raw": 0.0244,
+  "dist_km": 3.5
+ },
+ {
+  "id": "21015A24-",
+  "name": "WAELHEM (RUE)",
+  "ndvi_before": 0.286,
+  "d_ndvi_raw": 0.0218,
+  "dist_km": 3.9
+ },
+ {
+  "id": "21009A151",
+  "name": "A. DELPORTE-NORD",
+  "ndvi_before": 0.286,
+  "d_ndvi_raw": 0.0352,
+  "dist_km": 4.2
+ },
+ {
+  "id": "21009A652",
+  "name": "HOPITAUX",
+  "ndvi_before": 0.277,
+  "d_ndvi_raw": 0.0394,
+  "dist_km": 4.1
+ },
+ {
+  "id": "21007A373",
+  "name": "CHARROI (RUE DE)",
+  "ndvi_before": 0.287,
+  "d_ndvi_raw": 0.0478,
+  "dist_km": 2.7
+ },
+ {
+  "id": "21015A54-",
+  "name": "EMERAUDE (AVENUE)",
+  "ndvi_before": 0.277,
+  "d_ndvi_raw": 0.031,
+  "dist_km": 4.1
+ }
+]

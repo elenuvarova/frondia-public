@@ -1,0 +1,16 @@
+{
+ "id": 22,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "106b8209cfb66d8e",
+ "run_at": "2026-09-26T14:48:50+00:00",
+ "output": {
+  "label": "no",
+  "measures": [],
+  "why": "The text contains only budget figures and navigation menu headings (e.g. 'Dimension environnementale' as a menu item) with no actual description of any greening measure being carried out, planned, or existing."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.0341652,
+ "duration_ms": 4591
+}

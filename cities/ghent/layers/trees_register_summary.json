@@ -1,0 +1,50 @@
+{
+ "city": "ghent",
+ "snapshot": "trees_ghent_2026-09-27.csv.gz",
+ "date": "2026-09-27",
+ "trees": 68240,
+ "commune": "44021",
+ "in_sectors": 68073,
+ "previous": null,
+ "licence": "Modellicentie Gratis Hergebruik (Stad Gent)",
+ "planted": {
+  "2020": 967,
+  "2021": 819,
+  "2022": 1113,
+  "2023": 864,
+  "2024": 2258,
+  "2025": 1695
+ },
+ "where": {
+  "sectors": 150,
+  "planted": 7074,
+  "residents": 266208,
+  "least_canopy": {
+   "sectors": 50,
+   "planted_share": 0.239,
+   "residents_share": 0.482,
+   "per_1000_in_third": 13.2,
+   "per_1000_elsewhere": 39.0,
+   "per_10ha_in_third": 9.61,
+   "per_10ha_elsewhere": 6.93
+  },
+  "poorest": {
+   "sectors": 50,
+   "planted_share": 0.27,
+   "residents_share": 0.444,
+   "per_1000_in_third": 16.1,
+   "per_1000_elsewhere": 34.9,
+   "per_10ha_in_third": 10.8,
+   "per_10ha_elsewhere": 6.65
+  },
+  "hottest": {
+   "sectors": 50,
+   "planted_share": 0.209,
+   "residents_share": 0.498,
+   "per_1000_in_third": 11.2,
+   "per_1000_elsewhere": 41.8,
+   "per_10ha_in_third": 7.79,
+   "per_10ha_elsewhere": 7.33
+  }
+ }
+}

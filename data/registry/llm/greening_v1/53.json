@@ -1,0 +1,45 @@
+{
+ "id": 53,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "9cb10a8a20db928d",
+ "run_at": "2026-09-26T14:50:11+00:00",
+ "output": {
+  "measures": [
+   {
+    "quote": "plantation d'arbres",
+    "kind": "street_greening",
+    "status": "action",
+    "place": null,
+    "verbatim": true
+   },
+   {
+    "quote": "créer un jardin pédagogique",
+    "kind": "gardens_agriculture",
+    "status": "action",
+    "place": null,
+    "verbatim": true
+   },
+   {
+    "quote": "rendre plus attractifs les espaces verts et les espaces publics",
+    "kind": "other_greening",
+    "status": "intention",
+    "place": null,
+    "verbatim": true
+   },
+   {
+    "quote": "organiser des actions collectives de végétalisation et de conseil en agriculture urbaine",
+    "kind": "gardens_agriculture",
+    "status": "action",
+    "place": null,
+    "verbatim": true
+   }
+  ],
+  "label": "yes",
+  "why": "The quote \"plantation d'arbres\" is listed among committed interventions on public space (\"intervenir sur les espaces publics\"), and \"créer un jardin pédagogique\" is a firm project commitment, both changing vegetation cover, which qualifies the contract as \"yes\"."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.0416454,
+ "duration_ms": 12113
+}

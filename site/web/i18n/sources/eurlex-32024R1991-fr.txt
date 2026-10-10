@@ -1,0 +1,26 @@
+Source: https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32024R1991 (read 2026-10-04, headless Chromium via playwright-core; one page load)
+Excerpts only: the title, Article 3 points 15–21 (definitions), Article 8 whole, Article 14(4) (where the urban ecosystem areas of Article 8 are set). No-break spaces normalised to plain spaces; text otherwise verbatim.
+
+## Title
+RÈGLEMENT (UE) 2024/1991 DU PARLEMENT EUROPÉEN ET DU CONSEIL
+du 24 juin 2024
+relatif à la restauration de la nature et modifiant le règlement (UE) 2022/869
+
+## Article 3 — Définitions (points 15–21)
+Aux fins du présent règlement, on entend par:
+15) «unité administrative locale» ou «UAL»: une division administrative, dans un État membre, de niveau inférieur à celui d’une province, d’une région ou d’un État, établie conformément à l’article 4 du règlement (CE) no 1059/2003 du Parlement européen et du Conseil (43);
+16) «centres urbains» et «pôles urbains»: des unités territoriales classées dans les agglomérations, villes et banlieues selon la typologie fondée sur la grille établie conformément à l’article 4 ter, paragraphe 2, du règlement (CE) no 1059/2003;
+17) «agglomérations»: des UAL dans lesquelles au moins 50 % de la population vit dans un ou plusieurs centres urbains, proportion mesurée en utilisant le degré d’urbanisation établi conformément à l’article 4 ter, paragraphe 3, point a), du règlement (CE) no 1059/2003;
+18) «villes et banlieues»: des UAL dans lesquelles moins de 50 % de la population vit dans un centre urbain, mais au moins 50 % de la population vit dans un pôle urbain, proportions mesurées en utilisant le degré d’urbanisation établi conformément à l’article 4 ter, paragraphe 3, point a), du règlement (CE) no 1059/2003;
+19) «zones périurbaines»: les zones adjacentes à des centres urbains ou à des pôles urbains, comprenant au moins toutes les zones situées dans un rayon d’un kilomètre, mesuré à partir des limites extérieures de ces centres urbains ou pôles urbains, et situées dans la même agglomération ou dans la même ville et banlieue que ces centres urbains ou pôles urbains;
+20) «espaces verts urbains»: la surface totale d’arbres, de fourrés, d’arbustes, de végétation herbacée permanente, de lichens et de mousses, d’étangs et de cours d’eau présents dans les agglomérations ou dans les villes et banlieues, calculée sur la base des données fournies par le service Copernicus de surveillance des terres dans le cadre de la composante Copernicus du programme spatial de l’Union, établi par le règlement (UE) 2021/696, et, si elles sont disponibles pour l’État membre concerné, d’autres données supplémentaires appropriées fournies par cet État membre;
+21) «couvert arboré urbain»: la surface totale de couvert arboré dans les agglomérations et dans les villes et banlieues, calculée sur la base des données Tree Cover Density fournies par le service Copernicus de surveillance des terres dans le cadre de la composante Copernicus du programme spatial de l’Union, établi par le règlement (UE) 2021/696 du Parlement européen et du Conseil, et, si elles sont disponibles pour l’État membre concerné, d’autres données supplémentaires appropriées fournies par cet État membre;
+
+## Article 8
+Restauration des écosystèmes urbains
+1.   D’ici au 31 décembre 2030, les États membres veillent à ce qu’il n’y ait pas de perte nette de la surface totale nationale des espaces verts urbains ni du couvert arboré urbain des zones d’écosystème urbain, déterminées conformément à l’article 14, paragraphe 4, par rapport à 2024. Aux fins du présent paragraphe, les États membres peuvent exclure de ces surfaces totales nationales les zones d’écosystème urbain dans lesquelles la part des espaces verts urbains dans les centres urbains et les pôles urbains dépasse 45 % et la part du couvert arboré urbain dépasse 10 %.
+2.   À compter du 1er janvier 2031, les États membres obtiennent une tendance à l’augmentation de la surface totale nationale des espaces verts urbains, y compris au moyen de l’intégration d’espaces verts urbains dans les bâtiments et infrastructures, dans les zones d’écosystème urbain, déterminées conformément à l’article 14, paragraphe 4, mesurée tous les six ans à compter du 1er janvier 2031, jusqu’à ce qu’un niveau satisfaisant, fixé conformément à l’article 14, paragraphe 5, soit atteint.
+3.   Les États membres obtiennent, dans chaque zone d’écosystème urbain déterminée conformément à l’article 14, paragraphe 4, une tendance à l’augmentation du couvert arboré urbain, mesurée tous les six ans à compter du 1er janvier 2031, jusqu’à ce qu’un niveau satisfaisant, fixé conformément à l’article 14, paragraphe 5, soit atteint.
+
+## Article 14, paragraph 4
+4.   Les États membres déterminent et cartographient les zones d’écosystème urbain visées à l’article 8 pour toutes leurs agglomérations et leurs villes et banlieues.

@@ -1,0 +1,575 @@
+{
+ "cities": {
+  "brussels": {
+   "name": "Brussels",
+   "sectors": 724,
+   "measured": 686,
+   "population": 1227004,
+   "threshold_ndvi": 0.03451,
+   "null_mean_ndvi": -9.962893680922256e-05,
+   "background": {
+    "n": 668,
+    "thr": 0.03451,
+    "raw_median": 0.03172,
+    "k_raw": 263,
+    "k_eff": 16,
+    "share_raw": 0.3937125748502994
+   },
+   "canopy_ratio_poor_rich": 0.56,
+   "comparable": 668,
+   "art8": {
+    "laus": 19,
+    "exempt": [
+     "Auderghem / Oudergem",
+     "Uccle / Ukkel",
+     "Watermael-Boitsfort / Watermaal-Bosvoorde",
+     "Woluwe-Saint-Pierre / Sint-Pieters-Woluwe"
+    ],
+    "green_ucuc": 0.393104,
+    "green7_ucuc": 0.400355,
+    "green_nw_ucuc": 0.384943,
+    "stable": true,
+    "canopy_r": [
+     0.853,
+     0.867,
+     0.931
+    ]
+   }
+  },
+  "antwerp": {
+   "name": "Antwerp",
+   "sectors": 458,
+   "measured": 457,
+   "population": 710992,
+   "threshold_ndvi": 0.04916,
+   "null_mean_ndvi": -2.0454749633583443e-05,
+   "background": {
+    "n": 423,
+    "thr": 0.04916,
+    "raw_median": 0.032609,
+    "k_raw": 60,
+    "k_eff": 6,
+    "share_raw": 0.14184397163120568
+   },
+   "canopy_ratio_poor_rich": 0.51,
+   "comparable": 423,
+   "art8": {
+    "laus": 1,
+    "exempt": [],
+    "green_ucuc": 0.396877,
+    "green7_ucuc": 0.417731,
+    "green_nw_ucuc": 0.345151,
+    "stable": true,
+    "canopy_r": [
+     0.87,
+     0.911,
+     0.946
+    ]
+   }
+  },
+  "ghent": {
+   "name": "Ghent",
+   "sectors": 201,
+   "measured": 201,
+   "population": 269299,
+   "threshold_ndvi": 0.04038,
+   "null_mean_ndvi": 0.0001380219786938104,
+   "background": {
+    "n": 185,
+    "thr": 0.04038,
+    "raw_median": 0.031975,
+    "k_raw": 54,
+    "k_eff": 5,
+    "share_raw": 0.2918918918918919
+   },
+   "canopy_ratio_poor_rich": 0.55,
+   "comparable": 185,
+   "art8": {
+    "laus": 1,
+    "exempt": [],
+    "green_ucuc": 0.444271,
+    "green7_ucuc": 0.489801,
+    "green_nw_ucuc": 0.409858,
+    "stable": false,
+    "canopy_r": [
+     0.808,
+     0.848,
+     0.858
+    ]
+   }
+  },
+  "liege": {
+   "name": "Liège",
+   "sectors": 184,
+   "measured": 181,
+   "population": 195453,
+   "threshold_ndvi": 0.05164,
+   "null_mean_ndvi": 0.000647496456340347,
+   "background": {
+    "n": 163,
+    "thr": 0.05164,
+    "raw_median": 0.014144,
+    "k_raw": 3,
+    "k_eff": 1,
+    "share_raw": 0.018404907975460124
+   },
+   "canopy_ratio_poor_rich": 0.5,
+   "comparable": 163,
+   "art8": {
+    "laus": 1,
+    "exempt": [
+     "Liège / Luik"
+    ],
+    "green_ucuc": 0.460417,
+    "green7_ucuc": 0.480344,
+    "green_nw_ucuc": 0.41397,
+    "stable": false,
+    "canopy_r": [
+     0.902,
+     0.924,
+     0.947
+    ]
+   }
+  },
+  "charleroi": {
+   "name": "Charleroi",
+   "sectors": 291,
+   "measured": 287,
+   "population": 203790,
+   "threshold_ndvi": 0.04082,
+   "null_mean_ndvi": -0.0009766945290036293,
+   "background": {
+    "n": 269,
+    "thr": 0.04082,
+    "raw_median": 0.025986,
+    "k_raw": 48,
+    "k_eff": 5,
+    "share_raw": 0.17843866171003717
+   },
+   "canopy_ratio_poor_rich": 0.66,
+   "comparable": 269,
+   "art8": {
+    "laus": 1,
+    "exempt": [
+     "Charleroi"
+    ],
+    "green_ucuc": 0.48854,
+    "green7_ucuc": 0.512792,
+    "green_nw_ucuc": 0.480621,
+    "stable": true,
+    "canopy_r": [
+     0.871,
+     0.901,
+     0.907
+    ]
+   }
+  }
+ },
+ "lst_threshold_c": 1.32,
+ "parks": {
+  "total": 350,
+  "refused": 98,
+  "brussels_total": 152,
+  "brussels_refused": 60,
+  "max_gap": 0.04
+ },
+ "restorations_noise": 25,
+ "monitoring": [
+  {
+   "city": "brussels",
+   "season": 2024,
+   "candidates": 9,
+   "construction": 1,
+   "confirmed": 0,
+   "confirmed_names": []
+  },
+  {
+   "city": "brussels",
+   "season": 2025,
+   "candidates": 18,
+   "construction": 3,
+   "confirmed": 1,
+   "confirmed_names": [
+    "Wolvendael"
+   ]
+  },
+  {
+   "city": "brussels",
+   "season": 2026,
+   "candidates": 18,
+   "construction": 2,
+   "confirmed": 2,
+   "confirmed_names": [
+    "Wolvendael",
+    "Parc Forestier"
+   ]
+  },
+  {
+   "city": "antwerp",
+   "season": 2024,
+   "candidates": 5,
+   "construction": 0,
+   "confirmed": 0,
+   "confirmed_names": []
+  },
+  {
+   "city": "antwerp",
+   "season": 2025,
+   "candidates": 12,
+   "construction": 3,
+   "confirmed": 0,
+   "confirmed_names": []
+  },
+  {
+   "city": "antwerp",
+   "season": 2026,
+   "candidates": 12,
+   "construction": 4,
+   "confirmed": 0,
+   "confirmed_names": []
+  },
+  {
+   "city": "ghent",
+   "season": 2024,
+   "candidates": 6,
+   "construction": 0,
+   "confirmed": 0,
+   "confirmed_names": []
+  },
+  {
+   "city": "ghent",
+   "season": 2025,
+   "candidates": 6,
+   "construction": 1,
+   "confirmed": 0,
+   "confirmed_names": []
+  },
+  {
+   "city": "ghent",
+   "season": 2026,
+   "candidates": 6,
+   "construction": 2,
+   "confirmed": 1,
+   "confirmed_names": [
+    "Lake"
+   ]
+  },
+  {
+   "city": "liege",
+   "season": 2024,
+   "candidates": 5,
+   "construction": 0,
+   "confirmed": 1,
+   "confirmed_names": [
+    "Le Werihet"
+   ]
+  },
+  {
+   "city": "liege",
+   "season": 2025,
+   "candidates": 5,
+   "construction": 1,
+   "confirmed": 1,
+   "confirmed_names": [
+    "Le Werihet"
+   ]
+  },
+  {
+   "city": "liege",
+   "season": 2026,
+   "candidates": 5,
+   "construction": 0,
+   "confirmed": 0,
+   "confirmed_names": []
+  },
+  {
+   "city": "charleroi",
+   "season": 2024,
+   "candidates": 3,
+   "construction": 0,
+   "confirmed": 0,
+   "confirmed_names": []
+  },
+  {
+   "city": "charleroi",
+   "season": 2025,
+   "candidates": 8,
+   "construction": 1,
+   "confirmed": 0,
+   "confirmed_names": []
+  },
+  {
+   "city": "charleroi",
+   "season": 2026,
+   "candidates": 8,
+   "construction": 1,
+   "confirmed": 0,
+   "confirmed_names": []
+  }
+ ],
+ "controls_n": 12,
+ "min_scenes": 8,
+ "tests": 289,
+ "layers": {
+  "brussels": 48,
+  "antwerp": 46,
+  "ghent": 45,
+  "liege": 43,
+  "charleroi": 42
+ },
+ "check": {
+  "cities": {
+   "antwerp": {
+    "canopy": {
+     "sensitivity": {
+      "k": 5,
+      "n": 17
+     },
+     "specificity": {
+      "k": 395,
+      "n": 406
+     },
+     "agreement_when_ours_changed": {
+      "k": 5,
+      "n": 16
+     },
+     "direction_when_ours_changed": {
+      "k": 11,
+      "n": 16
+     },
+     "spearman": 0.306,
+     "opposite": 0
+    },
+    "green": {
+     "sensitivity": {
+      "k": 4,
+      "n": 15
+     },
+     "specificity": {
+      "k": 396,
+      "n": 408
+     },
+     "agreement_when_ours_changed": {
+      "k": 4,
+      "n": 16
+     },
+     "direction_when_ours_changed": {
+      "k": 15,
+      "n": 16
+     },
+     "spearman": 0.345,
+     "opposite": 0
+    }
+   },
+   "ghent": {
+    "canopy": {
+     "sensitivity": {
+      "k": 2,
+      "n": 8
+     },
+     "specificity": {
+      "k": 174,
+      "n": 177
+     },
+     "agreement_when_ours_changed": {
+      "k": 2,
+      "n": 6
+     },
+     "direction_when_ours_changed": {
+      "k": 4,
+      "n": 6
+     },
+     "spearman": 0.46,
+     "opposite": 1
+    },
+    "green": {
+     "sensitivity": {
+      "k": 0,
+      "n": 5
+     },
+     "specificity": {
+      "k": 171,
+      "n": 180
+     },
+     "agreement_when_ours_changed": {
+      "k": 0,
+      "n": 9
+     },
+     "direction_when_ours_changed": {
+      "k": 4,
+      "n": 9
+     },
+     "spearman": 0.364,
+     "opposite": 0
+    }
+   }
+  },
+  "pooled": {
+   "canopy": {
+    "sensitivity": {
+     "k": 7,
+     "n": 25
+    },
+    "specificity": {
+     "k": 569,
+     "n": 583
+    },
+    "agreement_when_ours_changed": {
+     "k": 7,
+     "n": 22
+    },
+    "direction_when_ours_changed": {
+     "k": 15,
+     "n": 22
+    }
+   },
+   "green": {
+    "sensitivity": {
+     "k": 4,
+     "n": 20
+    },
+    "specificity": {
+     "k": 567,
+     "n": 588
+    },
+    "agreement_when_ours_changed": {
+     "k": 4,
+     "n": 25
+    },
+    "direction_when_ours_changed": {
+     "k": 19,
+     "n": 25
+    }
+   }
+  }
+ },
+ "editions": {
+  "brussels": {
+   "years": [
+    2018,
+    2021
+   ],
+   "canopy_2018": 0.2571,
+   "canopy_2021": 0.3481,
+   "green_2018": 0.4452,
+   "green_2021": 0.434,
+   "threshold_canopy": 0.163624,
+   "threshold_green": 0.029525,
+   "units": 686,
+   "comparable": 666
+  },
+  "antwerp": {
+   "years": [
+    2018,
+    2021
+   ],
+   "canopy_2018": 0.1648,
+   "canopy_2021": 0.2008,
+   "green_2018": 0.4953,
+   "green_2021": 0.4991,
+   "threshold_canopy": 0.070967,
+   "threshold_green": 0.052854,
+   "units": 457,
+   "comparable": 450,
+   "aerial": {
+    "units": 457,
+    "official_canopy_2018": 0.1648,
+    "official_canopy_2021": 0.2008,
+    "aerial_high_2018": 0.1584,
+    "aerial_high_2021": 0.1718,
+    "example": {
+     "id": "11002Q091",
+     "name": "PARK",
+     "area_ha": 16.54,
+     "official_2018": 0.0757,
+     "official_2021": 0.6249,
+     "aerial_2018": 0.4127,
+     "aerial_2021": 0.4742
+    }
+   }
+  },
+  "ghent": {
+   "years": [
+    2018,
+    2021
+   ],
+   "canopy_2018": 0.1441,
+   "canopy_2021": 0.1799,
+   "green_2018": 0.4657,
+   "green_2021": 0.4736,
+   "threshold_canopy": 0.054051,
+   "threshold_green": 0.059403,
+   "units": 201,
+   "comparable": 195,
+   "aerial": {
+    "units": 201,
+    "official_canopy_2018": 0.1441,
+    "official_canopy_2021": 0.1799,
+    "aerial_high_2018": 0.1427,
+    "aerial_high_2021": 0.1445,
+    "example": {
+     "id": "44021L391",
+     "name": "VALKENHUIS",
+     "area_ha": 174.73,
+     "official_2018": 0.2712,
+     "official_2021": 0.4041,
+     "aerial_2018": 0.1824,
+     "aerial_2021": 0.1404
+    }
+   }
+  },
+  "liege": {
+   "years": [
+    2018,
+    2021
+   ],
+   "canopy_2018": 0.3174,
+   "canopy_2021": 0.3862,
+   "green_2018": 0.4951,
+   "green_2021": 0.4985,
+   "threshold_canopy": 0.079633,
+   "threshold_green": 0.065312,
+   "units": 181,
+   "comparable": 176
+  },
+  "charleroi": {
+   "years": [
+    2018,
+    2021
+   ],
+   "canopy_2018": 0.2728,
+   "canopy_2021": 0.3091,
+   "green_2018": 0.5126,
+   "green_2021": 0.4996,
+   "threshold_canopy": 0.086578,
+   "threshold_green": 0.054595,
+   "units": 287,
+   "comparable": 276
+  }
+ },
+ "be_vegetation": {
+  "years": [
+   2021,
+   2023
+  ],
+  "share_2021": 0.504914,
+  "share_2023": 0.487454,
+  "threshold": 0.047277,
+  "verdicts": {
+   "потеря": 10,
+   "шум": 638,
+   "прирост": 18
+  },
+  "loss_ha": -14.4,
+  "gain_ha": 53.9,
+  "raw_change_ha": -274.1,
+  "example": {
+   "id": "21006A323",
+   "name": "GERMINAL II",
+   "area_ha": 8.6,
+   "veg_2021": 0.7144,
+   "veg_2023": 0.5192,
+   "effect": -0.1512
+  }
+ }
+}

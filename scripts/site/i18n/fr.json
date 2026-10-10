@@ -1,0 +1,2229 @@
+{
+ "column.id": {
+  "en": "71647d5b48b3",
+  "text": "code du secteur statistique Statbel (la clé de jointure de chaque couche)"
+ },
+ "column.name": {
+  "en": "78c9248badd6",
+  "text": "nom du secteur, tel que l’écrit Statbel"
+ },
+ "layer.art8_balance_2025.column.area_ha": {
+  "en": "b95497cf70b6",
+  "text": "superficie, hectares"
+ },
+ "layer.art8_balance_2025.column.built_2024_ha": {
+  "en": "98b144b3ca41",
+  "text": "bâti, été 2024, hectares"
+ },
+ "layer.art8_balance_2025.column.built_2025_ha": {
+  "en": "ba97fcdcef65",
+  "text": "bâti, été 2025, hectares"
+ },
+ "layer.art8_balance_2025.column.built_eff": {
+  "en": "5dcaf46b6752",
+  "text": "bâti : la variation de la part moins la variation moyenne des zones témoins"
+ },
+ "layer.art8_balance_2025.column.built_eff_ha": {
+  "en": "94aa2eb5855b",
+  "text": "bâti : cet effet en hectares"
+ },
+ "layer.art8_balance_2025.column.built_raw_ha": {
+  "en": "b8178bef595b",
+  "text": "bâti : été 2025 moins été 2024, hectares, sans zones témoins"
+ },
+ "layer.art8_balance_2025.column.built_verdict": {
+  "en": "bd78de6685e7",
+  "text": "bâti : up (plus de bâti au-delà du bruit : imperméabilisé), down (moins de bâti au-delà du bruit : désimperméabilisé), noise (dans le bruit) ou refused (refusé)"
+ },
+ "layer.art8_balance_2025.column.commune": {
+  "en": "21d99998c151",
+  "text": "commune",
+  "same": true
+ },
+ "layer.art8_balance_2025.column.comparable": {
+  "en": "2181b5e4a87d",
+  "text": "True si les zones témoins sont comparables"
+ },
+ "layer.art8_balance_2025.column.gap": {
+  "en": "5482fa1ee46c",
+  "text": "indice de végétation en 2024, le secteur moins ses zones témoins (au-delà de 0,04 en valeur absolue : refusé)"
+ },
+ "layer.art8_balance_2025.column.green_2024_ha": {
+  "en": "215cc6cb330d",
+  "text": "espaces verts urbains, été 2024, hectares"
+ },
+ "layer.art8_balance_2025.column.green_2025_ha": {
+  "en": "8ad480c6cd8d",
+  "text": "espaces verts urbains, été 2025, hectares"
+ },
+ "layer.art8_balance_2025.column.green_eff": {
+  "en": "842c0b92661a",
+  "text": "espaces verts urbains : la variation de la part moins la variation moyenne des zones témoins"
+ },
+ "layer.art8_balance_2025.column.green_eff_ha": {
+  "en": "5d53b69e0c2e",
+  "text": "espaces verts urbains : cet effet en hectares"
+ },
+ "layer.art8_balance_2025.column.green_raw_ha": {
+  "en": "fa9f55c1c45b",
+  "text": "espaces verts urbains : été 2025 moins été 2024, hectares, sans zones témoins"
+ },
+ "layer.art8_balance_2025.column.green_verdict": {
+  "en": "9a5add2c2433",
+  "text": "espaces verts urbains : up (en hausse au-delà du bruit), down (en baisse au-delà du bruit), noise (dans le bruit) ou refused (refusé)"
+ },
+ "layer.art8_balance_2025.column.population": {
+  "en": "50286229439e",
+  "text": "habitants"
+ },
+ "layer.art8_balance_2025.column.trees_2024_ha": {
+  "en": "bad19a01a95f",
+  "text": "couvert arboré, été 2024, hectares"
+ },
+ "layer.art8_balance_2025.column.trees_2025_ha": {
+  "en": "387f71bb27f7",
+  "text": "couvert arboré, été 2025, hectares"
+ },
+ "layer.art8_balance_2025.column.trees_eff": {
+  "en": "be606ef16f02",
+  "text": "couvert arboré : la variation de la part moins la variation moyenne des zones témoins"
+ },
+ "layer.art8_balance_2025.column.trees_eff_ha": {
+  "en": "b2bac2023994",
+  "text": "couvert arboré : cet effet en hectares"
+ },
+ "layer.art8_balance_2025.column.trees_raw_ha": {
+  "en": "d3c39358acff",
+  "text": "couvert arboré : été 2025 moins été 2024, hectares, sans zones témoins"
+ },
+ "layer.art8_balance_2025.column.trees_verdict": {
+  "en": "4cea5fa49bd9",
+  "text": "couvert arboré : up (en hausse au-delà du bruit), down (en baisse au-delà du bruit), noise (dans le bruit) ou refused (refusé)"
+ },
+ "layer.art8_balance_2025.limits.0": {
+  "en": "05d1c2b84acb",
+  "text": "Des hectares selon la classification du sol de Dynamic World : pas les couches officielles CLCplus et Woody Vegetation, ni le cadastre."
+ },
+ "layer.art8_balance_2025.limits.1": {
+  "en": "104ae42416c9",
+  "text": "Un été comparé à un autre est plus bruité qu’une fenêtre de quatre ans."
+ },
+ "layer.art8_balance_2025.limits.2": {
+  "en": "0531ba057322",
+  "text": "Les hectares bruts incluent le glissement des classes d’un été à l’autre ; seul l’effet le soustrait."
+ },
+ "layer.art8_balance_2025.limits.3": {
+  "en": "fdd3db07e2ca",
+  "text": "Un parc qui perd des arbres peut paraître plus bâti quand un pixel mixte change de classe."
+ },
+ "layer.art8_balance_2025.measures": {
+  "en": "7cb5d322ba8e",
+  "text": "Pour chaque secteur, les espaces verts urbains (au sens du règlement : arbres, herbe, arbustes et eau, pas les terres agricoles), le couvert arboré et le sol bâti en hectares à l’été 2024 et à l’été 2025, et le changement au-delà du bruit par rapport à douze zones témoins."
+ },
+ "layer.art8_balance_2025.method": {
+  "en": "cc42c0dafb9d",
+  "text": "Chaque été, chaque pixel de 10 m revient à la classe dont la probabilité moyenne dans Dynamic World est la plus élevée ; la part d’une classe dans le secteur multipliée par la superficie du secteur donne des hectares. L’effet est la variation de la part dans le secteur moins la variation moyenne de ses zones témoins (les secteurs les plus semblables en 2024 par l’indice de végétation et la température de surface, aucun à moins de 1,5 km) ; multiplié par la superficie, il donne les hectares au-delà de ce qu’ont fait des zones comparables."
+ },
+ "layer.art8_balance_2025.source": {
+  "en": "3ba9a661729e",
+  "text": "Dynamic World V1 ; indice de végétation de Copernicus Sentinel-2 et température de surface de Landsat de l’été 2024 pour l’appariement ; secteurs et population de Statbel."
+ },
+ "layer.art8_balance_2025.title": {
+  "en": "d5bde911a57e",
+  "text": "Depuis l’année de référence 2024, en hectares : été 2025"
+ },
+ "layer.art8_balance_2025.unit": {
+  "en": "e2e89599c29a",
+  "text": "hectares ; part de la superficie du secteur"
+ },
+ "layer.art8_balance_2026.column.area_ha": {
+  "en": "b95497cf70b6",
+  "text": "superficie, hectares"
+ },
+ "layer.art8_balance_2026.column.built_2024_ha": {
+  "en": "98b144b3ca41",
+  "text": "bâti, été 2024, hectares"
+ },
+ "layer.art8_balance_2026.column.built_2026_ha": {
+  "en": "96ae61037061",
+  "text": "bâti, été 2026, hectares"
+ },
+ "layer.art8_balance_2026.column.built_eff": {
+  "en": "5dcaf46b6752",
+  "text": "bâti : la variation de la part moins la variation moyenne des zones témoins"
+ },
+ "layer.art8_balance_2026.column.built_eff_ha": {
+  "en": "94aa2eb5855b",
+  "text": "bâti : cet effet en hectares"
+ },
+ "layer.art8_balance_2026.column.built_raw_ha": {
+  "en": "0b1cfd015342",
+  "text": "bâti : été 2026 moins été 2024, hectares, sans zones témoins"
+ },
+ "layer.art8_balance_2026.column.built_verdict": {
+  "en": "bd78de6685e7",
+  "text": "bâti : up (plus de bâti au-delà du bruit : imperméabilisé), down (moins de bâti au-delà du bruit : désimperméabilisé), noise (dans le bruit) ou refused (refusé)"
+ },
+ "layer.art8_balance_2026.column.commune": {
+  "en": "21d99998c151",
+  "text": "commune",
+  "same": true
+ },
+ "layer.art8_balance_2026.column.comparable": {
+  "en": "2181b5e4a87d",
+  "text": "True si les zones témoins sont comparables"
+ },
+ "layer.art8_balance_2026.column.gap": {
+  "en": "5482fa1ee46c",
+  "text": "indice de végétation en 2024, le secteur moins ses zones témoins (au-delà de 0,04 en valeur absolue : refusé)"
+ },
+ "layer.art8_balance_2026.column.green_2024_ha": {
+  "en": "215cc6cb330d",
+  "text": "espaces verts urbains, été 2024, hectares"
+ },
+ "layer.art8_balance_2026.column.green_2026_ha": {
+  "en": "b690f2575557",
+  "text": "espaces verts urbains, été 2026, hectares"
+ },
+ "layer.art8_balance_2026.column.green_eff": {
+  "en": "842c0b92661a",
+  "text": "espaces verts urbains : la variation de la part moins la variation moyenne des zones témoins"
+ },
+ "layer.art8_balance_2026.column.green_eff_ha": {
+  "en": "5d53b69e0c2e",
+  "text": "espaces verts urbains : cet effet en hectares"
+ },
+ "layer.art8_balance_2026.column.green_raw_ha": {
+  "en": "b9d9055392d9",
+  "text": "espaces verts urbains : été 2026 moins été 2024, hectares, sans zones témoins"
+ },
+ "layer.art8_balance_2026.column.green_verdict": {
+  "en": "9a5add2c2433",
+  "text": "espaces verts urbains : up (en hausse au-delà du bruit), down (en baisse au-delà du bruit), noise (dans le bruit) ou refused (refusé)"
+ },
+ "layer.art8_balance_2026.column.population": {
+  "en": "50286229439e",
+  "text": "habitants"
+ },
+ "layer.art8_balance_2026.column.trees_2024_ha": {
+  "en": "bad19a01a95f",
+  "text": "couvert arboré, été 2024, hectares"
+ },
+ "layer.art8_balance_2026.column.trees_2026_ha": {
+  "en": "5a569261c836",
+  "text": "couvert arboré, été 2026, hectares"
+ },
+ "layer.art8_balance_2026.column.trees_eff": {
+  "en": "be606ef16f02",
+  "text": "couvert arboré : la variation de la part moins la variation moyenne des zones témoins"
+ },
+ "layer.art8_balance_2026.column.trees_eff_ha": {
+  "en": "b2bac2023994",
+  "text": "couvert arboré : cet effet en hectares"
+ },
+ "layer.art8_balance_2026.column.trees_raw_ha": {
+  "en": "dbdc5cceb2f4",
+  "text": "couvert arboré : été 2026 moins été 2024, hectares, sans zones témoins"
+ },
+ "layer.art8_balance_2026.column.trees_verdict": {
+  "en": "4cea5fa49bd9",
+  "text": "couvert arboré : up (en hausse au-delà du bruit), down (en baisse au-delà du bruit), noise (dans le bruit) ou refused (refusé)"
+ },
+ "layer.art8_balance_2026.limits.0": {
+  "en": "05d1c2b84acb",
+  "text": "Des hectares selon la classification du sol de Dynamic World : pas les couches officielles CLCplus et Woody Vegetation, ni le cadastre."
+ },
+ "layer.art8_balance_2026.limits.1": {
+  "en": "104ae42416c9",
+  "text": "Un été comparé à un autre est plus bruité qu’une fenêtre de quatre ans."
+ },
+ "layer.art8_balance_2026.limits.2": {
+  "en": "0531ba057322",
+  "text": "Les hectares bruts incluent le glissement des classes d’un été à l’autre ; seul l’effet le soustrait."
+ },
+ "layer.art8_balance_2026.limits.3": {
+  "en": "fdd3db07e2ca",
+  "text": "Un parc qui perd des arbres peut paraître plus bâti quand un pixel mixte change de classe."
+ },
+ "layer.art8_balance_2026.measures": {
+  "en": "90ad64c7965d",
+  "text": "Pour chaque secteur, les espaces verts urbains (au sens du règlement : arbres, herbe, arbustes et eau, pas les terres agricoles), le couvert arboré et le sol bâti en hectares à l’été 2024 et à l’été 2026, et le changement au-delà du bruit par rapport à douze zones témoins."
+ },
+ "layer.art8_balance_2026.method": {
+  "en": "cc42c0dafb9d",
+  "text": "Chaque été, chaque pixel de 10 m revient à la classe dont la probabilité moyenne dans Dynamic World est la plus élevée ; la part d’une classe dans le secteur multipliée par la superficie du secteur donne des hectares. L’effet est la variation de la part dans le secteur moins la variation moyenne de ses zones témoins (les secteurs les plus semblables en 2024 par l’indice de végétation et la température de surface, aucun à moins de 1,5 km) ; multiplié par la superficie, il donne les hectares au-delà de ce qu’ont fait des zones comparables."
+ },
+ "layer.art8_balance_2026.source": {
+  "en": "3ba9a661729e",
+  "text": "Dynamic World V1 ; indice de végétation de Copernicus Sentinel-2 et température de surface de Landsat de l’été 2024 pour l’appariement ; secteurs et population de Statbel."
+ },
+ "layer.art8_balance_2026.title": {
+  "en": "3a45cb6c8c3e",
+  "text": "Depuis l’année de référence 2024, en hectares : été 2026"
+ },
+ "layer.art8_balance_2026.unit": {
+  "en": "e2e89599c29a",
+  "text": "hectares ; part de la superficie du secteur"
+ },
+ "layer.art8_baseline_2021.column.canopy_lau_ha": {
+  "en": "43b1a7eec662",
+  "text": "couvert arboré dans toute la commune, hectares"
+ },
+ "layer.art8_baseline_2021.column.canopy_lau_pct": {
+  "en": "382a55dfc623",
+  "text": "couvert arboré dans toute la commune, pour cent"
+ },
+ "layer.art8_baseline_2021.column.canopy_ucuc_ha": {
+  "en": "8a7ae4bfc9f3",
+  "text": "couvert arboré dans les centres urbains et pôles urbains, hectares"
+ },
+ "layer.art8_baseline_2021.column.canopy_ucuc_pct": {
+  "en": "f690ef8b9e79",
+  "text": "couvert arboré dans les centres urbains et pôles urbains, pour cent (le couvert arboré de l’exemption)"
+ },
+ "layer.art8_baseline_2021.column.exempt": {
+  "en": "fb922d7de4ea",
+  "text": "True si plus de 45 % d’espaces verts et plus de 10 % de couvert arboré dans les centres urbains et pôles urbains"
+ },
+ "layer.art8_baseline_2021.column.green_lau_ha": {
+  "en": "93e765ad8057",
+  "text": "espaces verts dans toute la commune, hectares"
+ },
+ "layer.art8_baseline_2021.column.green_lau_pct": {
+  "en": "6abd207f82ff",
+  "text": "espaces verts dans toute la commune, pour cent"
+ },
+ "layer.art8_baseline_2021.column.green_ucuc_ha": {
+  "en": "53d5f31064c7",
+  "text": "espaces verts dans les centres urbains et pôles urbains, hectares"
+ },
+ "layer.art8_baseline_2021.column.green_ucuc_pct": {
+  "en": "c1e3f77c19ef",
+  "text": "espaces verts dans les centres urbains et pôles urbains, pour cent (les espaces verts de l’exemption)"
+ },
+ "layer.art8_baseline_2021.column.lau_id": {
+  "en": "e93440450519",
+  "text": "code UAL tel que l’écrit la Commission (lau2024.BE.<code INS>) ; vide sur la ligne qui réunit toutes les communes"
+ },
+ "layer.art8_baseline_2021.column.name": {
+  "en": "21d99998c151",
+  "text": "commune",
+  "same": true
+ },
+ "layer.art8_baseline_2021.column.population": {
+  "en": "09b3478c1faf",
+  "text": "habitants (UAL, LAU 2024)"
+ },
+ "layer.art8_baseline_2021.column.stable": {
+  "en": "1856bee45930",
+  "text": "True si le verdict tient sous chaque lecture du tableau de sensibilité"
+ },
+ "layer.art8_baseline_2021.column.uea_lau_ha": {
+  "en": "65798c469948",
+  "text": "écosystème urbain pris comme la commune entière, hectares"
+ },
+ "layer.art8_baseline_2021.column.uea_ucuc_ha": {
+  "en": "451c6a33adc2",
+  "text": "écosystème urbain pris comme les centres urbains et pôles urbains de la commune, hectares"
+ },
+ "layer.art8_baseline_2021.limits.0": {
+  "en": "5f85ae26873c",
+  "text": "Données de 2021 : la Commission n’autorise la Woody Vegetation Layer 2021 que pour les projets de plan."
+ },
+ "layer.art8_baseline_2021.limits.1": {
+  "en": "b0d7f4a8f674",
+  "text": "Les hectares sont la superficie des pixels à l’intérieur de la limite au 1:1M, pas le cadastre."
+ },
+ "layer.art8_baseline_2021.limits.2": {
+  "en": "ce09317fa282",
+  "text": "Faire correspondre les classes CLCplus à l’article 3, point 20, est notre lecture : voir le tableau de sensibilité."
+ },
+ "layer.art8_baseline_2021.measures": {
+  "en": "e29a3d5b24e6",
+  "text": "Pour chaque commune, la superficie de son écosystème urbain et les espaces verts et le couvert arboré qu’il contient, en hectares et en pour cent, pour les deux délimitations que la Commission laisse au choix du pays : les centres urbains et pôles urbains de la commune, et la commune entière. Le format de l’état zéro national néerlandais (PBL, 25 août 2026)."
+ },
+ "layer.art8_baseline_2021.method": {
+  "en": "7eddd91aa573",
+  "text": "Les parts de la couche ci-dessus multipliées par la superficie sur laquelle elles ont été mesurées : rien n’est recalculé. Une ville de plusieurs communes ajoute une ligne qui les réunit toutes."
+ },
+ "layer.art8_baseline_2021.source": {
+  "en": "97cbc216dbf2",
+  "text": "Reproduction par Frondia du script NRR_Art8 de l’AEE et du JRC (la couche ci-dessus) ; Copernicus CLCplus Backbone 2021, HRL Woody Vegetation Layer 2021 ; Eurostat UAL (LAU 2024), centres urbains et pôles urbains 2021."
+ },
+ "layer.art8_baseline_2021.title": {
+  "en": "1ff60046e8b2",
+  "text": "L’état zéro par commune, en hectares"
+ },
+ "layer.art8_baseline_2021.unit": {
+  "en": "fb003df77a32",
+  "text": "hectares ; pour cent"
+ },
+ "layer.art8_official_lau_2021.column.area_km2_all": {
+  "en": "4cdcadde0d16",
+  "text": "superficie mesurée, km²"
+ },
+ "layer.art8_official_lau_2021.column.area_km2_official": {
+  "en": "015da9727b69",
+  "text": "superficie officielle, km²"
+ },
+ "layer.art8_official_lau_2021.column.area_km2_ucuc": {
+  "en": "c3910a9f29d3",
+  "text": "superficie dans les centres urbains et pôles urbains, km²"
+ },
+ "layer.art8_official_lau_2021.column.canopy_wvl_all": {
+  "en": "cbc0d573790b",
+  "text": "part de végétation ligneuse, toute l’UAL"
+ },
+ "layer.art8_official_lau_2021.column.canopy_wvl_ucuc": {
+  "en": "33451db48cf9",
+  "text": "part de végétation ligneuse dans les centres et pôles urbains (le couvert arboré du test)"
+ },
+ "layer.art8_official_lau_2021.column.canopy_wvl_ucuc_statbel": {
+  "en": "f8bc1e4aeb58",
+  "text": "part de couvert arboré, avec la commune reconstituée à partir des secteurs Statbel"
+ },
+ "layer.art8_official_lau_2021.column.degurba": {
+  "en": "849906ddd500",
+  "text": "degré d’urbanisation (1 = ville)"
+ },
+ "layer.art8_official_lau_2021.column.exempt": {
+  "en": "c2fc469c7f90",
+  "text": "True si la commune bénéficie de l’exemption"
+ },
+ "layer.art8_official_lau_2021.column.exempt_no_water": {
+  "en": "4bd3ad8b913a",
+  "text": "le verdict hors plans d’eau"
+ },
+ "layer.art8_official_lau_2021.column.exempt_statbel": {
+  "en": "d55009c05d8b",
+  "text": "le verdict, avec la commune reconstituée à partir des secteurs Statbel"
+ },
+ "layer.art8_official_lau_2021.column.exempt_with7": {
+  "en": "b690d93e6e39",
+  "text": "le verdict en comptant les terres arables"
+ },
+ "layer.art8_official_lau_2021.column.green_all": {
+  "en": "a4f7bd951ce7",
+  "text": "part d’espaces verts, toute l’UAL"
+ },
+ "layer.art8_official_lau_2021.column.green_no_water_all": {
+  "en": "cf0f1c585e17",
+  "text": "part d’espaces verts hors plans d’eau, toute l’UAL"
+ },
+ "layer.art8_official_lau_2021.column.green_no_water_ucuc": {
+  "en": "b991554e8908",
+  "text": "part d’espaces verts dans les centres et pôles urbains, hors plans d’eau"
+ },
+ "layer.art8_official_lau_2021.column.green_ucuc": {
+  "en": "95c46f14f002",
+  "text": "part d’espaces verts dans les centres urbains et pôles urbains (les espaces verts du test)"
+ },
+ "layer.art8_official_lau_2021.column.green_ucuc_statbel": {
+  "en": "e53b4ed438c1",
+  "text": "part d’espaces verts avec la commune reconstituée à partir des secteurs Statbel"
+ },
+ "layer.art8_official_lau_2021.column.green_with7_all": {
+  "en": "817ed192d57c",
+  "text": "part d’espaces verts en comptant les terres arables, toute l’UAL"
+ },
+ "layer.art8_official_lau_2021.column.green_with7_ucuc": {
+  "en": "77c5dcd923f9",
+  "text": "part d’espaces verts dans les centres et pôles urbains, en comptant les terres arables"
+ },
+ "layer.art8_official_lau_2021.column.lau_id": {
+  "en": "09f8d984d1df",
+  "text": "code UAL (BE_ + code INS)"
+ },
+ "layer.art8_official_lau_2021.column.name": {
+  "en": "21d99998c151",
+  "text": "commune",
+  "same": true
+ },
+ "layer.art8_official_lau_2021.column.population": {
+  "en": "09b3478c1faf",
+  "text": "habitants (UAL, LAU 2024)"
+ },
+ "layer.art8_official_lau_2021.column.reason": {
+  "en": "2201880f2d43",
+  "text": "pourquoi la commune ne bénéficie pas de l’exemption, en chiffres"
+ },
+ "layer.art8_official_lau_2021.column.sealed_all": {
+  "en": "5bcb30403b6e",
+  "text": "part de sol imperméabilisé, toute l’UAL"
+ },
+ "layer.art8_official_lau_2021.column.sealed_ucuc": {
+  "en": "39f8cab93749",
+  "text": "part de sol imperméabilisé dans les centres et pôles urbains"
+ },
+ "layer.art8_official_lau_2021.column.stable": {
+  "en": "d74edcb1fca2",
+  "text": "True si le verdict tient sous chacune des lectures ci-dessus"
+ },
+ "layer.art8_official_lau_2021.column.tcd_all": {
+  "en": "af73413723d0",
+  "text": "densité moyenne du couvert arboré, toute l’UAL"
+ },
+ "layer.art8_official_lau_2021.column.tcd_any_all": {
+  "en": "b5c65a493044",
+  "text": "part des pixels présentant un couvert arboré, toute l’UAL"
+ },
+ "layer.art8_official_lau_2021.column.tcd_any_ucuc": {
+  "en": "1c018db08f14",
+  "text": "part des pixels présentant un couvert arboré dans les centres et pôles urbains"
+ },
+ "layer.art8_official_lau_2021.column.tcd_ucuc": {
+  "en": "d2e191fce3dc",
+  "text": "densité moyenne du couvert arboré dans les centres et pôles urbains"
+ },
+ "layer.art8_official_lau_2021.limits.0": {
+  "en": "afe9e25e50d3",
+  "text": "Espaces verts tirés de CLCplus 2021, là où le règlement cite 2023 ; couvert arboré tiré de la WVL 2021, autorisée seulement pour les projets de plan."
+ },
+ "layer.art8_official_lau_2021.limits.1": {
+  "en": "916067c2c497",
+  "text": "Faire correspondre les classes CLCplus à l’article 3, point 20, est notre lecture ; le verdict a été revérifié en comptant les terres arables comme espaces verts et hors plans d’eau."
+ },
+ "layer.art8_official_lau_2021.measures": {
+  "en": "1dfab09b9d9c",
+  "text": "La part d’espaces verts urbains et de couvert arboré dans chaque commune (UAL) et dans ses centres urbains et pôles urbains, et si la commune bénéficie de l’exemption de l’article 8, paragraphe 1 : plus de 45 % d’espaces verts et plus de 10 % de couvert arboré."
+ },
+ "layer.art8_official_lau_2021.method": {
+  "en": "68722bf320c2",
+  "text": "Le script NRR_Art8 de l’AEE et du JRC reproduit sur des données ouvertes : UAL (LAU 2024) × la grille de 1 km² des centres urbains et pôles urbains 2021 ; la part des pixels d’une classe à l’intérieur du polygone, selon le centre du pixel."
+ },
+ "layer.art8_official_lau_2021.source": {
+  "en": "f2dd480cf786",
+  "text": "Copernicus CLCplus Backbone 2021 (10 m), HRL Woody Vegetation Layer 2021 (5 m), HRL Tree Cover Density 2018 (10 m) ; Eurostat UAL (LAU 2024), degré d’urbanisation 2024, pôles urbains 2021."
+ },
+ "layer.art8_official_lau_2021.title": {
+  "en": "f16d9e316c76",
+  "text": "Article 8, paragraphe 1, par commune, selon la méthode de la Commission"
+ },
+ "layer.art8_official_lau_2021.unit": {
+  "en": "d8310668b0f8",
+  "text": "part de la superficie, 0–1"
+ },
+ "layer.art8_sensitivity_2021.column.canopy_pct": {
+  "en": "c224b434b6ff",
+  "text": "couvert arboré dans ces mêmes centres et pôles urbains, pour cent"
+ },
+ "layer.art8_sensitivity_2021.column.exempt": {
+  "en": "ccafb9bdd7ef",
+  "text": "le verdict sous cette lecture (vide là où la lecture n’a pas été calculée)"
+ },
+ "layer.art8_sensitivity_2021.column.green_pct": {
+  "en": "97a33d9947f4",
+  "text": "espaces verts dans les centres urbains et pôles urbains sous cette lecture, pour cent"
+ },
+ "layer.art8_sensitivity_2021.column.lau_id": {
+  "en": "de9a90e750e0",
+  "text": "code UAL (lau2024.BE.<code INS>)"
+ },
+ "layer.art8_sensitivity_2021.column.name": {
+  "en": "21d99998c151",
+  "text": "commune",
+  "same": true
+ },
+ "layer.art8_sensitivity_2021.column.reading": {
+  "en": "e2ddd7340de6",
+  "text": "official, with_arable, without_water ou statbel_sectors (officielle, avec les terres arables, hors plans d’eau, à partir des secteurs Statbel)"
+ },
+ "layer.art8_sensitivity_2021.limits.0": {
+  "en": "566197cfc628",
+  "text": "Seulement les lectures que le test applique : d’autres délimitations qu’un pays peut choisir n’ont pas été essayées."
+ },
+ "layer.art8_sensitivity_2021.measures": {
+  "en": "17fddff5ff9d",
+  "text": "Le verdict de l’article 8, paragraphe 1, pour chaque commune sous chaque lecture que le test applique : la lecture officielle, les terres arables comptées comme espaces verts, l’eau non comptée comme espace vert, et la commune reconstituée à partir des secteurs Statbel au lieu de la limite au 1:1M."
+ },
+ "layer.art8_sensitivity_2021.method": {
+  "en": "6ce25d15a089",
+  "text": "Les seuils de l’article 8, paragraphe 1, plus de 45 % d’espaces verts et plus de 10 % de couvert arboré, appliqués aux parts de chaque lecture."
+ },
+ "layer.art8_sensitivity_2021.source": {
+  "en": "f1a3424bfc95",
+  "text": "Reproduction par Frondia de NRR_Art8 (la couche « Article 8, paragraphe 1, par commune »)."
+ },
+ "layer.art8_sensitivity_2021.title": {
+  "en": "82723f2aff25",
+  "text": "Comment le verdict d’exemption dépend de la lecture"
+ },
+ "layer.art8_sensitivity_2021.unit": {
+  "en": "9fb33e9dff81",
+  "text": "pour cent ; True ou False"
+ },
+ "layer.article8_2024.column.area_ha": {
+  "en": "b95497cf70b6",
+  "text": "superficie, hectares"
+ },
+ "layer.article8_2024.column.built_2024": {
+  "en": "c0bddeaaa3c9",
+  "text": "bâti à l’été 2024, probabilité de classe"
+ },
+ "layer.article8_2024.column.built_eff": {
+  "en": "8a92aa1b24b5",
+  "text": "effet sur le bâti (imperméabilisation), mêmes zones témoins"
+ },
+ "layer.article8_2024.column.built_verdict": {
+  "en": "170578510618",
+  "text": "up (plus de bâti au-delà du bruit : imperméabilisé), down (moins de bâti au-delà du bruit : désimperméabilisé), noise (dans le bruit) ou refused (refusé)"
+ },
+ "layer.article8_2024.column.commune": {
+  "en": "21d99998c151",
+  "text": "commune",
+  "same": true
+ },
+ "layer.article8_2024.column.comparable": {
+  "en": "2181b5e4a87d",
+  "text": "True si les zones témoins sont comparables"
+ },
+ "layer.article8_2024.column.density": {
+  "en": "50a4751cf993",
+  "text": "habitants par hectare"
+ },
+ "layer.article8_2024.column.gap": {
+  "en": "e523c4d3f50e",
+  "text": "indice de végétation avant : le secteur moins ses zones témoins (au-delà de 0,04 en valeur absolue : refusé)"
+ },
+ "layer.article8_2024.column.grass_2024": {
+  "en": "e1796e22010c",
+  "text": "herbe à l’été 2024, probabilité de classe"
+ },
+ "layer.article8_2024.column.grass_eff": {
+  "en": "051fc13692b0",
+  "text": "effet sur la couverture herbacée"
+ },
+ "layer.article8_2024.column.income": {
+  "en": "55d04c9c1d9a",
+  "text": "revenu imposable médian, €, Statbel 2023"
+ },
+ "layer.article8_2024.column.lst_b": {
+  "en": "64a073e89442",
+  "text": "température de surface estivale avant, °C (Landsat), utilisée pour l’appariement"
+ },
+ "layer.article8_2024.column.ndvi_2024": {
+  "en": "fd9fa1164e31",
+  "text": "indice de végétation (NDVI) à l’été 2024, moyenne du secteur"
+ },
+ "layer.article8_2024.column.ndvi_a": {
+  "en": "b32686f3af86",
+  "text": "indice de végétation après, étés 2021–24"
+ },
+ "layer.article8_2024.column.ndvi_b": {
+  "en": "4f43f0db06a3",
+  "text": "indice de végétation avant, étés 2017–19"
+ },
+ "layer.article8_2024.column.ndvi_eff": {
+  "en": "f543d8b75908",
+  "text": "effet sur l’indice de végétation : la variation du secteur moins la variation moyenne de ses 12 zones témoins"
+ },
+ "layer.article8_2024.column.ndvi_raw": {
+  "en": "bbff87b2b55e",
+  "text": "variation sans soustraire les zones témoins (après − avant)"
+ },
+ "layer.article8_2024.column.ndvi_verdict": {
+  "en": "dd9d80e5532a",
+  "text": "up (plus vert au-delà du bruit), down (en perte au-delà du bruit), noise (dans le bruit) ou refused (refusé : pas de zones comparables)"
+ },
+ "layer.article8_2024.column.population": {
+  "en": "50286229439e",
+  "text": "habitants"
+ },
+ "layer.article8_2024.column.trees_2024": {
+  "en": "1eb958224e95",
+  "text": "couvert arboré à l’été 2024, probabilité de classe Dynamic World"
+ },
+ "layer.article8_2024.column.trees_eff": {
+  "en": "656edd3993de",
+  "text": "effet sur le couvert arboré, mêmes zones témoins"
+ },
+ "layer.article8_2024.column.trees_verdict": {
+  "en": "9ad0a8b1694c",
+  "text": "le même verdict pour le couvert arboré"
+ },
+ "layer.article8_2024.limits.0": {
+  "en": "026d8caaf74d",
+  "text": "Les valeurs de classe sont des probabilités, pas des parts du sol : comparez-les entre secteurs, ne les lisez pas comme des pourcentages de superficie."
+ },
+ "layer.article8_2024.limits.1": {
+  "en": "ffdf1b240560",
+  "text": "L’indice de végétation n’est pas le couvert arboré : une jeune plantation sur une prairie apparaît comme une perte, et la restauration d’un parc existant ne se voit pas."
+ },
+ "layer.article8_2024.measures": {
+  "en": "9241d66f6f3f",
+  "text": "Les niveaux d’indice de végétation (NDVI) et de couverture arborée, herbacée et bâtie à l’été 2024, et le changement des étés 2017–19 aux étés 2021–24 par rapport à douze secteurs témoins."
+ },
+ "layer.article8_2024.method": {
+  "en": "e4d406a46dbc",
+  "text": "Différence de différences : la variation du secteur moins la variation moyenne des 12 secteurs les plus semblables avant (indice de végétation et température de surface estivale), aucun à moins de 1,5 km. Un secteur dont le meilleur appariement s’écarte de plus de 0,04 de NDVI avant est refusé, pas comparé."
+ },
+ "layer.article8_2024.source": {
+  "en": "11547fb6351e",
+  "text": "Copernicus Sentinel-2 (médianes estivales, masque Cloud Score+), Dynamic World V1, température de surface de Landsat pour l’appariement ; revenu : Statbel 2023."
+ },
+ "layer.article8_2024.title": {
+  "en": "8b9bd9cbdc2d",
+  "text": "Verdure, couvert arboré et bâti en 2024, et la tendance par rapport aux zones témoins"
+ },
+ "layer.article8_2024.unit": {
+  "en": "47f3dfe469ee",
+  "text": "unités NDVI ; probabilité de classe Dynamic World"
+ },
+ "layer.canopy_probav_2019.column.canopy_share": {
+  "en": "3c0c7acfc365",
+  "text": "fraction de couvert arboré"
+ },
+ "layer.canopy_probav_2019.limits.0": {
+  "en": "333670217b82",
+  "text": "Époque 2019, et la série a pris fin."
+ },
+ "layer.canopy_probav_2019.limits.1": {
+  "en": "b1a16b4d2446",
+  "text": "Sur une grille de 100 m, les petits houppiers des rues denses apparaissent comme zéro."
+ },
+ "layer.canopy_probav_2019.measures": {
+  "en": "8fe369f1f546",
+  "text": "La fraction de couvert arboré de chaque secteur, d’un autre producteur et d’un autre capteur."
+ },
+ "layer.canopy_probav_2019.method": {
+  "en": "5b9f006085bf",
+  "text": "La bande tree-coverfraction, moyenne sur le secteur, grille de 100 m."
+ },
+ "layer.canopy_probav_2019.source": {
+  "en": "aa3f1446d740",
+  "text": "Copernicus Global Land Service, Land Cover 100 m (Proba-V, VITO), époque 2019."
+ },
+ "layer.canopy_probav_2019.title": {
+  "en": "0d0dcbfed4b1",
+  "text": "Couvert arboré selon Proba-V, un troisième instrument"
+ },
+ "layer.canopy_probav_2019.unit": {
+  "en": "d8310668b0f8",
+  "text": "part de la superficie, 0–1"
+ },
+ "layer.fit_score.column.cafe": {
+  "en": "ebd520131d04",
+  "text": "sous-score café, 0–1"
+ },
+ "layer.fit_score.column.childcare": {
+  "en": "273a816f227e",
+  "text": "sous-score crèche, 0–1"
+ },
+ "layer.fit_score.column.convenience": {
+  "en": "3257cbd5e438",
+  "text": "sous-score épicerie, 0–1"
+ },
+ "layer.fit_score.column.gp": {
+  "en": "9f921c163c66",
+  "text": "sous-score médecin généraliste, 0–1"
+ },
+ "layer.fit_score.column.hospital": {
+  "en": "c5cadb7f2d8b",
+  "text": "sous-score hôpital, 0–1"
+ },
+ "layer.fit_score.column.library": {
+  "en": "92021f9a79f7",
+  "text": "sous-score bibliothèque, 0–1"
+ },
+ "layer.fit_score.column.park": {
+  "en": "f943d41a6501",
+  "text": "sous-score parc, 0–1"
+ },
+ "layer.fit_score.column.percentile": {
+  "en": "59cf91e68c20",
+  "text": "rang parmi les secteurs de la ville, 0–100"
+ },
+ "layer.fit_score.column.pharmacy": {
+  "en": "f093c5b9f142",
+  "text": "sous-score pharmacie, 0–1"
+ },
+ "layer.fit_score.column.playground": {
+  "en": "c3c76bd1c4e2",
+  "text": "sous-score aire de jeux, 0–1"
+ },
+ "layer.fit_score.column.restaurant": {
+  "en": "a7188d523558",
+  "text": "sous-score restaurant, 0–1"
+ },
+ "layer.fit_score.column.scenario": {
+  "en": "17363d354a63",
+  "text": "family, remote ou senior (famille, télétravail, aînés)"
+ },
+ "layer.fit_score.column.school": {
+  "en": "ed59b7f3d437",
+  "text": "sous-score école, 0–1"
+ },
+ "layer.fit_score.column.score": {
+  "en": "15d8a49c2afd",
+  "text": "le score du scénario, 0–100"
+ },
+ "layer.fit_score.column.sport": {
+  "en": "7089c91a1603",
+  "text": "sous-score sport, 0–1"
+ },
+ "layer.fit_score.column.supermarket": {
+  "en": "3ba884900adc",
+  "text": "sous-score supermarché, 0–1"
+ },
+ "layer.fit_score.column.transit": {
+  "en": "f1594fb960ec",
+  "text": "sous-score transports en commun, 0–1, pondéré par les départs"
+ },
+ "layer.fit_score.limits.0": {
+  "en": "7dd29c72f952",
+  "text": "Un état, pas un changement mesuré : ne le mélangez jamais aux effets ci-dessus."
+ },
+ "layer.fit_score.limits.1": {
+  "en": "27e3327040fd",
+  "text": "OpenStreetMap n’est pas partout aussi complet : un score reflète la carte autant que la ville."
+ },
+ "layer.fit_score.limits.2": {
+  "en": "df8999b9179c",
+  "text": "Les pondérations des scénarios sont un choix éditorial, pas une mesure."
+ },
+ "layer.fit_score.measures": {
+  "en": "ee6146e011f9",
+  "text": "Dans quelle mesure un secteur répond à trois modes de vie — une famille avec enfants, le télétravail, les aînés — par l’accès à pied à quatorze services du quotidien."
+ },
+ "layer.fit_score.method": {
+  "en": "59ef7658f2a7",
+  "text": "Temps de marche depuis le centroïde du secteur sur le réseau piéton d’OpenStreetMap ; chaque service est noté selon une courbe à plateau puis à décroissance ; transports en commun pondérés par les départs à l’heure de pointe du matin ; une somme pondérée par scénario ; le centile est celui de Hazen, sur les secteurs de la ville."
+ },
+ "layer.fit_score.source": {
+  "en": "c19f5ec7a4ba",
+  "text": "Chaîne de traitement Neighbourhood Fit Score : points d’intérêt et réseau piéton d’OpenStreetMap, secteurs Statbel, horaires de {transit}."
+ },
+ "layer.fit_score.title": {
+  "en": "a739b6b83279",
+  "text": "Services du quotidien à distance de marche"
+ },
+ "layer.fit_score.unit": {
+  "en": "94a45a2f9500",
+  "text": "score 0–100 et centile ; scores par service 0–1"
+ },
+ "layer.groenkaart_2018_2024.column.agri_2018": {
+  "en": "caffeb4d191e",
+  "text": "terres agricoles, part, 2018"
+ },
+ "layer.groenkaart_2018_2024.column.agri_2021": {
+  "en": "f35459ff8e8a",
+  "text": "terres agricoles, part, 2021"
+ },
+ "layer.groenkaart_2018_2024.column.agri_2024": {
+  "en": "3a9e958eb49d",
+  "text": "terres agricoles, part, 2024"
+ },
+ "layer.groenkaart_2018_2024.column.high_2018": {
+  "en": "d1e161243420",
+  "text": "végétation haute (plus de 3 m), part de la surface classée, 2018"
+ },
+ "layer.groenkaart_2018_2024.column.high_2021": {
+  "en": "33ae6d6de311",
+  "text": "végétation haute (plus de 3 m), part de la surface classée, 2021"
+ },
+ "layer.groenkaart_2018_2024.column.high_2024": {
+  "en": "cfd041abf9ad",
+  "text": "végétation haute (plus de 3 m), part de la surface classée, 2024"
+ },
+ "layer.groenkaart_2018_2024.column.low_2018": {
+  "en": "c724411226ba",
+  "text": "végétation basse (moins de 3 m), part, 2018"
+ },
+ "layer.groenkaart_2018_2024.column.low_2021": {
+  "en": "6999377435a7",
+  "text": "végétation basse (moins de 3 m), part, 2021"
+ },
+ "layer.groenkaart_2018_2024.column.low_2024": {
+  "en": "dd58d43c80bd",
+  "text": "végétation basse (moins de 3 m), part, 2024"
+ },
+ "layer.groenkaart_2018_2024.column.none_2018": {
+  "en": "6bd9c5f21c22",
+  "text": "sans végétation, part, 2018"
+ },
+ "layer.groenkaart_2018_2024.column.none_2021": {
+  "en": "a26c89bbf367",
+  "text": "sans végétation, part, 2021"
+ },
+ "layer.groenkaart_2018_2024.column.none_2024": {
+  "en": "541ef15128d2",
+  "text": "sans végétation, part, 2024"
+ },
+ "layer.groenkaart_2018_2024.column.px": {
+  "en": "b6d6553c2bd7",
+  "text": "pixels de 4 m échantillonnés dans le secteur"
+ },
+ "layer.groenkaart_2018_2024.column.valid_2018": {
+  "en": "b17f824becab",
+  "text": "part classée des pixels du secteur, 2018"
+ },
+ "layer.groenkaart_2018_2024.column.valid_2021": {
+  "en": "228fb4571d1e",
+  "text": "part classée des pixels du secteur, 2021"
+ },
+ "layer.groenkaart_2018_2024.column.valid_2024": {
+  "en": "fcffbf8893c2",
+  "text": "part classée des pixels du secteur, 2024"
+ },
+ "layer.groenkaart_2018_2024.limits.0": {
+  "en": "be5ef6129617",
+  "text": "Flandre seulement : Anvers et Gand. Bruxelles et la Wallonie n’ont pas deux éditions comparables."
+ },
+ "layer.groenkaart_2018_2024.limits.1": {
+  "en": "0fb7b1a6c51b",
+  "text": "L’été 2018 a connu une sécheresse : la végétation basse de cette édition ressort faible."
+ },
+ "layer.groenkaart_2018_2024.limits.2": {
+  "en": "3c0ac7037cd3",
+  "text": "Deux instruments qui concordent ou non, pas une erreur par rapport à la réalité : la carte aérienne a ses propres erreurs."
+ },
+ "layer.groenkaart_2018_2024.measures": {
+  "en": "5f4e79487a9f",
+  "text": "La part de chaque secteur en végétation haute (plus de 3 m), végétation basse, terres agricoles et sans végétation sur la carte flamande de la verdure tirée de photographies aériennes de 2018, 2021 et 2024. Passée par la même méthode que les images satellitaires, elle indique à quelle fréquence les verdicts du détecteur sont confirmés."
+ },
+ "layer.groenkaart_2018_2024.method": {
+  "en": "45db1985ed3a",
+  "text": "La carte à 1 m échantillonnée à 4 m (plus proche voisin) depuis le service web de couverture de l’ANB ; un pixel compte quand son centre tombe dans le secteur Statbel (Lambert 72)."
+ },
+ "layer.groenkaart_2018_2024.source": {
+  "en": "2791bc2991c9",
+  "text": "Groenkaart Vlaanderen (ANB, Digitaal Vlaanderen) : segmentation de photographies aériennes estivales, végétation haute selon la hauteur."
+ },
+ "layer.groenkaart_2018_2024.title": {
+  "en": "8165e415d111",
+  "text": "Groenkaart Vlaanderen par secteur, le contrôle externe du détecteur"
+ },
+ "layer.groenkaart_2018_2024.unit": {
+  "en": "e4f647132ab3",
+  "text": "part de la surface classée, 0–1"
+ },
+ "layer.heat_2022_2025.column.area_ha": {
+  "en": "b95497cf70b6",
+  "text": "superficie, hectares"
+ },
+ "layer.heat_2022_2025.column.excess_over_city_c": {
+  "en": "3bfedec7e2df",
+  "text": "cette température moins celle du secteur médian de la ville, °C"
+ },
+ "layer.heat_2022_2025.column.lst_summer_c": {
+  "en": "3d2110d66b8b",
+  "text": "température de surface estivale médiane 2022–2025, °C"
+ },
+ "layer.heat_2022_2025.column.population": {
+  "en": "50286229439e",
+  "text": "habitants"
+ },
+ "layer.heat_2022_2025.limits.0": {
+  "en": "e8211ce68f41",
+  "text": "Température de surface, pas température de l’air."
+ },
+ "layer.heat_2022_2025.limits.1": {
+  "en": "3d2397271218",
+  "text": "Utile pour classer les secteurs entre eux ; pas pour dire « la température a baissé » : le seuil pour un changement de température est ressorti à 1,32 °C, plus qu’un effet réaliste d’un parc, si bien que le refroidissement n’est pas mesuré."
+ },
+ "layer.heat_2022_2025.measures": {
+  "en": "c0af66adb61e",
+  "text": "La température de surface estivale de chaque secteur et son écart au-dessus ou au-dessous du secteur médian de la ville."
+ },
+ "layer.heat_2022_2025.method": {
+  "en": "844c2e7be081",
+  "text": "La médiane des scènes estivales 2022–2025, bande thermique de Landsat 8/9, nuages masqués avec QA_PIXEL."
+ },
+ "layer.heat_2022_2025.source": {
+  "en": "69a181f2ade8",
+  "text": "Landsat Collection 2 Level 2 (ST_B10), secteurs et population de Statbel."
+ },
+ "layer.heat_2022_2025.title": {
+  "en": "be9fffe2ef34",
+  "text": "Chaleur estivale"
+ },
+ "layer.heat_2022_2025.unit": {
+  "en": "11c4350690a3",
+  "text": "°C",
+  "same": true
+ },
+ "layer.monitoring_2024.column.area_ha": {
+  "en": "b95497cf70b6",
+  "text": "superficie, hectares"
+ },
+ "layer.monitoring_2024.column.bulletin": {
+  "en": "f95ac399fb02",
+  "text": "la lecture du bulletin de saison après les documents : construction, canopy loss, not confirmed ou gained (chantier, perte de couvert arboré, non confirmé, gain)"
+ },
+ "layer.monitoring_2024.column.comparable": {
+  "en": "2181b5e4a87d",
+  "text": "True si les zones témoins sont comparables"
+ },
+ "layer.monitoring_2024.column.dw_built": {
+  "en": "652e8715d90e",
+  "text": "variation du bâti, probabilité de classe (saisons à partir de 2025)"
+ },
+ "layer.monitoring_2024.column.dw_label": {
+  "en": "4ae785ef9a38",
+  "text": "la lecture, par le second instrument, d’une perte au-delà du seuil : construction, canopy loss ou not confirmed (chantier, perte de couvert arboré, non confirmé)"
+ },
+ "layer.monitoring_2024.column.dw_trees": {
+  "en": "d77592314daa",
+  "text": "variation du couvert arboré, probabilité de classe (saisons à partir de 2025)"
+ },
+ "layer.monitoring_2024.column.effect": {
+  "en": "17360b390e62",
+  "text": "la variation moins la variation moyenne des zones témoins"
+ },
+ "layer.monitoring_2024.column.gap": {
+  "en": "01913c6b5482",
+  "text": "indice de végétation avant, le secteur moins ses zones témoins"
+ },
+ "layer.monitoring_2024.column.ndvi_before": {
+  "en": "f2b0d43141d6",
+  "text": "indice de végétation, moyenne des étés de référence"
+ },
+ "layer.monitoring_2024.column.ndvi_delta": {
+  "en": "f1086f4e1f46",
+  "text": "été 2024 moins la référence"
+ },
+ "layer.monitoring_2024.column.population": {
+  "en": "50286229439e",
+  "text": "habitants"
+ },
+ "layer.monitoring_2024.limits.0": {
+  "en": "849ddc80f475",
+  "text": "Une saison est plus bruitée qu’une fenêtre de quatre ans : une perte n’est nommée que si deux instruments concordent."
+ },
+ "layer.monitoring_2024.limits.1": {
+  "en": "1c1dcc3db731",
+  "text": "La cause ne figure pas dans les chiffres : elle vient des documents, et sans document elle reste inconnue."
+ },
+ "layer.monitoring_2024.measures": {
+  "en": "77d9a5e4178e",
+  "text": "L’indice de végétation à l’été 2024 par rapport à une référence glissante des trois étés précédents, secteur par secteur, avec la lecture de chaque perte par le second instrument."
+ },
+ "layer.monitoring_2024.method": {
+  "en": "4502c621d594",
+  "text": "Différence de différences par rapport au même type de zones témoins, avec le seuil propre à la saison. Une perte au-delà du seuil est lue par Dynamic World (couvert arboré en baisse : perte de couvert arboré ; bâti en hausse : chantier ; ni l’un ni l’autre : non confirmé), puis par les documents."
+ },
+ "layer.monitoring_2024.source": {
+  "en": "dd04ef887dc2",
+  "text": "Copernicus Sentinel-2, Dynamic World V1 (arbres, bâti) pour la corroboration."
+ },
+ "layer.monitoring_2024.title": {
+  "en": "78b528a0a4eb",
+  "text": "Suivi, été 2024"
+ },
+ "layer.monitoring_2024.unit": {
+  "en": "21243a0f68f3",
+  "text": "unités NDVI ; probabilité de classe"
+ },
+ "layer.monitoring_2025.column.area_ha": {
+  "en": "b95497cf70b6",
+  "text": "superficie, hectares"
+ },
+ "layer.monitoring_2025.column.bulletin": {
+  "en": "f95ac399fb02",
+  "text": "la lecture du bulletin de saison après les documents : construction, canopy loss, not confirmed ou gained (chantier, perte de couvert arboré, non confirmé, gain)"
+ },
+ "layer.monitoring_2025.column.comparable": {
+  "en": "2181b5e4a87d",
+  "text": "True si les zones témoins sont comparables"
+ },
+ "layer.monitoring_2025.column.dw_built": {
+  "en": "652e8715d90e",
+  "text": "variation du bâti, probabilité de classe (saisons à partir de 2025)"
+ },
+ "layer.monitoring_2025.column.dw_label": {
+  "en": "4ae785ef9a38",
+  "text": "la lecture, par le second instrument, d’une perte au-delà du seuil : construction, canopy loss ou not confirmed (chantier, perte de couvert arboré, non confirmé)"
+ },
+ "layer.monitoring_2025.column.dw_trees": {
+  "en": "d77592314daa",
+  "text": "variation du couvert arboré, probabilité de classe (saisons à partir de 2025)"
+ },
+ "layer.monitoring_2025.column.effect": {
+  "en": "17360b390e62",
+  "text": "la variation moins la variation moyenne des zones témoins"
+ },
+ "layer.monitoring_2025.column.gap": {
+  "en": "01913c6b5482",
+  "text": "indice de végétation avant, le secteur moins ses zones témoins"
+ },
+ "layer.monitoring_2025.column.ndvi_before": {
+  "en": "f2b0d43141d6",
+  "text": "indice de végétation, moyenne des étés de référence"
+ },
+ "layer.monitoring_2025.column.ndvi_delta": {
+  "en": "49901da0faac",
+  "text": "été 2025 moins la référence"
+ },
+ "layer.monitoring_2025.column.population": {
+  "en": "50286229439e",
+  "text": "habitants"
+ },
+ "layer.monitoring_2025.limits.0": {
+  "en": "849ddc80f475",
+  "text": "Une saison est plus bruitée qu’une fenêtre de quatre ans : une perte n’est nommée que si deux instruments concordent."
+ },
+ "layer.monitoring_2025.limits.1": {
+  "en": "1c1dcc3db731",
+  "text": "La cause ne figure pas dans les chiffres : elle vient des documents, et sans document elle reste inconnue."
+ },
+ "layer.monitoring_2025.measures": {
+  "en": "83510bdf68f6",
+  "text": "L’indice de végétation à l’été 2025 par rapport à une référence glissante des trois étés précédents, secteur par secteur, avec la lecture de chaque perte par le second instrument."
+ },
+ "layer.monitoring_2025.method": {
+  "en": "4502c621d594",
+  "text": "Différence de différences par rapport au même type de zones témoins, avec le seuil propre à la saison. Une perte au-delà du seuil est lue par Dynamic World (couvert arboré en baisse : perte de couvert arboré ; bâti en hausse : chantier ; ni l’un ni l’autre : non confirmé), puis par les documents."
+ },
+ "layer.monitoring_2025.source": {
+  "en": "dd04ef887dc2",
+  "text": "Copernicus Sentinel-2, Dynamic World V1 (arbres, bâti) pour la corroboration."
+ },
+ "layer.monitoring_2025.title": {
+  "en": "a5f07b863b5a",
+  "text": "Suivi, été 2025"
+ },
+ "layer.monitoring_2025.unit": {
+  "en": "21243a0f68f3",
+  "text": "unités NDVI ; probabilité de classe"
+ },
+ "layer.monitoring_2026.column.area_ha": {
+  "en": "b95497cf70b6",
+  "text": "superficie, hectares"
+ },
+ "layer.monitoring_2026.column.bulletin": {
+  "en": "f95ac399fb02",
+  "text": "la lecture du bulletin de saison après les documents : construction, canopy loss, not confirmed ou gained (chantier, perte de couvert arboré, non confirmé, gain)"
+ },
+ "layer.monitoring_2026.column.comparable": {
+  "en": "2181b5e4a87d",
+  "text": "True si les zones témoins sont comparables"
+ },
+ "layer.monitoring_2026.column.dw_built": {
+  "en": "652e8715d90e",
+  "text": "variation du bâti, probabilité de classe (saisons à partir de 2025)"
+ },
+ "layer.monitoring_2026.column.dw_label": {
+  "en": "4ae785ef9a38",
+  "text": "la lecture, par le second instrument, d’une perte au-delà du seuil : construction, canopy loss ou not confirmed (chantier, perte de couvert arboré, non confirmé)"
+ },
+ "layer.monitoring_2026.column.dw_trees": {
+  "en": "d77592314daa",
+  "text": "variation du couvert arboré, probabilité de classe (saisons à partir de 2025)"
+ },
+ "layer.monitoring_2026.column.effect": {
+  "en": "17360b390e62",
+  "text": "la variation moins la variation moyenne des zones témoins"
+ },
+ "layer.monitoring_2026.column.gap": {
+  "en": "01913c6b5482",
+  "text": "indice de végétation avant, le secteur moins ses zones témoins"
+ },
+ "layer.monitoring_2026.column.ndvi_before": {
+  "en": "f2b0d43141d6",
+  "text": "indice de végétation, moyenne des étés de référence"
+ },
+ "layer.monitoring_2026.column.ndvi_delta": {
+  "en": "d9d06eafc05d",
+  "text": "été 2026 moins la référence"
+ },
+ "layer.monitoring_2026.column.population": {
+  "en": "50286229439e",
+  "text": "habitants"
+ },
+ "layer.monitoring_2026.limits.0": {
+  "en": "849ddc80f475",
+  "text": "Une saison est plus bruitée qu’une fenêtre de quatre ans : une perte n’est nommée que si deux instruments concordent."
+ },
+ "layer.monitoring_2026.limits.1": {
+  "en": "1c1dcc3db731",
+  "text": "La cause ne figure pas dans les chiffres : elle vient des documents, et sans document elle reste inconnue."
+ },
+ "layer.monitoring_2026.measures": {
+  "en": "cadd041119d9",
+  "text": "L’indice de végétation à l’été 2026 par rapport à une référence glissante des trois étés précédents, secteur par secteur, avec la lecture de chaque perte par le second instrument."
+ },
+ "layer.monitoring_2026.method": {
+  "en": "4502c621d594",
+  "text": "Différence de différences par rapport au même type de zones témoins, avec le seuil propre à la saison. Une perte au-delà du seuil est lue par Dynamic World (couvert arboré en baisse : perte de couvert arboré ; bâti en hausse : chantier ; ni l’un ni l’autre : non confirmé), puis par les documents."
+ },
+ "layer.monitoring_2026.source": {
+  "en": "dd04ef887dc2",
+  "text": "Copernicus Sentinel-2, Dynamic World V1 (arbres, bâti) pour la corroboration."
+ },
+ "layer.monitoring_2026.title": {
+  "en": "acc45f05d511",
+  "text": "Suivi, été 2026"
+ },
+ "layer.monitoring_2026.unit": {
+  "en": "21243a0f68f3",
+  "text": "unités NDVI ; probabilité de classe"
+ },
+ "layer.planner_coverage.column.coverage": {
+  "en": "e18926320025",
+  "text": "part de la demande couverte"
+ },
+ "layer.planner_coverage.column.kind": {
+  "en": "50b30221921c",
+  "text": "type d’objet"
+ },
+ "layer.planner_coverage.column.n": {
+  "en": "405be6dbd299",
+  "text": "objets ajoutés, 0–40"
+ },
+ "layer.planner_coverage.column.service_radius_m": {
+  "en": "f4f51d19fa20",
+  "text": "rayon de desserte, mètres"
+ },
+ "layer.planner_coverage.limits.0": {
+  "en": "379f2cea76a5",
+  "text": "Couverture des points de demande, pas des habitants."
+ },
+ "layer.planner_coverage.measures": {
+  "en": "5a65273c5aad",
+  "text": "La part de la demande à moins de 500 m d’un objet, aujourd’hui (n = 0) et après le placement de chaque rang : la courbe sous « Et avec N de plus ? »."
+ },
+ "layer.planner_coverage.method": {
+  "en": "36212fbc9056",
+  "text": "Issu du même calcul de City Planner que les emplacements classés."
+ },
+ "layer.planner_coverage.source": {
+  "en": "fe89a1261512",
+  "text": "Chaîne de traitement City Planner."
+ },
+ "layer.planner_coverage.title": {
+  "en": "ef86bdc6ee93",
+  "text": "Couverture après chacun des quarante prochains objets"
+ },
+ "layer.planner_coverage.unit": {
+  "en": "c660efed4ad7",
+  "text": "part de la demande, 0–1"
+ },
+ "layer.planner_points.column.equity_index": {
+  "en": "31393973adff",
+  "text": "poids de défavorisation, 0–1"
+ },
+ "layer.planner_points.column.gap_score": {
+  "en": "b16b02c9fcb0",
+  "text": "demande non satisfaite que l’emplacement couvre, 0–1"
+ },
+ "layer.planner_points.column.kind": {
+  "en": "50b30221921c",
+  "text": "type d’objet"
+ },
+ "layer.planner_points.column.lat": {
+  "en": "33041a6c4fd5",
+  "text": "latitude, WGS 84",
+  "same": true
+ },
+ "layer.planner_points.column.lon": {
+  "en": "5cc95ba02e10",
+  "text": "longitude, WGS 84",
+  "same": true
+ },
+ "layer.planner_points.column.map_gap_500m": {
+  "en": "21d9f7adca79",
+  "text": "parmi ceux à moins de 500 m, combien l’OpenStreetMap du planificateur n’avait pas à moins de 50 m : une lacune de la carte, pas de la rue (vide là où cet OSM n’a pas été conservé)"
+ },
+ "layer.planner_points.column.named_at": {
+  "en": "7163e796785a",
+  "text": "la date à laquelle les points ont été fixés"
+ },
+ "layer.planner_points.column.official_at_point": {
+  "en": "9acd68a3ff07",
+  "text": "objets du même type dans le registre propre de la ville, dans le rayon de contrôle de 50 m autour du point (vide : pas de registre de ce type)"
+ },
+ "layer.planner_points.column.official_within_500m": {
+  "en": "a28c563ab143",
+  "text": "la même chose à moins de 500 m, le rayon de desserte du planificateur"
+ },
+ "layer.planner_points.column.out_of_check": {
+  "en": "9a8b7ff884dd",
+  "text": "True si, selon le registre, un objet se trouvait déjà dans le rayon de contrôle : le point sort alors du contrôle points nommés contre points de comparaison"
+ },
+ "layer.planner_points.column.rank": {
+  "en": "5455a1c521f9",
+  "text": "rang selon le planificateur, 1–40"
+ },
+ "layer.planner_points.column.role": {
+  "en": "6ead13f9b844",
+  "text": "named (nommé, 1–10), comparison (comparaison, 11–20) ou further (suivant, 21–40)"
+ },
+ "layer.planner_points.column.score": {
+  "en": "7e3118a364aa",
+  "text": "score composite du planificateur"
+ },
+ "layer.planner_points.column.sector": {
+  "en": "d8dbb999595f",
+  "text": "secteur Statbel où se trouve l’emplacement (vide hors du jeu de données)"
+ },
+ "layer.planner_points.limits.0": {
+  "en": "27dbecbcd68f",
+  "text": "Une recommandation, pas une mesure."
+ },
+ "layer.planner_points.limits.1": {
+  "en": "ee8b892a5e80",
+  "text": "Les rangs 11–20 sont par construction un peu moins bons que 1–10 : comme groupe de comparaison, ils sont prudents."
+ },
+ "layer.planner_points.measures": {
+  "en": "edc8f0eb827a",
+  "text": "Pour quatorze types d’objets publics, les quarante meilleurs emplacements classés par City Planner ; les dix premiers de chaque type ont été nommés le 5 septembre 2026, les dix suivants leur servent de comparaison."
+ },
+ "layer.planner_points.method": {
+  "en": "edfe75711fea",
+  "text": "Un algorithme glouton de couverture maximale sur une grille de demande pondérée par la défavorisation, avec un rayon de desserte de 500 m : chaque emplacement suivant est celui qui couvre le plus de demande non satisfaite."
+ },
+ "layer.planner_points.source": {
+  "en": "5f59ec1ad477",
+  "text": "Chaîne de traitement City Planner : objets et points de demande d’OpenStreetMap, secteurs Statbel, défavorisation par secteur."
+ },
+ "layer.planner_points.title": {
+  "en": "ffedfc577ce5",
+  "text": "Où City Planner placerait les prochains objets"
+ },
+ "layer.planner_points.unit": {
+  "en": "468663a396b8",
+  "text": "rang ; coordonnées ; scores du planificateur"
+ },
+ "layer.population_age.column.adults_15_64": {
+  "en": "9c009327a160",
+  "text": "de 15 à 64 ans"
+ },
+ "layer.population_age.column.children_0_14": {
+  "en": "76967e0acc6f",
+  "text": "enfants de moins de 15 ans"
+ },
+ "layer.population_age.column.population_census": {
+  "en": "3a118ded753b",
+  "text": "habitants au recensement de 2021"
+ },
+ "layer.population_age.column.seniors_65_plus": {
+  "en": "05f0b831f0e8",
+  "text": "65 ans et plus"
+ },
+ "layer.population_age.column.seniors_80_plus": {
+  "en": "6dea7c5d123a",
+  "text": "80 ans et plus (inclus dans les 65+)"
+ },
+ "layer.population_age.column.share_children": {
+  "en": "3cd735ee6cb9",
+  "text": "enfants de moins de 15 ans, part des habitants"
+ },
+ "layer.population_age.column.share_seniors": {
+  "en": "e1a267376cff",
+  "text": "65 ans et plus, part des habitants"
+ },
+ "layer.population_age.limits.0": {
+  "en": "2c11592efc27",
+  "text": "La date du recensement, pas 2024."
+ },
+ "layer.population_age.limits.1": {
+  "en": "3840eccb2eb4",
+  "text": "Les petits secteurs peuvent être arrondis par Statbel pour protéger la vie privée."
+ },
+ "layer.population_age.measures": {
+  "en": "cb1e538e2266",
+  "text": "Enfants de moins de 15 ans, adultes, personnes de 65 ans et plus, et à part celles de 80 ans et plus."
+ },
+ "layer.population_age.method": {
+  "en": "cdba6f673018",
+  "text": "Le recensement de 2021 par secteur, sexe et âge, additionné en quatre tranches ; les 80+ font partie des 65+."
+ },
+ "layer.population_age.source": {
+  "en": "a304c0401d91",
+  "text": "Statbel, Census 2021, tableau TF_CENSUS_2021_S01."
+ },
+ "layer.population_age.title": {
+  "en": "cd8046268d5e",
+  "text": "Habitants par âge"
+ },
+ "layer.population_age.unit": {
+  "en": "14f4dd1502c5",
+  "text": "personnes ; part"
+ },
+ "layer.rule_3_30_300.column.canopy_share": {
+  "en": "b0ca8f97d29c",
+  "text": "part de couvert arboré du secteur (WorldCover)"
+ },
+ "layer.rule_3_30_300.column.near_park_share": {
+  "en": "e2d31cc0af4a",
+  "text": "part du secteur à moins de 300 m d’un parc de 1 ha ou plus"
+ },
+ "layer.rule_3_30_300.column.passes_30": {
+  "en": "f8c75a2851a2",
+  "text": "1 si couvert arboré ≥ 30 %"
+ },
+ "layer.rule_3_30_300.column.passes_300": {
+  "en": "66192c01c349",
+  "text": "1 si au moins la moitié du secteur est à moins de 300 m d’un parc"
+ },
+ "layer.rule_3_30_300.column.passes_both": {
+  "en": "93d347456396",
+  "text": "1 si les deux parties sont respectées"
+ },
+ "layer.rule_3_30_300.column.population": {
+  "en": "50286229439e",
+  "text": "habitants"
+ },
+ "layer.rule_3_30_300.limits.0": {
+  "en": "39ad5925bd28",
+  "text": "La première partie, trois arbres visibles depuis chaque fenêtre, n’est pas mesurée."
+ },
+ "layer.rule_3_30_300.limits.1": {
+  "en": "d5f076662460",
+  "text": "Les jardins privés et fermés ne sont pas distingués des parcs."
+ },
+ "layer.rule_3_30_300.measures": {
+  "en": "7fec7fb6365a",
+  "text": "Les deux parties mesurables de la règle : 30 % de couvert arboré dans le secteur, et un parc d’au moins un hectare à moins de 300 m."
+ },
+ "layer.rule_3_30_300.method": {
+  "en": "65800df48885",
+  "text": "Couvert arboré : la part de la classe arbres d’ESA WorldCover (10 m), respecté à partir de 30 %. Parcs : polygones nommés d’OpenStreetMap de 1 ha ou plus ; un secteur respecte le critère quand la moitié de sa superficie se trouve à moins de 300 m de l’un d’eux."
+ },
+ "layer.rule_3_30_300.source": {
+  "en": "8e7c88cd0498",
+  "text": "ESA WorldCover v200 (2021), parcs d’OpenStreetMap, secteurs et population de Statbel."
+ },
+ "layer.rule_3_30_300.title": {
+  "en": "9abbdf1c6f76",
+  "text": "La règle 3-30-300"
+ },
+ "layer.rule_3_30_300.unit": {
+  "en": "e22a1fda0e84",
+  "text": "part de la superficie ; indicateurs de respect"
+ },
+ "layer.sectors.column.area_ha": {
+  "en": "e1ed96d3e5a8",
+  "text": "superficie du secteur, hectares"
+ },
+ "layer.sectors.column.commune": {
+  "en": "a96c5c703a11",
+  "text": "commune où se trouve le secteur"
+ },
+ "layer.sectors.column.lat": {
+  "en": "d7bd7589ad8d",
+  "text": "latitude du centroïde, WGS 84"
+ },
+ "layer.sectors.column.lon": {
+  "en": "1739a9fb780e",
+  "text": "longitude du centroïde, WGS 84"
+ },
+ "layer.sectors.column.population": {
+  "en": "43a44fba5d1d",
+  "text": "habitants (Statbel)"
+ },
+ "layer.sectors.limits.0": {
+  "en": "27c6ad984bc2",
+  "text": "Les limites des secteurs ne sont pas incluses : téléchargez-les auprès de Statbel (secteurs statistiques, données ouvertes) et faites la jointure sur id."
+ },
+ "layer.sectors.measures": {
+  "en": "88ad7dc59607",
+  "text": "L’unité sur laquelle chaque couche est jointe : chaque secteur statistique avec sa commune, ses habitants, sa superficie et son centroïde."
+ },
+ "layer.sectors.method": {
+  "en": "e4276e28db3e",
+  "text": "Lu dans le jeu de données de la ville : secteurs Statbel avec leur population de 2024 ; le centroïde est celui du polygone."
+ },
+ "layer.sectors.source": {
+  "en": "a394a1d17f64",
+  "text": "Secteurs statistiques et population de Statbel."
+ },
+ "layer.sectors.title": {
+  "en": "25e8db463ef1",
+  "text": "Secteurs statistiques"
+ },
+ "layer.sectors.unit": {
+  "en": "d8aaee715139",
+  "text": "personnes, hectares, degrés (WGS 84)"
+ },
+ "layer.shops_access.column.bakery_in_sector": {
+  "en": "49fe7f953a27",
+  "text": "boulangeries dans le secteur"
+ },
+ "layer.shops_access.column.bakery_m": {
+  "en": "adbdc0a76861",
+  "text": "mètres jusqu’à la boulangerie la plus proche"
+ },
+ "layer.shops_access.column.cafe_in_sector": {
+  "en": "4ce4842ba345",
+  "text": "cafés dans le secteur"
+ },
+ "layer.shops_access.column.cafe_m": {
+  "en": "4e40368c72e9",
+  "text": "mètres jusqu’au café le plus proche"
+ },
+ "layer.shops_access.column.confectionery_in_sector": {
+  "en": "6068e37fb9d6",
+  "text": "confiseries dans le secteur"
+ },
+ "layer.shops_access.column.confectionery_m": {
+  "en": "706b6391355b",
+  "text": "mètres jusqu’à la confiserie la plus proche"
+ },
+ "layer.shops_access.limits.0": {
+  "en": "7259b1faccee",
+  "text": "Un état, pas un changement mesuré."
+ },
+ "layer.shops_access.limits.1": {
+  "en": "b73e633a3262",
+  "text": "Distance à vol d’oiseau, pas le long des rues."
+ },
+ "layer.shops_access.limits.2": {
+  "en": "29e8337a26bf",
+  "text": "OpenStreetMap n’est pas partout aussi complet."
+ },
+ "layer.shops_access.measures": {
+  "en": "cf735bad54ff",
+  "text": "La distance d’un secteur à la boulangerie, au café et à la confiserie les plus proches, et combien de chacun s’y trouvent."
+ },
+ "layer.shops_access.method": {
+  "en": "6f35fe0bc48a",
+  "text": "Du point représentatif du secteur jusqu’à l’établissement le plus proche de chaque type, où qu’il soit dans la ville, à vol d’oiseau (SpotFinder)."
+ },
+ "layer.shops_access.source": {
+  "en": "b7d4121494fc",
+  "text": "Chaîne de traitement SpotFinder : établissements d’OpenStreetMap, secteurs Statbel."
+ },
+ "layer.shops_access.title": {
+  "en": "f170cf514947",
+  "text": "Boulangeries, cafés et confiseries à portée"
+ },
+ "layer.shops_access.unit": {
+  "en": "313a51aef209",
+  "text": "mètres ; nombre"
+ },
+ "layer.t8_UEAPolygons_lau.column.area_tcc": {
+  "en": "a410bfd05e80",
+  "text": "couvert arboré (Woody Vegetation Layer) dans l’écosystème urbain, km², texte"
+ },
+ "layer.t8_UEAPolygons_lau.column.area_ugs": {
+  "en": "4d0fdb9f6d09",
+  "text": "espaces verts urbains (CLCplus, notre lecture de l’article 3, point 20) dans l’écosystème urbain, km²"
+ },
+ "layer.t8_UEAPolygons_lau.column.fid": {
+  "en": "7b4dc039a83d",
+  "text": "identifiant de l’entité, hérité de la couche UAL de GISCO, comme dans l’exemple"
+ },
+ "layer.t8_UEAPolygons_lau.column.geom": {
+  "en": "58badd76e7af",
+  "text": "le polygone de la commune, MULTIPOLYGON, EPSG:3035"
+ },
+ "layer.t8_UEAPolygons_lau.column.lau_id": {
+  "en": "de9a90e750e0",
+  "text": "code UAL (lau2024.BE.<code INS>)"
+ },
+ "layer.t8_UEAPolygons_lau.column.uea_id": {
+  "en": "7b5c6b0d0c3a",
+  "text": "identifiant de l’écosystème urbain, vide"
+ },
+ "layer.t8_UEAPolygons_lau.limits.0": {
+  "en": "a65b6dec6477",
+  "text": "Un projet sur des données de 2021 : la Woody Vegetation Layer 2021 n’est autorisée que pour les projets de plan."
+ },
+ "layer.t8_UEAPolygons_lau.limits.1": {
+  "en": "5e15f546508e",
+  "text": "area_ugs est vide dans l’exemple de la Commission ; ici, c’est notre lecture de l’article 3, point 20, en classes CLCplus."
+ },
+ "layer.t8_UEAPolygons_lau.limits.2": {
+  "en": "592c184d8a97",
+  "text": "uea_id est vide, comme dans l’exemple : c’est le pays qui l’attribue."
+ },
+ "layer.t8_UEAPolygons_lau.limits.3": {
+  "en": "7d3d35f8fdda",
+  "text": "Pas d’index spatial R-tree (facultatif en GeoPackage) ; un logiciel SIG en construit un à l’ouverture s’il en a besoin."
+ },
+ "layer.t8_UEAPolygons_lau.measures": {
+  "en": "93b1b8ec2e2c",
+  "text": "t8_UEAPolygons : un polygone par commune avec la superficie de couvert arboré (area_tcc) et d’espaces verts urbains (area_ugs) en km², l’écosystème urbain étant pris comme la commune entière. Le schéma de l’exemple même de la Commission, champ par champ."
+ },
+ "layer.t8_UEAPolygons_lau.method": {
+  "en": "7337821506e5",
+  "text": "Le polygone UAL de la commune (LAU 2024, Eurostat GISCO, EPSG:3035) avec les superficies des couches ci-dessus ; area_tcc en texte à cinq décimales, comme l’arrondit le script de la Commission."
+ },
+ "layer.t8_UEAPolygons_lau.source": {
+  "en": "0e586f110649",
+  "text": "Schéma : AEE et JRC, github.com/eea/NRR_Art8 (commit du 22 septembre 2026). Chiffres : reproduction par Frondia de ce script sur des données ouvertes."
+ },
+ "layer.t8_UEAPolygons_lau.title": {
+  "en": "bd4203677d0a",
+  "text": "Le fichier Reportnet, commune entière"
+ },
+ "layer.t8_UEAPolygons_lau.unit": {
+  "en": "0f7e2d923ee6",
+  "text": "km²",
+  "same": true
+ },
+ "layer.t8_UEAPolygons_ucuc.column.area_tcc": {
+  "en": "a410bfd05e80",
+  "text": "couvert arboré (Woody Vegetation Layer) dans l’écosystème urbain, km², texte"
+ },
+ "layer.t8_UEAPolygons_ucuc.column.area_ugs": {
+  "en": "4d0fdb9f6d09",
+  "text": "espaces verts urbains (CLCplus, notre lecture de l’article 3, point 20) dans l’écosystème urbain, km²"
+ },
+ "layer.t8_UEAPolygons_ucuc.column.fid": {
+  "en": "7b4dc039a83d",
+  "text": "identifiant de l’entité, hérité de la couche UAL de GISCO, comme dans l’exemple"
+ },
+ "layer.t8_UEAPolygons_ucuc.column.geom": {
+  "en": "58badd76e7af",
+  "text": "le polygone de la commune, MULTIPOLYGON, EPSG:3035"
+ },
+ "layer.t8_UEAPolygons_ucuc.column.lau_id": {
+  "en": "de9a90e750e0",
+  "text": "code UAL (lau2024.BE.<code INS>)"
+ },
+ "layer.t8_UEAPolygons_ucuc.column.uea_id": {
+  "en": "7b5c6b0d0c3a",
+  "text": "identifiant de l’écosystème urbain, vide"
+ },
+ "layer.t8_UEAPolygons_ucuc.limits.0": {
+  "en": "a65b6dec6477",
+  "text": "Un projet sur des données de 2021 : la Woody Vegetation Layer 2021 n’est autorisée que pour les projets de plan."
+ },
+ "layer.t8_UEAPolygons_ucuc.limits.1": {
+  "en": "5e15f546508e",
+  "text": "area_ugs est vide dans l’exemple de la Commission ; ici, c’est notre lecture de l’article 3, point 20, en classes CLCplus."
+ },
+ "layer.t8_UEAPolygons_ucuc.limits.2": {
+  "en": "592c184d8a97",
+  "text": "uea_id est vide, comme dans l’exemple : c’est le pays qui l’attribue."
+ },
+ "layer.t8_UEAPolygons_ucuc.limits.3": {
+  "en": "7d3d35f8fdda",
+  "text": "Pas d’index spatial R-tree (facultatif en GeoPackage) ; un logiciel SIG en construit un à l’ouverture s’il en a besoin."
+ },
+ "layer.t8_UEAPolygons_ucuc.measures": {
+  "en": "fb84286e9025",
+  "text": "t8_UEAPolygons : un polygone par commune avec la superficie de couvert arboré (area_tcc) et d’espaces verts urbains (area_ugs) en km², l’écosystème urbain étant pris comme les centres urbains et pôles urbains de la commune. Le schéma de l’exemple même de la Commission, champ par champ."
+ },
+ "layer.t8_UEAPolygons_ucuc.method": {
+  "en": "7337821506e5",
+  "text": "Le polygone UAL de la commune (LAU 2024, Eurostat GISCO, EPSG:3035) avec les superficies des couches ci-dessus ; area_tcc en texte à cinq décimales, comme l’arrondit le script de la Commission."
+ },
+ "layer.t8_UEAPolygons_ucuc.source": {
+  "en": "0e586f110649",
+  "text": "Schéma : AEE et JRC, github.com/eea/NRR_Art8 (commit du 22 septembre 2026). Chiffres : reproduction par Frondia de ce script sur des données ouvertes."
+ },
+ "layer.t8_UEAPolygons_ucuc.title": {
+  "en": "8216c808cb52",
+  "text": "Le fichier Reportnet, centres et pôles urbains"
+ },
+ "layer.t8_UEAPolygons_ucuc.unit": {
+  "en": "0f7e2d923ee6",
+  "text": "km²",
+  "same": true
+ },
+ "layer.trees_register.column.planted_2020": {
+  "en": "204a6f488d5b",
+  "text": "plantés en 2020"
+ },
+ "layer.trees_register.column.planted_2021": {
+  "en": "0eb06c83e6a3",
+  "text": "plantés en 2021"
+ },
+ "layer.trees_register.column.planted_2022": {
+  "en": "aa125243567d",
+  "text": "plantés en 2022"
+ },
+ "layer.trees_register.column.planted_2023": {
+  "en": "09a05167c6bd",
+  "text": "plantés en 2023"
+ },
+ "layer.trees_register.column.planted_2024": {
+  "en": "137b4fec14ed",
+  "text": "plantés en 2024"
+ },
+ "layer.trees_register.column.planted_2025": {
+  "en": "94a02218b960",
+  "text": "plantés en 2025"
+ },
+ "layer.trees_register.column.trees": {
+  "en": "aef57b26cab2",
+  "text": "arbres dans le registre"
+ },
+ "layer.trees_register.limits.0": {
+  "en": "74b35d14dbae",
+  "text": "Seulement les arbres que gère la ville : les jardins et les terrains privés n’y figurent pas."
+ },
+ "layer.trees_register.limits.1": {
+  "en": "c3fbaa793dce",
+  "text": "Un arbre qui sort du registre peut avoir été abattu, être mort ou avoir été réinventorié : le registre ne dit pas lequel."
+ },
+ "layer.trees_register.limits.2": {
+  "en": "c6d9e56955ea",
+  "text": "Une année de plantation n’existe que dans le registre de Gand, et pas pour chaque arbre."
+ },
+ "layer.trees_register.measures": {
+  "en": "6b9ce44366cb",
+  "text": "Combien des arbres gérés par la ville se trouvent dans chaque secteur, et à Gand combien ont été plantés chaque année de 2020 à 2025. Un instantané du registre est conservé, pour que les arbres qui en sortent puissent être comptés à partir du suivant."
+ },
+ "layer.trees_register.method": {
+  "en": "d4528621c72e",
+  "text": "Le point de chaque arbre placé dans son secteur Statbel ; l’année de plantation du registre lui-même (Gand)."
+ },
+ "layer.trees_register.source": {
+  "en": "394e2c04b3c5",
+  "text": "Le registre ouvert des arbres de la ville."
+ },
+ "layer.trees_register.title": {
+  "en": "d55e09e395bc",
+  "text": "Arbres du registre de la ville, par secteur"
+ },
+ "layer.trees_register.unit": {
+  "en": "29d807300a96",
+  "text": "arbres"
+ },
+ "layer.worldcover_2021.column.area_ha": {
+  "en": "b95497cf70b6",
+  "text": "superficie, hectares"
+ },
+ "layer.worldcover_2021.column.population": {
+  "en": "50286229439e",
+  "text": "habitants"
+ },
+ "layer.worldcover_2021.column.wc_bare": {
+  "en": "3ac105e14edc",
+  "text": "part de sol nu"
+ },
+ "layer.worldcover_2021.column.wc_built": {
+  "en": "df2cd3314d62",
+  "text": "part de bâti"
+ },
+ "layer.worldcover_2021.column.wc_grass": {
+  "en": "8f3bea4d5a87",
+  "text": "part d’herbe"
+ },
+ "layer.worldcover_2021.column.wc_shrub": {
+  "en": "05a10c00708a",
+  "text": "part d’arbustes"
+ },
+ "layer.worldcover_2021.column.wc_trees": {
+  "en": "c5d4ea5d7f47",
+  "text": "part d’arbres"
+ },
+ "layer.worldcover_2021.limits.0": {
+  "en": "1615a6d0033e",
+  "text": "Une seule époque, 2021 : ni état de référence ni changement."
+ },
+ "layer.worldcover_2021.limits.1": {
+  "en": "a647475c7dd0",
+  "text": "Des classes strictes face aux probabilités de Dynamic World : comparez le rang, pas la valeur."
+ },
+ "layer.worldcover_2021.measures": {
+  "en": "185baeeaec05",
+  "text": "La part de chaque secteur en arbres, arbustes, herbe, bâti et sol nu, selon une classification stricte à 10 m."
+ },
+ "layer.worldcover_2021.method": {
+  "en": "2d3c4a262331",
+  "text": "La moyenne du masque de chaque classe à l’intérieur du secteur."
+ },
+ "layer.worldcover_2021.source": {
+  "en": "2448f81a5efe",
+  "text": "ESA WorldCover v200, époque 2021."
+ },
+ "layer.worldcover_2021.title": {
+  "en": "091f3f50375d",
+  "text": "Parts selon ESA WorldCover, un contrôle de notre classe arbres"
+ },
+ "layer.worldcover_2021.unit": {
+  "en": "d8310668b0f8",
+  "text": "part de la superficie, 0–1"
+ },
+ "osm.geofabrik": {
+  "en": "d8465689b96f",
+  "text": "OpenStreetMap tiré d’un extrait Geofabrik de la Belgique, données au {stamps}."
+ },
+ "osm.overpass": {
+  "en": "8c82562557dd",
+  "text": "OpenStreetMap tiré de requêtes Overpass en direct, le {date} ou avant."
+ },
+ "osm.unrecorded": {
+  "en": "c8a5fc8cc031",
+  "text": "L’instantané d’OpenStreetMap qui a été lu n’a pas été consigné à l’époque."
+ },
+ "register.check_why.7": {
+  "en": "b2cadfeac3f5",
+  "text": "Les espaces verts de proximité et le verdissement des intérieurs d’îlots et des façades ne sont présentés que comme ce que le quartier « doit » recevoir, un besoin ou une priorité affichés, sans verbe d’engagement qui prévoie ou finance une modification de la couverture végétale."
+ },
+ "register.kind.gardens_agriculture": {
+  "en": "d2871d3e3c51",
+  "text": "Jardins et agriculture urbaine"
+ },
+ "register.kind.green_roofs_facades": {
+  "en": "b83456725366",
+  "text": "Toitures et façades vertes"
+ },
+ "register.kind.new_green_space": {
+  "en": "a9ee65e21163",
+  "text": "Nouvel espace vert"
+ },
+ "register.kind.other_greening": {
+  "en": "ceab11acb2f8",
+  "text": "Autre verdissement"
+ },
+ "register.kind.park_redesign": {
+  "en": "5e65c7619b81",
+  "text": "Réaménagement de parc"
+ },
+ "register.kind.restoration": {
+  "en": "6a3c6c77892d",
+  "text": "Restauration"
+ },
+ "register.kind.street_greening": {
+  "en": "b677a74b2972",
+  "text": "Verdissement des rues"
+ },
+ "register.kind.unsealing": {
+  "en": "e24f731147f4",
+  "text": "Désimperméabilisation"
+ },
+ "register.label.no": {
+  "en": "7880574e29cd",
+  "text": "Aucune mesure de verdissement"
+ },
+ "register.label.weak": {
+  "en": "be07a9a87c80",
+  "text": "Verdissement : simple objectif"
+ },
+ "register.label.yes": {
+  "en": "684a001d3b64",
+  "text": "S’engage à verdir"
+ },
+ "register.model_why.7": {
+  "en": "3172f016dbe9",
+  "text": "La clause « une suppression des friches urbaines réinvesties par des bâtiments et des espaces verts de proximité » engage à créer des espaces verts de proximité dans le cadre des investissements prévus, une action qui modifie la couverture végétale : le contrat reçoit donc l’étiquette « s’engage »."
+ },
+ "register.status.action": {
+  "en": "dd9061853d8b",
+  "text": "Engagement"
+ },
+ "register.status.intention": {
+  "en": "21dc3d5d4557",
+  "text": "Un objectif"
+ },
+ "register.status.state": {
+  "en": "a4ad1b677f9d",
+  "text": "Une description"
+ },
+ "register.why.1": {
+  "en": "f7501d289888",
+  "text": "Le texte ne contient que des chiffres de budget, des nombres de projets et des libellés de navigation ou de menu (p. ex. « Fonctionnement », « Périmètre d’intervention », « Commission de quartier »), sans description d’aucune action, intention ou état de verdissement : aucune mesure ne peut donc en être extraite."
+ },
+ "register.why.10": {
+  "en": "e9eb3e89ba0a",
+  "text": "Le texte n’est qu’un résumé budgétaire et une liste de titres de sections façon table des matières (p. ex. « Définition », « Périmètre d’intervention », « Dimension environnementale », « Historique et évolution »), sans description d’un véritable parc, d’une plantation, d’une désimperméabilisation ou d’une autre action de verdissement : rien ne compte donc comme mesure."
+ },
+ "register.why.11": {
+  "en": "c83afe0bdf86",
+  "text": "Le texte n’est que des chiffres de budget, des titres et des libellés de navigation (p. ex. « Chiffres-clés », « Programmes », « Financements »), sans aucune phrase décrivant une véritable action, intention ou état de verdissement : aucune mesure ne peut donc en être extraite."
+ },
+ "register.why.12": {
+  "en": "72b6c019ce53",
+  "text": "Le texte se borne à énumérer des chiffres de budget, des logements, une crèche et des projets socio-économiques, sans mention d’aucun parc, espace vert, plantation, désimperméabilisation ou autre action de verdissement."
+ },
+ "register.why.13": {
+  "en": "fd2c968ee396",
+  "text": "Le texte ne contient que des chiffres de budget et des éléments du menu de navigation (p. ex. « Programmes Financements Chiffres-clés »), sans description d’aucune véritable mesure de verdissement."
+ },
+ "register.why.14": {
+  "en": "4c0729b32473",
+  "text": "Le texte n’est qu’un menu de titres de sections et de chiffres budgétaires ou statistiques, sans phrase décrivant une mesure de verdissement précise : aucune citation ne peut donc valoir comme action, intention ou état pour un parc, une restauration, une désimperméabilisation, un verdissement de rue, un jardin ou une toiture verte."
+ },
+ "register.why.15": {
+  "en": "57538f700fcc",
+  "text": "Le texte se borne à énumérer des chiffres de budget, des sources de financement et des titres de menu ou de section (p. ex. « Définition », « Chiffres-clés »), sans description d’aucune véritable mesure de verdissement."
+ },
+ "register.why.16": {
+  "en": "503a0f213c67",
+  "text": "Le texte n’est que des chiffres de budget, des nombres de projets (logements, crèche, projets socio-économiques) et des libellés du menu de navigation, sans mention d’aucun parc, espace vert, plantation, désimperméabilisation ou mesure de verdissement semblable."
+ },
+ "register.why.17": {
+  "en": "0d957fd6f96f",
+  "text": "Le texte n’est que des chiffres de budget, des mentions de copyright et des titres de navigation ou de menu (p. ex. « Dimension environnementale », « Critères techniques et environnementaux »), sans aucune phrase décrivant une véritable action, intention ou état de verdissement : aucune mesure ne peut donc être citée."
+ },
+ "register.why.18": {
+  "en": "5c00976021c5",
+  "text": "Le texte ne contient que des chiffres de budget, des crédits et des libellés du menu de navigation (p. ex. « Dimension environnementale » comme titre de section), sans réelle description d’aucune action, intention ou état de verdissement."
+ },
+ "register.why.19": {
+  "en": "033749413ab8",
+  "text": "Le texte n’est que des chiffres de budget et des libellés du menu de navigation (p. ex. « Définition », « Fonctionnement », « Périmètre d’intervention »), sans phrase décrivant une quelconque mesure de verdissement : il n’y a donc rien à citer et le contrat reçoit l’étiquette « aucune mesure »."
+ },
+ "register.why.2": {
+  "en": "16ca8cc8b899",
+  "text": "Le texte n’est qu’une liste de chiffres de budget et de titres de sections (p. ex. « Dimension environnementale », « Critères techniques et environnementaux »), sans aucune phrase décrivant un véritable espace vert, une plantation, une désimperméabilisation ou une autre mesure touchant la végétation ou l’occupation du sol : aucune mesure n’a donc pu être citée."
+ },
+ "register.why.20": {
+  "en": "35d23d171149",
+  "text": "Le texte ne contient que des chiffres de budget et des titres de menu ou de navigation (p. ex. « 22 logements », « 7 projets socio-économiques », « Chiffres-clés »), sans mention d’aucune mesure de verdissement comme des parcs, des plantations, une désimperméabilisation ou des jardins."
+ },
+ "register.why.21": {
+  "en": "b33f2155e72a",
+  "text": "Le texte n’est qu’une liste de chiffres de budget et de titres de menu ou de section (p. ex. « Budgets Région », « Cinq types d’actions », « Fonctionnement »), sans description d’aucune action, intention ou état de verdissement concret."
+ },
+ "register.why.22": {
+  "en": "f1abb8a1f71f",
+  "text": "Le texte ne contient que des chiffres de budget et des titres du menu de navigation (p. ex. « Dimension environnementale » comme élément de menu), sans réelle description d’aucune mesure de verdissement réalisée, prévue ou existante."
+ },
+ "register.why.23": {
+  "en": "d8842f6c1f1d",
+  "text": "Le texte n’est qu’un tableau budgétaire et un menu de navigation fait de titres de sections (p. ex. « Fonctionnement », « Dimension environnementale », « Chiffres-clés »), sans aucune phrase décrivant une véritable action, intention ou état de verdissement."
+ },
+ "register.why.24": {
+  "en": "8e7c7c8726b2",
+  "text": "Le texte ne se compose que de chiffres de budget, de chiffres génériques d’équipements (« 18 logements 25 places dans 1 crèche 8 projets socio-économiques ») et de libellés du menu de navigation (« Définition », « Cinq types d’actions », « Fonctionnement », etc.), sans description d’aucune véritable action, intention ou état de verdissement."
+ },
+ "register.why.25": {
+  "en": "a7faf1ee81e4",
+  "text": "Le texte n’est qu’un résumé budgétaire et une liste de titres de menu ou de section (p. ex. « Dimension environnementale », « Critères techniques et environnementaux »), sans réelle description d’aucune action, intention ou état de verdissement d’un espace vert."
+ },
+ "register.why.26": {
+  "en": "db7ed5261120",
+  "text": "Le texte ne se compose que de chiffres de budget et de titres de navigation ou de menu, sans description d’aucune action, intention ou état de verdissement."
+ },
+ "register.why.27": {
+  "en": "d373e2e84f8b",
+  "text": "Le texte ne contient que des chiffres de budget et des libellés de menu ou de section (p. ex. « Dimension environnementale », « Critères techniques et environnementaux »), sans description concrète d’aucune action, intention ou état de verdissement : aucune mesure ne peut donc être identifiée."
+ },
+ "register.why.28": {
+  "en": "ab6ea0a34ab5",
+  "text": "Le texte ne contient que des chiffres de budget et des titres de sections de navigation ou de menu (p. ex. « Dimension environnementale », « Critères techniques et environnementaux »), sans description concrète d’aucune mesure de parc, de jardin, de désimperméabilisation ou de plantation : aucune mesure de verdissement ne peut donc être identifiée."
+ },
+ "register.why.29": {
+  "en": "ea4b3fe10150",
+  "text": "Le texte ne contient que des chiffres de budget, des titres de sections génériques (p. ex. « Dimension environnementale », « Chiffres-clés ») et des nombres de logements, de crèches et de projets socio-économiques, sans aucune phrase décrivant un parc, un jardin, un arbre, une désimperméabilisation ou une autre mesure de végétation ou de verdissement."
+ },
+ "register.why.3": {
+  "en": "b76cda0a2fc9",
+  "text": "Le texte ne contient que des chiffres de budget, des éléments du menu de navigation et des catégories génériques de contrat (p. ex. « Dimension environnementale », « Critères techniques et environnementaux »), sans description concrète d’aucune mesure de verdissement : il reçoit donc l’étiquette « aucune mesure »."
+ },
+ "register.why.30": {
+  "en": "9fbf2e1f3010",
+  "text": "Le texte n’est que des chiffres de budget, des crédits et des titres de navigation ou de menu (p. ex. « Définition », « Cinq types d’actions », « Chiffres-clés »), sans description d’aucune mesure de verdissement concrète : aucune mesure ne peut donc en être extraite."
+ },
+ "register.why.31": {
+  "en": "e98c5fabaab5",
+  "text": "Le texte n’est qu’un tableau budgétaire et une liste de titres de sections (Définition, Budgets, Programmes, Chiffres-clés, etc.), sans description d’aucune action, intention ou état de verdissement concret : aucune mesure ne peut donc en être extraite."
+ },
+ "register.why.32": {
+  "en": "8ba4b93608fa",
+  "text": "Le texte se borne à énumérer des budgets, des chiffres de logements, de crèches et de projets socio-économiques et des titres de menu génériques comme « Dimension environnementale », sans décrire aucune mesure de verdissement concrète."
+ },
+ "register.why.33": {
+  "en": "6f7cbb75c877",
+  "text": "Le texte n’est que des chiffres de budget et une liste de navigation façon table des matières (p. ex. « Chiffres-clés », « Partenariat », « Dimension environnementale »), sans aucune phrase décrivant une véritable action, intention ou état de verdissement."
+ },
+ "register.why.34": {
+  "en": "d397b787cb8d",
+  "text": "Le texte n’est que des chiffres de budget, des mentions de copyright et des titres de menu ou de catégorie (p. ex. « Dimension environnementale », « Critères techniques et environnementaux »), sans aucune phrase décrivant une véritable action, intention ou état de verdissement : aucune mesure ne peut donc en être extraite."
+ },
+ "register.why.35": {
+  "en": "1c5edbf5c8c3",
+  "text": "Le texte n’est que des chiffres de budget et des titres de menu ou de navigation (p. ex. « Fonctionnement Périmètre d’intervention Partenariat Dimension environnementale »), sans description d’aucun véritable parc, plantation, désimperméabilisation ou mesure de verdissement : aucune mesure ne peut donc être identifiée."
+ },
+ "register.why.36": {
+  "en": "94371a529fc7",
+  "text": "Le texte ne se compose que de chiffres de budget, de crédits photo et de titres de menu ou de section (p. ex. « Définition », « Cinq types d’actions », « Fonctionnement »), sans description d’aucune véritable mesure de verdissement."
+ },
+ "register.why.37": {
+  "en": "58082751f892",
+  "text": "Le texte n’est que des chiffres de budget et une liste de titres de navigation ou de section (p. ex. « Dimension environnementale » comme titre de menu), sans aucune véritable phrase décrivant un parc, une plantation, une désimperméabilisation, un jardin ou une autre action de verdissement : aucune mesure ne peut donc en être extraite."
+ },
+ "register.why.38": {
+  "en": "bec9e3f03b7e",
+  "text": "Le texte n’est qu’un tableau budgétaire et une liste de titres de navigation ou de section (p. ex. « Dimension environnementale », « Critères techniques et environnementaux »), sans aucune phrase décrivant une véritable action, intention ou état de verdissement."
+ },
+ "register.why.39": {
+  "en": "e1c89f86b6d2",
+  "text": "Le texte ne contient que des chiffres de budget, des titres de sections génériques (« Cinq types d’actions », « Dimension environnementale », « Critères techniques et environnementaux ») et des libellés de navigation, sans mention concrète d’aucun parc, espace vert, plantation, désimperméabilisation ou jardin."
+ },
+ "register.why.4": {
+  "en": "fce671dd9d90",
+  "text": "Le texte ne contient que des chiffres de budget et des libellés de navigation génériques (« Définition », « Fonctionnement », « Participation », etc.), sans description d’aucune action, intention ou état de verdissement concret : aucune mesure ne peut donc en être extraite."
+ },
+ "register.why.40": {
+  "en": "770819987d09",
+  "text": "Le texte ne contient que des chiffres de budget, des crédits et des titres de navigation ou de menu (p. ex. « Chiffres-clés », « Financements »), sans aucune phrase décrivant une action, une intention ou un état de verdissement touchant la végétation ou le sol imperméabilisé."
+ },
+ "register.why.41": {
+  "en": "16840534af8a",
+  "text": "Le texte n’est qu’un tableau budgétaire et un menu de navigation fait de titres de sections (p. ex. « Dimension environnementale », « Critères techniques et environnementaux »), sans action, intention ou état décrit qui touche la couverture végétale ou le sol imperméabilisé."
+ },
+ "register.why.42": {
+  "en": "fc81c6785123",
+  "text": "Le texte n’est qu’un tableau budgétaire et une liste de titres de menu ou de section (p. ex. « Cinq types d’actions », « Périmètre d’intervention »), sans phrase décrivant des parcs, des plantations, une désimperméabilisation ou toute autre action de verdissement."
+ },
+ "register.why.43": {
+  "en": "8a09593b72be",
+  "text": "Le texte ne contient que des chiffres de budget et des titres du menu de navigation (p. ex. « Dimension environnementale », « Chiffres-clés »), sans phrase décrivant une action, une intention ou un état de verdissement."
+ },
+ "register.why.44": {
+  "en": "0ee5cd13d83a",
+  "text": "Le texte n’est que des chiffres de budget, des nombres de logements, de crèches et de projets socio-économiques, et des libellés du menu de navigation (p. ex. « 25 logements 36 places dans 1 crèche 10 projets socio-économiques »), sans mention d’aucun parc, espace vert, plantation, désimperméabilisation ou autre action de verdissement."
+ },
+ "register.why.45": {
+  "en": "0b9db43ca204",
+  "text": "La clause « réhabiliter et végétaliser le square Jacques Frank et les voiries qui l’entourent » figure parmi les projets fermement engagés du contrat (« développe les projets suivants ») : c’est donc une action qui modifie la couverture végétale, et le contrat reçoit l’étiquette « s’engage »."
+ },
+ "register.why.46": {
+  "en": "40c23d271f22",
+  "text": "La clause « aménagement d’un parc » est un engagement ferme à créer un nouvel espace vert, ce qui décide l’étiquette « s’engage »."
+ },
+ "register.why.47": {
+  "en": "5a5528bb7054",
+  "text": "Le texte énumère des projets sociaux, de logement, de mobilité et d’espace public (logements, trottoirs, voiries, éclairages, restructuration d’un îlot autour d’un centre de jeunes), mais ne mentionne jamais de parcs, de plantations, de désimperméabilisation, de jardins ni de toitures ou façades vertes : il n’y a donc aucune mesure de verdissement."
+ },
+ "register.why.48": {
+  "en": "b19ba47fb6c6",
+  "text": "Le contrat s’engage à des actions de verdissement concrètes comme « plantation » dans les travaux d’espace public et « des potagers urbains » dans le réaménagement de la plaine Liverpool, deux projets fermes (verbes « intervenir » et « réaménager ») qui modifient la couverture végétale et justifient l’étiquette « s’engage »."
+ },
+ "register.why.49": {
+  "en": "ae31d5083f5e",
+  "text": "La clause « créer un petit jardin public et une fresque murale » est un engagement ferme à créer un nouvel espace vert, ce qui vaut au contrat l’étiquette « s’engage »."
+ },
+ "register.why.5": {
+  "en": "34fd037eaea0",
+  "text": "Le texte ne contient que des chiffres de budget et des titres de sections ou libellés de menu (p. ex. « Cinq types d’actions », « Fonctionnement », « Chiffres-clés »), sans description d’aucune véritable mesure de verdissement comme un parc, un jardin, une désimperméabilisation ou un projet de plantation."
+ },
+ "register.why.50": {
+  "en": "7d92c785d82a",
+  "text": "La citation « réaménager des trottoirs, voiries, carrefours, jardins et cours d’école » engage, avec le verbe ferme « réaménager », à réaménager des jardins (espaces verts) : c’est une mesure de verdissement de niveau action, et le contrat reçoit l’étiquette « s’engage » ; aucun autre passage ne mentionne de changement de la végétation ou du sol imperméabilisé (le reste porte sur des logements, des places, une crèche, la cohésion sociale et des programmes de formation)."
+ },
+ "register.why.51": {
+  "en": "b3542fd518d5",
+  "text": "La clause « intervenir sur les espaces publics: plantation, réfection de trottoirs et de voiries, installation de mobilier urbain » engage le contrat à planter dans le cadre des travaux d’espace public, une mesure au statut d’action qui modifie la couverture végétale."
+ },
+ "register.why.52": {
+  "en": "3a091a4f0754",
+  "text": "Le contrat s’engage à « intervenir sur les espaces publics: éclairages, plantations et réfection de voiries », une action ferme qui comprend la plantation de végétation et justifie l’étiquette « s’engage »."
+ },
+ "register.why.53": {
+  "en": "74a38057a50c",
+  "text": "La citation « plantation d’arbres » figure parmi les interventions engagées sur l’espace public (« intervenir sur les espaces publics »), et « créer un jardin pédagogique » est un engagement de projet ferme ; tous deux modifient la couverture végétale, ce qui vaut au contrat l’étiquette « s’engage »."
+ },
+ "register.why.54": {
+  "en": "d98d7b5ff9d8",
+  "text": "La citation « aménager un parc, des plaines de jeux et des espaces de rencontres » est un engagement ferme à créer un nouveau parc, une action de verdissement qui modifie la couverture végétale."
+ },
+ "register.why.55": {
+  "en": "1817abbfcb3f",
+  "text": "Le contrat énumère des projets comme la rénovation de trottoirs, le réaménagement de places selon le concept « espace merveilleux » (coloration, exotisme, mobilier urbain) et la création de rues semi-piétonnes ; aucun ne mentionne de végétation, d’arbres, de désimperméabilisation ou de création d’espace vert : il n’y a donc aucune mesure de verdissement."
+ },
+ "register.why.56": {
+  "en": "7c21ce103cae",
+  "text": "La citation « réhabiliter des espaces naturels délaissés et en friche, comme les talus des chemins de fer », avec les engagements à des plantations, à un « park system », à des toitures vertes et à des sols perméables, constitue des actions fermes qui modifient la couverture végétale et le sol imperméabilisé : le contrat reçoit donc l’étiquette « s’engage »."
+ },
+ "register.why.57": {
+  "en": "23df1d8b6a9e",
+  "text": "La citation « implanter des potagers urbains sur plusieurs sites du périmètre » est un engagement ferme (dans la liste des projets que le contrat « va développer ») qui crée un nouveau sol végétalisé ou cultivé, ce qui décide l’étiquette « s’engage »."
+ },
+ "register.why.58": {
+  "en": "abfaa5f1667e",
+  "text": "La citation « aménager une friche verte, le tracé historique de la Senne, en un parc longitudinal » est un engagement ferme (verbe d’engagement « aménager ») à transformer une friche en un nouveau parc, ce qui modifie la couverture végétale : le contrat reçoit donc l’étiquette « s’engage »."
+ },
+ "register.why.59": {
+  "en": "5058ec6e56c1",
+  "text": "La citation « réaménager complètement le square Apollo et les abords des logements en espaces publics conviviaux, ludiques et à haute qualité écologique » est une action fermement engagée (verbe « réaménager ») qui réaménage un parc : le contrat reçoit donc l’étiquette « s’engage »."
+ },
+ "register.why.6": {
+  "en": "d8d73a255399",
+  "text": "Le texte n’est que des chiffres de budget, des crédits et des libellés du menu de navigation (p. ex. « Chiffres-clés », « Programmes », « Financements »), sans mention d’aucun parc, espace vert, plantation, désimperméabilisation ou autre mesure liée à la végétation : aucune mesure de verdissement ne peut donc être identifiée."
+ },
+ "register.why.60": {
+  "en": "451b0e87fb99",
+  "text": "Le contrat s’engage fermement à « aménager un parc de 3.200 m2 en intérieur d’îlot » et à « développer un axe vert » avec une meilleure perméabilité des sols, deux engagements formulés avec des verbes d’engagement (« va développer », « aménager ») qui modifient la couverture végétale et le sol imperméabilisé, d’où l’étiquette « s’engage »."
+ },
+ "register.why.61": {
+  "en": "8f1940039c51",
+  "text": "Le contrat s’engage à des actions de verdissement, notamment « verduriser et restaurer la Place Desmet ainsi que plusieurs voiries », avec un verbe d’engagement ferme qui modifie la couverture végétale, ce qui remplit le critère de l’étiquette « s’engage »."
+ },
+ "register.why.62": {
+  "en": "5e151dfec41e",
+  "text": "Le contrat s’engage à des actions de verdissement concrètes comme « Le projet prévoit le réaménagement d’un grand parc urbain pour en faire un réservoir de biodiversité » et la création de plusieurs jardins dans les pôles Fontainas et Abattoir et rue Vandenbranden, des engagements fermes qui modifient la végétation ou le sol imperméabilisé : le contrat reçoit donc l’étiquette « s’engage »."
+ },
+ "register.why.63": {
+  "en": "1a0be8538036",
+  "text": "La citation « créer une promenade verte le long de la ligne de train 28 » engage (verbe « créer ») à aménager un nouvel espace vert, ce qui suffit à en faire une mesure de verdissement de niveau action et donne l’étiquette « s’engage »."
+ },
+ "register.why.64": {
+  "en": "c372abdfe283",
+  "text": "Le contrat s’engage à aménager des « jardins en intérieur d’îlots » dans le cadre des projets qu’il « va développer », un engagement ferme qui crée un nouvel espace vert : le contrat reçoit donc l’étiquette « s’engage »."
+ },
+ "register.why.65": {
+  "en": "479d7ecca3df",
+  "text": "Le contrat s’engage à des actions de verdissement concrètes comme « la création d’une espace vert » et « l’aménagement d’un nouvel espace vert collectif sur une friche dans la prolongation du parc de la Petite Senne », des projets fermes qui modifieront la couverture végétale : l’étiquette est donc « s’engage »."
+ },
+ "register.why.66": {
+  "en": "1fcb63c728d8",
+  "text": "Le texte décrit des logements, une reconversion économique, un réseau de mobilité douce et des solutions d’aménagement de voirie (« des interventions sur l’espace public du périmètre afin d’y mettre en place un réseau de déplacement doux, le traitement des traversées sous tunnel ainsi que la recherche de solutions d’aménagements pour la rue d’Aerschot »), mais ne mentionne ni parcs, ni plantations, ni désimperméabilisation, ni jardins, ni toitures ou façades vertes : il n’y a donc aucune mesure de verdissement."
+ },
+ "register.why.67": {
+  "en": "6d381da67265",
+  "text": "La clause « créer un espace vert en intérieur d’ilot accessible au quartier » est un engagement ferme (verbe « créer » dans une liste d’actions dont le quartier « bénéficiera ») à ajouter une nouvelle couverture verte, ce qui vaut au contrat l’étiquette « s’engage »."
+ },
+ "register.why.68": {
+  "en": "51c4a1015839",
+  "text": "La citation « créer au sein du projet phare du site de l’ECAM, un parc urbain en intérieur d’îlot » engage le contrat à créer réellement un nouveau parc urbain, une action ferme qui modifie la couverture végétale : le contrat reçoit donc l’étiquette « s’engage »."
+ },
+ "register.why.69": {
+  "en": "2860e657bb34",
+  "text": "La citation « le développement de potagers urbains sur la toiture du nouveau Colruyt » engage (par « développement ») à créer des potagers urbains végétalisés, une action qui modifie la couverture végétale, ce qui vaut au contrat l’étiquette « s’engage »."
+ },
+ "register.why.7": {
+  "en": "3172f016dbe9",
+  "text": "La clause « une suppression des friches urbaines réinvesties par des bâtiments et des espaces verts de proximité » engage à créer des espaces verts de proximité dans le cadre des investissements prévus, une action qui modifie la couverture végétale : le contrat reçoit donc l’étiquette « s’engage »."
+ },
+ "register.why.70": {
+  "en": "97c83ade3b9d",
+  "text": "Le contrat s’engage à des actions de verdissement concrètes comme « réaménagement du Square Delhaye et de ses alentours » et « plantation d’arbres sur la chaussée de Louvain », des engagements fermes qui modifient la couverture végétale, ce qui justifie l’étiquette « s’engage »."
+ },
+ "register.why.71": {
+  "en": "04fd419d2864",
+  "text": "La citation « aménager un cheminement vert, le long du tracé de la petite Senne » est un engagement ferme (aménager) à créer un cheminement vert, ce qui modifie la couverture végétale et donne l’étiquette « s’engage »."
+ },
+ "register.why.72": {
+  "en": "cf047ebaa869",
+  "text": "Le contrat s’engage à créer 5 « Pocket Park » et à transformer l’intérieur d’îlot abandonné L28A « en vue de la transformer en espace vert ouvert sur le quartier », deux actions fermes qui créent un nouvel espace vert : l’étiquette est donc « s’engage »."
+ },
+ "register.why.73": {
+  "en": "c9050a5ebf8e",
+  "text": "Le texte décrit seulement la situation du périmètre, les budgets et des ambitions générales comme « la qualité et l’augmentation de l’offre d’espace public destinés aux modes doux » et « la lutte contre l’insalubrité », dont aucune ne mentionne de parcs, d’arbres, de jardins, de désimperméabilisation ni de changement de la végétation ou du sol imperméabilisé."
+ },
+ "register.why.74": {
+  "en": "60d14614ec57",
+  "text": "La phrase « sera portée à l’aménagement...création de zones verdurisées » engage (futur « sera portée ») à créer des zones verdurisées dans le cadre du réaménagement de l’espace public, ce qui vaut mesure de verdissement de niveau action et détermine l’étiquette « s’engage »."
+ },
+ "register.why.75": {
+  "en": "d47cc6e45d25",
+  "text": "La seule mention d’espace vert, « un fort potentiel de création de logements, d’équipements et d’espaces verts », décrit un potentiel ou une occasion plutôt qu’un engagement ferme (aucun budget ni aucune action pour des espaces verts ne figure parmi les Infos énumérées) : elle ne compte donc que comme intention, ce qui vaut au contrat l’étiquette « un objectif »."
+ },
+ "register.why.76": {
+  "en": "b36fc91e5afa",
+  "text": "La seule mention liée au verdissement, « le site de l’abbaye, son espace vert et ses abords », nomme simplement un espace vert existant comme partie d’une zone stratégique, sans verbe d’engagement ni objectif de modifier la couverture végétale : le contrat ne contient donc aucune mesure de verdissement réalisable ou envisagée et reçoit l’étiquette « aucune mesure »."
+ },
+ "register.why.77": {
+  "en": "accc6969b6e9",
+  "text": "La citation « Le Pôle Ysewyn privilégiera la création d’un espace vert partagé entre le square Frison et la rue Ysewyn » est un engagement ferme (création de) qui modifie la couverture végétale : le contrat reçoit donc l’étiquette « s’engage »."
+ },
+ "register.why.78": {
+  "en": "bae70e70a0dd",
+  "text": "La citation « établira une « liaison douce »... avec différentes interventions sur l’espace public (maillage vert et bleu) » engage (établira) à des interventions concrètes de maillage vert et bleu sur l’espace public, ce qui compte comme mesure de verdissement au statut d’action et donne l’étiquette « s’engage »."
+ },
+ "register.why.79": {
+  "en": "ef28689e969f",
+  "text": "Le texte ne mentionne que la rénovation de salles de sport, d’une halle publique et d’une façade, une structure d’accueil de la petite enfance, des logements et des « opérations immobilières et d’espaces publics » non précisées pour plusieurs rues, sans mention de parcs, d’espaces verts, d’arbres, de jardins, de désimperméabilisation ou d’autres interventions sur la végétation : il n’y a donc aucune mesure de verdissement."
+ },
+ "register.why.8": {
+  "en": "c1b9b804575d",
+  "text": "Le texte n’est que des chiffres de budget et une liste de titres de sections (p. ex. « Dimension environnementale », « Critères techniques et environnementaux »), sans action, intention ou état décrit qui touche la couverture végétale ou le sol imperméabilisé."
+ },
+ "register.why.80": {
+  "en": "aacc4591ac8c",
+  "text": "Le texte ne cite « favoriser la nature en ville » que comme objectif général, sans s’engager à aucune action précise qui modifie la couverture végétale, et les éléments concrets du programme énumérés (crèche, équipement de proximité, rénovation de l’espace Vogler, garages vélo) ne sont pas des mesures de verdissement : le contrat reçoit donc l’étiquette « un objectif »."
+ },
+ "register.why.81": {
+  "en": "288116d9c0e4",
+  "text": "Le texte ne cite un meilleur accès aux espaces verts que comme objectif (« améliorer l’accessibilité aux espaces verts »), sans s’engager à aucune création, réaménagement, désimperméabilisation ou plantation concrète : cela vaut donc intention et non action."
+ },
+ "register.why.82": {
+  "en": "b61519590b6c",
+  "text": "La seule mention de verdissement, « la création d’espaces publics et d’espaces verts s’avérera donc nécessaire », présente la création d’espaces verts comme un besoin plutôt que comme un engagement ferme : le contrat reçoit donc l’étiquette « un objectif »."
+ },
+ "register.why.83": {
+  "en": "b05a870f122a",
+  "text": "Le texte énumère des priorités comme la qualité du logement, la gestion de l’espace public, l’emploi et la gestion durable de l’eau (« gérer durablement l’eau »), mais ne mentionne ni parcs, ni espaces verts, ni plantation d’arbres, ni désimperméabilisation, ni jardins, ni aucune mesure touchant la couverture végétale : aucune mesure de verdissement ne peut donc en être extraite."
+ },
+ "register.why.84": {
+  "en": "51e60e705dfb",
+  "text": "Le texte décrit seulement le périmètre, des chiffres de budget et des catégories administratives génériques comme « Dimension environnementale » en titre de section, sans mention concrète d’aucun parc, plantation d’arbres, jardin, désimperméabilisation ou autre changement de la végétation ou de l’occupation du sol."
+ },
+ "register.why.85": {
+  "en": "ecb125927417",
+  "text": "Le texte décrit seulement le périmètre, la friche ferroviaire (« une friche inaccessible »), l’affectation du sol, les budgets et des noms de lieux comme « Parc de l’Ouest », sans s’engager à ni viser aucune action de verdissement concrète comme la création, le réaménagement ou la désimperméabilisation d’un espace vert."
+ },
+ "register.why.86": {
+  "en": "8e2c282ee908",
+  "text": "Le texte décrit seulement le périmètre, les budgets et le caractère existant du site (« Le site du Peterbos constitue un parc habité... avec des dégagements visuels extrêmement généreux et verdurisés »), sans engagement, intention ni projet d’action de verdissement : il reçoit donc l’étiquette « aucune mesure »."
+ },
+ "register.why.87": {
+  "en": "ec7a49665451",
+  "text": "La citation « Le premier pôle prévoit des interventions dans certains espaces publics afin d’améliorer leur verdurisation » est un engagement ferme (« prévoit ») à des interventions de verdissement : le contrat reçoit donc l’étiquette « s’engage »."
+ },
+ "register.why.88": {
+  "en": "c627de9d26cf",
+  "text": "La seule référence au verdissement tournée vers l’avenir, « qualité des espaces publics, végétalisés, », ne cite la qualité de la végétation que comme un point à travailler, sans action engagée (ni verbe d’engagement ni projet précis) : le contrat reçoit donc l’étiquette « un objectif » et non « s’engage » ; les autres mentions de l’imperméabilisation et du manque d’espaces verts ne sont que des descriptions d’état relevant du diagnostic."
+ },
+ "register.why.89": {
+  "en": "00f150699cbd",
+  "text": "Le contrat s’engage à des travaux concrets qui modifient la végétation, comme « qui sera lui-même également réaménagé et équipé d’un kiosque » pour le Parc de Résédas et « la Rue Henri Deleers transformée en rue parc », des engagements fermes au futur : le contrat reçoit donc l’étiquette « s’engage »."
+ },
+ "register.why.9": {
+  "en": "555e8f844601",
+  "text": "Le texte n’est qu’un résumé budgétaire et un menu de navigation (copyrights, chiffres de budget, « 45 logements », « 9 projets socio-économiques », titres de menu comme « Programmes », « Financements », « Chiffres-clés »), sans description d’aucune véritable mesure de verdissement : il reçoit donc l’étiquette « aucune mesure »."
+ },
+ "register.why.90": {
+  "en": "70d279c82b3b",
+  "text": "La citation « le programme visera la création de logements de qualité ainsi que la déminéralisation et verdurisation de l’espace public au nord » engage le programme lui-même (par le verbe « visera », qui régit directement les travaux de verdissement et n’introduit pas une proposition de but) à désimperméabiliser et verdir l’espace public, une mesure de niveau action qui modifie la végétation ou le sol imperméabilisé : le contrat reçoit donc l’étiquette « s’engage »."
+ },
+ "register.why.91": {
+  "en": "d05b1dab559d",
+  "text": "Le texte ne présente le verdissement que comme un besoin ou un objectif (p. ex. « il convient de continuer à aérer et végétaliser la maille »), sans verbe d’engagement comme « sera aménagé » ou « seront plantés » : cela ne vaut donc qu’intention, ce qui donne l’étiquette « un objectif »."
+ },
+ "register.why.92": {
+  "en": "3ee516e87998",
+  "text": "Le texte s’engage à agir avec « la création d’espaces de jeux et d’espaces verts », inscrite comme priorité 7 du programme, ce qui compte selon les instructions comme un projet ferme (« création de ») et donne l’étiquette « s’engage » ; la mention du « parc de la Fonderie » n’est qu’un nom de lieu décrivant la limite du périmètre et est donc consignée comme mention d’« état »."
+ },
+ "register.why.93": {
+  "en": "42359ff61e43",
+  "text": "Le texte ne cite le parc du Bempt que comme l’un des huit axes thématiques du programme (« Le parc du Bempt, un espace vert pour le quartier »), sans verbe d’engagement précisant ce qui y sera réellement fait, ce qui en fait une intention et non une action, et décrit le sol imperméabilisé du quartier Katanga comme un état diagnostiqué : le contrat reçoit donc « un objectif » et non « s’engage »."
+ },
+ "register.why.94": {
+  "en": "ea1bd376db84",
+  "text": "Toutes les mentions liées au vert, comme « donnant la primauté à un vaste espace vert continu », décrivent l’état historique, déjà existant, du site (issu de phases de construction passées) plutôt qu’un engagement, une intention ou une action actuels dans le programme effectif du contrat, qui ne cite que la rénovation de bâtiments (façades, chauffage) et un « réaménagement d’espace public » générique sans engagement modifiant la végétation : l’étiquette est donc « aucune mesure »."
+ },
+ "register.why.95": {
+  "en": "37073a412756",
+  "text": "Le texte décrit seulement la situation, l’histoire et les pôles administratifs du quartier (Centralité de quartier, Enfance & jeunesse, Axe Victor Bourgeois, socio-économique, Coordination), sans engagement, intention ni description d’état touchant des changements de la couverture végétale ou du sol imperméabilisé ; des mentions comme « réserve naturelle du Zavelenberg » et « implantation de plusieurs équipements » sont des noms de lieux ou un contexte sans rapport, pas des mesures de verdissement."
+ },
+ "register.why.96": {
+  "en": "8cae3519ee33",
+  "text": "Le texte décrit seulement le périmètre géographique du quartier, son parc de logements, des chiffres de budget et une liste de titres de sections administratives, sans aucune clause qui engage, vise ou même décrive un changement de la végétation ou du sol imperméabilisé."
+ },
+ "register.why.97": {
+  "en": "aeb5aaa93093",
+  "text": "La seule mention liée au verdissement, « plusieurs espaces verts », décrit simplement des équipements existants du quartier, sans action prévue ni intention de créer, de réaménager ou de verdir un nouvel espace : le contrat ne contient donc aucune mesure de verdissement engagée et reçoit l’étiquette « aucune mesure »."
+ },
+ "register.why.98": {
+  "en": "bf71431fffc5",
+  "text": "Le texte n’est qu’un résumé budgétaire et une liste de titres de sections façon table des matières (p. ex. « Dimension environnementale », « Critères techniques et environnementaux »), sans description concrète d’aucune action, intention ou état de verdissement : aucune mesure ne peut donc en être extraite."
+ },
+ "threshold.article8": {
+  "en": "27856218bbc2",
+  "text": "Indice de végétation {ndvi}, couvert arboré {trees}, bâti {built} : le 95e centile de la distribution sous hypothèse nulle propre à ce calcul — chacun des {n} secteurs comparables joue une fois le rôle d’« intervention » face à ses propres {controls} zones témoins, et les effets qui en sortent ne sont que du bruit."
+ },
+ "threshold.balance": {
+  "en": "77d2f72ddf21",
+  "text": "Espaces verts {green}, couvert arboré {trees}, bâti {built} (part de la superficie du secteur) : le 95e centile de la distribution sous hypothèse nulle propre à ce calcul, pour chaque classe et chaque saison séparément — chaque secteur joue une fois le rôle d’« intervention » face à ses {controls} zones témoins."
+ },
+ "threshold.groenkaart": {
+  "en": "eb50e32134a5",
+  "text": "Végétation haute {high}, toute la végétation {green} (part du secteur) : la carte aérienne passée par la même méthode, 2018 contre la moyenne de 2021 et 2024, les mêmes {controls} zones témoins, sa propre distribution sous hypothèse nulle. Face au détecteur : couvert arboré — accord sur « dans le bruit » pour {cs_k} sur {cs_n}, sur « changé » pour {cc_k} sur {cc_n} ; indice de végétation — {gs_k} sur {gs_n} et {gc_k} sur {gc_n}."
+ },
+ "threshold.level": {
+  "en": "9dde8eeb5f6f",
+  "text": "Pas de seuil de significativité : un niveau pour une année, pas un changement. Le format de la Commission elle-même ne comporte pas de seuil non plus ; savoir si quelque chose a changé au-delà du bruit relève de la couche sous « Ce qui a changé »."
+ },
+ "threshold.monitoring": {
+  "en": "368dc37bc247",
+  "text": "{thr} : le 95e centile de la distribution sous hypothèse nulle propre à la saison (référence {base} contre l’été {season}, chaque secteur jouant une fois le rôle d’« intervention »). Une perte n’est publiée que si le second instrument (Dynamic World) concorde."
+ },
+ "threshold.none": {
+  "en": "4399f5da28ab",
+  "text": "Pas de seuil de significativité : cette couche est un état ou une recommandation, pas un changement mesuré."
+ },
+ "threshold.trees": {
+  "en": "5c5f2f8afc50",
+  "text": "Pas de seuil de significativité : une ligne d’exécution, ce qui a été planté et conservé, pas un effet mesuré."
+ }
+}

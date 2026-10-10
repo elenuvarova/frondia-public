@@ -1,0 +1,19 @@
+─── Building liege boundary ───
+  Loading sector boundaries …
+  Brussels polygon buffered +2000 m
+
+─── Building walking network from data/raw/belgium-latest.osm.pbf ───
+  osmium: belgium-latest.osm.pbf → box 5.487926,50.538562,5.710641,50.710659 → highways → liege_walk_highways.osm
+  walk filter dropped 69,148 of 461,730 directed edges
+
+─── Adding travel_time attributes ───
+  Nodes: 27,278
+  Edges: 73,546
+  Avg edge length: 65.6 m
+
+─── Saving liege_walk.graphml ───
+  ✓ 36.9 MB
+  ✓ Stats written to graph_stats.json
+
+Next steps complete!
+Next: python 05_score.py --city liege

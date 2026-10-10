@@ -1,0 +1,1878 @@
+[
+ {
+  "id": 1,
+  "name": "Fontainas",
+  "commune": "Bruxelles",
+  "years": [
+   1994,
+   1998
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 2,
+  "name": "Alhambra",
+  "commune": "Bruxelles",
+  "years": [
+   1994,
+   1998
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 3,
+  "name": "Gilles",
+  "commune": "Saint-Gilles",
+  "years": [
+   1994,
+   1998
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 4,
+  "name": "Gray",
+  "commune": "Ixelles",
+  "years": [
+   1994,
+   1998
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 5,
+  "name": "Baptiste",
+  "commune": "Molenbeek",
+  "years": [
+   1994,
+   1998
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 6,
+  "name": "Wielemans",
+  "commune": "Forest",
+  "years": [
+   1994,
+   1998
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 7,
+  "name": "Christine",
+  "commune": "Bruxelles",
+  "years": [
+   1997,
+   2001
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Le quartier de la rue Marie-Christine doit prioritairement bénéficier d'investissements qui permettront : une suppression des friches urbaines réinvesties par des bâtiments et des espaces verts de proximité. un réaménagement des espaces publics - tels que la Place de la Maison Rouge qui doit redevenir un point de repère dans le quartier - mais aussi la réaménagement de certains carrefours dans ou ",
+    "terms": [
+     "espaces verts",
+     "verduris",
+     "verdurisation"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 8,
+  "name": "Pavillon",
+  "commune": "Schaerbeek",
+  "years": [
+   1997,
+   2001
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 9,
+  "name": "Rempart des Moines",
+  "commune": "Bruxelles",
+  "years": [
+   1997,
+   2001
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 10,
+  "name": "Rosée",
+  "commune": "Anderlecht",
+  "years": [
+   1997,
+   2001
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 11,
+  "name": "Duchesse de Brabant",
+  "commune": "Molenbeek",
+  "years": [
+   1999,
+   2003
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 12,
+  "name": "Révision",
+  "commune": "Anderlecht",
+  "years": [
+   1999,
+   2003
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 13,
+  "name": "Bossuet",
+  "commune": "Saint-Josse",
+  "years": [
+   1999,
+   2003
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 14,
+  "name": "Nord",
+  "commune": "Bruxelles",
+  "years": [
+   1999,
+   2003
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 15,
+  "name": "Brabant",
+  "commune": "Schaerbeek",
+  "years": [
+   2000,
+   2004
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 16,
+  "name": "Etangs Noirs",
+  "commune": "Molenbeek",
+  "years": [
+   2000,
+   2004
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 17,
+  "name": "Aviation",
+  "commune": "Anderlecht",
+  "years": [
+   2000,
+   2004
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 18,
+  "name": "Rue Verte",
+  "commune": "Saint-Josse",
+  "years": [
+   2000,
+   2004
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 19,
+  "name": "Tanneurs",
+  "commune": "Bruxelles",
+  "years": [
+   2000,
+   2004
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 20,
+  "name": "Aerschot",
+  "commune": "Schaerbeek",
+  "years": [
+   2001,
+   2005
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 21,
+  "name": "Chimiste",
+  "commune": "Anderlecht",
+  "years": [
+   2001,
+   2005
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 22,
+  "name": "Fonderie Pierron",
+  "commune": "Molenbeek",
+  "years": [
+   2001,
+   2005
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 23,
+  "name": "Square Delhaye",
+  "commune": "Saint-Josse",
+  "years": [
+   2001,
+   2005
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 24,
+  "name": "Théodore Verhaegen",
+  "commune": "Saint-Gilles",
+  "years": [
+   2001,
+   2005
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 25,
+  "name": "Blyckaerts",
+  "commune": "Ixelles",
+  "years": [
+   2002,
+   2006
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 26,
+  "name": "Heyvaert",
+  "commune": "Molenbeek",
+  "years": [
+   2002,
+   2006
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 27,
+  "name": "Jérusalem",
+  "commune": "Schaerbeek",
+  "years": [
+   2002,
+   2006
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 28,
+  "name": "Ponts",
+  "commune": "Bruxelles",
+  "years": [
+   2002,
+   2006
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 29,
+  "name": "Monnaies",
+  "commune": "Saint-Gilles",
+  "years": [
+   2003,
+   2007
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 30,
+  "name": "Quartier Maritime",
+  "commune": "Molenbeek",
+  "years": [
+   2003,
+   2007
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 31,
+  "name": "Van Artevelde",
+  "commune": "Bruxelles",
+  "years": [
+   2003,
+   2007
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 32,
+  "name": "Vanhuffel",
+  "commune": "Koekelberg",
+  "years": [
+   2003,
+   2007
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 33,
+  "name": "Conseil",
+  "commune": "Anderlecht",
+  "years": [
+   2004,
+   2008
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 34,
+  "name": "Meuse",
+  "commune": "Molenbeek",
+  "years": [
+   2004,
+   2008
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 35,
+  "name": "Malibran",
+  "commune": "Ixelles",
+  "years": [
+   2004,
+   2008
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 36,
+  "name": "Princesse Elisabeth",
+  "commune": "Schaerbeek",
+  "years": [
+   2004,
+   2008
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 37,
+  "name": "Mommaerts",
+  "commune": "Molenbeek",
+  "years": [
+   2005,
+   2009
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 38,
+  "name": "Wayez",
+  "commune": "Anderlecht",
+  "years": [
+   2005,
+   2009
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 39,
+  "name": "Kessels",
+  "commune": "Schaerbeek",
+  "years": [
+   2005,
+   2009
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 40,
+  "name": "Léopold à Léopold",
+  "commune": "Bruxelles",
+  "years": [
+   2005,
+   2009
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 41,
+  "name": "Méridien de Bruxelles",
+  "commune": "Saint-Josse",
+  "years": [
+   2006,
+   2010
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 42,
+  "name": "Les Quais",
+  "commune": "Bruxelles",
+  "years": [
+   2006,
+   2010
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 43,
+  "name": "Coeur de Jette",
+  "commune": "Jette",
+  "years": [
+   2006,
+   2010
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 44,
+  "name": "Denis",
+  "commune": "Forest",
+  "years": [
+   2006,
+   2010
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 45,
+  "name": "Fontainas",
+  "commune": "Saint-Gilles",
+  "years": [
+   2007,
+   2011
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Le contrat de quartier développe les projets suivants : rénover des immeubles pour y créer 26 logements à loyer modéré; réhabiliter et végétaliser le square Jacques Frank et les voiries qui l'entourent; créer une halte garderie avec un accès au Parc Germeau; étendre le centre sportif; créer une boutique informatique pour reconditionner du matériel et dispenser des formations; inciter les habitants",
+    "terms": [
+     "parc",
+     "verduris",
+     "verdurisation",
+     "végétalis"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 46,
+  "name": "Rives Ouest",
+  "commune": "Molenbeek",
+  "years": [
+   2007,
+   2011
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Le contrat de quartier développe les projets suivants : réaliser 55 nouveaux logements, dont 25 conventionnés; intervenir sur les espaces publics: réaménagement d'une place et d'un carrefour, aménagement d'un parc, réfection de trottoirs et voiries, installation de mobilier urbain, travaux pour lutter contre les nuisances du trafic automobile; créer deux crèches et un centre de formation, fournir ",
+    "terms": [
+     "parc"
+    ]
+   }
+  ],
+  "state_only": [
+   {
+    "quote": "Les espaces verts y sont quasi-inexistants.",
+    "terms": [
+     "espaces verts"
+    ]
+   }
+  ],
+  "needs_review": false
+ },
+ {
+  "id": 47,
+  "name": "Maison Rouge",
+  "commune": "Bruxelles",
+  "years": [
+   2007,
+   2011
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 48,
+  "name": "Lemmens",
+  "commune": "Anderlecht",
+  "years": [
+   2007,
+   2011
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Il développe les projets suivants: rénover 29 logements, dont 25 pour ménages à faible revenu et 4 logements moyens; intervenir sur les espaces publics: plantation, réfection de façades, trottoirs et voiries, installation de mobilier urbain et de poubelles, travaux sur les éclairages et la signalisation, et création de fresques par des artistes locaux; réaménager la plaine de Liverpool en terrain ",
+    "terms": [
+     "parc",
+     "plantation",
+     "potager"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 49,
+  "name": "Rouppe",
+  "commune": "Bruxelles",
+  "years": [
+   2008,
+   2012
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Il développe les projets suivants: réaliser 28 nouveaux logements pour ménages à faible revenu; soutenir la rénovation de 50 logements privés en subsidiant les travaux et en les faisant effectuer par des personnes en insertion socioprofessionnelle; accorder des primes pour la rénovation de devantures commerciales; intervenir sur les espaces publics: plantation, réfection de façades, trottoirs et v",
+    "terms": [
+     "jardin",
+     "plantation"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 50,
+  "name": "Antoine",
+  "commune": "Forest",
+  "years": [
+   2008,
+   2012
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Le contrat de quartier développe les projets suivants: réaliser 25 nouveaux logements (dont 17 logements via un accord de coopération entre le fédéral et la région) pour ménages à faible revenu; réaménager des trottoirs, voiries, carrefours, jardins et cours d'école; réaménager les places Orban et Saint-Antoine; réaménager la maison de quartier Saint-Antoine; construire une crèche et une nouvelle ",
+    "terms": [
+     "jardin"
+    ]
+   }
+  ],
+  "state_only": [
+   {
+    "quote": "Ce contrat couvre un périmètre délimité par les avenues Van Volxem, Wielemans-Ceuppens et du Parc, et les limites communales entre Forest et Saint-Gilles.",
+    "terms": [
+     "parc"
+    ]
+   }
+  ],
+  "needs_review": false
+ },
+ {
+  "id": 51,
+  "name": "Lazare",
+  "commune": "Molenbeek",
+  "years": [
+   2008,
+   2012
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Le contrat de quartier développe les projets suivants: réaliser 82 nouveaux logements, dont 46 conventionnés; intervenir sur les espaces publics: plantation, réfection de trottoirs et de voiries, installation de mobilier urbain; créer une crèche, une antenne de quartier, un jardin récréatif avec un pavillon et un espace extrascolaire; accompagner les jeunes du quartier dans leur parcours professio",
+    "terms": [
+     "jardin",
+     "parc",
+     "plantation"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 52,
+  "name": "Portaels",
+  "commune": "Schaerbeek",
+  "years": [
+   2008,
+   2012
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Le contrat de quartier développe les projets suivants: réaliser 26 nouveaux logements, dont 12 seront conventionnés; intervenir sur les espaces publics: éclairages, plantations et réfection de voiries, amélioration des parcours vers le Parc Josaphat et vers la promenade verte (rue Monplaisir), renforcement de l'axe patrimonial Sainte-Marie et traversée de la place Verboekhoven; créer une crèche et",
+    "terms": [
+     "parc",
+     "plantation"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 53,
+  "name": "Vue",
+  "commune": "Molenbeek",
+  "years": [
+   2009,
+   2013
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Le contrat de quartier développe les projets suivants: réaliser 57 nouveaux logements, dont 34 conventionnés; intervenir sur les espaces publics: éclairages, plantation d'arbres, réfection de voiries, réaménagement de la Place Communale et placement de mobilier urbain; créer un jardin pédagogique, rendre plus attractifs les espaces verts et les espaces publics; organiser des actions collectives de",
+    "terms": [
+     "arbre",
+     "espaces verts",
+     "jardin",
+     "plantation",
+     "végétalis"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 54,
+  "name": "Pont de Luttre",
+  "commune": "Forest",
+  "years": [
+   2009,
+   2013
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Le contrat de quartier développe les projets suivants : autour d'un même pôle, construire un restaurant pédagogique, une crèche, un centre de jour pour personnes âgées et un espace jeunesse/maison de quartier; aménager un parc, des plaines de jeux et des espaces de rencontres; réaménager certains carrefours et voiries; installer un éclairage scénographique du pont de Luttre; rénover et étendre le ",
+    "terms": [
+     "espaces verts",
+     "parc"
+    ]
+   },
+   {
+    "quote": "Le recours au Maître architecte bruxellois est prévu pour le développement du parc et ses alentours. &copy; Serge Brison - urban.brussels - 2016 &copy; Marc Detiffe - urban.brussels - 2014 &copy; Serge Brison - urban.brussels - 2016 &copy; Serge Brison - urban.brussels - 2016 Budgets Région 9 964 549,18 &euro; Forest 1 100 103,38 &euro; Beliris 2 750 000,00 &euro; Total 13 814 652,56 &euro; Infos ",
+    "terms": [
+     "parc"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 55,
+  "name": "Alsemberg",
+  "commune": "Saint-Gilles",
+  "years": [
+   2009,
+   2013
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [
+   {
+    "quote": "Les îlots situés entre l'avenue du Parc et la chaussée d'Alsemberg sont inclus dans le périmètre, qui atteint la limite du contrat de quartier « Fontainas » en cours de réalisation. &copy; Bruno Veyckemans - urban.brussels - 2013 &copy; Bruno Veyckemans - urban.brussels - 2013 &copy; Bruno Veyckemans - urban.brussels - 2013 &copy; Bruno Veyckemans - urban.brussels - 2013 Budgets Région 9 275 106,1",
+    "terms": [
+     "parc"
+    ]
+   }
+  ],
+  "needs_review": false
+ },
+ {
+  "id": 56,
+  "name": "Sceptre",
+  "commune": "Ixelles",
+  "years": [
+   2009,
+   2013
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Le contrat de quartier développe les projets suivants : favoriser les rénovations et les constructions performantes en énergie; améliorer les connexions entre les sous-quartiers, en créant des parcours sécurisés et en favorisant la mobilité active; réhabiliter des espaces naturels délaissés et en friche, comme les talus des chemins de fer; renforcer le maillage vert par des plantations dans l'espa",
+    "terms": [
+     "maillage vert",
+     "parc",
+     "plantation",
+     "végétalis"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 57,
+  "name": "Midi",
+  "commune": "Anderlecht",
+  "years": [
+   2010,
+   2014
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Le contrat de Quartier Durable va développer les projets suivants: créer du logement social selon les normes passives ou très basse énergie; implanter des potagers urbains sur plusieurs sites du périmètre; créer un restaurant social où seront servis les légumes issus des potagers; assainir et réaménager les espaces verts aux pieds des logements sociaux; réaménager l'espace public; améliorer la mob",
+    "terms": [
+     "espaces verts",
+     "potager"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 58,
+  "name": "Masui",
+  "commune": "Bruxelles",
+  "years": [
+   2010,
+   2014
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Le contrat de Quartier Durable va développer les projets suivants: aménager une friche verte, le tracé historique de la Senne, en un parc longitudinal formant un couloir de mobilité active entre le quartier Masui et le centre-ville; autour de ce nouvel « axe Senne », créer ou rénover plus de 40 logements aux normes passives ou très basse énergie, et aménager des potagers collectifs; lutter contre ",
+    "terms": [
+     "parc",
+     "potager"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 59,
+  "name": "Helmet",
+  "commune": "Schaerbeek",
+  "years": [
+   2010,
+   2014
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Le contrat de quartier durable va développer les projets suivants: construire des logements et une crèche; réaménager complètement le square Apollo et les abords des logements en espaces publics conviviaux, ludiques et à haute qualité écologique; y intégrer des équipements communautaires et des locaux pour personnes âgées; activer et verduriser plusieurs intérieurs d'îlots; renforcer l'attractivit",
+    "terms": [
+     "verduris",
+     "végétalis"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 60,
+  "name": "Liedekerke",
+  "commune": "Saint-Josse",
+  "years": [
+   2010,
+   2014
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Le contrat de quartier durable va développer les projets suivants: construire environ 50 logements exemplaires au point de vue énergétique et accessibles aux personnes à mobilité réduite; développer un axe vert et améliorer la perméabilité des sols de 10 à 20% sur l'ancien tracé du Maelbeek; aménager un parc de 3.200 m2 en intérieur d'îlot, entre les rues Potagère, du Moulin et de la Limite; impla",
+    "terms": [
+     "parc"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 61,
+  "name": "Scheut",
+  "commune": "Anderlecht",
+  "years": [
+   2011,
+   2015
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Les actions prévues sont les suivantes : restructurer, réaménager et sécuriser le Parc Petit Scheut avec, entre autres, une plaine de jeux pour les petits; rénover le bâtiment inutilisé du 18, rue de Swaef pour le réaffecter en centre culturel (ce qu'il était il y a 15 ans); rénover et restructurer les logements communaux des rues Debatty et Deswaef (partiellement occupés) pour créer de nouveaux s",
+    "terms": [
+     "parc",
+     "verduris"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 62,
+  "name": "Jardin aux Fleurs",
+  "commune": "Bruxelles",
+  "years": [
+   2011,
+   2015
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Le projet prévoit le réaménagement d'un grand parc urbain pour en faire un réservoir de biodiversité, la création de logements ouverts sur le parc : ils intégreront des critères stricts en matière d'éco-construction et de performance énergétique et viseront un objectif zéro carbone; créer une nouvelle salle de sport, deux espaces co-accueillants, un jardin, et construire un espace horeca de rencon",
+    "terms": [
+     "jardin",
+     "parc"
+    ]
+   },
+   {
+    "quote": "Ce terrain sera viabilisé et mis à la disposition des riverains et d'associations du quartier afin d'y réaliser des projets communautaires; renforcer des projets associatifs pour améliorer la mixité culturelle (ex: radio de quartier), accroître les activités et l'accueil extrascolaires ainsi que la formation et l'aide à l'emploi (notamment dans les métiers verts); mener certaines opérations socio-",
+    "terms": [
+     "verduris"
+    ]
+   }
+  ],
+  "state_only": [
+   {
+    "quote": "Plus d'info sur la webradio mobile du contrat de quartier Jardin aux fleurs : http://mobileradio.be &copy; Marc Detiffe - urban.brussels - 2014 &copy; Serge Brison - urban.brussels - 2012 &copy; Séverin Malaud - urban.brussels - 2017 &copy; Séverin Malaud - urban.brussels - 2017 Budgets Région 10 900 000,00 &euro; Bruxelles 13 184 549,14 &euro; Beliris 3 000 000,00 &euro; Total 27 084 549,14 &euro",
+    "terms": [
+     "jardin"
+    ]
+   }
+  ],
+  "needs_review": false
+ },
+ {
+  "id": 63,
+  "name": "Koekelberg historique",
+  "commune": "Koekelberg",
+  "years": [
+   2011,
+   2015
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Constituée d'un jardin public et de passerelles, cette « allée verte » permettra un cheminement piéton reliant la Place Simonis à la rue de Ganshoren et la rue du Neep, où sera construit un nouveau pôle culturel; aménager des terrains au coeur de l'îlot Schmitz afin de pouvoir y accueillir des jardins collectifs (potagers) comprenant un site de compostage; mettre en oeuvre une série d'opérations c",
+    "terms": [
+     "jardin",
+     "potager",
+     "verduris"
+    ],
+    "needs_review": "смешанные маркеры"
+   }
+  ],
+  "state_only": [],
+  "needs_review": true
+ },
+ {
+  "id": 64,
+  "name": "Josaphat",
+  "commune": "Schaerbeek",
+  "years": [
+   2011,
+   2015
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Le contrat de Quartier Durable va développer, entre autres, les projets suivants: créer ou rénover plusieurs logements durables; développer le pôle « petite enfance » rue Van Dyck: crèche passive, local de « co-accueil » (accueil d'enfants + activités avec les familles), formation d'auxiliaires de l'enfance, jardins en intérieur d'îlots, etc. au Parc Rasquinet: construire un terrain multisports co",
+    "terms": [
+     "jardin",
+     "parc"
+    ]
+   }
+  ],
+  "state_only": [
+   {
+    "quote": "La majorité des interventions du contrat lui-même auront lieux rues Josaphat, Van Dyck, l'Olivier et au Parc Rasquinet.",
+    "terms": [
+     "parc"
+    ]
+   }
+  ],
+  "needs_review": false
+ },
+ {
+  "id": 65,
+  "name": "Autour de Léopold II",
+  "commune": "Molenbeek",
+  "years": [
+   2012,
+   2016
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Plusieurs équipements de quartier seront réalisés (hall de sport polyvalent, crèche francophone de 84 places), ainsi qu’un logement ; la construction de trois logements assimilés au logement social qui répondront aux critères de performances énergétiques et d'éco-construction, ainsi que la création d’une espace vert ; le réaménagement des rues de l'Avenir et de Ribaucourt en favorisant la mobilité",
+    "terms": [
+     "espace vert",
+     "parc",
+     "verduris",
+     "verdurisation"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 66,
+  "name": "Progrès",
+  "commune": "Schaerbeek",
+  "years": [
+   2012,
+   2016
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 67,
+  "name": "Albert",
+  "commune": "Forest",
+  "years": [
+   2012,
+   2016
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Le projet prévoit le réaménagement du carrefour et de la dalle Albert, la rénovation d'une crèche, la construction de logements sociaux, la construction d'un complexe d'équipement comprenant, un restaurant de quartier, un foyer, un auditorium, une salle de sport doux et la construction d'une deuxième salle de sport doux venant compléter le complexe d'équipement: ils intégreront des critères strict",
+    "terms": [
+     "espace vert",
+     "parc"
+    ]
+   }
+  ],
+  "state_only": [
+   {
+    "quote": "La zone est contiguë à celle du contrat de quartier actif Parc-Alsemberg (2009-2014) à la limite communale de Saint-Gilles. &copy; Serge Brison - urban.brussels - 2016 &copy; Serge Brison - urban.brussels - 2016 &copy; Serge Brison - urban.brussels - 2016 &copy; Serge Brison - urban.brussels - 2016 Budgets Région 10 899 999,99 &euro; Forest 629 614,33 &euro; Beliris 3 125 000,00 &euro; Total 14 65",
+    "terms": [
+     "parc"
+    ]
+   }
+  ],
+  "needs_review": false
+ },
+ {
+  "id": 68,
+  "name": "Bosnie",
+  "commune": "Saint-Gilles",
+  "years": [
+   2012,
+   2016
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Les actions suivantes y sont prévues : créer au sein du projet phare du site de l'ECAM, un parc urbain en intérieur d'îlot, deux nouveaux logements à finalité sociale, une crèche, un espace extrascolaire, un équipement sportif et un pôle dédié à la jeunesse; intervenir sur les espaces publics : plantations, installation de mobilier urbain, développement d'espaces ludiques; aménager un pôle social ",
+    "terms": [
+     "parc",
+     "plantation",
+     "verduris",
+     "verdurisation"
+    ],
+    "needs_review": "смешанные маркеры"
+   }
+  ],
+  "state_only": [
+   {
+    "quote": "Le périmètre d'intervention s'étend autour de la rue de Bosnie et est délimité par l'avenue Fonsny, la rue Théodore Verhaegen, la place de Bethlehem, l'avenue du Parc, et les limites communales entre Saint-Gilles et Forest.",
+    "terms": [
+     "parc"
+    ]
+   },
+   {
+    "quote": "Le quartier est densément bâti et présente un taux de verdurisation faible tant au niveau des espaces public qu'en intérieurs d'ilot : manque d'espaces verts, intérieurs d'ilots imperméabilisés, manque de plantation dans les rues, etc.",
+    "terms": [
+     "espaces verts",
+     "plantation",
+     "verduris",
+     "verdurisation"
+    ]
+   },
+   {
+    "quote": "La verdurisation du quartier, l'amélioration de ses qualités environnementales et du cadre de vie (espaces publics et intérieurs d'îlot) constitueront les enjeux fondamentaux du contrat de Quartier Durable.",
+    "terms": [
+     "verduris",
+     "verdurisation"
+    ]
+   },
+   {
+    "quote": "La zone se superpose partiellement aux contrats de quartier précédents : Barrière-Bethléem (1994-1998), Théodore Verhaegen (2001-2005), Fontainas (2007-2011) et jouxte le contrat de quartier Parc Alsemberg (2009-2014), ainsi que le contrat de quartier Saint-Antoine (2008-2012) à la frontière communale de Forest. &copy; Bruno Veyckemans - urban.brussels - 2013 &copy; Marc Detiffe - urban.brussels -",
+    "terms": [
+     "parc"
+    ]
+   }
+  ],
+  "needs_review": true
+ },
+ {
+  "id": 69,
+  "name": "Maelbeek",
+  "commune": "Ixelles",
+  "years": [
+   2013,
+   2017
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Les principales opérations prévues sont : le projet phare du site de l'Entre Deux Ponts : pôle identitaire entre les places Flagey et Jourdan qui consiste en une extension du bâtiment de la Cinematek (550 m² en rénovation et 650 m² en construction neuve) accueillant des espaces ateliers et fablab (laboratoire de fabrication), un atelier vélo, des espaces bureaux et ateliers partagés avec une possi",
+    "terms": [
+     "jardin",
+     "potager"
+    ]
+   },
+   {
+    "quote": "Cette toiture-potager sera un laboratoire d’agriculture urbaine (projet Lagum) bénéficiant de subsides du contrat de quartier durable Maelbeek et du Feder; le renforcement du maillage écologique, appuyée par un coordinateur maillage vert; le recyclage des matériaux et déchets par la mise en place d'une filière durable de récupération; l'augmentation de l'offre en logements sociaux, à caractère soc",
+    "terms": [
+     "maillage vert",
+     "potager"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 70,
+  "name": "Axe Louvain",
+  "commune": "Saint-Josse",
+  "years": [
+   2013,
+   2017
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Le programme se structure autour des objectifs stratégiques régionaux suivants : améliorer la prévention et la gestion des déchets à l'échelle du quartier : ce projet phare consiste à développer une « ressourcerie » visant à restaurer et offrir des meubles et appareils électroménagers de seconde main à des ménages précarisés, à implanter de nouveaux sites de compost collectif, à créer des espaces ",
+    "terms": [
+     "arbre",
+     "espaces verts",
+     "plantation"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 71,
+  "name": "Compas",
+  "commune": "Anderlecht",
+  "years": [
+   2013,
+   2017
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [
+   {
+    "quote": "Situé entre les frontières des communes de Molenbeek-Saint-Jean et Bruxelles-Ville, ce périmètre y jouxte également plusieurs contrats de quartier dont celui de Jardin aux Fleurs (2011-2015) à Bruxelles-Ville. &copy; Séverin Malaud - urban.brussels &copy; Séverin Malaud - urban.brussels &copy; Séverin Malaud - urban.brussels &copy; Séverin Malaud - urban.brussels Budgets Région 10 900 000,00 &euro",
+    "terms": [
+     "jardin"
+    ]
+   }
+  ],
+  "needs_review": false
+ },
+ {
+  "id": 72,
+  "name": "Bockstael",
+  "commune": "Bruxelles",
+  "years": [
+   2013,
+   2017
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "En vue de poursuivre l'effort de revitalisation de cette partie de Laeken, d'importants moyens sont investis dans les domaines suivants: la construction de 14 à 18 logements en faveur des bas et moyens revenus avec les standards environnementaux \"passif\"; l'amélioration du maillage vert avec l'aménagement d'un tronçon de liaison cyclo-piétonne le long de la ligne de chemin de fer L50, la création ",
+    "terms": [
+     "maillage vert"
+    ]
+   },
+   {
+    "quote": "Le projet phare du programme vise à utiliser l'espace en friche en intérieur d'îlot le long de la ligne de chemin de fer L28A en vue de la transformer en espace vert ouvert sur le quartier grâce à deux opérations immobilières le long du boulevard Bockstael.",
+    "terms": [
+     "espace vert"
+    ]
+   }
+  ],
+  "state_only": [
+   {
+    "quote": "Ce quartier est densément construit et présente un taux de verdurisation très faible.",
+    "terms": [
+     "verduris",
+     "verdurisation"
+    ]
+   }
+  ],
+  "needs_review": false
+ },
+ {
+  "id": 73,
+  "name": "Jonction",
+  "commune": "Bruxelles",
+  "years": [
+   2014,
+   2018
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 74,
+  "name": "Gray",
+  "commune": "Etterbeek",
+  "years": [
+   2014,
+   2018
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Une attention particulière sera portée à l'aménagement d'un espace public générateur de cohésion sociale, de mobilité douce et innovant sur le plan environnemental (gestion des eaux de pluie, création de zones verdurisées, etc). &copy; 2014 &copy; 2014 &copy; Séverin Malaud - urban.brussels &copy; 2014 Budgets Région 10 899 600,00 &euro; Etterbeek 601 663,00 &euro; Beliris 1 421 953,00 &euro; Tota",
+    "terms": [
+     "verduris"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 75,
+  "name": "Petite Senne",
+  "commune": "Molenbeek",
+  "years": [
+   2014,
+   2018
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Ce périmètre présentait des opportunités intéressantes en termes de reconversion de sites d'anciennes activités industrielles, souvent occupées par des commerces de voiture, qui dessinaient un fort potentiel de création de logements, d'équipements et d'espaces verts. &copy; 2014 &copy; Georges De Kinder - urban.brussels &copy; &copy; Georges De Kinder - urban.brussels - 2015 Budgets Région 10 990 ",
+    "terms": [
+     "espaces verts"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 76,
+  "name": "Abbaye",
+  "commune": "Forest",
+  "years": [
+   2014,
+   2018
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [
+   {
+    "quote": "Le CQD pourra notamment s'appuyer sur deux zones stratégiques en termes de redéploiement urbanistique, social, économique et environnemental: le site de l'abbaye, son espace vert et ses abords ainsi qu'une vaste friche urbaine située à proximité de la maison communale.",
+    "terms": [
+     "espace vert"
+    ]
+   }
+  ],
+  "needs_review": false
+ },
+ {
+  "id": 77,
+  "name": "Biestebroeck",
+  "commune": "Anderlecht",
+  "years": [
+   2015,
+   2019
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "L’espace public de l’Ecole 13 (rue Wayez) sera valorisé et l’acquisition d’un terrain (chaussée de Mons) permettra d’y construire du logement et d’y qu’aménager un nouvel espace public avec une intervention artistique/paysagère sur le mur mitoyen ; Le Pôle Rauter permettra l’aménagement d’une extension du parc à l'arrière du Foyer anderlechtois, la construction d’une annexe polyvalente et l’aménag",
+    "terms": [
+     "espace vert",
+     "parc"
+    ]
+   }
+  ],
+  "state_only": [
+   {
+    "quote": "Les espaces verts y sont quasi inexistants et les espaces publics peu conviviaux et dégradés, laissant place aux dépôts clandestins.",
+    "terms": [
+     "espaces verts"
+    ]
+   },
+   {
+    "quote": "Ces ensembles sont définis sous la forme de pôles : Le Pôle Bronze accueillera une crèche francophone de 49 places avec un jardin et une extension pour la Maison des Artistes ainsi qu’une œuvre d’art sur le mur aveugle du bâtiment.",
+    "terms": [
+     "jardin"
+    ]
+   }
+  ],
+  "needs_review": false
+ },
+ {
+  "id": 78,
+  "name": "Morichar",
+  "commune": "Saint-Gilles",
+  "years": [
+   2015,
+   2019
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Trois grands pôles y seront développés : Le premier, la « promenade saint-gilloise », établira une « liaison douce » entre la porte de Hal et le parc de Forest, avec différentes interventions sur l’espace public (maillage vert et bleu).",
+    "terms": [
+     "maillage vert",
+     "parc"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 79,
+  "name": "Athénée",
+  "commune": "Ixelles",
+  "years": [
+   2016,
+   2020
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 80,
+  "name": "Pogge",
+  "commune": "Schaerbeek",
+  "years": [
+   2016,
+   2020
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 81,
+  "name": "Les Marolles",
+  "commune": "Bruxelles",
+  "years": [
+   2018,
+   2022
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Il aura également comme enjeu, entre autres choses, de travailler sur les ruptures urbaines en recréant de la perméabilité au travers des grands îlots, de requalifier l’espace public et à améliorer l’accessibilité aux espaces verts.",
+    "terms": [
+     "espaces verts"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 82,
+  "name": "Magritte",
+  "commune": "Jette",
+  "years": [
+   2018,
+   2022
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Une restructuration de l’espace associée à la création d’espaces publics et d’espaces verts s’avérera donc nécessaire.",
+    "terms": [
+     "espaces verts"
+    ]
+   }
+  ],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 83,
+  "name": "Senne",
+  "commune": "Forest",
+  "years": [
+   2018,
+   2022
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 84,
+  "name": "Stephenson",
+  "commune": "Schaerbeek",
+  "years": [
+   2019,
+   2023
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 85,
+  "name": "Autour du Parc de l'Ouest",
+  "commune": "Molenbeek",
+  "years": [
+   2019,
+   2023
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [
+   {
+    "quote": "Le périmètre du Contrat de Quartier Durable Autour du Parc de l’Ouest se développe entre la Gare de l’Ouest et la station de métro Osseghem et de part et d’autre de la ligne ferroviaire L28.",
+    "terms": [
+     "parc"
+    ]
+   }
+  ],
+  "needs_review": false
+ },
+ {
+  "id": 86,
+  "name": "Peterbos",
+  "commune": "Anderlecht",
+  "years": [
+   2019,
+   2023
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [
+   {
+    "quote": "Le site du Peterbos constitue un parc habité, un urbanisme en ordre ouvert, où aucun des immeubles n’est véritablement à front de rue ou dans l’alignement avec des dégagements visuels extrêmement généreux et verdurisés.",
+    "terms": [
+     "parc",
+     "verduris"
+    ]
+   }
+  ],
+  "needs_review": false
+ },
+ {
+  "id": 87,
+  "name": "Petite Colline",
+  "commune": "Schaerbeek",
+  "years": [
+   2020,
+   2024
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Le premier pôle prévoit des interventions dans certains espaces publics afin d’améliorer leur verdurisation, de favoriser les modes de déplacement actifs et de rendre les lieux plus attractifs pour les habitants.",
+    "terms": [
+     "verduris",
+     "verdurisation"
+    ]
+   },
+   {
+    "quote": "Quant au programme socio-économique, il est constitué d'un budget citoyen, de deux actions visant à accompagner les propriétaires de logements dans leur rénovation, avec ou sans mise en AIS, d’une action visant à la verdurisation du quartier en ISP et à l’animation du Parc Reine Verte, d’une action visant à améliorer la signalétique du quartier et, pour finir, de plusieurs actions sélectionnées vi",
+    "terms": [
+     "parc",
+     "verduris",
+     "verdurisation"
+    ],
+    "needs_review": "смешанные маркеры"
+   }
+  ],
+  "state_only": [
+   {
+    "quote": "Au nord-est de la rue des Palais, le tissu urbain est principalement constitué de maisons mitoyennes, avec des intérieurs d’ilots verdurisés.",
+    "terms": [
+     "verduris"
+    ]
+   },
+   {
+    "quote": "Au sud-ouest de la rue des Palais, le bâti est plus dense et les intérieurs d’ilots moins verdurisés, mis à part au niveau du Parc de la Reine Verte, seul espace vert du périmètre.",
+    "terms": [
+     "espace vert",
+     "parc",
+     "verduris"
+    ]
+   }
+  ],
+  "needs_review": true
+ },
+ {
+  "id": 88,
+  "name": "Midi",
+  "commune": "Saint-Gilles",
+  "years": [
+   2020,
+   2024
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Il s'appuie sur les trois enjeux identifiés collectivement à l’étape précédente : - trouver de la place (répondre aux enjeux liés à la densité de construction très forte du quartier et à son importante imperméabilisation du sol, à la densité d’habitat et d’activités, et à la carence chronique en espaces publics) ; - améliorer l’habitabilité du quartier (développer l'offre en logements accessibles,",
+    "terms": [
+     "végétalis"
+    ]
+   }
+  ],
+  "state_only": [
+   {
+    "quote": "Le programme a été construit en tenant compte du contexte particulier du périmètre : sa densité, l’absence de grosses opportunités foncières, ou d’une offre satisfaisante en espaces verts, la forte présence automobile, l’articulation avec l’infrastructure métropolitaine et ses projets à grande échelle, ainsi que le contexte social, économique, environnemental et culturel, particulièrement compliqu",
+    "terms": [
+     "espaces verts"
+    ]
+   }
+  ],
+  "needs_review": false
+ },
+ {
+  "id": 89,
+  "name": "Bizet",
+  "commune": "Anderlecht",
+  "years": [
+   2020,
+   2024
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Une deuxième pôle Résédas se situe autour du Parc de Résédas qui sera lui-même également réaménagé et équipé d’un kiosque.",
+    "terms": [
+     "parc"
+    ]
+   },
+   {
+    "quote": "Les jardins du Foyer Anderlechtois seront liés au parc ainsi que le site Agrorésédas qui doit d’abord être acquis.",
+    "terms": [
+     "jardin",
+     "parc"
+    ]
+   },
+   {
+    "quote": "Comme axes structurants du périmètre, la Rue Robert Buyck sera mise en sens unique, la Rue des Résédas sera partiellement réaménagé en rue cyclable et surtout la Rue Henri Deleers transformée en rue parc entre la Place Bizet et la Rue Walcourt.",
+    "terms": [
+     "parc"
+    ]
+   }
+  ],
+  "state_only": [
+   {
+    "quote": "L’espace public entre ce deux bâtiments doit mener les habitants vers le « parc système » au nord de la Place Bizet.",
+    "terms": [
+     "parc"
+    ]
+   },
+   {
+    "quote": "Ce site accueillera des projets d’agroécologie et d’alimentation durable.",
+    "terms": [
+     "agroécolog"
+    ]
+   }
+  ],
+  "needs_review": false
+ },
+ {
+  "id": 90,
+  "name": "Anvers",
+  "commune": "Bruxelles",
+  "years": [
+   2021,
+   2025
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Ainsi, le programme visera la création de logements de qualité ainsi que la déminéralisation et verdurisation de l'espace public au nord, et l'aménagement et l'activation de la dalle Héliport, au sud.",
+    "terms": [
+     "déminéralis",
+     "verduris",
+     "verdurisation"
+    ]
+   }
+  ],
+  "state_only": [
+   {
+    "quote": "Au nord, le \"vieux quartier\" est ce qui reste du tissu industriel bruxellois du 19ème siècle, avec son urbanisme en ordre fermé, ses parcelles resserrées, un bâti dense assez dégradé mélangeant petits entrepôts et ensembles de logements, d'équipements ou de commerces.",
+    "terms": [
+     "parc"
+    ]
+   },
+   {
+    "quote": "Au sud, la dalle Héliport avec ses six barres de logements sociaux bordées par le parc Maximilien propose au contraire un urbanisme en ordre ouvert aux gabarits plus élevés.",
+    "terms": [
+     "parc"
+    ]
+   },
+   {
+    "quote": "Quant au programme socio-économique, il est constitué d'un budget citoyen (\"Made in Héliport-Anvers\") et de 15 actions sélectionnées via un appel à projets et répondant à une multitude d'enjeux propres au périmètre (cohésion sociale, propreté, verdurisation, ISP, etc.).",
+    "terms": [
+     "verduris",
+     "verdurisation"
+    ]
+   }
+  ],
+  "needs_review": false
+ },
+ {
+  "id": 91,
+  "name": "Jacquet",
+  "commune": "Koekelberg",
+  "years": [
+   2021,
+   2025
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Sur l'ensemble du périmètre, on note des manques en infrastructures pour la petite enfance, la nécessité de développer des équipements sportifs et/ou culturels, l'importance de renforcer les structures de lutte contre le décrochage scolaire ou encore l'envie de nombreux jeunes de développer des initiatives pour eux et pour le quartier. - Enjeu 5 : Inscrire le quartier dans le maillage vert et bleu",
+    "terms": [
+     "maillage vert"
+    ]
+   }
+  ],
+  "state_only": [
+   {
+    "quote": "Cinq enjeux ont été identifiés collectivement : - Enjeu 1 : L’espace public, comme pilier pour les interventions dans le cadre du CQD : dans ce quartier dense, il convient de continuer à aérer et végétaliser la maille et offrir des espaces ouverts qualitatifs aux habitants et usagers du périmètre. - Enjeu 2 : Réparer le tissu urbain et trouver de la place.",
+    "terms": [
+     "végétalis"
+    ]
+   },
+   {
+    "quote": "Il est globalement assez minéralisé avec quelques poches d'espaces verts et un fond de vallée qui court le long des rues de Ganshoren, des Tisserands et Schmitz.",
+    "terms": [
+     "espaces verts"
+    ]
+   },
+   {
+    "quote": "Etant donné sa situation géographique sur le lit d'une ancienne rivière, le quartier est propice au développement d'un maillage vert et bleu à échelle locale.",
+    "terms": [
+     "maillage vert"
+    ]
+   },
+   {
+    "quote": "Aujourd'hui, les différents espaces verts (square de Noville, îlot Schmitz, parc Victoria) fonctionnent en poches distinctes.",
+    "terms": [
+     "espaces verts",
+     "parc"
+    ]
+   }
+  ],
+  "needs_review": false
+ },
+ {
+  "id": 92,
+  "name": "Etangs Noirs",
+  "commune": "Molenbeek",
+  "years": [
+   2021,
+   2025
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Le programme se résume en 8 priorités : Priorité 1 : perspectives d’avenir pour les jeunes ; Priorité 2 : bien-être physique et mental des enfants, des jeunes et de tous ; Priorité 3 : renforcer le réseau associatif et culturel existant ; Priorité 4 : l’accès à la culture ; Priorité 5 : la qualité des logements ; Priorité 6 : la sécurité des déplacements des piétons et cyclistes Priorité 7 : la cr",
+    "terms": [
+     "espaces verts"
+    ],
+    "needs_review": "смешанные маркеры"
+   }
+  ],
+  "state_only": [
+   {
+    "quote": "Il s’étend de la Maison des Cultures et de la Cohésion Sociale (MCCS) située au nord-est jusqu’au parc de la Fonderie situé au sud-est.",
+    "terms": [
+     "parc"
+    ]
+   }
+  ],
+  "needs_review": true
+ },
+ {
+  "id": 93,
+  "name": "Deux Cités",
+  "commune": "Forest",
+  "years": [
+   2022,
+   2026
+  ],
+  "has_greening_measure": true,
+  "measures": [
+   {
+    "quote": "Le périmètre, à caractère essentiellement résidentiel (dont 69% de logements sociaux), est composé de 3 ensembles aux profils distincts: au sud, la Nouvelle Cité et ses barres de logements des années 70 nouvellement rénovées; à l'est, la Cité Forest Vert, une cité-jardin typique des années 20 présentant un mixte de maisons privées et de petits immeubles de logements sociaux; au nord, le quartier K",
+    "terms": [
+     "jardin"
+    ]
+   }
+  ],
+  "state_only": [
+   {
+    "quote": "Le parc du Bempt, un espace vert pour le quartier C.",
+    "terms": [
+     "espace vert",
+     "parc"
+    ]
+   }
+  ],
+  "needs_review": false
+ },
+ {
+  "id": 94,
+  "name": "Versailles",
+  "commune": "",
+  "years": [
+   2022,
+   2026
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [
+   {
+    "quote": "Les parkings disparaissent complètement sous terre, donnant la primauté à un vaste espace vert continu.",
+    "terms": [
+     "espace vert"
+    ]
+   }
+  ],
+  "needs_review": false
+ },
+ {
+  "id": 95,
+  "name": "Cité Moderne",
+  "commune": "",
+  "years": [
+   2022,
+   2026
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [
+   {
+    "quote": "Le premier, à l’Est, est une cité jardin constituant un ensemble patrimonial de renom.",
+    "terms": [
+     "jardin"
+    ]
+   },
+   {
+    "quote": "La Cité Moderne constitue un patrimoine urbanistique et architectural exceptionnel mais vieillissant, et dont l’esprit coopératif révolutionnaire de la cité-jardin s’est doucement estompé avec les décennies.",
+    "terms": [
+     "jardin"
+    ]
+   }
+  ],
+  "needs_review": false
+ },
+ {
+  "id": 96,
+  "name": "Villas de Ganshoren",
+  "commune": "",
+  "years": [
+   2023,
+   2027
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ },
+ {
+  "id": 97,
+  "name": "Conscience",
+  "commune": "",
+  "years": [
+   2023,
+   2027
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [
+   {
+    "quote": "Le quartier abrite un nœud commercial, la maison communale, trois écoles primaires et plusieurs espaces verts.",
+    "terms": [
+     "espaces verts"
+    ]
+   }
+  ],
+  "needs_review": false
+ },
+ {
+  "id": 98,
+  "name": "Petite Suisse",
+  "commune": "Ixelles",
+  "years": [
+   2023,
+   2027
+  ],
+  "has_greening_measure": false,
+  "measures": [],
+  "state_only": [],
+  "needs_review": false
+ }
+]

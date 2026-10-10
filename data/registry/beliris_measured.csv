@@ -1,0 +1,75 @@
+project,domaine,url,park,osm,area_ha,dist_m,ndvi_effect,verdict,in_brussels
+Réalisation de la passerelle Porte de Ninove,mobilite,https://www.beliris.be/fr/projets/passerelle-porte-ninove.html,Parc de la Porte de Ninove - Ninoofsepoortpark,way/25428277,2.25,216,0.2352,ПОЗЕЛЕНЕЛ,yes
+Réaménagement de la Petite Ceinture Ouest,mobilite,https://www.beliris.be/fr/projets/reamenagement-de-la-petite-ceinture-ouest.html,Parc de la Porte de Ninove - Ninoofsepoortpark,way/25428277,2.25,212,0.2352,ПОЗЕЛЕНЕЛ,yes
+Réaménagement de la Porte de Ninove,public,https://www.beliris.be/fr/projets/porte-de-ninove-5.html,Parc de la Porte de Ninove - Ninoofsepoortpark,way/25428277,2.25,140,0.2352,ПОЗЕЛЕНЕЛ,yes
+Contrat de quartier Heyvaert,public,https://www.beliris.be/fr/projets/heyvaert.html,Parc de la Porte de Ninove - Ninoofsepoortpark,way/25428277,2.25,495,0.2352,ПОЗЕЛЕНЕЛ,yes
+Contrat de quartier Chimiste,public,https://www.beliris.be/fr/projets/chimiste.html,Parc de la Porte de Ninove - Ninoofsepoortpark,way/25428277,2.25,353,0.2352,ПОЗЕЛЕНЕЛ,yes
+Construction du parc de Haren,vert,https://www.beliris.be/fr/projets/parc-haren.html,Parc de Haren - Park van Haren,way/37184707,1.38,147,0.0719,ПОЗЕЛЕНЕЛ,yes
+Étangs d'Ixelles: restauration,vert,https://www.beliris.be/fr/projets/etangs-d-ixelles.html,Jardin du Roi - Koningstuin,way/23173132,1.46,428,0.0708,ПОЗЕЛЕНЕЛ,yes
+Contrat de quartier Fontainas,public,https://www.beliris.be/fr/projets/contrat-de-quartier-fontainas.html,Parc de la Porte de Hal - Hallepoortpark,relation/17376399,2.29,443,0.0682,ПОЗЕЛЕНЕЛ,yes
+Logements sociaux : Cité Hellemans,batiment,https://www.beliris.be/fr/projets/hellemans.html,Parc de la Porte de Hal - Hallepoortpark,relation/17376399,2.29,301,0.0682,ПОЗЕЛЕНЕЛ,yes
+Promenade Verte - Canal,mobilite,https://www.beliris.be/fr/projets/promenade-verte.html,Parc du Bempt - Bemptpark,way/23782038,16.56,68,0.0543,контроль несопоставим,yes
+Construction d’une nouvelle salle omnisport à Evere,loisir,https://www.beliris.be/fr/projets/salle-omnisport-evere.html,Parc d'Evere - Park van Evere,way/30383373,1.94,187,0.0488,ПОЗЕЛЕНЕЛ,yes
+Un nouveau parc à Bruxelles : le parc de la Ligne 28,vert,https://www.beliris.be/fr/projets/parc-de-la-ligne-28.html,Parc de la Ligne 28 - Park van Lijn 28,way/783856763,2.25,278,0.0439,контроль несопоставим,yes
+Rénovation du pôle multimodal Schuman,mobilite,https://www.beliris.be/fr/projets/gare-schuman.html,Square Ambiorix - Ambiorixsquare,relation/8971920,2.29,478,0.0342,шум,yes
+Rénovation des logements sociaux Minimes,batiment,https://www.beliris.be/fr/projets/minimes-1.html,Parc d'Egmont - Egmontpark,way/1084906419,1.28,305,0.032,контроль несопоставим,yes
+Construction des ascenseurs Poelaert ,mobilite,https://www.beliris.be/fr/projets/construction-des-ascenseurs-poelaert.html,Parc d'Egmont - Egmontpark,way/1084906419,1.28,348,0.032,контроль несопоставим,yes
+Restauration du Square du Petit Sablon,public,https://www.beliris.be/fr/projets/restauration-du-square-du-petit-sablon.html,Parc d'Egmont - Egmontpark,way/1084906419,1.28,227,0.032,контроль несопоставим,yes
+Rénovation de la piscine Louis Namèche,loisir,https://www.beliris.be/fr/projets/piscine-louis-nameche.html,Parc des Muses - Muzenpark,way/25430024,1.63,399,0.0279,контроль несопоставим,yes
+Construction du tunnel ferroviaire Schuman-Josaphat,mobilite,https://www.beliris.be/fr/projets/tunnel-schuman-josaphat.html,Square Marie-Louise - Maria-Louizasquare,relation/8971918,2.33,486,0.0254,контроль несопоставим,yes
+Parking Maelbeek et parc Jo Heyne,vert,https://www.beliris.be/fr/projets/parking-maelbeek.html,Square Marie-Louise - Maria-Louizasquare,relation/8971918,2.33,262,0.0254,контроль несопоставим,yes
+Cure de jouvence pour le parc de Forest,vert,https://www.beliris.be/fr/projets/parc-de-forest.html,Parc de Forest - Park van Vorst,way/5451317,13.42,269,0.0181,шум,yes
+Maison intercommunautaire Al Andalous,batiment,https://www.beliris.be/fr/projets/maison-intercommunautaire-al-andalous.html,Parc de Forest - Park van Vorst,way/5451317,13.42,377,0.0181,шум,yes
+Rénovation des Bains Turcs de Saint-Gilles,loisir,https://www.beliris.be/fr/projets/bains-turcs-1.html,Parc de Forest - Park van Vorst,way/5451317,13.42,493,0.0181,шум,yes
+Prolongement de la ligne 94,mobilite,https://www.beliris.be/fr/projets/prolongement-de-la-ligne-94.html,Étangs du Leybeek - Leybeekvijvers,way/23634256,2.17,240,0.0176,шум,yes
+Les Jardins de l’Abbaye de la Cambre.,vert,https://www.beliris.be/fr/projets/les-jardins-de-lrabbaye-de-la-cambre.html,Jardins de l'Abbaye de la Cambre - Tuinen van de Ter Kamerenabdij,way/4318238,7.05,64,0.0117,шум,yes
+Basilique de Koekelberg : rénovation de l'électricité,culture,https://www.beliris.be/fr/projets/basilique-de-koekelberg.html,Parc Élisabeth - Elisabethpark,relation/15655925,20.32,90,0.0113,шум,yes
+"Construction d'une maison communautaire ""les Villas""",batiment,https://www.beliris.be/fr/projets/maison-communautaire-les-villas.html,Parc Élisabeth - Elisabethpark,relation/15655925,20.32,497,0.0113,шум,yes
+Revitalisation des abords des logements sociaux « Les Villas »,public,https://www.beliris.be/fr/projets/les-villas-abords.html,Parc Élisabeth - Elisabethpark,relation/15655925,20.32,440,0.0113,шум,yes
+Contrat de quartier Scheut,public,https://www.beliris.be/fr/projets/contrat-de-quartier-scheut.html,Parc Albert - Albertpark,way/15890328,2.57,354,0.0107,контроль несопоставим,yes
+Restauration du mur d'enceinte du Rouge-Cloître,culture,https://www.beliris.be/fr/projets/rouge-cloitre.html,Rouge Cloître - Rood Klooster,way/23160652,35.44,238,0.01,шум,yes
+Réaménagement de la place Cardinal Mercier,mobilite,https://www.beliris.be/fr/projets/place-cardinal-mercier.html,Parc Paul Garcet - Paul Garcetpark,way/23902379,1.14,14,0.0098,контроль несопоставим,yes
+Bâtiment Hector Denis : restauration,batiment,https://www.beliris.be/fr/projets/archiducs.html,Parc de la Héronnière - Reigerbospark,relation/5962474,8.39,399,0.0098,шум,yes
+Réaméagement du Parc Léopold - zone sud,vert,https://www.beliris.be/fr/projets/parc-leopold-sud.html,Parc Léopold - Leopoldpark,way/14592122,7.61,132,0.0059,шум,yes
+Le Muséum des Sciences naturelles : une nouvelle salle pour les dinosaures,culture,https://www.beliris.be/fr/projets/des-vieux-dinosaures-dans-une-nouvelle-salle.html,Parc Léopold - Leopoldpark,way/14592122,7.61,167,0.0059,шум,yes
+Réaméagement du Parc Léopold - Zone Nord,vert,https://www.beliris.be/fr/projets/parc-leopold-zone-nord.html,Parc Léopold - Leopoldpark,way/14592122,7.61,189,0.0059,шум,yes
+Le réaménagement de la place Jourdan,public,https://www.beliris.be/fr/projets/place-jourdan.html,Parc Léopold - Leopoldpark,way/14592122,7.61,210,0.0059,шум,yes
+Réaménagement des abords de la gare du Luxembourg ,public,https://www.beliris.be/fr/projets/abords-gare-luxembourg.html,Parc Léopold - Leopoldpark,way/14592122,7.61,340,0.0059,шум,yes
+"Rénovation de la piscine    ""le Neptunium""",culture,https://www.beliris.be/fr/projets/piscine-communale-de-schaerbeek-le-neptunium.html,Parc Josaphat - Josaphatpark,way/31465238,27.27,464,0.0021,шум,yes
+Rénovation du Stade du Crossing,loisir,https://www.beliris.be/fr/projets/stade-du-crossing.html,Parc Josaphat - Josaphatpark,way/31465238,27.27,316,0.0021,шум,yes
+Restauration du Parc Josaphat,vert,https://www.beliris.be/fr/projets/parc-josaphat.html,Parc Josaphat - Josaphatpark,way/31465238,27.27,168,0.0021,шум,yes
+Contrat de quartier Jérusalem,public,https://www.beliris.be/fr/projets/contrat-de-quartier-jerusalem.html,Parc Josaphat - Josaphatpark,way/31465238,27.27,465,0.0021,шум,yes
+Restauration de l'Atomium,culture,https://www.beliris.be/fr/projets/atomium.html,Parc d'Osseghem - Ossegempark,way/16303371,18.48,368,0.0012,шум,yes
+Restauration du Bois de la Cambre,vert,https://www.beliris.be/fr/projets/bois-de-la-cambre.html,Île Robinson - Robinsoneiland,way/9621741,1.15,443,0.0007,шум,yes
+Mise en lumière de l'église Notre Dame de Laeken,culture,https://www.beliris.be/fr/projets/eclairage-eglise-de-laeken.html,Square du vingt-et-un-juillet - Square van de 21ste juli,way/1106650800,1.68,292,-0.0001,шум,yes
+Restauration de l'Église Notre-Dame de Laeken,culture,https://www.beliris.be/fr/projets/eglise-de-laeken.html,Square du vingt-et-un-juillet - Square van de 21ste juli,way/1106650800,1.68,305,-0.0001,шум,yes
+Restauration du parc Marie-José,vert,https://www.beliris.be/fr/projets/parc-mariejose.html,Parc Marie-José - Marie-Josépark,way/147913929,6.53,49,-0.0023,контроль несопоставим,yes
+Réaménagement du Parc de Biestebroeck,vert,https://www.beliris.be/fr/projets/parc-de-biestebroeck.html,Parc de Biestebroeck - Biestebroeckpark,way/32252612,1.53,167,-0.0049,контроль несопоставим,yes
+Réaménagement de la place de la Résistance,public,https://www.beliris.be/fr/projets/place-de-la-resistance.html,Parc de Biestebroeck - Biestebroeckpark,way/32252612,1.53,166,-0.0049,контроль несопоставим,yes
+Aumale-Wayez,public,https://www.beliris.be/fr/projets/aumale-wayez-1.html,Parc de Biestebroeck - Biestebroeckpark,way/32252612,1.53,265,-0.0049,контроль несопоставим,yes
+Pavillon des jardiniers et gardiens de parcs au Botanique,batiment,https://www.beliris.be/fr/projets/pavillon-des-jardiniers-et-gardiens-de-parcs-au-botanique.html,Jardin botanique - Kruidtuin,relation/5643094,4.83,183,-0.005,шум,yes
+Rénovation des immeubles Linné-Plantes,batiment,https://www.beliris.be/fr/projets/renovation-des-immeubles-linne-plantes.html,Jardin botanique - Kruidtuin,relation/5643094,4.83,403,-0.005,шум,yes
+Construction d'un centre de jour et d'hébergement,batiment,https://www.beliris.be/fr/projets/gamp.html,Jardin botanique - Kruidtuin,relation/5643094,4.83,303,-0.005,шум,yes
+Logements sociaux passifs Musin,batiment,https://www.beliris.be/fr/projets/logements-sociaux-musin.html,Jardin botanique - Kruidtuin,relation/5643094,4.83,128,-0.005,шум,yes
+Construction du bâtiment Méridien,batiment,https://www.beliris.be/fr/projets/logements-sociaux-meridien.html,Jardin botanique - Kruidtuin,relation/5643094,4.83,481,-0.005,шум,yes
+Réfection des toitures du Château du Karreveld,culture,https://www.beliris.be/fr/projets/chateau-karreveld.html,Parc du Karreveld - Karreveldpark,way/30293368,3.3,37,-0.0064,шум,yes
+Restauration du parc du Karreveld,vert,https://www.beliris.be/fr/projets/parc-karreveld.html,Parc du Karreveld - Karreveldpark,way/30293368,3.3,37,-0.0064,шум,yes
+Parc du Cinquantenaire : restauration du petit patrimoine,vert,https://www.beliris.be/fr/projets/parc-du-cinquantenaire.html,Parc du Cinquantenaire - Jubelpark,relation/555230,33.81,337,-0.0098,шум,yes
+Illuminations au Parc du Cinquantenaire,culture,https://www.beliris.be/fr/projets/cinquantenaire-nouvel-eclairage.html,Parc du Cinquantenaire - Jubelpark,relation/555230,33.81,121,-0.0098,шум,yes
+Restauration du monument du Congo,culture,https://www.beliris.be/fr/projets/monument-du-congo.html,Parc du Cinquantenaire - Jubelpark,relation/555230,33.81,337,-0.0098,шум,yes
+Contrat de quartier : Léopold à Léopold,public,https://www.beliris.be/fr/projets/leopold-a-leopold.html,Square Prince Charles - Prins Karelsquare,way/38802456,1.19,493,-0.0208,контроль несопоставим,yes
+Rénovation de la station de métro Arts-Loi,mobilite,https://www.beliris.be/fr/projets/arts-loi.html,Parc de Bruxelles - Warandepark,way/3517578,11.57,257,-0.027,шум,yes
+Rénovation du Couloir de la Gare Centrale,mobilite,https://www.beliris.be/fr/projets/couloir-gare-centrale.html,Parc de Bruxelles - Warandepark,way/3517578,11.57,437,-0.027,шум,yes
+Rénovation du Parc de Bruxelles,vert,https://www.beliris.be/fr/projets/parc-de-bruxelles.html,Parc de Bruxelles - Warandepark,way/3517578,11.57,49,-0.027,шум,yes
+Restauration du circuit sud du Palais des Beaux-Arts,culture,https://www.beliris.be/fr/projets/restauration-bozar.html,Parc de Bruxelles - Warandepark,way/3517578,11.57,400,-0.027,шум,yes
+Passerelle chaussée de Watermael (Promenade verte),mobilite,https://www.beliris.be/fr/projets/passerelle-chaussee-de-watermael-promenade-verte.html,Parc de Woluwe - Woluwepark,way/16089352,73.36,438,-0.0324,шум,yes
+Contrat de quartier parc Alsemberg,public,https://www.beliris.be/fr/projets/contrat-de-quartier-parc-alsemberg.html,Parc Pierre Paulus - Pierre Pauluspark,way/4731047,1.21,352,-0.0598,контроль несопоставим,yes
+Contrat de quartier Métal-Monnaies,vert,https://www.beliris.be/fr/projets/metal-monnaies.html,Parc Pierre Paulus - Pierre Pauluspark,way/4731047,1.21,140,-0.0598,контроль несопоставим,yes
+Un nouveau parc au quai des Matériaux,vert,https://www.beliris.be/fr/projets/quai-des-materiaux.html,Quai des Matériaux - Materialenkaai,way/1092694436,2.55,159,-0.0692,ПОТЕРЯЛ,yes
+Création du pont Suzan Daniel,mobilite,https://www.beliris.be/fr/projets/pont-suzan-daniel-1.html,Quai des Matériaux - Materialenkaai,way/1092694436,2.55,51,-0.0692,ПОТЕРЯЛ,yes
+Contrat de quartier Escaut-Meuse,public,https://www.beliris.be/fr/projets/escaut-meuse.html,Quai des Matériaux - Materialenkaai,way/1092694436,2.55,412,-0.0692,ПОТЕРЯЛ,yes
+Contrat de quartier Maritime,public,https://www.beliris.be/fr/projets/maritime.html,Quai des Matériaux - Materialenkaai,way/1092694436,2.55,398,-0.0692,ПОТЕРЯЛ,yes
+Un nouvel écrin pour la rue Neuve,public,https://www.beliris.be/fr/projets/rue-neuve.html,Jardin de René Pechère - René Pechèretuin,way/21775928,1.45,477,-0.0827,ПОТЕРЯЛ,yes
+Modernisation des Ateliers et de l'Administration à La Monnaie ,culture,https://www.beliris.be/fr/projets/la-monnaie.html,Jardin de René Pechère - René Pechèretuin,way/21775928,1.45,475,-0.0827,ПОТЕРЯЛ,yes
+Contrat de quartier Rives-Ouest,public,https://www.beliris.be/fr/projets/rives-ouest.html,Park Ouest,way/1134956557,1.31,147,-0.1149,ПОТЕРЯЛ,yes
+Rénovation de la chaussée de Gand,mobilite,https://www.beliris.be/fr/projets/renovation-de-la-chaussee-de-gand.html,Park Ouest,way/1134956557,1.31,261,-0.1149,ПОТЕРЯЛ,yes

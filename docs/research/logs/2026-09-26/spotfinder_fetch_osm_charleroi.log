@@ -1,0 +1,4 @@
+[fetch_osm] reading Charleroi from /home/user/facta/pipelines/neighbourhood_fit_score/pipeline/data/raw/belgium-260925.osm.pbf (local extract, no Overpass) ...
+[fetch_osm] relations matching a selector: 2, exported as multipolygons: 2
+[fetch_osm] received 2680 raw OSM elements
+[fetch_osm] wrote 2680 points -> /home/user/facta/pipelines/spotfinder/pipeline/data/charleroi_osm_points_raw.geojson

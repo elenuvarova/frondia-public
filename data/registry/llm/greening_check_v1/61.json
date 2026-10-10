@@ -1,0 +1,17 @@
+{
+ "id": 61,
+ "version": "greening_check_v1",
+ "prompt_sha": "a75f853000ec9eaa",
+ "schema_sha": "e9bc62506ba62dd5",
+ "text_sha": "2e2a84f88f356642",
+ "run_at": "2026-09-26T15:44:44+00:00",
+ "output": {
+  "label": "yes",
+  "quote": "verduriser et restaurer la Place Desmet ainsi que plusieurs voiries (rues de l'Agrafe, de l'Aguille, Ruquoy et Verdonck, etc.)",
+  "why": "This greening of a square and several streets is listed under \"Les actions prévues\", so the contract commits to it; the same list also includes redesigning the Parc Petit Scheut.",
+  "quote_verbatim": true
+ },
+ "model": "claude-opus-5-5",
+ "cost_usd": 0.0617438,
+ "duration_ms": 4278
+}

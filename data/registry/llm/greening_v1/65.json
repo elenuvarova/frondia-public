@@ -1,0 +1,45 @@
+{
+ "id": 65,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "6cc7d07ba37781ec",
+ "run_at": "2026-09-26T14:51:09+00:00",
+ "output": {
+  "measures": [
+   {
+    "quote": "la création d’une espace vert",
+    "kind": "new_green_space",
+    "status": "action",
+    "place": "Quai du Charbonnage, 86",
+    "verbatim": true
+   },
+   {
+    "quote": "le réaménagement des rues de l'Avenir et de Ribaucourt en favorisant la mobilité douce, la verdurisation, la redynamisation de l’axe commerçant Ribaucourt et la convivialité",
+    "kind": "street_greening",
+    "status": "action",
+    "place": "rues de l'Avenir et de Ribaucourt",
+    "verbatim": true
+   },
+   {
+    "quote": "l’aménagement d’un nouvel espace vert collectif sur une friche dans la prolongation du parc de la Petite Senne",
+    "kind": "new_green_space",
+    "status": "action",
+    "place": "une friche dans la prolongation du parc de la Petite Senne",
+    "verbatim": true
+   },
+   {
+    "quote": "la revalorisation du parc Saint-Rémy de manière qualitative et durable par le réaméganement de celui-ci et la sécurisation de ses abords",
+    "kind": "park_redesign",
+    "status": "action",
+    "place": "parc Saint-Rémy",
+    "verbatim": true
+   }
+  ],
+  "label": "yes",
+  "why": "The contract commits to concrete greening actions such as \"la création d’une espace vert\" and \"l’aménagement d’un nouvel espace vert collectif sur une friche dans la prolongation du parc de la Petite Senne\", which are firm plans that will change vegetation cover, so the label is yes."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.06233539999999999,
+ "duration_ms": 22062
+}

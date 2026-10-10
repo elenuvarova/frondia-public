@@ -1,0 +1,109 @@
+/* ── the register of interventions (phase 2b) ──────────────────────────────────
+   The dossier's document layout (dossier.css). References in Figma 124:2, rows 29–33:
+   - a measure as Dovetail's highlight: the quote marked in the note colour (lavender, the palette's
+     role for notes: ink on it 8.1 : 1), its tags in mono under it, the source above;
+   - the rate as Adaline's evaluation and Cohere's comparison with a baseline, each value on the
+     dossier's bar with a tick (Churnkey), the bar here the Wilson interval;
+   - the disagreements as Braintrust's failing rows: a tinted card per case;
+   - the labels as Intercom Fin's three-step rating, drawn by form as the atlas's point roles (Forest):
+     the stronger role filled, the weaker outlined, none without a mark, "not described" dashed;
+   - the filter as Maze's result tabs, each with its count. */
+
+.reg .seq-wrap { overflow: hidden; display: block; }
+.reg .seq { --gap: 3ch; display: flex; flex-wrap: wrap; margin-left: calc(-1 * var(--gap)); }
+.reg .seq > span::before { content: "·"; content: "·" / ""; display: inline-block; width: var(--gap); text-align: center; }
+
+/* the rate: one group per question, the model and the rule on one scale each */
+.reg-int { gap: var(--s-32); margin-top: var(--s-48); }
+.reg-int-group { display: grid; grid-template-columns: minmax(150px, 220px) minmax(0, 1fr) 128px; column-gap: var(--s-20); row-gap: var(--s-12); }
+.reg .reg-int-title { grid-column: 1 / -1; margin: 0; font: 600 16px/22px var(--sans); letter-spacing: .01em; text-transform: none; }   /* a heading inside the section, under its caps label */
+.doc-scale-row.reg-int-row { grid-column: 1 / -1; grid-template-columns: subgrid; gap: 0 var(--s-20); }
+.reg-int-row .doc-scale-v { display: flex; flex-direction: column; gap: 2px; }
+.reg-int-row .doc-scale-v small { font-size: 12px; line-height: 16.8px; color: var(--ink-3); }
+.reg-int-track { background: linear-gradient(var(--rule-2), var(--rule-2)) center / 100% 1px no-repeat; }
+.reg-int-track i { background: color-mix(in srgb, var(--ink) 28%, var(--paper)); }   /* opaque: the hairline must not show through the interval */
+.doc-scale-read.reg-int-read { grid-column: 2 / 4; margin: 0 !important; }
+@media (max-width: 560px) {
+  .reg-int-group { grid-template-columns: minmax(0, 1fr) 112px; }
+  .reg-int-row .doc-scale-track { grid-column: 1 / -1; grid-row: 2; }
+  .doc-scale-read.reg-int-read { grid-column: 1 / -1; }
+}
+
+/* the disagreements: a tinted card per case (Braintrust) */
+.reg-misses { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-16); }
+.reg-miss { background: var(--paper-2); border-radius: 16px; padding: var(--s-20); display: grid; gap: var(--s-12); }
+.reg-miss-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--s-8) var(--s-20); }
+.reg-miss-link { font-size: 14px; line-height: 20px; }
+.reg-miss-labels { margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-16); border-top: 1px solid var(--rule); padding-top: var(--s-12); }
+.reg-miss-labels div { display: flex; flex-direction: column; gap: 2px; }
+.reg-miss-labels dt { font-size: 14px; line-height: 20px; color: var(--ink-3); }
+.reg-miss-labels dd { margin: 0; font-size: 14px; line-height: 20px; }
+.reg .reg-miss-why { font-size: 16px; line-height: 24px; max-width: 64ch; }
+.reg-miss-why-k { font-weight: 600; }
+@media (max-width: 560px) { .reg-miss { padding: var(--s-16); } .reg-miss-labels { gap: var(--s-8); } }
+
+/* the filter: tabs with their counts (Maze), wrapping on a phone */
+.reg-filter { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-12) var(--s-20); margin-bottom: var(--s-16); }
+.reg-tabs { display: flex; flex-wrap: wrap; gap: var(--s-8); }
+.reg-tabs button {
+  display: inline-flex; align-items: center; gap: var(--s-8); height: 36px; padding: 0 14px; border-radius: 999px;
+  border: 1px solid var(--rule-2); background: transparent; color: var(--ink); cursor: pointer;
+  font: 400 14px/14px var(--mono); transition: background-color .25s, color .25s;
+}
+.reg-tabs button:hover:not(:disabled):not([aria-pressed="true"]) { background: rgba(29, 29, 27, .06); }
+.reg-tabs button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.reg-tabs button:disabled { opacity: .45; cursor: default; }
+.reg-tab-n { color: inherit; opacity: .7; font-feature-settings: "tnum" 1; }
+.reg-only { display: inline-flex; align-items: center; gap: var(--s-8); font-size: 14px; line-height: 20px; cursor: pointer; min-height: 36px; }
+.reg-only input { width: 18px; height: 18px; accent-color: var(--ink); margin: 0; }
+@media (max-width: 720px) { .reg-tabs button, .reg-only { min-height: 44px; height: auto; } }
+
+/* the register: rows on hairlines, the contract on the left, its reading on the right */
+.reg .doc-sec--wide > .reg-wide { max-width: var(--doc-wide); margin-inline: auto; }
+.reg .reg-row p, .reg .reg-miss p { margin: 0; }   /* the document's p + p spacing is for prose; here the gaps set it */
+.reg-list { border-bottom: 1px solid var(--rule); }
+.reg-row { display: grid; grid-template-columns: minmax(160px, 240px) minmax(0, 1fr); gap: var(--s-12) var(--s-32); padding: var(--s-20) 0; border-top: 1px solid var(--rule); }
+.reg-row:focus { outline: none; }
+.reg-row:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+.reg-row-head { display: flex; flex-direction: column; gap: var(--s-8); min-width: 0; }
+.reg-name { font-family: var(--serif); font-size: 24px; line-height: 27px; letter-spacing: .01em; margin: 0; font-weight: 400; }   /* David 24 / 27 */
+.reg .reg-meta { font-size: 12px; line-height: 16.8px; color: var(--ink-3); margin: 0; }
+.reg-row-body { display: flex; flex-direction: column; gap: var(--s-12); min-width: 0; }
+.reg .reg-chips { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-8) var(--s-12); margin: 0; font-size: 12px; line-height: 16.8px; }
+.reg-chip i { background: transparent; }
+.reg-chip--yes i { background: var(--ink); }
+.reg-chip--weak i { border: 1.5px solid var(--ink); }
+.reg-chip--no i { display: none; }
+.reg-chip--no { padding-left: 11px; }
+.reg-chip--blank { border-style: dashed; border-color: var(--rule-2); color: var(--ink-3); padding-left: 11px; }
+.reg-chip--blank i { display: none; }
+.reg-checked { color: var(--ink-3); }
+.reg-quotes { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-12); }
+.reg-quotes li { display: grid; gap: 4px; }
+.reg .reg-q { font-size: 16px; line-height: 24px; max-width: 68ch; }
+.reg-q mark { background: color-mix(in srgb, var(--note-bg) 42%, var(--paper)); color: var(--ink); padding: 1px 3px; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.reg .reg-q-meta { font-size: 12px; line-height: 16.8px; color: var(--ink-3); }
+.reg .reg-note { font-size: 16px; line-height: 24px; color: var(--ink-3); }
+.reg-foot { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: var(--s-8) var(--s-20); }
+.reg-why { flex: 1 1 280px; min-width: 0; }
+.reg-why summary { cursor: pointer; font-size: 14px; line-height: 20px; min-height: 24px; width: fit-content; }
+.reg-why summary::marker { font-size: 11px; }
+.reg-why summary:hover { text-decoration: underline; text-underline-offset: .2em; text-decoration-thickness: 1px; }
+.reg .reg-why-text { font-size: 14px; line-height: 20px; color: var(--ink-2); margin: var(--s-8) 0 0; max-width: 64ch; }
+.reg-src { font-size: 14px; line-height: 20px; white-space: nowrap; }
+@media (max-width: 720px) {
+  .reg-row { grid-template-columns: 1fr; }
+  .reg-why summary { padding-block: 12px; }   /* a 44-px target that keeps its disclosure marker */
+  .reg-src { min-height: 44px; display: inline-flex; align-items: center; }
+}
+/* while a filter's rows are on their way (components/RegisterFilters.tsx): the list and the tab counts
+   fade, so the pressed tab never sits over the previous view's counts and rows */
+.reg-list, .reg-tab-n { transition: opacity .15s ease; }
+.reg-list[aria-busy="true"] { opacity: .5; }
+.reg-filter[data-pending] .reg-tab-n { opacity: .35; }
+@media (prefers-reduced-motion: reduce) { .reg-list, .reg-tab-n { transition: none; } }
+@media print {
+  .reg-filter, .reg-why summary, .reg-src { display: none !important; }
+  .reg-row { break-inside: avoid; }
+  .reg-q mark { background: none; border-bottom: 1px solid #1d1d1b; }
+}

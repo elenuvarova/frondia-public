@@ -1,0 +1,12 @@
+[fetch_statbel] downloading sector geometry ...
+[fetch_statbel] using cached sh_statbel_statistical_sectors_31370_20220101.shp.zip
+[fetch_statbel] geometry: 19795 sectors
+[fetch_statbel] downloading fiscal income ...
+[fetch_statbel] using cached TF_PSNL_INC_TAX_SECTOR.xlsx
+[fetch_statbel] income: keeping latest year 2023 (19950 sector rows)
+[fetch_statbel] downloading population ...
+[fetch_statbel] using cached OPENDATA_SECTOREN_2024.xlsx
+[fetch_statbel] sectors failing income merge: 3184/19795 (16.1%)
+[fetch_statbel] sectors failing population merge: 0/19795 (0.0%)
+[fetch_statbel] clipped sectors to Charleroi bbox: 503/19795 retained
+[fetch_statbel] wrote 503 sectors -> /home/user/facta/pipelines/spotfinder/pipeline/data/charleroi_statbel_sectors.geojson

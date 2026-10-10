@@ -1,0 +1,14 @@
+OK ghent toilets exit=0 assets=144 demand=1634 coverage=27.8% → 51.6%
+OK ghent benches exit=0 assets=2098 demand=1576 coverage=61.2% → 76.0%
+OK ghent waste_bins exit=0 assets=972 demand=2387 coverage=47.4% → 60.7%
+OK ghent drinking_water exit=0 assets=27 demand=2176 coverage=7.2% → 40.3%
+OK ghent fitness_stations exit=0 assets=31 demand=439 coverage=8.0% → 43.6%
+OK ghent bike_parking exit=0 assets=3333 demand=1634 coverage=65.9% → 78.2%
+OK ghent defibrillators exit=0 assets=142 demand=1491 coverage=28.8% → 51.7%
+OK ghent dog_areas exit=0 assets=27 demand=337 coverage=10.0% → 43.2%
+OK ghent playgrounds exit=0 assets=234 demand=622 coverage=43.5% → 62.2%
+OK ghent shelters exit=0 assets=415 demand=1324 coverage=55.8% → 69.8%
+OK ghent recycling exit=0 assets=191 demand=783 coverage=32.8% → 57.4%
+OK ghent bicycle_repair exit=0 assets=39 demand=4714 coverage=12.2% → 46.7%
+OK ghent public_bookcases exit=0 assets=83 demand=762 coverage=20.5% → 47.4%
+OK ghent picnic_tables exit=0 assets=414 demand=6693 coverage=23.9% → 55.0%

@@ -1,0 +1,12 @@
+# engine, data and tests (Python 3.12+)
+numpy==2.5.3
+shapely==2.1.2
+requests==2.34.2
+pillow==12.3.0
+tifffile==2026.9.20
+pytest==9.1.1
+# Earth Engine pipelines (scripts/gee), need your own Google Cloud project
+earthengine-api==1.7.41
+# only scripts/registry/city_sectors.py (one-off sector import)
+geopandas
+pandas

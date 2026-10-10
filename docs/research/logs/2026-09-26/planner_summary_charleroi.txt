@@ -1,0 +1,14 @@
+OK charleroi toilets exit=0 assets=11 demand=1336 coverage=3.6% → 41.2%
+OK charleroi benches exit=0 assets=162 demand=1188 coverage=18.7% → 52.4%
+OK charleroi waste_bins exit=0 assets=44 demand=1386 coverage=10.3% → 46.3%
+OK charleroi drinking_water exit=0 assets=1 demand=1500 coverage=0.9% → 38.8%
+OK charleroi fitness_stations exit=0 assets=2 demand=134 coverage=0.7% → 46.6%
+OK charleroi bike_parking exit=0 assets=61 demand=1336 coverage=16.8% → 49.3%
+OK charleroi defibrillators exit=0 assets=6 demand=1303 coverage=2.2% → 40.1%
+OK charleroi dog_areas exit=0 assets=1 demand=109 coverage=0.2% → 50.0%
+OK charleroi playgrounds exit=0 assets=29 demand=267 coverage=14.9% → 53.8%
+OK charleroi shelters exit=0 assets=178 demand=1240 coverage=44.2% → 72.2%
+OK charleroi recycling exit=0 assets=8 demand=339 coverage=4.1% → 47.8%
+OK charleroi bicycle_repair exit=0 assets=1 demand=1302 coverage=1.0% → 38.4%
+OK charleroi public_bookcases exit=0 assets=2 demand=312 coverage=1.8% → 42.1%
+OK charleroi picnic_tables exit=0 assets=16 demand=377 coverage=2.4% → 44.4%

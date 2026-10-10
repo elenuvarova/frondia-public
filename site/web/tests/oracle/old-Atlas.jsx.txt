@@ -1,0 +1,1134 @@
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { BALANCE, BUILT, CASES, CHECK, CITY_NAMES, COMMUNES, EQUITY, MORE, NEED, NOT_MEASURED, PHOTOS, REGISTERED, OBJECTS, OBJECT_ONE, PLACE, QUESTIONS, SCENARIO_LABEL, SERVICE_LABEL, SHOP_LABEL } from '@frondia/shared/content/en'
+import { Icon } from '@frondia/shared/icons/Icon'
+import { useJSON } from '@frondia/shared/lib/data'
+import { fixed, int, pct, shortWindow, signed, titleCase } from '@frondia/shared/lib/format'
+import { LACK, MIN_RESIDENTS, NEED_LENSES, SCENARIOS, SHOP_TYPES, fewResidents, measuredIn, needFill, needStep, worst } from '@frondia/shared/lib/lenses'
+import { Link, navigate, useRoute } from '@frondia/shared/lib/router'
+import { NullHistogram } from '@frondia/shared/viz/NullHistogram'
+import { FIELD_UNDER_DATA, SectorMap, builtFill, countFor, fillFor } from '@frondia/shared/viz/SectorMap'
+import { landingHref } from '../lib/links'
+import { useMoreBelow } from '../lib/moreBelow'
+import { asset } from '@frondia/shared/lib/base'
+
+const VERDICT = {
+  up: ['up', 'Greener beyond noise'],
+  down: ['down', 'Lost beyond noise'],
+  noise: ['noise', 'Within noise'],
+  refused: ['refused', 'No comparable places — refused'],
+}
+
+/* ── pan & zoom on the SVG viewBox ─────────────────────────────────────── */
+// The viewBox always has the container's aspect, so screen ↔ map is one scale `s`.
+// "Fit" places a box in the part of the stage that the floating panels leave free.
+function useViewBox(svgRef, W, H) {
+  const [el, setEl] = useState(null)
+  const [size, setSize] = useState(null)
+  const [vb, setVb] = useState({ x: 0, y: 0, w: W, h: H })
+  const drag = useRef(null)
+  const moved = useRef(false)
+  const anim = useRef(0)
+  const S = useRef({})
+
+  useEffect(() => {
+    if (!el) return
+    const ro = new ResizeObserver(([e]) => setSize({ w: e.contentRect.width, h: e.contentRect.height }))
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [el])
+
+  const free = useMemo(() => {
+    if (!size) return null
+    const mobile = size.w <= 860   // the CSS's phone is max-width: 860px
+    const l = mobile ? 12 : 376, r = mobile ? 12 : 72, t = mobile ? 56 : 24, b = mobile ? size.h * 0.46 : 24
+    return { l, t, w: Math.max(80, size.w - l - r), h: Math.max(80, size.h - t - b) }
+  }, [size])
+
+  // `drawer`: a card is open on the right, keep the target out from under it
+  const fitBox = useCallback((b, pad = 1, drawer = false) => {
+    if (!size || !free) return null
+    const fw = drawer && size.w > 860 ? Math.max(80, free.w - 332) : free.w
+    const bw = Math.max(24, (b.x1 - b.x0) * pad), bh = Math.max(24, (b.y1 - b.y0) * pad)
+    const s = Math.min(fw / bw, free.h / bh)
+    const cx = (b.x0 + b.x1) / 2, cy = (b.y0 + b.y1) / 2
+    return { x: cx - (free.l + fw / 2) / s, y: cy - (free.t + free.h / 2) / s, w: size.w / s, h: size.h / s }
+  }, [size, free])
+
+  const home = useMemo(() => fitBox({ x0: 0, y0: 0, x1: W, y1: H }) || { x: 0, y: 0, w: W, h: H }, [fitBox, W, H])
+  useEffect(() => { setVb(home) }, [home])
+  S.current = { home }
+
+  const clamp = (v) => {
+    const h0 = S.current.home
+    const w = Math.min(h0.w * 1.25, Math.max(h0.w / 28, v.w)), k = w / v.w
+    const h = v.h * k
+    const cx = v.x + v.w / 2, cy = v.y + v.h / 2
+    return { w, h, x: Math.min(W, Math.max(-w + 0, cx - w / 2)), y: Math.min(H, Math.max(-h, cy - h / 2)) }
+  }
+  const toSvg = (cx, cy) => {
+    const svg = svgRef.current
+    const p = svg.createSVGPoint(); p.x = cx; p.y = cy
+    return p.matrixTransform(svg.getScreenCTM().inverse())
+  }
+  const zoomAt = useCallback((cx, cy, f) => {
+    const p = toSvg(cx, cy)
+    setVb((v) => {
+      const n = clamp({ x: p.x - (p.x - v.x) * f, y: p.y - (p.y - v.y) * f, w: v.w * f, h: v.h * f })
+      const k = n.w / v.w
+      return { ...n, x: p.x - (p.x - v.x) * k, y: p.y - (p.y - v.y) * k }
+    })
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+
+  const flyTo = useCallback((target, ms = 800) => {
+    if (!target) return
+    cancelAnimationFrame(anim.current)
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
+    setVb((from) => {
+      if (reduce) return target
+      const t0 = performance.now()
+      const ease = (t) => 1 - Math.pow(1 - t, 3)
+      const step = (now) => {
+        const t = Math.min(1, (now - t0) / ms), k = ease(t)
+        setVb({ x: from.x + (target.x - from.x) * k, y: from.y + (target.y - from.y) * k,
+                w: from.w + (target.w - from.w) * k, h: from.h + (target.h - from.h) * k })
+        if (t < 1) anim.current = requestAnimationFrame(step)
+      }
+      anim.current = requestAnimationFrame(step)
+      return from
+    })
+  }, [])
+
+  // callback ref: remember the stage and bind a native non-passive wheel listener
+  const ref = useCallback((node) => {
+    setEl(node)
+    if (node) node.addEventListener('wheel', (e) => { e.preventDefault(); zoomAt(e.clientX, e.clientY, Math.exp(e.deltaY * 0.0016)) }, { passive: false })
+  }, [zoomAt])
+
+  const handlers = {
+    ref,
+    onPointerDown: (e) => {
+      if (e.button !== 0) return
+      cancelAnimationFrame(anim.current)
+      drag.current = { x: e.clientX, y: e.clientY, vb }
+      moved.current = false
+    },
+    onPointerMove: (e) => {
+      const d = drag.current
+      if (!d) return
+      const dx = e.clientX - d.x, dy = e.clientY - d.y
+      if (!moved.current && Math.hypot(dx, dy) < 4) return
+      if (!moved.current) { moved.current = true; e.currentTarget.setPointerCapture?.(e.pointerId) }
+      const a = svgRef.current.getScreenCTM().a
+      setVb(clamp({ ...d.vb, x: d.vb.x - dx / a, y: d.vb.y - dy / a }))
+    },
+    onPointerUp: () => { drag.current = null },
+    onPointerCancel: () => { drag.current = null },
+  }
+  return { vb, size, home, zoomAt, flyTo, fitBox, handlers, wasDrag: () => moved.current }
+}
+
+function bbox(d) {
+  const nums = d.match(/-?\d+(\.\d+)?/g).map(Number)
+  let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity
+  for (let i = 0; i < nums.length; i += 2) {
+    x0 = Math.min(x0, nums[i]); x1 = Math.max(x1, nums[i])
+    y0 = Math.min(y0, nums[i + 1]); y1 = Math.max(y1, nums[i + 1])
+  }
+  return { x0, y0, x1, y1 }
+}
+
+/* ── pieces ────────────────────────────────────────────────────────────── */
+function Toggle({ on, onChange, children }) {
+  return (
+    <button type="button" role="switch" aria-checked={on} className={`switch ${on ? 'on' : ''}`} onClick={() => onChange(!on)}>
+      <span className="switch-track"><span className="switch-knob" /></span>
+      <span>{children}</span>
+    </button>
+  )
+}
+
+const km = (m) => (m == null ? '—' : m < 1000 ? `${m} m` : `${(m / 1000).toFixed(1)} km`)
+const R3 = ['meets neither', 'meets one of the two', 'meets both']   // as in the lens's legend
+const longDate = (iso) => iso && new Date(`${iso}T12:00:00`).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+
+// what a list row shows for a need lens
+function needLabel(s, lens, opt) {
+  if (lens === 'services') return `${s.fit?.[opt.scenario]}/100`
+  if (lens === 'shops') return km(s.shop?.[opt.shop])
+  if (lens === 'heat') return `${signed(s.hot, 1)} °C`
+  if (lens === 'r3') return `${pct(s.cs)} canopy`
+  return ''
+}
+
+function Chips({ label, value, options, onChange }) {
+  return (
+    <div className="chips" role="group" aria-label={label}>
+      {options.map(([k, text]) => (
+        <button key={k} type="button" aria-pressed={k === value} onClick={() => onChange(k)}>{text}</button>
+      ))}
+    </div>
+  )
+}
+
+// a second choice inside a lens, or one among many: one row, the name left and the value with a caret
+// right (Mapbox Studio's style panel). A native select, so a phone opens its own picker.
+function Choice({ label, value, options, onChange }) {
+  return (
+    <label className="choice">
+      <span>{label}</span>
+      <select value={value} onChange={(e) => onChange(e.target.value)}>
+        {options.map(([k, text]) => <option key={k} value={k}>{text}</option>)}
+      </select>
+      <i className="caret" aria-hidden="true" />
+    </label>
+  )
+}
+
+/* ── the sector page: the three questions, top to bottom ─────────────────── */
+function Passport({ s, city, onClose, cases, points, opt }) {
+  const more = useMoreBelow()
+  const thr = city.thresholds.ndvi
+  const [cls, text] = VERDICT[s.nv] || ['noise', 'Not measured']
+  const k = s.ne != null ? Math.abs(s.ne) / thr : null
+  const caseHere = cases.find((c) => {
+    const b = bbox(s.d)
+    return c.x >= b.x0 && c.x <= b.x1 && c.y >= b.y0 && c.y <= b.y1
+  })
+  const here = (points?.points || []).filter((p) => p.s === s.id && p.r <= 20)
+    .sort((a, b) => (a.role === 'named' ? 0 : 1) - (b.role === 'named' ? 0 : 1) || a.r - b.r)
+  const scen = opt.scenario
+  return (
+    <aside className="drawer" ref={more} aria-label={`Sector ${titleCase(s.n)}`}>
+      <div className="drawer-head">
+        <Seq className="label" text={`Sector · ${s.id} · ${s.c}`} />
+        <button type="button" className="drawer-x" onClick={onClose} aria-label="Close sector">×</button>
+      </div>
+      <h2 className="display-s">{titleCase(s.n)}</h2>
+      <p className="mono drawer-people">{int(s.pop)} residents{s.inc ? ` · median income €${int(s.inc)}` : ''}</p>
+      {/* the printable dossier lives on the landing's side (a document, in its system) */}
+      {s.t24 != null && (
+        <a className="pill pill--sm pill--line drawer-dossier" href={landingHref(`dossier?city=${city.city}&sector=${s.id}`)}>
+          Dossier for this sector <span className="arr">→</span>
+        </a>
+      )}
+
+      <section className="drawer-part">
+        <h3 className="part-title">{QUESTIONS.need.long}</h3>
+        {(s.pop || 0) < MIN_RESIDENTS && (
+          <p className="small">Fewer than {MIN_RESIDENTS} people live here: the numbers stand, but the atlas does not shade or rank the sector.</p>
+        )}
+        <dl className="passport">
+          {s.fit && (
+            <div className="wide"><dt className="label">Everyday services · {SCENARIO_LABEL[scen]}</dt>
+              <dd><span className="mono big">{s.fit[scen]}</span><span className="small"> / 100 · weakest: {s.low?.[scen]?.map((x) => SERVICE_LABEL[x]).join(', ')}</span></dd></div>
+          )}
+          {s.shop && SHOP_TYPES.map((t) => (
+            <div key={t}><dt className="label">Nearest {SHOP_LABEL[t].toLowerCase()}</dt><dd className="mono">{km(s.shop[t])}</dd></div>
+          ))}
+          {s.hot != null && <div><dt className="label">Summer heat</dt><dd className="mono">{signed(s.hot, 1)} °C vs city</dd></div>}
+          {s.cs != null && <div><dt className="label">Tree canopy</dt><dd className="mono">{pct(s.cs)}</dd></div>}
+          {s.r3 != null && <div><dt className="label">3-30-300</dt><dd className="mono">{R3[s.r3]}</dd></div>}
+          {s.kid != null && <div><dt className="label">Children · 65+</dt><dd className="mono">{pct(s.kid)} · {pct(s.old)}</dd></div>}
+        </dl>
+      </section>
+
+      <section className="drawer-part">
+        <h3 className="part-title">{QUESTIONS.place.long}</h3>
+        {here.length ? (
+          <ul className="proposals">
+            {here.map((p) => (
+              <li key={`${p.t}-${p.r}`}><i className={`pt pt-${p.role || 'more'}`} />
+                <span>{OBJECT_ONE[p.t]}</span>
+                <span className="mono">#{p.r}{p.role === 'named' ? ' · named' : p.role === 'control' ? ' · comparison' : ''}</span></li>
+            ))}
+          </ul>
+        ) : <p className="small">None of City Planner’s first twenty candidates of any kind falls in this sector.</p>}
+      </section>
+
+      <section className="drawer-part">
+        <h3 className="part-title">{QUESTIONS.change.long}</h3>
+        <span className={`chip chip--${cls}`}><i />{text}</span>
+        <dl className="passport">
+          <div className="wide"><dt className="label">Effect against matched places</dt>
+            <dd><span className="mono big">{signed(s.ne, 3)}</span>
+              {k != null && s.nv !== 'refused' && <span className="small"> · {k.toFixed(1)}× the threshold (±{fixed(thr, 3)})</span>}</dd></div>
+          <div><dt className="label">Own change, raw</dt><dd className="mono">{signed(s.raw, 3)}</dd></div>
+          <div><dt className="label">Match gap before</dt><dd className="mono">{signed(s.gap, 3)}</dd></div>
+          <div><dt className="label">Vegetation 2024</dt><dd className="mono">{fixed(s.n24, 3)}</dd></div>
+          <div><dt className="label">Canopy 2024</dt><dd className="mono">{fixed(s.t24, 3)}</dd></div>
+          {s.be != null && city.built && (
+            <div className="wide"><dt className="label">{BUILT.passport}</dt>
+              <dd><span className="mono">{signed(s.be, 3)}</span>
+                <span className="small"> · {BUILT.word[s.bv] || 'not measured'}{s.bv !== 'refused' ? ` (±${fixed(city.built.threshold, 3)})` : ''}</span></dd></div>
+          )}
+        </dl>
+        <div className="drawer-hist">
+          <p className="label">Where it sits in the city’s noise</p>
+          <NullHistogram hist={city.hist} thr={thr} height={150} compact showAxis
+                         label={`Distribution of effects in ${city.name}; this sector ${signed(s.ne, 3)}`} />
+          {s.ne != null && (
+            <span className="drawer-pin" style={{ left: `${Math.min(100, Math.max(0, ((s.ne - city.hist.lo) / (city.hist.hi - city.hist.lo)) * 100))}%` }}>
+              <i />{signed(s.ne, 3)}
+            </span>
+          )}
+        </div>
+        <p className="small">
+          {s.nv == null
+            ? 'This sector was not measured in this window, so there is no verdict.'
+            : s.nv === 'refused'
+            ? 'No twelve sectors looked enough like this one beforehand, so no verdict is given. That is a result, not a gap.'
+            : `Compared with twelve sectors that had the same greenness and summer heat in ${city.window.split('→')[0].trim()}. ${s.nv === 'noise' ? 'The difference sits inside the city’s own noise.' : 'The difference is outside the city’s own noise.'}`}
+        </p>
+        {caseHere && (
+          <Link to={`/?city=${city.city}&case=${caseHere.slug}`} className="pill pill--sm pill--ink">
+            Audit: {CASES[caseHere.slug]?.place || caseHere.name} <span className="arr">→</span>
+          </Link>
+        )}
+      </section>
+    </aside>
+  )
+}
+
+/* ── the three panels ────────────────────────────────────────────────────── */
+/* ── who is short (phase 2): the lens by income third, and who lives in the worst-off group ──
+   Rows as in Deel's side panel (label and value on one line, a thin bar on a hairline track); the age
+   rows are set against all residents in points, as Steep's breakdown sets segments against the total.
+   Bars are ink, not the lack ramp: the ramp means a class on the map. Heat is a difference from the
+   city's median sector, so its bars leave the centre line to either side. */
+const GAP_PTS = 2   // a group is named in the reading from 2 points of difference with all residents
+const EQUITY_FMT = {
+  services: (v) => `${Math.round(v)}/100`,
+  shops: (v) => km(Math.round(v / 10) * 10),
+  heat: (v) => `${signed(v, 1)}\u00A0°C`,
+  r3: (v) => pct(v),
+}
+function barStyle(lens, v, vals) {
+  if (lens === 'heat') {   // diverging from the city median
+    const m = Math.max(1, ...vals.map(Math.abs))
+    const w = (50 * Math.abs(v)) / m
+    return { left: `${v >= 0 ? 50 : 50 - w}%`, width: `${w}%` }
+  }
+  const top = lens === 'services' ? 100 : lens === 'shops' ? Math.max(...vals) : 1
+  return { left: 0, width: `${(100 * v) / top}%` }
+}
+const MORE_IS_WORSE = { services: false, shops: true, heat: true, r3: true }
+function equityReading(lens, o, e) {
+  const f = EQUITY_FMT[lens]
+  const [p, , r] = e.thirds
+  const worse = MORE_IS_WORSE[lens] ? p > r : p < r
+  const income = EQUITY.reading[lens](worse, f(p), f(r), o)
+  const g = EQUITY.group[lens]
+  const d = { kid: e.kid - e.all, old: e.old - e.all }
+  const named = ['kid', 'old'].filter((k) => Math.abs(d[k]) * 100 >= GAP_PTS)
+  const noun = { kid: EQUITY.kidNoun, old: EQUITY.oldNoun }
+  let ages
+  if (!named.length) ages = EQUITY.ages.none(g)
+  else if (named.length === 1) ages = EQUITY.ages.one(noun[named[0]], d[named[0]] > 0, g, pct(e[named[0]]), pct(e.all))
+  else if ((d.kid > 0) !== (d.old > 0)) {
+    const [m, l] = d.kid > 0 ? ['kid', 'old'] : ['old', 'kid']
+    ages = EQUITY.ages.split(noun[m], noun[l], g, pct(e[m]), pct(e[l]), pct(e.all))
+  } else ages = EQUITY.ages.both(d.kid > 0, g, pct(e.kid), pct(e.old), pct(e.all))
+  return `${income} ${ages}`
+}
+
+function Equity({ city, lens, opt }) {
+  const o = lens === 'services' ? opt.scenario : lens === 'shops' ? opt.shop : '_'
+  const e = city.equity?.[lens]?.[o]
+  if (!e) return null
+  const f = EQUITY_FMT[lens]
+  const cut = e.cut == null ? null : EQUITY.cut[lens](lens === 'heat' ? `${signed(e.cut, 1)}\u00A0°C` : lens === 'shops' ? km(Math.round(e.cut / 10) * 10) : e.cut)
+  const pts = (v) => { const n = Math.round((v - e.all) * 100); return `${signed(n, 0)} ${Math.abs(n) === 1 ? 'pt' : 'pts'}` }
+  const euro = (v) => `€${int(v)}`
+  return (
+    <section className="equity" aria-label={EQUITY.title}>
+      <p className="label">{EQUITY.title}</p>
+      <p className="small equity-read">{equityReading(lens, o, e)}</p>
+      <p className="small equity-head">{EQUITY.byIncome[lens](o)}</p>
+      <ul className={`bars${lens === 'heat' ? ' bars--diverging' : ''}`}>
+        {e.thirds.map((v, i) => (
+          <li key={i}>
+            <span>{EQUITY.thirds[i]}</span><span className="v">{f(v)}</span>
+            <span className="track" aria-hidden="true"><i style={barStyle(lens, v, e.thirds)} /></span>
+          </li>
+        ))}
+      </ul>
+      <p className="small equity-head">{EQUITY.livesIn(EQUITY.group[lens], cut)}</p>
+      <ul className="bars">
+        <li className="ref">
+          <span>{EQUITY.all}</span><span className="v">{pct(e.all)}</span>
+          <span className="track" aria-hidden="true"><i style={{ left: 0, width: `${100 * e.all}%` }} /></span>
+        </li>
+        {['kid', 'old'].map((k) => (
+          <li key={k} className="vs-row">
+            <span>{EQUITY[k]}</span>
+            <span className="vs">{pts(e[k])}<span className="sr-only"> {EQUITY.vs}</span></span>
+            <span className="v">{pct(e[k])}</span>
+            <span className="track" aria-hidden="true"><i style={{ left: 0, width: `${100 * e[k]}%` }} /></span>
+          </li>
+        ))}
+      </ul>
+      <p className="small panel-source">{EQUITY.source(euro(city.equity.income_cuts[0]), euro(city.equity.income_cuts[1]))}</p>
+    </section>
+  )
+}
+
+function NeedPanel({ city, lens, setLens, opt, setOpt, onPick, otherCity }) {
+  const more = useMoreBelow()
+  const words = NEED[lens]
+  const measured = measuredIn(city, lens)
+  const list = useMemo(() => (measured ? worst(city, lens, opt) : []), [city, lens, opt, measured])
+  return (
+    <section className="panel" ref={more} aria-label="What’s missing">
+      <p className="label">{QUESTIONS.need.long}</p>
+      <div>
+        <h1 className="display-s">{words.title} in {city.name}</h1>
+      </div>
+      <Chips label="Lens" value={lens} onChange={setLens} options={NEED_LENSES.map((k) => [k, NEED[k].chip])} />
+      {lens === 'services' && measured && (
+        <Choice label="Weighted for" value={opt.scenario} onChange={(v) => setOpt({ ...opt, scenario: v })}
+                options={SCENARIOS.map((k) => [k, SCENARIO_LABEL[k]])} />
+      )}
+      {lens === 'shops' && measured && (
+        <Choice label="Nearest" value={opt.shop} onChange={(v) => setOpt({ ...opt, shop: v })}
+                options={SHOP_TYPES.map((k) => [k, SHOP_LABEL[k]])} />
+      )}
+      {measured ? (
+        <>
+          <p className="small">{typeof words.lede === 'function' ? words.lede(city) : words.lede}</p>
+          {/* phone: the list legend is hidden, a one-line ramp carries the ends */}
+          <div className="ramp" aria-hidden="true">
+            <span className="ramp-bar">{LACK.map((c, i) => words.legend[i] && <i key={i} style={{ background: c }} />)}</span>
+            <span className="ramp-ends"><span>{words.legend.find(Boolean)}</span><span>{[...words.legend].reverse().find(Boolean)}</span></span>
+          </div>
+          <ul className="legend">
+            {words.legend.map((t, i) => t && <li key={i}><i className="sw" style={{ background: LACK[i] }} />{t}</li>)}
+            {lens !== 'services' && <li><i className="sw sw-blank" />{lens === 'heat' ? 'At or below the city median' : lens === 'shops' ? 'Within 300 m' : 'Meets both'}</li>}
+            <li><i className="sw sw-few" />Fewer than {MIN_RESIDENTS} residents · {fewResidents(city)} sectors</li>
+          </ul>
+          <p className="small panel-source">{words.source} {words.limit}</p>
+          <Equity city={city} lens={lens} opt={opt} />
+          <p className="label panel-sub">Lacking most</p>
+          <ol className="toplist">
+            {list.map((s) => (
+              <li key={s.id}>
+                <button type="button" onClick={() => onPick(s)}>
+                  <i className="dot" style={{ background: LACK[needStep(s, lens, opt) - 1] }} />
+                  <span>{titleCase(s.n)}<small>{s.c}</small></span><span className="mono">{needLabel(s, lens, opt)}</span>
+                </button>
+              </li>
+            ))}
+          </ol>
+        </>
+      ) : (
+        <p className="small">{NOT_MEASURED(city.name)} <button type="button" className="link" onClick={otherCity}>See it in {city.city === 'brussels' ? 'Antwerp' : 'Brussels'} →</button></p>
+      )}
+    </section>
+  )
+}
+
+/* ── what if N more? (phase 2): the planner's coverage after each rank ─────────────────────────
+   The value above the slider and the result under it, as Dub's calculator sets them; the curve is the
+   context of the choice, as Mixpanel draws the volume you pick: the area up to N is filled, a marker
+   stands at N, and a dashed line marks the ten named on 5 September (Mixpanel's "Recommended"). */
+function CoverageCurve({ steps, k, named = 10 }) {
+  const W = 235, H = 64, lo = steps[0], hi = steps[steps.length - 1] || lo + 0.01
+  const x = (i) => (i / (steps.length - 1)) * W
+  const y = (v) => H - 4 - ((v - lo) / (hi - lo || 1)) * (H - 10)
+  const line = steps.map((v, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join('')
+  const area = `M0,${H}` + steps.slice(0, k + 1).map((v, i) => `L${x(i).toFixed(1)},${y(v).toFixed(1)}`).join('') + `L${x(k).toFixed(1)},${H}Z`
+  return (
+    <svg className="more-curve" viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none" aria-hidden="true">
+      {k > 0 && <path d={area} className="more-curve-area" />}
+      <path d={line} className="more-curve-line" vectorEffect="non-scaling-stroke" />
+      <line x1={x(named)} x2={x(named)} y1="0" y2={H} className="more-curve-named" vectorEffect="non-scaling-stroke" />
+      <line x1={x(k)} x2={x(k)} y1="0" y2={H} className="more-curve-mark" vectorEffect="non-scaling-stroke" />
+    </svg>
+  )
+}
+
+function MoreN({ city, points, t, n, setN }) {
+  const steps = t.steps
+  if (!steps) return null
+  const k = Math.max(0, Math.min(n, steps.length - 1))
+  const byId = new Map(city.sectors.map((s) => [s.id, s]))
+  const cut = city.equity?.income_cuts?.[0]
+  const first = points.points.filter((p) => p.t === t.key && p.r <= k && p.s && byId.get(p.s)?.inc != null)
+  const poor = first.filter((p) => byId.get(p.s).inc <= cut).length
+  const euro = `€${int(cut)}`
+  return (
+    <div className="more-n">
+      <p className="label more-title">{MORE.title(k)}</p>
+      <input type="range" className="more-range" min="0" max={steps.length - 1} step="1" value={k}
+             onChange={(e) => setN(Number(e.target.value))} aria-label={MORE.slider}
+             aria-valuetext={`${k}: ${pct(steps[k])} ${MORE.read}`} />
+      <p className="more-read"><b className="num-m">{pct(steps[0])} → {pct(steps[k])}</b><span>{MORE.read}</span></p>
+      <div className="more-chart">
+        <CoverageCurve steps={steps} k={k} />
+        {/* the tag sits on the side of the dashed line away from the marker, so the two never cross */}
+        <span className={`more-named-tag mono${k > 10 ? ' is-left' : ''}`} style={{ left: `${(100 * 10) / (steps.length - 1)}%` }} aria-hidden="true">{MORE.named}</span>
+      </div>
+      <p className="more-ends mono" aria-hidden="true"><span>{MORE.today}</span><span>{MORE.all(steps.length - 1)}</span></p>
+      <p className="small">{k === 0 ? MORE.zero : k === 1 ? MORE.whoOne(poor > 0, euro) : MORE.who(k, poor, euro)}</p>
+    </div>
+  )
+}
+
+function PlacePanel({ city, points, obj, setObj, onPick, n, setN }) {
+  const more = useMoreBelow()
+  if (!points) return <section className="panel" ref={more} aria-label="What to place"><p className="small">Loading…</p></section>
+  const t = points.types.find((x) => x.key === obj) || points.types[0]
+  const named = points.points.filter((p) => p.t === t.key && p.role === 'named').sort((a, b) => a.r - b.r)
+  const byId = new Map(city.sectors.map((s) => [s.id, s]))
+  return (
+    <section className="panel" ref={more} aria-label="What to place">
+      <p className="label">{QUESTIONS.place.long}</p>
+      <div>
+        <h1 className="display-s">{OBJECTS[t.key]} in {city.name}</h1>
+        <p className="mono panel-window">{t.n} candidates from a pool of {int(t.pool)}</p>
+      </div>
+      <Choice label="Object" value={t.key} onChange={setObj}
+              options={points.types.map((x) => [x.key, OBJECTS[x.key]])} />
+      {t.before != null && (
+        <div className="counts">
+          <div><span className="num-l">{pct(t.before)}</span><span className="label">of demand within 500 m today</span></div>
+          <div><span className="num-l">{pct(t.after)}</span><span className="label">with all {t.n} placed</span></div>
+        </div>
+      )}
+      <MoreN city={city} points={points} t={t} n={n} setN={setN} />
+      <ul className="legend legend--points">
+        <li><i className="pt pt-named" />{PLACE.legend[0]}</li>
+        <li><i className="pt pt-control" />{PLACE.legend[1]}</li>
+        <li><i className="pt pt-more" />{PLACE.legend[2]}</li>
+      </ul>
+      <p className="small">{PLACE.lede} {PLACE.named(longDate(points.registered_at))}</p>
+      <p className="small panel-source">{PLACE.source} {PLACE.limit} {PLACE.mapped}</p>
+      {t.official && <p className="small panel-source">{PLACE.register(t.official, OBJECT_ONE[t.key]?.toLowerCase() || OBJECTS[t.key].toLowerCase())} {PLACE.registerSnap(longDate(t.official.date))}</p>}
+      <p className="label panel-sub">Named first</p>
+      <ol className="toplist">
+        {named.map((p) => {
+          const s = p.s && byId.get(p.s)
+          return (
+            <li key={p.r}>
+              <button type="button" onClick={() => onPick(p, s)}>
+                <i className="pt pt-named" /><span>{s ? titleCase(s.n) : 'Outside the sectors'}<small>{s ? s.c : city.name}</small></span><span className="mono">#{p.r}</span>
+              </button>
+            </li>
+          )
+        })}
+      </ol>
+    </section>
+  )
+}
+
+/* ── communes (phase 2): Article 8(1) by commune, and what was registered before the works ────
+   The list follows Grain's scale: the threshold labelled once above the rows, a dashed line through
+   them (elements board, 44). A registered footprint is an outline with no fill, as Zillow draws a
+   boundary someone set. The fill is the green share itself, in ColorBrewer Greens (brand.css), and a
+   bar in the list takes its commune's class, so list and map read the same. */
+const GREENS = ['var(--green-1)', 'var(--green-2)', 'var(--green-3)', 'var(--green-4)', 'var(--green-5)']
+const greenStep = (g) => (g == null ? null : g < 0.15 ? 0 : g < 0.3 ? 1 : g < 0.45 ? 2 : g < 0.6 ? 3 : 4)
+
+// commune names on the map: the larger commune is placed first; a name that would touch a placed name
+// or a registered pin moves up or down by a line, and one with no free place is left out (the list and
+// the tooltip still name it). Sizes are in map units, so the pass reruns as the view zooms.
+function placeLabels(list, pins, fs, pinR) {
+  const placed = [], boxes = pins.map((p) => ({ x0: p.x - pinR, x1: p.x + pinR, y0: p.y - pinR, y1: p.y + pinR }))
+  const hit = (b) => boxes.some((o) => b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0)
+  for (const c of [...list].sort((a, b) => (b.area || 0) - (a.area || 0))) {
+    const w = c.name.length * fs * 0.56, h = fs * 1.2
+    for (const dy of [0, 1.15, -1.15, 2.3, -2.3]) {
+      const y = c.y + dy * h
+      const b = { x0: c.x - w / 2, x1: c.x + w / 2, y0: y - h / 2, y1: y + h / 2 }
+      if (!hit(b)) { boxes.push(b); placed.push({ ...c, y }); break }
+    }
+  }
+  return placed
+}
+
+// the balance after the 2024 base: lost and gained beyond noise, and the net, in hectares — the three bars of
+// France's Mon Diagnostic Artificialisation (Figma 125:2, row 49) set as rows on a hairline track (Deel), one
+// scale for all three. Left is less, right is more; the colour says what the change means: more built-up is loss
+const HA = (v) => `${v > 0 ? '+' : v < 0 ? '−' : ''}${fixed(Math.abs(v), 1)}\u00A0ha`
+function Balance({ city }) {
+  const b = city.balance
+  const s = b.latest, d = b.seasons[s]
+  const top = Math.max(1, ...['green', 'trees', 'built'].flatMap((k) => [Math.abs(d[k].lost_ha), d[k].gained_ha]))
+  const w = (v) => `${(50 * Math.abs(v)) / top}%`
+  return (
+    <div className="balance">
+      <p className="label panel-sub">{BALANCE.title(b.base)}</p>
+      <p className="small">{BALANCE.lede(b.base, s)}</p>
+      <ul className="bars bars--diverging bars--balance">
+        {['green', 'trees', 'built'].map((k) => (
+          <li key={k}>
+            <span>{BALANCE.rows[k]}<small>{BALANCE.split(`${fixed(Math.abs(d[k].lost_ha), 1)}\u00A0ha`, `${fixed(d[k].gained_ha, 1)}\u00A0ha`)}</small></span>
+            <span className="v">{BALANCE.net(HA(d[k].net_ha))}</span>
+            <span className="track" aria-hidden="true">
+              <i className={k === 'built' ? 'is-gain' : 'is-loss'} style={{ left: `calc(50% - ${w(d[k].lost_ha)})`, width: w(d[k].lost_ha) }} />
+              <i className={k === 'built' ? 'is-loss' : 'is-gain'} style={{ left: '50%', width: w(d[k].gained_ha) }} />
+            </span>
+          </li>
+        ))}
+      </ul>
+      <p className="small">{BALANCE.raw(city.name, s, HA(d.green.raw_net_ha), HA(d.built.raw_net_ha))}</p>
+      {[b.base, s].filter((y) => b.preliminary[y]).map((y) => <p key={y} className="small">{BALANCE.preliminary(y)}</p>)}
+      <p className="small panel-source">{BALANCE.limit}</p>
+    </div>
+  )
+}
+
+function CommuneBody({ city, onPickRegistered }) {
+  const co = city.communes
+  const tested = co.list.filter((c) => c.green != null).sort((a, b) => b.green - a.green)
+  const lo = co.leave_out
+  const reg = city.registered || []
+  const untested = co.tested < co.list.length
+  return (
+    <>
+      <p className="small">{COMMUNES.lede}</p>
+      <div className="counts">
+        <div><span className="num-l">{co.exempt}</span><span className="label">{COMMUNES.exempt}</span></div>
+        <div><span className="num-l">{co.tested - co.exempt}</span><span className="label">{COMMUNES.counted}</span></div>
+      </div>
+      {co.region && <p className="small">{COMMUNES.region(co.tested, pct(co.region.green, 1))}</p>}
+      {lo && <p className="small">{COMMUNES.leaveOut(co.exempt, pct(lo.area), pct(lo.residents), pct(lo.woody), lo.rest, pct(lo.rest_green))}</p>}
+      <div className="threshold-list">
+        <p className="small equity-head">{COMMUNES.listTitle}</p>
+        <div className="tl-scale" aria-hidden="true">
+          <span>{COMMUNES.scale.lo}</span><span className="tl-mark">{COMMUNES.scale.mark}</span><span>{COMMUNES.scale.hi}</span>
+        </div>
+        <ul className="bars tl-rows">
+          {tested.map((c) => (
+            <li key={c.code} className={c.exempt ? 'is-exempt' : ''}>
+              <span><a href={landingHref(`commune?code=${c.code}`)}>{c.name}</a>{c.exempt && <small>{COMMUNES.exempt}</small>}{c.canopy < 0.1 && <small>{COMMUNES.canopyToo(pct(c.canopy))}</small>}</span>
+              <span className="v">{pct(c.green, 1)}</span>
+              <span className="track" aria-hidden="true"><i style={{ left: 0, width: `${100 * c.green}%`, background: GREENS[greenStep(c.green)] }} /></span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      {tested.filter((c) => c.stable === false).map((c) => (
+        <p key={c.code} className="small">{COMMUNES.unstable(c, fixed(100 * Math.abs(0.45 - c.green), 1), pct(c.green7, 1), pct(c.green_nw, 1))}</p>
+      ))}
+      {untested && <p className="small">{COMMUNES.untested}</p>}
+      <ul className="legend legend--compact">
+        {COMMUNES.legend.map((t, i) => <li key={i}><i className="sw" style={{ background: GREENS[i] }} />{t}</li>)}
+        <li><i className="sw sw-exempt" />{COMMUNES.legendExempt}</li>
+        {untested && <li><i className="sw sw-few" />{COMMUNES.legendUntested}</li>}
+        {reg.length > 0 && <li><i className="sw sw-registered" />{COMMUNES.legendRegistered}</li>}
+      </ul>
+      <p className="small panel-source">{COMMUNES.source}</p>
+      {city.balance && <Balance city={city} />}
+      <p className="label panel-sub">{REGISTERED.title}</p>
+      {reg.length ? (
+        <>
+          <p className="small reg-lede">{REGISTERED.lede(reg.length, longDate(reg[0].registered), REGISTERED.source[city.city])}</p>
+          <ol className="toplist toplist--reg">
+            {reg.map((r, i) => (
+              <li key={r.id}>
+                <button type="button" onClick={() => onPickRegistered(r)}>
+                  <i className={`reg-num${r.comparable ? '' : ' is-refused'}`}>{i + 1}</i>
+                  <span>{r.name}<small>{r.comparable ? `${REGISTERED.expects[r.type]} · ${REGISTERED.named}` : REGISTERED.refused}</small></span>
+                </button>
+              </li>
+            ))}
+          </ol>
+        </>
+      ) : <p className="small reg-lede">{REGISTERED.none(city.city, city.name)}</p>}
+    </>
+  )
+}
+
+/* parts joined by " · ": a part that wraps to the next line leaves its dot behind (atlas.css .seq) */
+function Seq({ text, className }) {
+  return <p className={`${className} seq-wrap`}><span className="seq">{text.split(' · ').map((t, i) => <span key={i}>{t}</span>)}</span></p>
+}
+
+function ChangePanel({ city, lens, setLens, measure, setMeasure, control, setControl, counts, top, onPick, onPickRegistered }) {
+  const more = useMoreBelow()
+  const thr = city.thresholds.ndvi
+  const photosOn = lens === 'photos' && !!city.photos
+  const builtOn = lens === 'change' && measure === 'built' && !!city.built
+  return (
+    <section className="panel" ref={more} aria-label="What changed">
+      <p className="label">{QUESTIONS.change.long}</p>
+      <div>
+        <h1 className="display-s">{lens === 'communes' ? COMMUNES.title(city.name) : `What changed in ${city.name}`}</h1>
+        <Seq className="mono panel-window" text={lens === 'communes' ? COMMUNES.window : lens === 'field' && city.field ? `Summer ${city.field.year} · Sentinel-2` : photosOn ? PHOTOS.window(...city.photos.years) : `Summers ${shortWindow(city.window)} · Sentinel-2`} />
+      </div>
+      <Chips label="View" value={lens} onChange={setLens}
+             options={[['change', 'Sectors'], ['communes', COMMUNES.chip], ['field', 'Field'], ...(city.photos ? [['photos', PHOTOS.chip]] : [])]} />
+      {lens === 'change' && city.built && <Choice label={BUILT.measure} value={measure} onChange={setMeasure} options={BUILT.options} />}
+      {lens === 'communes' ? <CommuneBody city={city} onPickRegistered={onPickRegistered} /> : builtOn ? <BuiltBody city={city} top={top} onPick={onPick} /> : <>
+      <Toggle on={control} onChange={setControl}>Subtract matched places</Toggle>
+      <div className="counts">
+        <div><span className="num-l tone-up">{counts.up}</span><span className="label">{control ? 'greener beyond noise' : 'look greener'}</span></div>
+        <div><span className="num-l tone-down">{counts.down}</span><span className="label">{control ? 'lost beyond noise' : 'look browner'}</span></div>
+      </div>
+      {photosOn ? (
+        <>
+          <p className="small photo-lede">{PHOTOS.lede(...city.photos.years)}</p>
+          {/* the outlines have no other key, on a phone too: the compact legend stays */}
+          <ul className="legend legend--compact legend--outline">
+            <li><i className="sw sw-line-up" />{control ? PHOTOS.legend.up : PHOTOS.legend.rawUp}</li>
+            <li><i className="sw sw-line-down" />{control ? PHOTOS.legend.down : PHOTOS.legend.rawDown}</li>
+          </ul>
+        </>
+      ) : (
+        <>
+          <NullHistogram hist={city.hist} thr={thr} mode={control ? 'effect' : 'raw'} height={170} compact />
+          <ul className="legend">
+            <li><i className="sw sw-up" />Greener: threshold, 2×, 3×</li>
+            <li><i className="sw sw-down" />Lost: threshold, 2×, 3×</li>
+            <li><i className="sw sw-noise" />Within noise — the field shows through</li>
+            {control && <li><i className="sw sw-refused" />No comparable places · {city.counts.refused}</li>}
+          </ul>
+        </>
+      )}
+      <p className="small">
+        {control
+          ? <>Threshold ±{fixed(thr, 3)} — measured on {int(city.units.comparable)} sectors of {city.name} playing “intervention” once each.</>
+          : <>Without subtracting matched places, the city-wide shift of {signed(city.background.raw_median, 3)} makes {city.background.k_raw} of {city.background.n} sectors of {city.name} ({pct(city.background.share_raw)}) look “significantly greener”, against {city.background.k_eff} once matched places are subtracted.</>}
+      </p>
+      {photosOn && <p className="small panel-source">{PHOTOS.note(shortWindow(city.window))}</p>}
+      {control && lens === 'change' && city.check && <p className="small panel-source">{CHECK.line(city.check.green)}</p>}
+      {control && (
+        <>
+          <p className="label panel-sub">Largest changes beyond noise</p>
+          <ol className="toplist">
+            {top.map((s) => (
+              <li key={s.id}>
+                <button type="button" onClick={() => onPick(s)}>
+                  <i className={`dot dot-${s.nv}`} /><span>{titleCase(s.n)}<small>{s.c}</small></span><span className="mono">{signed(s.ne, 3)}</span>
+                </button>
+              </li>
+            ))}
+          </ol>
+        </>
+      )}
+      </>}
+    </section>
+  )
+}
+
+// sealed ground: the built-up class against the same matched places. There is no raw view, since the
+// run kept each sector's effect and not its own before and after, so the toggle gives way to a line saying so
+function BuiltBody({ city, top, onPick }) {
+  const b = city.built
+  return (
+    <>
+      <p className="small">{BUILT.lede}</p>
+      <div className="counts">
+        <div><span className="num-l tone-down">{b.counts.up}</span><span className="label">{BUILT.counts.up}</span></div>
+        <div><span className="num-l tone-up">{b.counts.down}</span><span className="label">{BUILT.counts.down}</span></div>
+      </div>
+      <NullHistogram hist={b.hist} thr={b.threshold} mode="effect" height={170} compact invert
+                     label={`Distribution of ${b.counts.up + b.counts.down + b.counts.noise} built-up effects; threshold ±${b.threshold.toFixed(3)}`} />
+      <ul className="legend">
+        <li><i className="sw sw-down" />{BUILT.legend.up}</li>
+        <li><i className="sw sw-up" />{BUILT.legend.down}</li>
+        <li><i className="sw sw-noise" />{BUILT.legend.noise}</li>
+        <li><i className="sw sw-refused" />No comparable places · {b.counts.refused}</li>
+      </ul>
+      <p className="small">{BUILT.threshold(fixed(b.threshold, 3), int(city.units.comparable), city.name)} {BUILT.limit}</p>
+      <p className="small panel-source">{BUILT.rawOff}</p>
+      <p className="label panel-sub">{BUILT.top}</p>
+      <ol className="toplist">
+        {top.map((s) => (
+          <li key={s.id}>
+            <button type="button" onClick={() => onPick(s)}>
+              <i className={`dot dot-${s.bv === 'up' ? 'down' : 'up'}`} /><span>{titleCase(s.n)}<small>{s.c}</small></span><span className="mono">{signed(s.be, 3)}</span>
+            </button>
+          </li>
+        ))}
+      </ol>
+    </>
+  )
+}
+
+function CaseDrawer({ c, onClose }) {
+  const more = useMoreBelow()
+  const words = CASES[c.slug]
+  const nd = c.instruments[0]
+  const above = c.series.seasons.filter((p) => p.effect > c.series.threshold).length
+  return (
+    <aside className="drawer" ref={more} aria-label={`Audit ${words.place}`}>
+      <div className="drawer-head">
+        <Seq className="label" text={`Audit · ${words.city} · opened ${c.completed}`} />
+        <button type="button" className="drawer-x" onClick={onClose} aria-label="Close audit">×</button>
+      </div>
+      <h2 className="display-s">{words.place}</h2>
+      <span className="chip chip--up"><i />Greener beyond noise</span>
+      <dl className="passport">
+        <div className="wide"><dt className="label">Effect against {c.controls.length} named places</dt>
+          <dd><span className="mono big">{signed(nd.effect, 3)}</span><span className="small"> · threshold {fixed(nd.threshold, 3)}</span></dd></div>
+        {c.defensible_effect != null && <div className="wide"><dt className="label">Defensible, baseline before the works</dt><dd className="mono">{signed(c.defensible_effect, 3)}</dd></div>}
+        <div><dt className="label">Footprint</dt><dd className="mono">{fixed(c.area_ha, 2)} ha</dd></div>
+        <div><dt className="label">Summers above noise</dt><dd className="mono">{above} of {c.series.seasons.length}</dd></div>
+      </dl>
+      <p className="small">{words.reading}</p>
+      <p className="label">Matched places</p>
+      <ol className="controls-list">
+        {c.controls.map((x) => <li key={x.id}><span>{titleCase(x.name)}</span><span className="mono">{x.dist_km} km</span></li>)}
+      </ol>
+    </aside>
+  )
+}
+
+/* The whole city before and after: the handle of the swipe. It writes --split (0…1 of the stage's
+   width) on the stage, and the upper photo under the map reads it, so a drag re-renders the handle
+   and nothing else. It stays on the free map: right of the panel and left of an open drawer, on a
+   wide screen. The look is the landing's split slider (Osmo); the knob is a slider for keyboards and
+   screen readers: arrows ±2 %, Page ±10 %, Home / End to the ends. */
+const KNOB_ROOM = 120   // px a year tag needs beside the knob
+function SwipeHandle({ stageRef, years }) {
+  const [a, b] = years
+  const [split, setSplit] = useState(0.5)
+  const [room, setRoom] = useState({ before: true, after: true })
+  const [knobY, setKnobY] = useState(null)
+  const at = useRef(0.5), drag = useRef(false)
+  // the free map: on a wide screen right of the panel and left of an open drawer, the knob in the lower
+  // quarter (a picked place lands mid-map); on a phone the cards sit at the bottom, so the knob sits
+  // just above the higher of them and below the zoom buttons
+  const bounds = () => {
+    const st = stageRef.current
+    if (!st) return [0, 1, 1, null]
+    const r = st.getBoundingClientRect()
+    const panel = st.querySelector(':scope > .panel'), drawer = st.querySelector(':scope > .drawer')
+    let lo = 16, hi = r.width - 16, y = r.height * 0.76
+    if (window.matchMedia('(min-width: 861px)').matches) {
+      if (panel) lo = Math.max(lo, panel.getBoundingClientRect().right - r.left + 24)
+      if (drawer) hi = Math.min(hi, drawer.getBoundingClientRect().left - r.left - 24)
+    } else {
+      const zoom = st.querySelector(':scope > .zoom')
+      const top = (zoom ? zoom.getBoundingClientRect().bottom - r.top : 0) + 30
+      const cards = [panel, drawer].filter(Boolean).map((el) => el.getBoundingClientRect().top - r.top)
+      y = Math.max(top, Math.min(r.height, ...cards) - 40)
+    }
+    return [lo / r.width, hi / r.width, r.width, Math.round(y)]
+  }
+  const apply = (v) => {
+    const [lo, hi, w, y] = bounds()
+    setKnobY(y)
+    const q = Math.min(hi, Math.max(lo, v))
+    at.current = q
+    stageRef.current?.style.setProperty('--split', String(q))
+    setSplit(q)
+    const before = (q - lo) * w > KNOB_ROOM, after = (hi - q) * w > KNOB_ROOM
+    setRoom((p) => (p.before === before && p.after === after ? p : { before, after }))
+  }
+  // after every render: a drawer that opened or the panel's width may have moved the bounds
+  useEffect(() => { apply(at.current) })
+  useEffect(() => {
+    const st = stageRef.current
+    const on = () => apply(at.current)
+    window.addEventListener('resize', on)
+    st?.addEventListener('animationend', on)   // a drawer slides in: measure where it came to rest
+    return () => { window.removeEventListener('resize', on); st?.removeEventListener('animationend', on); st?.style.removeProperty('--split') }
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+
+  const toPointer = (e) => { const r = stageRef.current.getBoundingClientRect(); apply((e.clientX - r.left) / r.width) }
+  const onDown = (e) => {
+    if (e.button) return
+    e.preventDefault()
+    e.currentTarget.setPointerCapture(e.pointerId)
+    drag.current = true
+    toPointer(e)
+  }
+  const onKey = (e) => {
+    const [lo, hi] = bounds()
+    const step = { ArrowLeft: -0.02, ArrowDown: -0.02, ArrowRight: 0.02, ArrowUp: 0.02, PageDown: -0.1, PageUp: 0.1 }[e.key]
+    if (step != null) { e.preventDefault(); apply(at.current + step) }
+    else if (e.key === 'Home') { e.preventDefault(); apply(lo) }
+    else if (e.key === 'End') { e.preventDefault(); apply(hi) }
+  }
+  const p = Math.round(split * 100)
+  return (
+    <div className="swipe" style={{ left: `${split * 100}%`, '--knob-y': knobY == null ? undefined : `${knobY}px` }} onPointerDown={onDown}
+         onPointerMove={(e) => { if (drag.current) toPointer(e) }}
+         onPointerUp={() => { drag.current = false }} onPointerCancel={() => { drag.current = false }}>
+      <span className="swipe-line" aria-hidden="true" />
+      <span className={`swipe-tag is-before${room.before ? '' : ' is-hidden'}`} aria-hidden="true">{PHOTOS.tag(a)}</span>
+      <div className="swipe-knob" role="slider" tabIndex={0} aria-label={PHOTOS.handle(a, b)}
+           aria-valuemin={0} aria-valuemax={100} aria-valuenow={p} aria-valuetext={PHOTOS.valueText(p, a, b)} onKeyDown={onKey}>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
+          <path d="M20.7931 11.5L15.2931 5.99995L16.0002 5.29285L22.3537 11.6464V12.3535L16.0002 18.7071L15.2931 18L20.793 12.5L3.20719 12.5L8.70714 18L8.00004 18.7071L1.64648 12.3535L1.64648 11.6464L8.00004 5.29285L8.70714 5.99995L3.2071 11.5L20.7931 11.5Z" fill="currentColor" />
+        </svg>
+      </div>
+      <span className={`swipe-tag is-after${room.after ? '' : ' is-hidden'}`} aria-hidden="true">{PHOTOS.tag(b)}</span>
+    </div>
+  )
+}
+
+/* ── page ──────────────────────────────────────────────────────────────── */
+const Q_ICON = { need: 'thermometer', place: 'pin', change: 'layers' }
+const firstMeasured = (city) => NEED_LENSES.find((k) => measuredIn(city, k)) || 'heat'
+
+export function Atlas() {
+  const { query } = useRoute()
+  const cityKey = CITY_NAMES[query.get('city')] ? query.get('city') : 'brussels'
+  const caseSlug = query.get('case')
+  const { data: city } = useJSON(asset(`data/${cityKey}.json`))
+  const { data: cases } = useJSON(asset('data/cases.json'))
+  const { data: points } = useJSON(asset(`data/points-${cityKey}.json`))
+  // the question: from the address (?q=need|place|change), otherwise "what changed" — the landing's
+  // deep links (?case=, ?sector=) all belong to it
+  const [q, setQ] = useState(() => (['need', 'place', 'change'].includes(query.get('q')) ? query.get('q') : 'change'))
+  const [needLens, setNeedLens] = useState(() => (NEED_LENSES.includes(query.get('lens')) ? query.get('lens') : null))
+  const [opt, setOpt] = useState(() => ({
+    scenario: SCENARIOS.includes(query.get('for')) ? query.get('for') : 'family',
+    shop: SHOP_TYPES.includes(query.get('shop')) ? query.get('shop') : 'bakery',
+  }))
+  const [obj, setObj] = useState(() => (OBJECTS[query.get('obj')] ? query.get('obj') : 'toilets'))
+  // what if N more: the ten named by default; the address keeps another choice
+  const [moreN, setMoreN] = useState(() => { const v = Number(query.get('n')); return Number.isInteger(v) && v >= 0 && v <= 40 && query.get('n') !== null ? v : 10 })
+  const [control, setControl] = useState(true)
+  const [lens, setLens] = useState(() => (['communes', 'field', 'photos'].includes(query.get('view')) ? query.get('view') : 'change'))
+  const [measure, setMeasure] = useState(() => (query.get('m') === 'built' ? 'built' : 'green'))
+  const [selected, setSelected] = useState(null)
+  const [hovered, setHovered] = useState(null)
+  const [hoverPt, setHoverPt] = useState(null)
+  const svgRef = useRef(null), stageRef = useRef(null)
+  const W = city?.svg.W || 1000, H = city?.svg.H || 1000
+  const { vb, size: stageSize, home, zoomAt, flyTo, fitBox, handlers, wasDrag } = useViewBox(svgRef, W, H)
+  // map units per screen pixel: the viewBox keeps the stage's aspect, so one scale holds both ways
+  const unitPx = stageSize ? stageSize.w / vb.w : 1
+  const labelFs = Math.max(vb.w / 78, 10 / unitPx), pinR = Math.max(vb.w / 100, 8 / unitPx), pinFs = Math.max(vb.w / 125, 8 / unitPx)
+
+  const flown = useRef(null)   // the sector the view last flew to: a link to it does not fly again
+  useEffect(() => { setSelected(null); flown.current = null }, [cityKey])
+  // until one is chosen, the first need lens this city measures; a chosen one that this city does
+  // not measure stays chosen and says so (with a link to the city that does)
+  const need = needLens || (city ? firstMeasured(city) : 'heat')
+  // deep link: /?city=brussels&sector=21003A283 opens that sector's page and flies to it, once
+  const sectorId = query.get('sector')
+  useEffect(() => {
+    if (!city || !sectorId) return
+    const s = city.sectors.find((x) => x.id === sectorId)
+    if (!s) return
+    if (selected?.id !== s.id) setSelected(s)
+    if (flown.current !== s.id) {
+      const box = fitBox(bbox(s.d), 3.2, true)
+      if (box) { flyTo(box); flown.current = s.id }
+    }
+  }, [city, sectorId, fitBox]) // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    if (!city || !caseSlug) return
+    const c = city.cases.find((x) => x.slug === caseSlug)
+    if (c) { setQ('change'); setSelected(null); flyTo(fitBox(bbox(c.d), 14, true)) }
+  }, [city, caseSlug, fitBox]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  const mode = q !== 'change' || lens === 'field' ? 'field' : control ? 'effect' : 'raw'
+  const thr = city?.thresholds.ndvi
+  const counts = useMemo(() => city && countFor(city.sectors, mode === 'field' ? 'effect' : mode, thr), [city, mode, thr])
+  const builtOn = q === 'change' && lens === 'change' && measure === 'built' && !!city?.built
+  const top = useMemo(() => {
+    if (!city) return []
+    if (builtOn) {
+      return city.sectors.filter((s) => s.bv === 'up' || s.bv === 'down')
+        .sort((a, b) => Math.abs(b.be) - Math.abs(a.be)).slice(0, 8)
+    }
+    return city.sectors.filter((s) => fillFor(s, 'effect', thr) && s.nv !== 'refused')
+      .sort((a, b) => Math.abs(b.ne) - Math.abs(a.ne)).slice(0, 8)
+  }, [city, thr, builtOn])
+  const sealFill = useCallback((s) => builtFill(s, city?.built?.threshold), [city])
+  const fill = useCallback((s) => needFill(s, need, opt), [need, opt])
+  const communesOn = q === 'change' && lens === 'communes'
+  const photosOn = q === 'change' && lens === 'photos' && !!city?.photos
+  const photoSrc = useMemo(() => city?.photos?.src.map(asset), [city])
+  const communeOf = useMemo(() => new Map((city?.communes?.list || []).map((c) => [c.code, c])), [city])
+  const communeFill = useCallback((s) => {
+    const c = communeOf.get(s.id.slice(0, 5))
+    return c && c.green != null ? GREENS[greenStep(c.green)] : 'var(--noise)'
+  }, [communeOf])
+  const pickRegistered = (r) => flyTo(fitBox(bbox(r.d), 8, true))
+  // an audit's label runs right of its pin, unless another pin sits on that line of text (Droogdokkenpark
+  // and Park Spoor Noord are 75 map units apart); the sizes follow the zoom, so zoomed in both go right
+  const leftLabel = useMemo(() => {
+    const fs = vb.w / 58, out = new Set(), cs = city?.cases || []
+    for (const a of cs) {
+      const reach = vb.w / 70 + 0.5 * fs * (CASES[a.slug]?.place.length || 0)
+      if (cs.some((b) => b !== a && b.x > a.x && b.x - a.x < reach && Math.abs(b.y - a.y) < 1.4 * fs)) out.add(a.slug)
+    }
+    return out
+  }, [city, vb.w])
+  const noFill = useCallback(() => null, [])
+
+  // the address follows the view (city, question, lens and its choice, object, the open sector or
+  // audit), so a copied link opens what is on screen. It is replaced, never pushed: the back button
+  // does not walk through every click
+  const link = (over = {}) => {
+    const v = { city: cityKey, q, lens: need, view: lens, m: measure, n: moreN, for: opt.scenario, shop: opt.shop, obj,
+                case: caseSlug, sector: selected?.id, ...over }
+    const p = new URLSearchParams({ city: v.city })
+    if (v.q !== 'change') p.set('q', v.q)
+    if (v.q === 'need') {
+      p.set('lens', v.lens)
+      if (v.lens === 'services' && v.for !== 'family') p.set('for', v.for)
+      if (v.lens === 'shops' && v.shop !== 'bakery') p.set('shop', v.shop)
+    }
+    if (v.q === 'place') { p.set('obj', v.obj); if (v.n !== 10) p.set('n', v.n) }
+    if (v.q === 'change' && v.view !== 'change') p.set('view', v.view)
+    if (v.q === 'change' && v.view === 'change' && v.m === 'built') p.set('m', 'built')
+    if (v.case) p.set('case', v.case)
+    else if (v.sector) p.set('sector', v.sector)
+    return `/?${p}`
+  }
+  const here = link()
+  // a deep link to a sector of this city, not applied yet (a sector of the other city is dropped)
+  const pending = !!sectorId && !selected && !!city?.sectors.some((x) => x.id === sectorId)
+  useEffect(() => {
+    if (!city || pending) return
+    if (`/?${query.toString()}` !== here) navigate(here, { replace: true, keepScroll: true })
+  }, [here, city, pending]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  const select = (s) => {
+    if (wasDrag()) return
+    flown.current = s.id   // clicked on the map: it is in view already
+    setSelected(s)
+    if (caseSlug) navigate(link({ case: null, sector: s.id }), { replace: true, keepScroll: true })
+  }
+  const pick = (s) => { if (!s) return; setSelected(s); flyTo(fitBox(bbox(s.d), 3.2, true)); flown.current = s.id }
+  const pickPoint = (p, s) => {
+    if (s) { pick(s); return }
+    const r = 40
+    flyTo(fitBox({ x0: p.x - r, y0: p.y - r, x1: p.x + r, y1: p.y + r }, 1, true))
+  }
+  const openCase = q === 'change' && caseSlug && cases?.find((c) => c.slug === caseSlug)
+  const otherCity = () => {
+    setSelected(null); flown.current = null
+    navigate(link({ city: cityKey === 'brussels' ? 'antwerp' : 'brussels', case: null, sector: null }), { replace: true, keepScroll: true })
+  }
+  const shown = q === 'place' && points ? points.points.filter((p) => p.t === obj).sort((a, b) => b.r - a.r) : []
+  const byId = useMemo(() => new Map((city?.sectors || []).map((s) => [s.id, s])), [city])
+
+  const tip = hoverPt
+    ? <><b>{OBJECT_ONE[hoverPt.t]} · #{hoverPt.r}</b><span>{hoverPt.role === 'named' ? 'named' : hoverPt.role === 'control' ? 'comparison' : 'further candidate'}</span>
+        <span className="mono">{hoverPt.s && byId.get(hoverPt.s) ? titleCase(byId.get(hoverPt.s).n) : ''}</span></>
+    : hovered && (
+      <><b>{titleCase(hovered.n)}</b><span>{hovered.c}</span>
+        <span className="mono">{q === 'need'
+          ? (needStep(hovered, need, opt) == null ? 'not measured' : needLabel(hovered, need, opt))
+          : q === 'place' ? `${int(hovered.pop)} residents`
+            : communesOn ? (() => { const c = communeOf.get(hovered.id.slice(0, 5)); return c?.green != null ? `${c.name} · ${pct(c.green, 1)} green · ${c.exempt ? 'exempt' : 'counted'}` : `${c?.name || ''} · not tested` })()
+            : builtOn ? `built-up ${signed(hovered.be, 3)}`
+            : mode === 'raw' ? `raw ${signed(hovered.raw, 3)}` : `effect ${signed(hovered.ne, 3)}`}</span></>
+    )
+
+  return (
+    <div className="atlas">
+      <header className="atlas-bar">
+        <a href={landingHref()} className="wordmark" aria-label="Frondia, home">frondia</a>
+        {/* the city as a pill with its pin (Sweatpals, DoorDash): a native select, so the keyboard, screen
+            readers and a phone's own picker all work as they do everywhere */}
+        <label className="city-pick">
+          <Icon name="pin" size={16} />
+          <span className="sr-only">City</span>
+          <select value={cityKey} onChange={(e) => { setSelected(null); flown.current = null; navigate(link({ city: e.target.value, case: null, sector: null }), { replace: true, keepScroll: true }) }}>
+            {Object.entries(CITY_NAMES).map(([k, n]) => <option key={k} value={k}>{n}</option>)}
+          </select>
+          <span className="city-pick-mark" aria-hidden="true" />
+        </label>
+        <div className="seg seg--lens" role="group" aria-label="Question">
+          {['need', 'place', 'change'].map((k) => (
+            <button key={k} type="button" aria-pressed={q === k} onClick={() => { setQ(k); setHoverPt(null) }}>
+              <Icon name={Q_ICON[k]} size={16} /><span className="long">{QUESTIONS[k].long}</span><span className="short">{QUESTIONS[k].short}</span>
+            </button>
+          ))}
+        </div>
+        <div className="atlas-bar-end">
+          <a href={landingHref('#threshold')}>How it decides</a>
+        </div>
+      </header>
+
+      <div className="atlas-stage" ref={stageRef}>
+        {city && (
+          <div className="atlas-map" {...handlers}>
+            <SectorMap svgRef={svgRef} city={city} mode={mode} view={vb} selected={selected} hovered={hovered} activeCase={caseSlug}
+                       onSelect={select} onHover={setHovered} showCases={q === 'change' && !communesOn}
+                       field={q !== 'need' && !communesOn && !photosOn} photos={photosOn ? photoSrc : null}
+                       fill={q === 'need' ? fill : q === 'place' || photosOn ? noFill : communesOn ? communeFill : builtOn ? sealFill : null}
+                       fieldOpacity={q === 'change' && lens === 'field' ? 0.95 : FIELD_UNDER_DATA}
+                       stroke={q === 'change' && lens === 'field' ? 'rgba(20,20,19,.18)' : q === 'place' ? 'rgba(20,20,19,.12)' : communesOn ? 'rgba(250,249,245,.35)' : photosOn ? 'rgba(250,249,245,.2)' : 'var(--paper)'}
+                       className="atlas-svg" label={`${city.name}: ${city.sectors.length} sectors`}>
+              {communesOn && (
+                <g className="communes" aria-hidden="true">
+                  {city.communes.list.map((c) => <path key={c.code} d={c.d} className={`commune${c.exempt ? ' is-exempt' : ''}`} />)}
+                  {(city.registered || []).map((r) => <path key={r.id} d={r.d} className={`reg${r.comparable ? '' : ' is-refused'}`} />)}
+                  {/* a boulevard's footprint is a hairline at city scale: a numbered pin makes it findable, the same number as in the list */}
+                  {(city.registered || []).map((r, i) => (
+                    <g key={r.id} className={`reg-pin${r.comparable ? '' : ' is-refused'}`} transform={`translate(${r.x} ${r.y})`}>
+                      <circle r={pinR} strokeWidth={1 / unitPx} />
+                      <text style={{ fontSize: pinFs }} dy="0.36em">{i + 1}</text>
+                    </g>
+                  ))}
+                  {placeLabels(city.communes.list, city.registered || [], labelFs, pinR).map((c) => (
+                    <text key={c.code} x={c.x} y={c.y} className={`commune-label${c.exempt ? ' is-exempt' : ''}`}
+                          style={{ fontSize: labelFs }} strokeWidth={labelFs / 4}>{c.name}</text>
+                  ))}
+                </g>
+              )}
+              {q === 'change' && !communesOn && city.cases.map((c) => (
+                <g key={c.slug} className={`case-pin${leftLabel.has(c.slug) ? ' is-left' : ''}`} transform={`translate(${c.x} ${c.y})`}
+                   onClick={() => { if (!wasDrag()) navigate(link({ case: c.slug }), { replace: true, keepScroll: true }) }}
+                   role="link" tabIndex={0} aria-label={`Audit: ${CASES[c.slug]?.place}`}
+                   onKeyDown={(e) => { if (e.key === 'Enter') navigate(link({ case: c.slug }), { replace: true, keepScroll: true }) }}>
+                  {/* the open case shows its footprint, not a dot on top of it */}
+                  {c.slug !== caseSlug && <circle r={vb.w / 110} className="case-pin-dot" />}
+                  <text x={(leftLabel.has(c.slug) ? -1 : 1) * (c.slug === caseSlug ? vb.w / 40 : vb.w / 70)} y={vb.w / 260} style={{ fontSize: vb.w / 58 }} strokeWidth={vb.w / 280}>{CASES[c.slug]?.place}</text>
+                </g>
+              ))}
+              {shown.length > 0 && (
+                <g className="pts" aria-hidden="true">
+                  {shown.map((p) => (
+                    <circle key={p.r} cx={p.x} cy={p.y}
+                            r={p.role === 'named' ? vb.w / 150 : p.role === 'control' ? vb.w / 170 : vb.w / 330}
+                            className={`pt-dot pt-dot-${p.role || 'more'}${p.r > moreN ? ' is-beyond' : ''}`}
+                            onMouseEnter={() => setHoverPt(p)} onMouseLeave={() => setHoverPt(null)}
+                            onClick={() => { if (!wasDrag()) pickPoint(p, p.s && byId.get(p.s)) }} />
+                  ))}
+                </g>
+              )}
+            </SectorMap>
+            {tip && <div className="atlas-tip" role="status">{tip}</div>}
+          </div>
+        )}
+
+        {photosOn && <SwipeHandle stageRef={stageRef} years={city.photos.years} />}
+        {city && q === 'need' && (
+          <NeedPanel city={city} lens={need} setLens={setNeedLens} opt={opt} setOpt={setOpt} onPick={pick} otherCity={otherCity} />
+        )}
+        {city && q === 'place' && (
+          <PlacePanel city={city} points={points} obj={obj} setObj={setObj} onPick={pickPoint} n={moreN} setN={setMoreN} />
+        )}
+        {city && q === 'change' && (
+          <ChangePanel city={city} lens={lens} setLens={setLens} measure={measure} setMeasure={setMeasure} control={control} setControl={setControl}
+                       counts={counts} top={top} onPick={pick} onPickRegistered={pickRegistered} />
+        )}
+
+        {city && selected && !openCase && (
+          <Passport s={selected} city={city} cases={city.cases} points={points} opt={opt} onClose={() => setSelected(null)} />
+        )}
+        {openCase && (
+          <CaseDrawer c={openCase} onClose={() => { navigate(link({ case: null }), { replace: true, keepScroll: true }); flyTo(home) }} />
+        )}
+
+        <div className="zoom" role="group" aria-label="Zoom">
+          <button type="button" onClick={() => { const r = svgRef.current?.getBoundingClientRect(); r && zoomAt(r.left + r.width / 2, r.top + r.height / 2, 0.7) }} aria-label="Zoom in">+</button>
+          <button type="button" onClick={() => { const r = svgRef.current?.getBoundingClientRect(); r && zoomAt(r.left + r.width / 2, r.top + r.height / 2, 1.4) }} aria-label="Zoom out">−</button>
+          <button type="button" onClick={() => flyTo(home)} aria-label="Reset view" className="mono">⤢</button>
+        </div>
+        {/* every source on screen is credited: the field (change and place), Landsat (heat),
+            ESA WorldCover's canopy (3-30-300; CC BY 4.0 asks for this wording) */}
+        <p className="atlas-credit">
+          {[
+            q !== 'need' && `Contains modified Copernicus Sentinel data ${photosOn ? city.photos.years.join(', ') : city?.field?.year || ''}`.trim(),
+            q === 'need' && need === 'heat' && 'Landsat courtesy of the U.S. Geological Survey',
+            q === 'need' && need === 'r3' && '© ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data (2021) processed by ESA WorldCover consortium',
+            'sectors © Statbel', 'map data © OpenStreetMap contributors',
+          ].filter(Boolean).join(' · ')}
+        </p>
+      </div>
+    </div>
+  )
+}

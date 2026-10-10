@@ -1,0 +1,16 @@
+{
+ "id": 12,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "dd1168b3ee50dd7a",
+ "run_at": "2026-09-26T14:48:33+00:00",
+ "output": {
+  "label": "no",
+  "measures": [],
+  "why": "The text only lists budget figures, housing units, a crèche, and socio-economic projects with no mention of any park, green space, planting, unsealing, or other greening action."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.0291224,
+ "duration_ms": 4663
+}

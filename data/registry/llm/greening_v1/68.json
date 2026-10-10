@@ -1,0 +1,52 @@
+{
+ "id": 68,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "5182d5275c6f00db",
+ "run_at": "2026-09-26T14:51:29+00:00",
+ "output": {
+  "measures": [
+   {
+    "quote": "La verdurisation du quartier, l'amélioration de ses qualités environnementales et du cadre de vie (espaces publics et intérieurs d'îlot) constitueront les enjeux fondamentaux du contrat de Quartier Durable.",
+    "kind": "other_greening",
+    "status": "intention",
+    "place": null,
+    "verbatim": true
+   },
+   {
+    "quote": "créer au sein du projet phare du site de l'ECAM, un parc urbain en intérieur d'îlot",
+    "kind": "new_green_space",
+    "status": "action",
+    "place": "site de l'ECAM",
+    "verbatim": true
+   },
+   {
+    "quote": "intervenir sur les espaces publics : plantations, installation de mobilier urbain, développement d'espaces ludiques",
+    "kind": "street_greening",
+    "status": "action",
+    "place": "espaces publics",
+    "verbatim": true
+   },
+   {
+    "quote": "favoriser la verdurisation du quartier via la création d'une pépinière et des actions sur les façades, les toitures et les balcons",
+    "kind": "gardens_agriculture",
+    "status": "action",
+    "place": null,
+    "verbatim": true
+   },
+   {
+    "quote": "favoriser la verdurisation du quartier via la création d'une pépinière et des actions sur les façades, les toitures et les balcons",
+    "kind": "green_roofs_facades",
+    "status": "action",
+    "place": null,
+    "verbatim": true
+   }
+  ],
+  "label": "yes",
+  "why": "The quote \"créer au sein du projet phare du site de l'ECAM, un parc urbain en intérieur d'îlot\" commits the contract to actually creating a new urban park, a firm action that changes vegetation cover, so the contract is labeled \"yes\"."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.0639344,
+ "duration_ms": 29857
+}

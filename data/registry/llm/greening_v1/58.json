@@ -1,0 +1,31 @@
+{
+ "id": 58,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "7128712ee5128750",
+ "run_at": "2026-09-26T14:50:32+00:00",
+ "output": {
+  "label": "yes",
+  "why": "The quote \"aménager une friche verte, le tracé historique de la Senne, en un parc longitudinal\" is a firm commitment (verb of commitment \"aménager\") to turn a wasteland into a new park, which changes vegetation cover, so the contract is labeled yes.",
+  "measures": [
+   {
+    "quote": "aménager une friche verte, le tracé historique de la Senne, en un parc longitudinal formant un couloir de mobilité active entre le quartier Masui et le centre-ville",
+    "kind": "new_green_space",
+    "status": "action",
+    "place": "le tracé historique de la Senne",
+    "verbatim": true
+   },
+   {
+    "quote": "aménager des potagers collectifs",
+    "kind": "gardens_agriculture",
+    "status": "action",
+    "place": "axe Senne",
+    "verbatim": true
+   }
+  ]
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.053843,
+ "duration_ms": 16809
+}

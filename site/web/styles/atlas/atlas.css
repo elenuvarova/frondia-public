@@ -1,0 +1,526 @@
+/* ── atlas: the product interface ─────────────────────────────────────────
+   Principal layout: Felt, measured on 8 screens (Figma, "v2 · Felt principal layout"):
+   floating cards 12 from the edge, side panel 267, drawer 298, padding 16, bar 46,
+   spacing ladder 7 · 10 · 15 · 24 · 35 — small steps hold a group, large ones separate groups.
+   These are named in tokens.css (--inset, --panel, --drawer, --pad, --bar, --s-7 … --s-35).
+   Type: the small end of David's system (labels 12, UI 14, numbers 14, titles 24, reading 35). */
+.atlas { height: 100dvh; display: grid; grid-template-rows: auto 1fr; background: var(--paper); overflow: hidden; }
+.atlas-bar {
+  display: flex; align-items: center; gap: var(--s-15); padding: env(safe-area-inset-top, 0px) var(--inset) 0;
+  min-height: calc(var(--bar) + env(safe-area-inset-top, 0px));
+  border-bottom: 1px solid var(--rule); background: var(--paper); z-index: 6; overflow-x: auto; scrollbar-width: none;
+}
+.atlas-bar::-webkit-scrollbar { display: none; }
+.atlas-bar .wordmark { font-size: 24px; margin-right: var(--s-10); }   /* David small head 24 */
+.atlas-bar .seg button { height: 28px; }
+/* the city picker: a pill with the city's pin and a chevron over a native select (Sweatpals, DoorDash) */
+.city-pick { position: relative; display: inline-flex; align-items: center; gap: 7px; height: 36px; padding: 0 10px; border: 1px solid var(--rule); border-radius: 999px; background: rgba(240, 238, 230, .6); color: var(--ink); cursor: pointer; }
+.city-pick:hover { background: rgba(29, 29, 27, .06); }
+.city-pick:focus-within { outline: 2px solid var(--ink); outline-offset: 2px; }
+.city-pick select { appearance: none; -webkit-appearance: none; border: 0; background: transparent; color: inherit; font: 400 14px/14px var(--mono); padding: 0 18px 0 0; margin: 0; cursor: pointer; height: 100%; }
+.city-pick select:focus { outline: none; }
+/* the chevron is drawn, like the caret of a choice row: the ⌄ glyph fell back to another font and sat low */
+.city-pick-mark {
+  position: absolute; right: 14px; top: 50%; width: 6px; height: 6px; margin-top: -5px; pointer-events: none;
+  border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg);
+}
+.atlas-bar-end { margin-left: auto; }
+.atlas-bar-end a { font-size: 14px; line-height: 19.6px; text-decoration: none; color: var(--ink-2); }
+.atlas-bar-end a:hover { color: var(--ink); }
+/* the language switch before "How it decides"; on phones the whole bar end is hidden (≤860), the switch with it. With the
+   switch (a second language routed) the bar end never wraps or shrinks, and the questions take their short labels on
+   narrower desktops (below), so the bar stays one line of 46 px. Without it (the English production) nothing changes */
+/* the site's .lang rules (styles/tokens.css) for this document, which does not load that file; 24-px targets (2.5.8) */
+.atlas-bar-end .lang { display: inline-flex; gap: .4em; align-items: baseline; margin-right: var(--s-15); }
+.atlas-bar-end .lang-sep { opacity: .5; }
+.atlas-bar-end .lang a { display: inline-block; min-width: 24px; min-height: 24px; line-height: 24px; text-align: center; }
+.atlas-bar-end .lang a[aria-current='true'] { text-decoration: underline; text-underline-offset: .2em; }
+.atlas-bar:has(.lang) .atlas-bar-end { white-space: nowrap; flex-shrink: 0; }
+/* measured on /xx/atlas (the pseudo-language, 35 % longer than English), 4 Oct: with the long labels the bar needs
+   1 243 px, so the short ones hold up to 1 260; with them and the switch it needs 1 010, so below 1 020 the switch leaves the
+   bar (the site's pages keep theirs in the Nav); without the switch it needs 890 at 861, so up to 919 the bar's gaps step
+   down the ladder (15 → 7, the wordmark's 10 → 0). "How it decides" never wraps or runs off the edge */
+/* every build, English production included (P5-8): from 861 to 880 px the long questions pushed "How it decides" onto a
+   second line and the bar to 49 px (measured in 1-px steps, all five cities); the short labels fit */
+@media (min-width: 861px) and (max-width: 880px) {
+  .seg .long { display: none; }
+  .seg .short { display: inline; }
+}
+@media (min-width: 861px) and (max-width: 1260px) {
+  .atlas-bar:has(.lang) .seg .long { display: none; }
+  .atlas-bar:has(.lang) .seg .short { display: inline; }
+}
+@media (min-width: 861px) and (max-width: 1019px) { .atlas-bar-end .lang { display: none; } }
+@media (min-width: 861px) and (max-width: 919px) {
+  .atlas-bar:has(.lang) { gap: var(--s-7); }
+  .atlas-bar:has(.lang) .wordmark { margin-right: 0; }
+}
+
+.atlas-stage { position: relative; overflow: hidden; background: var(--stage); }
+.atlas-map { position: absolute; inset: 0; cursor: grab; touch-action: none; }
+.atlas-map:active { cursor: grabbing; }
+.atlas-svg { width: 100%; height: 100%; display: block; }
+.atlas-svg .sectors path { cursor: pointer; transition: fill .45s var(--ease); }
+.atlas-svg .sectors path:hover { fill-opacity: .88; }
+
+.case-pin { cursor: pointer; }
+.case-pin-dot { fill: var(--ink); stroke: var(--paper); stroke-width: 1.4; vector-effect: non-scaling-stroke; }
+.case-pin text {
+  font-family: var(--serif); font-style: italic; fill: var(--ink);
+  paint-order: stroke; stroke: var(--paper); stroke-linejoin: round;
+}
+.case-pin.is-left text { text-anchor: end; }
+.case-pin:focus-visible { outline: none; }
+.case-pin:focus-visible .case-pin-dot { stroke: var(--gain-2); stroke-width: 3; }
+/* the label turns over (paper on an ink casing): the open audit's pin has no dot, so its focus showed nothing, and an
+   SVG group's outline is not drawn by WebKit (WCAG 2.4.7, re-check 2) */
+.case-pin:focus-visible text { fill: var(--paper); stroke: var(--ink); }
+.case-pin-hit { fill: transparent; }   /* a 24-px target round the pin's point (WCAG 2.5.8) */
+/* the map itself is a keyboard stop (re-check 2): arrows move it, + and − zoom, Enter opens the sector in its middle,
+   which is outlined as under the pointer */
+.atlas-svg > svg:focus { outline: none; }
+.atlas-svg > svg:focus-visible { outline: 2px solid var(--ink); outline-offset: -2px; }
+
+.atlas-tip {
+  position: absolute; left: 50%; bottom: var(--s-24); transform: translateX(-50%); z-index: 4; pointer-events: none;
+  display: flex; align-items: baseline; gap: var(--s-10); white-space: nowrap;
+  background: var(--ink); color: var(--paper); padding: var(--s-10) var(--s-15); border-radius: 999px; font-size: 14px; line-height: 19.6px;
+}
+.atlas-tip span { color: var(--ink-4); }
+.atlas-tip .mono { color: var(--paper); font-size: 12px; }
+
+/* floating cards */
+.panel, .drawer {
+  position: absolute; top: var(--inset); z-index: 5; max-height: calc(100% - 2 * var(--inset)); overflow: auto;
+  display: flex; flex-direction: column; padding: var(--pad);
+  border: 1px solid var(--rule); border-radius: 22px;
+  box-shadow: 0 1px 0 rgba(250, 249, 245, .6) inset, 0 18px 48px -18px rgba(20, 20, 19, .22);
+}
+/* scrolling inside a card: a 4-px bar that stays clear of the rounded corners (the track keeps 22 off
+   each end, the card's radius), and a fade on the lower edge while more waits below. Chrome and Safari
+   draw the bar from ::-webkit-scrollbar; Firefox, which has no such selector, from the standard pair */
+.panel::-webkit-scrollbar, .drawer::-webkit-scrollbar { width: 10px; }
+.panel::-webkit-scrollbar-track, .drawer::-webkit-scrollbar-track { background: none; margin: 22px 0; }
+.panel::-webkit-scrollbar-thumb, .drawer::-webkit-scrollbar-thumb {
+  background: var(--cloud-dark); background-clip: padding-box; border: 3px solid transparent; border-radius: 999px;
+}   /* cloud-dark: 3.1 : 1 on paper, a scrollbar is a control (WCAG 1.4.11); ink-4 was 1.9 */
+.panel::-webkit-scrollbar-thumb:hover, .drawer::-webkit-scrollbar-thumb:hover { background-color: var(--ink-3); }
+@supports not selector(::-webkit-scrollbar) {
+  .panel, .drawer { scrollbar-width: thin; scrollbar-color: var(--cloud-dark) transparent; }
+}
+/* prose in a card avoids a lone word on its last line (text-wrap: pretty, where the browser has it) */
+.panel p.small, .drawer p.small { text-wrap: pretty; }
+/* a control reached by the keyboard scrolls clear of the fades, not under them (WCAG 2.4.11) */
+.panel, .drawer { scroll-padding-block: 32px 48px; }
+.panel::after, .drawer::after {
+  content: ''; flex: none; position: sticky; bottom: calc(-1 * var(--pad)); z-index: 1; height: 48px;
+  margin: -48px calc(-1 * var(--pad)) calc(-1 * var(--pad)); pointer-events: none;
+  background: linear-gradient(to bottom, rgba(240, 238, 230, 0), var(--paper) 88%);
+  opacity: 0; transition: opacity .25s var(--ease);
+}
+.panel[data-more-below]::after, .drawer[data-more-below]::after { opacity: 1; }
+/* the upper edge, once scrolled: 32 tall, it takes no room (16 up into the padding, 16 back) */
+.panel::before, .drawer::before {
+  content: ''; flex: none; position: sticky; top: calc(-1 * var(--pad)); z-index: 1; height: 32px;
+  margin: calc(-1 * var(--pad)) calc(-1 * var(--pad)) calc(-1 * var(--pad)); pointer-events: none;
+  background: linear-gradient(to top, rgba(240, 238, 230, 0), var(--paper) 80%);
+  opacity: 0; transition: opacity .25s var(--ease);
+}
+.panel[data-more-above]::before, .drawer[data-more-above]::before { opacity: 1; }
+.panel { left: var(--inset); width: var(--panel); background: rgba(240, 238, 230, .94); backdrop-filter: blur(16px) saturate(1.15); }   /* .94, was .86: over a dark map or photo the panel's grey text fell to 4.1 : 1 (WCAG 1.4.3, re-check 2) */
+.drawer { right: var(--inset); width: var(--drawer); background: var(--paper); animation: drawerIn .5s var(--ease) both; }
+/* the ladder: 15 between related blocks by default; 7 ties a title to its kicker or a list to its
+   header; 10 hangs a chart on its numbers; 24 opens a new group */
+.panel > * + *, .drawer > * + * { margin-top: var(--s-15); }
+.panel > .panel-kicker:first-child + div, .drawer > .drawer-head + h2 { margin-top: var(--s-7); }
+/* the kicker's row: the question, and the language switch beside it where the bar has none (≤ 1 019 px; Elena, 5 Oct
+   2026: on a phone the bar end is hidden, from 861 to 1 019 it has no room). Small: the label's 12 px, ink-2. Its 24-px
+   targets reach 3 px above and below the 18-px label line, into the ladder's gaps, so the row, the sheet's collapsed
+   height (44 %) and everything under it stay where they were */
+.panel-kicker { display: flex; align-items: center; justify-content: space-between; gap: var(--s-10); }
+.panel-kicker .lang { display: none; }
+@media (max-width: 1019px) {
+  .panel-kicker .lang { display: inline-flex; flex: none; align-items: center; gap: .25em; margin-block: -3px; font: 400 12px/24px var(--sans); letter-spacing: .02em; color: var(--ink-3); }
+  .panel-kicker .lang-sep { opacity: .5; }
+  .panel-kicker .lang a { display: inline-block; min-width: 24px; min-height: 24px; text-align: center; text-decoration: none; color: var(--ink-2); }
+  .panel-kicker .lang a:hover { color: var(--ink); }
+  .panel-kicker .lang a[aria-current='true'] { color: var(--ink); text-decoration: underline; text-underline-offset: .2em; }
+}
+.panel > .switch, .panel > .panel-sub, .drawer > .drawer-hist, .drawer > .small + .pill, .drawer > .small + .label { margin-top: var(--s-24); }
+.panel > .hist, .panel > .legend, .drawer > h2 + .chip { margin-top: var(--s-10); }
+.panel > .panel-sub + .toplist, .drawer > .label + .controls-list { margin-top: var(--s-7); }
+@keyframes drawerIn { from { opacity: 0; transform: translateX(14px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .drawer { animation: none; } }
+.panel-window { margin: var(--s-7) 0 0; color: var(--ink-3); }
+/* " · " between parts, and none at a line's end: each part carries its dot in front, three characters
+   wide, and the line's first part has its dot outside the column, where the paragraph clips it */
+.seq-wrap { overflow: hidden; }
+.seq { --gap: 3ch; display: flex; flex-wrap: wrap; margin-left: calc(-1 * var(--gap)); }   /* the dot's box and the clip are one width */
+.seq-wrap.label .seq { --gap: 1.2em; }
+.seq > span::before { content: "·"; content: "·" / ""; display: inline-block; width: var(--gap); text-align: center; }
+.panel .label, .drawer .label { margin: 0; }
+
+.switch { display: inline-flex; align-items: center; gap: var(--s-10); background: none; border: 0; padding: 2px 0; cursor: pointer; font: 400 14px/19.6px var(--sans); letter-spacing: .01em; text-align: left; }
+.switch-track { flex: none; width: 42px; height: 24px; border-radius: 999px; background: var(--paper-3); position: relative; transition: background-color .25s; box-shadow: inset 0 0 0 1px var(--rule); }
+.switch-knob { position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: #FAF9F5; box-shadow: 0 1px 3px rgba(20, 20, 19, .22); transition: transform .35s var(--ease); }
+.switch.on .switch-track { background: var(--ink); }
+.switch.on .switch-knob { transform: translateX(18px); }
+
+.counts { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-10); }
+/* «en désimperméabilisation» is one 180-px word: two columns cannot hold it in the panel below 360 px nor on a wide
+   screen (233 px inside), and the panel scrolled sideways and cut it («désimperméab»; 71 px at every width from 861).
+   In Dutch and French the two counts sit side by side while both fit and stack when they do not; English is unchanged
+   (re-check 2 after plan 5, WCAG 1.4.10) */
+:is(:lang(nl), :lang(fr)) .counts { display: flex; flex-wrap: wrap; }
+:is(:lang(nl), :lang(fr)) .counts > div { flex: 1 1 0; }
+.counts > div { display: flex; flex-direction: column; gap: var(--s-7); border-top: 1px solid var(--rule-2); padding-top: var(--s-10); }
+/* in a 111-px column David's 16-px stat label breaks into three lines: the interface uses its UI size */
+.counts .num-l + .label { font-size: 14px; line-height: 19.6px; letter-spacing: .01em; }
+.tone-up { color: var(--gain-3); }
+.tone-down { color: var(--loss-3); }
+
+.legend { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-7); font-size: 14px; line-height: 20px; color: var(--ink-2); }
+.legend li { display: flex; align-items: center; gap: var(--s-10); }
+.sw { flex: none; width: 30px; height: 10px; border-radius: 3px; }
+.sw-up { background: linear-gradient(90deg, var(--gain-1) 0 33%, var(--gain-2) 33% 66%, var(--gain-3) 66%); }
+.sw-down { background: linear-gradient(90deg, var(--loss-1) 0 33%, var(--loss-2) 33% 66%, var(--loss-3) 66%); }
+.sw-noise { border: 1px solid var(--rule-2); }
+.sw-refused { background: repeating-linear-gradient(45deg, var(--hatch-ground) 0 2px, var(--hatch) 2px 3px); }
+.sw-blank { border: 1px solid var(--rule-2); background: var(--stage); }
+.sw-few { background: var(--noise); }
+
+.toplist { list-style: none; margin: 0; padding: 0; display: grid; }
+/* a row is the mark, the name and the value; when the value no longer fits beside the name's longest word it goes under the
+   name, right-aligned, instead of running out of the panel (Elena, 5 Oct 2026: «Oude Schippersdokken(Zuidwijk)», a Statbel
+   name with no space before its bracket, and the French 3-30-300 values «0 % de couvert arboré» ended 2–6 px past the
+   panel at 1440, up to 60 with text spacing). Flex, not grid: a line breaks on the parts' widths, so a row that fits is
+   drawn as before. The mark keeps its 10-px column (dot 8 + 1 + 1) */
+.toplist button {
+  width: 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 2px var(--s-10);
+  border: 0; border-top: 1px solid var(--rule); background: none; padding: var(--s-10) 2px; cursor: pointer; text-align: left; font-size: 14px; line-height: 19.6px;
+}
+.toplist button:hover span:nth-child(2) { text-decoration: underline; text-underline-offset: 3px; }
+.toplist button > i { flex: none; }
+.toplist button > i.dot { margin-inline: 1px; }
+.toplist button > span:not(.mono) { flex: 1 1 0; min-width: min-content; }
+.toplist button > .mono { flex: 0 1 auto; min-width: min-content; margin-left: auto; text-align: right; }
+.toplist .mono { font-size: 14px; line-height: 17.5px; color: var(--ink-2); }
+.toplist small { display: block; font-size: 12px; line-height: 16px; color: var(--ink-3); margin-top: 1px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; }
+.dot-up { background: var(--gain-2); }
+.dot-down { background: var(--loss-3); }
+
+/* ── the unified atlas: three questions (docs/07-unified-frondia.md) ─────────── */
+.seg .short { display: none; }
+/* chips: the lens, one choice among four (elements board, 36: the applied chip is filled ink). In the
+   267-px panel four never fit one row, so they sit two by two: a wrapped row left one chip alone */
+.chips { display: flex; flex-wrap: wrap; gap: var(--s-7); }
+.chips button {
+  height: 30px; padding: 0 var(--s-10); border-radius: 999px; border: 1px solid var(--rule-2); background: none;
+  font: 400 12px/12px var(--mono); color: var(--ink-2); cursor: pointer; transition: background-color .2s, color .2s, border-color .2s;
+}
+.chips button:hover { color: var(--ink); border-color: var(--ink-3); }
+.chips button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+@media (min-width: 861px), (max-width: 359px) { .panel > .chips { display: grid; grid-template-columns: 1fr 1fr; } }   /* and a phone narrower than four chips */
+/* three views (sectors, communes, field) sit in one row of three, sized to their words: a two-column grid left the third alone */
+@media (min-width: 861px), (max-width: 359px) { .panel > .chips:has(> :nth-child(3):last-child) { grid-template-columns: repeat(3, auto); } }
+.panel > .chips + .choice { margin-top: var(--s-10); }   /* the choice refines the lens: it hangs on the chips */
+.panel-source { color: var(--ink-3); }
+/* who is short (phase 2): a new group after the lens's source; inside it the ladder repeats, 7 ties a
+   block title to its rows, 15 opens the next block. Rows as in Deel's side panel: label and value on
+   one line, a 4-px bar on a hairline track; the age rows add Steep's "vs total" column in points */
+.panel > .equity { margin-top: var(--s-24); }
+.equity > * + * { margin-top: var(--s-15); }
+.equity > .label + .equity-read { margin-top: var(--s-7); }
+.equity > .equity-head + .bars { margin-top: var(--s-7); }
+.equity-read { color: var(--ink-2); text-wrap: pretty; }
+.bars { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-10); }
+.bars li { display: grid; grid-template-columns: 1fr auto; column-gap: var(--s-10); row-gap: 5px; align-items: baseline; font-size: 14px; line-height: 19.6px; color: var(--ink-2); }
+.bars li.vs-row { grid-template-columns: 1fr auto auto; }
+.bars .v { font: 400 13px/17.5px var(--mono); color: var(--ink); text-align: right; }
+.bars .vs { font: 400 12px/16px var(--mono); color: var(--ink-3); }
+.bars .track { grid-column: 1 / -1; position: relative; height: 4px; }
+.bars .track::before { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--rule); }
+.bars .track i { position: absolute; top: 0; bottom: 0; background: var(--ink-3); border-radius: 1px; }
+.bars li.ref .track i { background: var(--ink-4); }   /* all residents: the reference the age rows are read against */
+/* communes (phase 2): Article 8(1). On the map every commune is outlined (the lightest green sits
+   close to the paper), an exempt one in heavy ink; a registered footprint is an outline with no fill
+   (Zillow's drawn boundary), the refusal fixed in advance in ink-3. In the list, Grain's scale: the
+   45 % test labelled once above the rows, a dashed line through them. */
+.commune { fill: none; stroke: var(--ink); stroke-opacity: .5; stroke-width: .8; vector-effect: non-scaling-stroke; }
+.commune.is-exempt { stroke-opacity: 1; stroke-width: 2.4; }
+.reg { fill: none; stroke: var(--ink); stroke-width: 1.8; vector-effect: non-scaling-stroke; }
+.reg.is-refused { stroke: var(--ink-3); }
+.commune-label { font-family: var(--sans); fill: var(--ink); paint-order: stroke; stroke: var(--paper); stroke-linejoin: round; text-anchor: middle; dominant-baseline: middle; pointer-events: none; }
+.commune-label.is-exempt { font-weight: 600; }
+.threshold-list { display: grid; }
+.threshold-list > .equity-head + .tl-scale { margin-top: var(--s-7); }
+.tl-scale { position: relative; height: 16px; font: 400 12px/16px var(--mono); color: var(--ink-3); }
+.tl-scale span { position: absolute; top: 0; white-space: nowrap; }
+.tl-scale span:first-child { left: 0; }
+.tl-scale span:last-child { right: 0; }
+.tl-scale .tl-mark { left: 45%; transform: translateX(-50%); color: var(--ink-2); }
+.tl-rows { position: relative; margin-top: var(--s-10); }
+/* the 45 % mark on every bar, not one line through the list: a line through the rows crossed the names */
+.tl-rows .track::after { content: ''; position: absolute; left: 45%; top: -4px; bottom: -3px; width: 1px; background: var(--ink-2); }
+.bars li.is-exempt > span:first-child { color: var(--ink); font-weight: 500; }
+.bars li > span:first-child small { display: block; font-size: 12px; line-height: 16px; color: var(--ink-3); }
+.sw-exempt { background: var(--paper); box-shadow: inset 0 0 0 2px var(--ink); }
+.sw-registered { background: none; box-shadow: inset 0 0 0 1.6px var(--ink); }
+/* photos: the verdicts are outlines on the photograph (viz.css .photo-verdicts), so the key is too */
+.sw-line-up { background: var(--paper); box-shadow: inset 0 0 0 2px var(--gain-3); }
+.sw-line-down { background: var(--paper); box-shadow: inset 0 0 0 2px var(--loss-3); }
+.reg-pin circle { fill: var(--paper); stroke: var(--ink); }
+.reg-pin text { font-family: var(--mono); fill: var(--ink); text-anchor: middle; pointer-events: none; }
+.reg-pin.is-refused circle { stroke: var(--ink-3); }
+.reg-pin.is-refused text { fill: var(--ink-3); }
+.reg-num { width: 18px; height: 18px; border-radius: 50%; box-shadow: inset 0 0 0 1.2px var(--ink); font: 400 11px/18px var(--mono); font-style: normal; text-align: center; color: var(--ink); }
+.reg-num.is-refused { box-shadow: inset 0 0 0 1.2px var(--ink-3); color: var(--ink-3); }
+.bars--balance .track i.is-loss { background: var(--loss-2); }
+.bars--balance .track i.is-gain { background: var(--gain-2); }
+.bars--diverging .track::after { content: ''; position: absolute; left: 50%; top: -3px; bottom: -3px; width: 1px; background: var(--rule-2); }   /* the city's median sector */
+.link { border: 0; background: none; padding: 0; font: inherit; color: var(--ink); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+/* a choice as one row, name left, value and caret right (elements board, 37: Mapbox Studio); the
+   select itself is invisible chrome, its text is the value; the row takes the whole line to tap */
+.choice {
+  position: relative; display: flex; align-items: center; justify-content: space-between; gap: var(--s-10);
+  border-top: 1px solid var(--rule);   /* a hairline above, like every list row; below it the next block starts */
+  font-size: 14px; line-height: 19.6px; color: var(--ink-2); cursor: pointer;
+}
+.choice select {
+  appearance: none; -webkit-appearance: none; min-width: 0; min-height: 40px; margin: 0; border: 0; border-radius: 0;
+  background: none; padding: 0 20px 0 0; font: 500 14px/19.6px var(--sans); color: var(--ink);
+  text-align: right; text-align-last: right; cursor: pointer; text-overflow: ellipsis;
+}
+.choice select:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.choice .caret {
+  position: absolute; right: 3px; top: 50%; width: 6px; height: 6px; margin-top: -5px; pointer-events: none;
+  border-right: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink); transform: rotate(45deg);
+}
+.choice:hover select { text-decoration: underline; text-underline-offset: 3px; }
+/* points: named (ranks 1–10) solid, their comparison (11–20) a ring, further candidates small */
+.pt { flex: none; display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
+.pt-named { background: var(--ink); }
+.pt-control { background: var(--paper); box-shadow: inset 0 0 0 1.6px var(--ink); }
+.pt-more { width: 6px; height: 6px; margin: 0 2px; background: var(--ink-3); }
+.toplist .pt { margin: 0 -1px 0 1px; }   /* drawn 1 px in, in its 10-px column (the row is flex since 5 Oct) */
+.pt-dot { cursor: pointer; vector-effect: non-scaling-stroke; }
+.pt-dot-named { fill: var(--ink); stroke: var(--paper); stroke-width: 1.4; }
+.pt-dot-control { fill: var(--paper); stroke: var(--ink); stroke-width: 1.8; }
+.pt-dot-more { fill: var(--ink-3); fill-opacity: .7; }
+.pt-dot:hover { stroke: var(--lack-3); stroke-width: 2.4; }
+/* the sector page: three parts, 24 apart, each opened by its question */
+.drawer-people { margin: var(--s-7) 0 0; color: var(--ink-3); }
+.drawer > .drawer-dossier { align-self: flex-start; flex-shrink: 0; margin-top: var(--s-15); }   /* a flex column that scrolls would squeeze it */
+/* a longer language (plan 5): the dossier link wraps inside the drawer instead of making it scroll sideways (the
+   pseudo-language's ran 343 px in a 296-px drawer); one line keeps the pill's 34 px, so English is drawn as before */
+.drawer-dossier { white-space: normal; max-width: 100%; height: auto; min-height: 34px; text-align: left; }
+.drawer > .drawer-part { margin-top: var(--s-24); border-top: 1px solid var(--rule-2); padding-top: var(--s-15); display: flex; flex-direction: column; }
+.drawer-part > * + * { margin-top: var(--s-10); }
+/* a part opens with its question, one level above the field labels (Mapbox and Apple Maps head a
+   section in bold sentence case, never in the caps of its fields) */
+.part-title { margin: 0; font: 600 14px/19.6px var(--sans); letter-spacing: .01em; color: var(--ink); }
+.drawer-part > .part-title + * { margin-top: var(--s-15); }
+.drawer-part .passport { border-top: 0; padding-top: 0; }
+.drawer-part .chip { align-self: flex-start; }
+.drawer-part > .drawer-hist { margin-top: var(--s-15); }
+.proposals { list-style: none; margin: 0; padding: 0; display: grid; }
+.proposals li { display: grid; grid-template-columns: 14px 1fr auto; align-items: center; gap: var(--s-10); padding: var(--s-7) 0; border-top: 1px solid var(--rule); font-size: 14px; line-height: 19.6px; }
+.proposals li:first-child { border-top: 0; }
+.proposals .mono { font-size: 12px; color: var(--ink-3); }
+.ramp { display: none; }
+.ramp-bar { display: flex; height: 10px; border-radius: 3px; overflow: hidden; }
+.ramp-bar i { flex: 1; }
+.ramp-ends { display: flex; justify-content: space-between; gap: var(--s-10); margin-top: var(--s-7); font-size: 12px; line-height: 16px; color: var(--ink-3); }
+
+/* passport */
+.drawer-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.drawer > h2:focus { outline: none; }   /* where focus lands when a card opens (re-check 2): a heading, not a control */
+.drawer-x { width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--rule); background: none; cursor: pointer; font-size: 18px; line-height: 1; color: var(--ink-2); }
+.drawer-x:hover { color: var(--ink); border-color: var(--rule-2); }
+.drawer .chip { align-self: flex-start; }
+/* label and value rows are shared across the two columns (subgrid), so values line up
+   even when only one of the labels wraps */
+.passport { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-7) var(--s-15); margin: 0; border-top: 1px solid var(--rule); padding-top: var(--s-15); }
+.passport div { display: grid; grid-row: span 2; grid-template-rows: subgrid; min-width: 0; }
+.passport .wide { grid-column: 1 / -1; }
+.passport dd { margin: 0 0 8px; font-size: 14px; line-height: 17.5px; }   /* David numbers; 7 + 8 = 15 between items */
+.passport .big { font-family: var(--serif); font-size: 35px; line-height: 36.75px; letter-spacing: .01em; }   /* David card title 35 */
+.drawer-hist { position: relative; border-top: 1px solid var(--rule); padding-top: var(--s-15); }
+.drawer-hist .label { margin-bottom: var(--s-7) !important; }
+.drawer-pin {
+  position: absolute; top: 42px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 2px;
+  font: 400 12px/16.8px var(--mono); color: var(--ink); pointer-events: none;
+}
+.drawer-pin i { order: 2; width: 2px; height: 46px; background: var(--ink); border-radius: 1px; }
+.controls-list { list-style: none; margin: 0; padding: 0; counter-reset: c; display: grid; }
+.controls-list li { display: flex; justify-content: space-between; gap: 12px; padding: var(--s-7) 0; border-top: 1px solid var(--rule); font-size: 14px; line-height: 19.6px; }
+.controls-list .mono { font-size: 12px; color: var(--ink-3); }
+
+.zoom { position: absolute; right: var(--inset); bottom: var(--inset); z-index: 5; display: flex; flex-direction: column; background: var(--paper); border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; }
+/* with a drawer open the zoom moves left of it, not over it (desktop; on a phone the drawer is a bottom sheet) */
+@media (min-width: 861px) { .drawer ~ .zoom { right: calc(var(--inset) + var(--drawer) + var(--inset)); } }
+.zoom button { width: 40px; height: 40px; border: 0; background: none; cursor: pointer; font-size: 18px; color: var(--ink-2); }
+.zoom button + button { border-top: 1px solid var(--rule); }
+.zoom button:hover { background: var(--paper-2); color: var(--ink); }
+/* the pan buttons (WCAG 2.5.7): a cross of four 32-px keys in the zoom's look, --s-10 above the zoom card (122 tall: three
+   40-px keys and their rules; 8 until the small-fixes round, 6 Oct 2026: off the Felt ladder, and beside the zoom it was
+   already 10); they follow it left of an open card and above the consent banner */
+.atlas-stage { container: atlas-stage / size; }
+.pan { position: absolute; right: var(--inset); bottom: calc(var(--inset) + 122px + var(--s-10)); z-index: 5; display: grid; grid-template: repeat(3, 32px) / repeat(3, 32px); }
+.pan button { width: 32px; height: 32px; padding: 0; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--rule); border-radius: 14px; background: var(--paper); color: var(--ink-2); cursor: pointer; }
+.pan button:hover { background: var(--paper-2); color: var(--ink); }
+.pan-up { grid-area: 1 / 2; } .pan-left { grid-area: 2 / 1; } .pan-right { grid-area: 2 / 3; } .pan-down { grid-area: 3 / 2; }
+@media (min-width: 861px) {
+  .drawer ~ .pan { right: calc(var(--inset) + var(--drawer) + var(--inset)); }
+  /* the zoom, moved left of an open card, ran over the end of the credit where the map between the cards is narrow (861 to
+     about 1 000 px; round-1 re-check, 6 Oct 2026): the credit then wraps short of the zoom, 10 px clear of it (the credit's
+     content starts at 2 insets + the panel and has 6-px side padding; the zoom is 42 wide) */
+  .drawer ~ .atlas-credit { max-width: min(60ch, calc(100% - 4 * var(--inset) - var(--panel) - var(--drawer) - 58px)); }
+  :root:has(.consent-banner) .pan { bottom: calc(var(--consent-room) + 122px + var(--s-10)); }
+}
+/* while the consent banner is up the atlas makes room for it (Elena, 5 Oct 2026; WCAG 2.4.11: the card hid the bottom
+   sheet's controls on a phone and the zoom at 1440, and the atlas does not scroll, so scroll padding could not help).
+   On a wide screen the card sits in the right corner: the zoom and a sector's or an audit's card end above it; the panel
+   on the left never reaches it (≥ 861 px the card starts right of 425 px, the panel ends at 279). On a phone the card
+   spans the foot of the screen: the stage itself ends above it, so the bottom sheet, its controls, the map's free middle
+   and the pins flown into view all stay clear. A choice closes the card and everything returns; nothing slides, so
+   reduced motion has nothing to stop */
+@media (min-width: 861px) {
+  :root:has(.consent-banner) .zoom { bottom: var(--consent-room); }
+  :root:has(.consent-banner) .drawer { max-height: calc(100% - var(--inset) - var(--consent-room)); }
+}
+@media (max-width: 860px) {
+  :root:has(.consent-banner) .atlas { padding-bottom: calc(var(--consent-room) - var(--s-7)); }
+  /* on a short phone the banner left the stage 216 px (320 × 568) or 128 (320 × 480): the sheet and a card ran over the
+     zoom's reset key, and at 480 the zoom itself ran under the banner (round-2 re-check, 6 Oct 2026). While it is up the
+     sheet and a card end 8 below the zoom (inset + 122 + 8 from the stage's top, and their own 8 from its foot), and the
+     stage keeps at least room for the zoom and 56 px of sheet (206): where the screen has less, the page scrolls above
+     the banner instead of the zoom going under it (the sheet's controls then scroll clear of it: consent.css's padding) */
+  :root:has(.consent-banner) .atlas { height: auto; min-height: 100dvh; grid-template-rows: auto minmax(206px, 1fr); }
+  :root:has(.consent-banner) .panel { max-height: min(44%, calc(100% - var(--inset) - 122px - 2 * 8px)); }
+  :root:has(.consent-banner) .drawer { max-height: min(64%, calc(100% - var(--inset) - 122px - 2 * 8px)); }
+}
+/* right of the lens panel: inset + panel + inset */
+.atlas-credit { position: absolute; left: calc(var(--inset) + var(--panel) + var(--inset)); bottom: var(--inset); z-index: 4; margin: 0; font: 400 12px/16px var(--sans); letter-spacing: .01em; color: var(--ink-3); max-width: 60ch;
+  background: color-mix(in srgb, var(--paper) 92%, transparent); padding: 2px 6px; margin-left: -6px; box-sizing: content-box; border-radius: 6px; }
+/* David fine print; on a plate, as the landing's photo caption: straight on the field or the photos it fell to 2.9–3.9 : 1
+   (WCAG 1.4.3, re-check 2). The plate grows outward (content-box, pulled back by its padding): the words keep their
+   width and their line breaks */
+
+@media (max-width: 860px) {
+  .atlas-bar-end { display: none; }
+  /* the tip sits at the foot of the stage, which the bottom sheet covers: there it only showed as black slivers either
+     side of a narrow card (320, re-check 1); the card and the panel already say what the tip would */
+  .atlas-tip { display: none; }
+  .panel { top: auto; bottom: 8px; left: 8px; right: 8px; width: auto; max-height: 44%; }
+  .drawer { top: auto; bottom: 8px; left: 8px; right: 8px; width: auto; max-height: 64%; }
+  .zoom { top: var(--inset); bottom: auto; right: var(--inset); }
+  /* under the zoom card, 28-px keys (≥ 24: 2.5.8); where the sheet or a card leaves no room there, beside the zoom or
+     left out (the container queries at the end of this file) */
+  .pan { top: calc(var(--inset) + 122px + var(--s-10)); bottom: auto; grid-template: repeat(3, 28px) / repeat(3, 28px); }
+  .pan button { width: 28px; height: 28px; }
+  .atlas-credit { left: var(--inset); bottom: auto; top: var(--inset); max-width: 62%; }
+  .seg .long { display: none; }
+  .seg .short { display: inline; }
+  /* phone: the three questions get a row of their own, three equal buttons */
+  /* the 44-px city pill fills the 46-px bar: 7 above it as below the lenses, 10 between the rows,
+     or the pill touches the lenses (and the top edge) */
+  .atlas-bar { flex-wrap: wrap; row-gap: var(--s-10); padding-top: calc(env(safe-area-inset-top, 0px) + var(--s-7)); padding-bottom: var(--s-7); overflow-x: visible; }
+  .atlas-bar .seg--lens { order: 3; flex: 1 0 100%; display: flex; }
+  .atlas-bar .seg--lens button { flex: 1 1 0; justify-content: center; }
+  /* a longer language: the three equal buttons keep to the screen, a short label that no longer fits wraps in its button
+     (320: the pseudo-language's labels ran 36 px past the edge); English fits and is drawn as before */
+  .atlas-bar .seg--lens, .atlas-bar .seg--lens button { min-width: 0; }
+  .atlas-bar .seg--lens button { white-space: normal; text-align: center; }
+  .panel > .ramp { display: block; }
+  .toplist, .panel-sub, .legend { display: none; }
+  /* who is short: as the ramp stands in for the legend, the reading stands in for the bars */
+  .equity .equity-head, .equity .bars { display: none; }
+  /* communes: the list of communes is the view itself and stays; the key stays as one compact row,
+     since the outlines have no other key; the registered list hides with the other lists */
+  .panel .legend--compact { display: flex; flex-wrap: wrap; gap: var(--s-7) var(--s-15); }
+  .panel .legend--compact li { font-size: 12px; line-height: 16px; }
+  .panel .reg-lede { display: none; }
+  /* but the points' three roles have no other key on a phone: one compact row */
+  .panel > .legend--points { display: flex; flex-wrap: wrap; gap: var(--s-7) var(--s-15); }
+  .panel > .legend--points li { font-size: 12px; line-height: 16px; }
+  /* NN/g's touch minimum on a phone, as on the landing: 40 for controls in a row, 44 for a lone button */
+  .atlas-bar .seg button, .panel .chips button { height: 40px; }
+  .city-pick { height: 44px; }
+  .drawer-x { width: 44px; height: 44px; }
+  .counts .num-l { font-size: 45px; line-height: 47.25px; }   /* phone: David H3 size */
+}
+
+/* what if N more? (phase 2): the value above the slider, the result under it (Dub); the curve with the
+   area up to N, a marker at N and the ten named as a dashed line (Mixpanel's volume chart) */
+.panel > .more-n { margin-top: var(--s-24); }
+.more-n > * + * { margin-top: var(--s-10); }
+.more-n > .more-title + .more-range { margin-top: var(--s-7); }   /* its own class: a phone hides .panel-sub */
+.more-range { width: 100%; height: 24px; margin: 0; accent-color: var(--ink); cursor: pointer; }
+.more-read { margin: 0; display: flex; align-items: baseline; gap: var(--s-10); flex-wrap: wrap; font-size: 14px; line-height: 19.6px; color: var(--ink-2); }
+.more-read .num-m { font: 400 24px/27px var(--serif); color: var(--ink); letter-spacing: .01em; }
+.more-curve { display: block; width: 100%; height: 64px; }
+.more-curve-area { fill: var(--ink-4); fill-opacity: .45; }
+.more-curve-line { fill: none; stroke: var(--ink-2); stroke-width: 1.4; }
+.more-curve-named { stroke: var(--ink-3); stroke-width: 1; stroke-dasharray: 3 3; }
+.more-curve-mark { stroke: var(--ink); stroke-width: 1.6; }
+.more-chart { position: relative; }
+.more-named-tag { position: absolute; top: 0; left: var(--at); transform: translateX(5px); font-size: 11px; line-height: 14px; color: var(--ink-3); white-space: nowrap; }
+/* left of the line the tag has the line's own offset and the panel's padding: a longer language's word wraps there,
+   flush right, instead of running out of the panel (plan 5); English's (1 px into the padding) keeps its one line */
+.more-named-tag.is-left { transform: translateX(calc(-100% - 5px)); white-space: normal; text-align: right; width: max-content; max-width: calc(var(--at) - 5px + var(--pad)); }
+.more-chart + .more-ends { margin-top: 4px; }
+.more-ends { margin: 4px 0 0; display: flex; justify-content: space-between; font-size: 12px; line-height: 16px; color: var(--ink-3); }
+.pt-dot.is-beyond { opacity: .22; }
+
+/* the whole city before and after (phase 2): the landing's split slider (Osmo) laid over the map.
+   A 24-px strip is the drag surface; the knob and the two year tags sit at the middle of the free map
+   (a phone's panel covers the lower 44 %, so there they sit higher). Above the map, under the cards */
+.swipe { position: absolute; top: 0; bottom: 0; z-index: 4; width: 24px; margin-left: -12px; cursor: ew-resize; touch-action: none; }
+.swipe-line { position: absolute; top: 0; bottom: 0; left: 11px; width: 2px; background: var(--paper-2); box-shadow: 0 0 0 1px rgba(20, 20, 19, .2); pointer-events: none; }
+.swipe-knob {
+  position: absolute; left: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px;   /* 44: NN/g's touch minimum */
+  display: grid; place-items: center; border-radius: 999px; outline: none;
+  background: var(--paper-2); color: var(--ink); border: 1px solid var(--rule-2); box-shadow: 0 8px 22px -8px rgba(20, 20, 19, .45);
+}
+.swipe-knob::after {
+  content: ''; position: absolute; inset: -1px; border-radius: 999px; border: 1px solid var(--paper-2);
+  transition: inset .4s cubic-bezier(.35, 1, .6, 1), opacity .4s cubic-bezier(.35, 1, .6, 1);
+}
+.swipe:hover .swipe-knob::after { inset: -8px; opacity: .6; }
+.swipe-knob:focus-visible { outline: 2px solid var(--paper); outline-offset: 3px; box-shadow: 0 0 0 5px var(--ink); }
+.swipe-tag {
+  position: absolute; transform: translateY(-50%); white-space: nowrap; pointer-events: none;
+  background: var(--paper); color: var(--ink); padding: 6px 10px; border-radius: 10px; font: 400 12px/14px var(--mono);
+  transition: opacity .2s;
+}
+.swipe-tag.is-before { right: calc(50% + 32px); }
+.swipe-tag.is-after { left: calc(50% + 32px); }
+.swipe-tag.is-hidden { opacity: 0; pointer-events: none; }
+/* a tap on a year moves the split a tenth toward it (WCAG 2.5.7: the split moved only by a drag; SwipeHandle) */
+.swipe .swipe-tag:not(.is-hidden) { pointer-events: auto; cursor: pointer; }
+/* a tag keeps to its half of the screen beside a centred knob, 32 from it and the inset from the edge: a longer year label
+   wraps (the pseudo-language's after-tag ran 5 px past a 320 screen). The handle is 24 px wide, so the tag sizes to its
+   own words (max-content), not to the handle; English's fits and is drawn as before */
+.swipe-tag { width: max-content; max-width: calc(50vw - 32px - var(--inset)); white-space: normal; }
+.swipe-knob, .swipe-tag { top: var(--knob-y, 76%); }   /* SwipeHandle measures the free map: a picked place lands mid-map */
+@media (prefers-reduced-motion: reduce) { .swipe-knob::after, .swipe-tag { transition: none; } }
+.panel > .photo-lede + .legend { margin-top: var(--s-7); }
+
+/* a commune's name opens its page on the landing (phase 2c, item 3) */
+.tl-rows a { color: inherit; text-decoration: underline; text-decoration-color: var(--rule-2); text-underline-offset: 3px; }
+.tl-rows a:hover { text-decoration-color: var(--ink); }
+/* on a phone the cross ends 228 px below the stage's top (inset, zoom 122, --s-10, three 28-px keys), which must stay clear
+   of the bottom sheet (44 %) and of a card (64 %): a stage under 440
+   px (the consent banner up, a phone on its side, a laptop at 200 % zoom) or, with a card open, under 661 px has no room
+   under the zoom. The cross then goes beside the zoom, 10 to its left, top-aligned; where the stage is under 480 wide that
+   would reach the credit (62 % of the width), or where the stage is too short for the 96 px beside the zoom above the
+   sheet (192) or a card (300), the cross is left out. A card open on a phone drew the cross over its head and its close
+   button (round-1 re-check, 6 Oct 2026) */
+@container atlas-stage (max-height: 439px) { @media (max-width: 860px) { .pan { top: var(--inset); right: calc(var(--inset) + 52px); } } }
+@container atlas-stage (max-height: 660px) { @media (max-width: 860px) { .drawer ~ .pan { top: var(--inset); right: calc(var(--inset) + 52px); } } }
+@container atlas-stage (max-height: 439px) and (max-width: 479px) { @media (max-width: 860px) { .pan { display: none; } } }
+@container atlas-stage (max-height: 660px) and (max-width: 479px) { @media (max-width: 860px) { .drawer ~ .pan { display: none; } } }
+@container atlas-stage (max-height: 191px) { @media (max-width: 860px) { .pan { display: none; } } }
+@container atlas-stage (max-height: 299px) { @media (max-width: 860px) { .drawer ~ .pan { display: none; } } }

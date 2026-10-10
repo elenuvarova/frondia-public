@@ -1,0 +1,52 @@
+  osmium: /usr/bin/osmium  city: charleroi
+
+─── Step 1: Extract charleroi from Belgium PBF ───
+  Extracting charleroi bbox 4.34,50.34,4.52,50.5 from Belgium PBF …
+    ✓ charleroi.osm.pbf  (12.8 MB)
+
+─── Step 2: Export POIs to GeoJSON ───
+  Filtering POI tags from charleroi PBF …
+    ✓ charleroi_pois.osm.pbf  (0.5 MB)
+  Exporting POIs to GeoJSON …
+    ✓ charleroi_pois.geojson  (2.1 MB)
+
+─── Step 3: Categorise & filter ───
+  Reading charleroi_pois.geojson …
+  Raw features: 4,142
+  After categorisation: 4,026
+  Parks: 704 kept (≥0.5 ha), 995 dropped
+
+─── Category counts ───
+  school               864
+  park                 704
+  sport                519
+  bench                253  ⚠  low-confidence
+  restaurant           251
+  convenience           96
+  supermarket           86
+  cafe                  57
+  playground            44
+  pharmacy              39
+  gp                    22  ⚠  low-confidence
+  veterinary            21
+  childcare             21
+  community             19
+  hospital              17
+  library               15
+  coworking              2  ⚠  low-confidence
+  dog_park               1  ⚠  low-confidence
+
+─── Step 4: Spatial join to sectors ───
+  Spatial join: 2,084 inside sectors, 947 outside/unmatched
+
+  ✓ 3,031 POIs → /home/user/facta/pipelines/neighbourhood_fit_score/pipeline/data/processed/charleroi/pois_all.geojson
+  ✓ Amenity table: 256 sectors × 18 categories
+
+─── Step 5: TEC transit ───
+  Stops in the city's bbox: 2,131
+  Monday 20260928: 37 services, 20,933 trips
+  Frequency computed for 2,112 served stops
+  Transit stops in sectors: 1,039
+  ✓ 2,131 transit stops → transit_stops.geojson
+
+Next: python 04_graph.py --city charleroi

@@ -1,0 +1,17 @@
+{
+ "id": 79,
+ "version": "greening_check_v1",
+ "prompt_sha": "a75f853000ec9eaa",
+ "schema_sha": "e9bc62506ba62dd5",
+ "text_sha": "08d7292b41053ce6",
+ "run_at": "2026-09-26T15:45:02+00:00",
+ "output": {
+  "label": "no",
+  "quote": "",
+  "why": "The contract commits to sports halls, a market hall façade, childcare, housing, and unspecified real-estate and public-space works, but no part of the text mentions planting, parks, removing paving, gardens or green roofs or façades.",
+  "quote_verbatim": true
+ },
+ "model": "claude-opus-5-5",
+ "cost_usd": 0.0634638,
+ "duration_ms": 5736
+}

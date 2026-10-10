@@ -1,0 +1,26 @@
+Source: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=CELEX:32024R1991 (read 2026-10-04, headless Chromium via playwright-core; one page load)
+Excerpts only: the title, Article 3 points 15–21 (definitions), Article 8 whole, Article 14(4) (where the urban ecosystem areas of Article 8 are set). No-break spaces normalised to plain spaces; text otherwise verbatim.
+
+## Title
+VERORDENING (EU) 2024/1991 VAN HET EUROPEES PARLEMENT EN DE RAAD
+van 24 juni 2024
+inzake natuurherstel en tot wijziging van Verordening (EU) 2022/869
+
+## Artikel 3 — Definities (points 15–21)
+Voor de toepassing van deze verordening wordt verstaan onder:
+15) “lokale bestuurlijke eenheid” of “LBE”: een bestuurlijke afdeling op laag niveau van een lidstaat onder het niveau van een provincie, regio of staat, zoals vastgesteld overeenkomstig artikel 4 van Verordening (EG) nr. 1059/2003 van het Europees Parlement en de Raad (43);
+16) “stedelijke centra” en “stedelijke clusters”: territoriale eenheden die in steden, kleinere steden en voorsteden zijn ingedeeld aan de hand van een op rasters gebaseerde typologie die is vastgesteld overeenkomstig artikel 4 ter, lid 2, van Verordening (EG) nr. 1059/2003;
+17) “steden”: lokale bestuurlijke eenheden waar minstens 50 % van de bevolking in een of meer stedelijke centra woont, gemeten aan de hand van de urbanisatiegraad die is vastgesteld overeenkomstig artikel 4 ter, lid 3, punt a), van Verordening (EG) nr. 1059/2003;
+18) “kleinere steden en voorsteden”: lokale bestuurlijke eenheden waar minder dan 50 % van de bevolking in een stedelijk centrum woont, maar minstens 50 % van de bevolking in een stedelijke cluster woont, gemeten aan de hand van de urbanisatiegraad die is vastgesteld overeenkomstig artikel 4 ter, lid 3, punt a), van Verordening (EG) nr. 1059/2003;
+19) “voorstedelijke gebieden”: gebieden die grenzen aan stedelijke centra of stedelijke clusters, met inbegrip van minstens alle gebieden binnen 1 kilometer, gemeten vanaf de buitenste grenzen van die stedelijke centra of stedelijke clusters, en die gelegen zijn in dezelfde stad of dezelfde kleinere stad en voorstad als die stedelijke centra of stedelijke clusters;
+20) “stedelijke groene ruimte”: de totale oppervlakte aan in steden of kleinere steden en voorsteden aangetroffen bomen, heesters, struiken, vaste kruidachtige vegetatie, korstmossen en mossen, vijvers en waterlopen, berekend op basis van gegevens die zijn verstrekt door de landmonitoringdienst van Copernicus uit hoofde van de Copernicus-component van het bij Verordening (EU) 2021/696 vastgestelde ruimtevaartprogramma van de Unie en, indien de betrokken lidstaat daarover beschikt, andere door die lidstaat verstrekte relevante aanvullende gegevens;
+21) “stedelijke boomkroonbedekking”: de totale met bomen bedekte oppervlakte in steden, kleinere steden en voorsteden, berekend op basis van de gegevens over de boombedekkingsdichtheid die zijn verstrekt door de landmonitoringdienst van Copernicus uit hoofde van de Copernicus-component van het bij bij Verordening (EU) 2021/696 vastgestelde ruimtevaartprogramma van de Unie en, indien de betrokken lidstaat daarover beschikt, andere door die lidstaat verstrekte relevante aanvullende gegevens;
+
+## Artikel 8
+Herstel van stedelijke ecosystemen
+1.   Uiterlijk op 31 december 2030 verzekeren de lidstaten dat er geen nettoverlies is in de totale nationale oppervlakte stedelijke groene ruimte en stedelijke boomkroonbedekking in stedelijke ecosysteemgebieden, zoals bepaald overeenkomstig artikel 14, lid 4, in vergelijking met 2024. Voor de toepassing van dit lid kunnen de lidstaten de stedelijke ecosysteemgebieden van die totale nationale oppervlakte uitsluiten indien het aandeel stedelijke groene ruimte in de stedelijke centra en stedelijke clusters groter is dan 45 % en het aandeel stedelijke boomkroonbedekking groter is dan 10 %.
+2.   Vanaf 1 januari 2031 realiseren een toenemende trend in de totale nationale oppervlakte stedelijke groene ruimte, onder meer door de integratie van stedelijke groene ruimte in gebouwen en infrastructuur, in stedelijke ecosysteemgebieden, bepaald overeenkomstig artikel 14, lid 4, te meten om de zes jaar vanaf 1 januari 2031, totdat een bevredigend niveau is bereikt zoals vastgesteld overeenkomstig artikel 14, lid 5.
+3.   De lidstaten realiseren in elk stedelijk ecosysteemgebied, bepaald overeenkomstig artikel 14, lid 4, een toenemende trend in de stedelijke boomkroonbedekking, te meten om de zes jaar vanaf 1 januari 2031, totdat het bevredigend niveau is bereikt zoals vastgesteld overeenkomstig artikel 14, lid 5.
+
+## Artikel 14, lid 4
+4.   De lidstaten stellen stedelijke ecosysteemgebieden zoals bedoeld in artikel 8 vast en brengen deze in kaart voor al hun steden en kleinere steden en voorsteden.

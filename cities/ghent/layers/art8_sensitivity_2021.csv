@@ -1,0 +1,5 @@
+lau_id,name,reading,green_pct,canopy_pct,exempt
+lau2024.BE.44021,Gent / Gand,official,44.4271,18.8591,False
+lau2024.BE.44021,Gent / Gand,with_arable,48.9801,18.8591,True
+lau2024.BE.44021,Gent / Gand,without_water,40.9858,18.8591,False
+lau2024.BE.44021,Gent / Gand,statbel_sectors,44.4422,18.7602,False

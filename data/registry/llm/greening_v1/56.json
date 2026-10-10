@@ -1,0 +1,52 @@
+{
+ "id": 56,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "0af02aa4e58c65e1",
+ "run_at": "2026-09-26T14:50:30+00:00",
+ "output": {
+  "measures": [
+   {
+    "quote": "réhabiliter des espaces naturels délaissés et en friche, comme les talus des chemins de fer",
+    "kind": "restoration",
+    "status": "action",
+    "place": "les talus des chemins de fer",
+    "verbatim": true
+   },
+   {
+    "quote": "renforcer le maillage vert par des plantations dans l'espace public",
+    "kind": "other_greening",
+    "status": "action",
+    "place": null,
+    "verbatim": true
+   },
+   {
+    "quote": "en créant un « park system »",
+    "kind": "new_green_space",
+    "status": "action",
+    "place": null,
+    "verbatim": true
+   },
+   {
+    "quote": "l'aménagement de toitures vertes",
+    "kind": "green_roofs_facades",
+    "status": "action",
+    "place": null,
+    "verbatim": true
+   },
+   {
+    "quote": "de sols végétalisés et perméables",
+    "kind": "unsealing",
+    "status": "action",
+    "place": null,
+    "verbatim": true
+   }
+  ],
+  "label": "yes",
+  "why": "The quote \"réhabiliter des espaces naturels délaissés et en friche, comme les talus des chemins de fer\" together with commitments to plantations, a \"park system\", green roofs and permeable soils are firm actions that change vegetation cover and sealed ground, so the contract is labeled yes."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.0498324,
+ "duration_ms": 20118
+}

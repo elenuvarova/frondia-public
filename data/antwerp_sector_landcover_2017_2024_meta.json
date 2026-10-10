@@ -1,0 +1,13 @@
+{
+ "city": "antwerp",
+ "window": "2017–2019 → 2021–2024",
+ "run": "2026-09-26",
+ "scenes_before": 78,
+ "scenes_after": 103,
+ "composite": "Dynamic World V1, months 6–8, mean, 10 m",
+ "rows": 460,
+ "footprints": [
+  "osm:way/572550498",
+  "osm:way/4403124"
+ ]
+}

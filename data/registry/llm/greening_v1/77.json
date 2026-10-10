@@ -1,0 +1,38 @@
+{
+ "id": 77,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "b0968a73f3795c64",
+ "run_at": "2026-09-26T14:51:58+00:00",
+ "output": {
+  "measures": [
+   {
+    "quote": "accueillera une crèche francophone de 49 places avec un jardin",
+    "kind": "other_greening",
+    "status": "action",
+    "place": "Pôle Bronze",
+    "verbatim": true
+   },
+   {
+    "quote": "Le Pôle Rauter permettra l’aménagement d’une extension du parc à l'arrière du Foyer anderlechtois",
+    "kind": "new_green_space",
+    "status": "action",
+    "place": "à l'arrière du Foyer anderlechtois (Pôle Rauter)",
+    "verbatim": true
+   },
+   {
+    "quote": "Le Pôle Ysewyn privilégiera la création d’un espace vert partagé entre le square Frison et la rue Ysewyn",
+    "kind": "new_green_space",
+    "status": "action",
+    "place": "entre le square Frison et la rue Ysewyn",
+    "verbatim": true
+   }
+  ],
+  "label": "yes",
+  "why": "The quote \"Le Pôle Ysewyn privilégiera la création d’un espace vert partagé entre le square Frison et la rue Ysewyn\" is a firm commitment (creation of) that changes vegetation cover, so the contract qualifies as \"yes\"."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.0597554,
+ "duration_ms": 27188
+}

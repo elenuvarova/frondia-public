@@ -1,0 +1,522 @@
+{
+ "date": "2026-09-27",
+ "sources": [
+  {
+   "city": "antwerp",
+   "key": "ant_aed",
+   "records": 211,
+   "kinds": {
+    "defibrillator": 211
+   },
+   "dated": 189,
+   "date_means": "installed",
+   "licence": "Gratis Open Data Licentie (Stad Antwerpen)",
+   "spec": [
+    "ags",
+    "portal_publiek11/MapServer/1049"
+   ],
+   "sha256_16": "823996841bf34618"
+  },
+  {
+   "city": "antwerp",
+   "key": "ant_papiermand",
+   "records": 4175,
+   "kinds": {
+    "waste_basket": 4175
+   },
+   "dated": 4169,
+   "date_means": "recorded",
+   "licence": "Gratis Open Data Licentie (Stad Antwerpen)",
+   "spec": [
+    "ags",
+    "portal_publiek1/MapServer/7"
+   ],
+   "sha256_16": "a2a81d2bf74b091a"
+  },
+  {
+   "city": "antwerp",
+   "key": "ant_zitmeubilair",
+   "records": 5410,
+   "kinds": {
+    "bench": 5410
+   },
+   "dated": 0,
+   "date_means": null,
+   "licence": "Gratis Open Data Licentie (Stad Antwerpen)",
+   "spec": [
+    "ags",
+    "portal_publiek4/MapServer/282"
+   ],
+   "sha256_16": "aa711488e8463f36"
+  },
+  {
+   "city": "antwerp",
+   "key": "ant_wachthuisje",
+   "records": 924,
+   "kinds": {
+    "shelter": 924
+   },
+   "dated": 894,
+   "date_means": "installed",
+   "licence": "Gratis Open Data Licentie (Stad Antwerpen)",
+   "spec": [
+    "ags",
+    "portal_publiek4/MapServer/270"
+   ],
+   "sha256_16": "cc1b0cf0959781b5"
+  },
+  {
+   "city": "antwerp",
+   "key": "ant_fietsenstalling",
+   "records": 4959,
+   "kinds": {
+    "bicycle_parking": 4959
+   },
+   "dated": 0,
+   "date_means": null,
+   "licence": "Gratis Open Data Licentie (Stad Antwerpen)",
+   "spec": [
+    "ags",
+    "portal_publiek2/MapServer/145"
+   ],
+   "sha256_16": "834fce4830d56b8a"
+  },
+  {
+   "city": "antwerp",
+   "key": "ant_speelterrein",
+   "records": 362,
+   "kinds": {
+    "playground": 362
+   },
+   "dated": 354,
+   "date_means": "opened",
+   "licence": "Gratis Open Data Licentie (Stad Antwerpen)",
+   "spec": [
+    "ags",
+    "portal_publiek3/MapServer/229"
+   ],
+   "sha256_16": "bca007c1b4e81169"
+  },
+  {
+   "city": "antwerp",
+   "key": "ant_buurtsport",
+   "records": 29,
+   "kinds": {
+    "fitness_station": 29
+   },
+   "dated": 22,
+   "date_means": "opened",
+   "licence": "Gratis Open Data Licentie (Stad Antwerpen)",
+   "spec": [
+    "ags",
+    "portal_publiek6/MapServer/629"
+   ],
+   "sha256_16": "ca5c5cb891c36ac3"
+  },
+  {
+   "city": "antwerp",
+   "key": "ant_hondenloopzone",
+   "records": 97,
+   "kinds": {
+    "dog_park": 97
+   },
+   "dated": 39,
+   "date_means": "opened",
+   "licence": "Gratis Open Data Licentie (Stad Antwerpen)",
+   "spec": [
+    "ags",
+    "portal_publiek6/MapServer/622"
+   ],
+   "sha256_16": "ccefe2da3698dc3f"
+  },
+  {
+   "city": "antwerp",
+   "key": "ant_toilet",
+   "records": 126,
+   "kinds": {
+    "toilets": 126
+   },
+   "dated": 84,
+   "date_means": "opened",
+   "licence": "Gratis Open Data Licentie (Stad Antwerpen)",
+   "spec": [
+    "ags",
+    "portal_publiek1/MapServer/8"
+   ],
+   "sha256_16": "c9978c2b7d26b969"
+  },
+  {
+   "city": "antwerp",
+   "key": "ant_drinkfontein",
+   "records": 96,
+   "kinds": {
+    "drinking_water": 96
+   },
+   "dated": 0,
+   "date_means": null,
+   "licence": "Gratis Open Data Licentie (Stad Antwerpen)",
+   "spec": [
+    "ags",
+    "portal_publiek4/MapServer/265"
+   ],
+   "sha256_16": "f4d3f5c386490146"
+  },
+  {
+   "city": "antwerp",
+   "key": "ant_glascontainer",
+   "records": 434,
+   "kinds": {
+    "recycling": 434
+   },
+   "dated": 434,
+   "date_means": "recorded",
+   "licence": "Gratis Open Data Licentie (Stad Antwerpen)",
+   "spec": [
+    "ags",
+    "portal_publiek1/MapServer/10"
+   ],
+   "sha256_16": "f036f077c2974c7a"
+  },
+  {
+   "city": "antwerp",
+   "key": "ant_parkmeubilair",
+   "records": 6082,
+   "kinds": {
+    "bench": 4490,
+    "bicycle_parking": 1250,
+    "picnic_table": 184,
+    "waste_basket": 158
+   },
+   "dated": 0,
+   "date_means": null,
+   "licence": "Gratis Open Data Licentie (Stad Antwerpen)",
+   "spec": [
+    "ags",
+    "portal_publiek6/MapServer/680"
+   ],
+   "sha256_16": "d58ddd6bfac0bac0"
+  },
+  {
+   "city": "brussels",
+   "key": "bxl_urbis_furniture",
+   "records": 6901,
+   "kinds": {
+    "bench": 2262,
+    "waste_basket": 4639
+   },
+   "dated": 0,
+   "date_means": null,
+   "licence": "UrbIS, Paradigm / Brussels Mobility (free use, terms not verified)",
+   "spec": [
+    "wfs",
+    "bm_urbis_topo",
+    "bm_urbis_topo:street_furniture_point"
+   ],
+   "sha256_16": "fdb07dc3095fcc4a"
+  },
+  {
+   "city": "brussels",
+   "key": "bxl_parking_bike",
+   "records": 1553,
+   "kinds": {
+    "bicycle_parking": 1553
+   },
+   "dated": 1351,
+   "date_means": "installed",
+   "licence": "Brussels Mobility (licence not found)",
+   "spec": [
+    "wfs",
+    "bm_bike",
+    "bm_bike:assets_parking_bike"
+   ],
+   "sha256_16": "614f1a7f49809f2e"
+  },
+  {
+   "city": "brussels",
+   "key": "bxl_aed",
+   "records": 99,
+   "kinds": {
+    "defibrillator": 99
+   },
+   "dated": 0,
+   "date_means": null,
+   "licence": "CC0 1.0 (Ville de Bruxelles)",
+   "spec": [
+    "ods",
+    "bxl",
+    "defibrillateurs-installes-par-la-ville-de-bruxelles"
+   ],
+   "sha256_16": "e3dc9f29b3cdc6bd"
+  },
+  {
+   "city": "brussels",
+   "key": "bxl_toilets",
+   "records": 156,
+   "kinds": {
+    "toilets": 156
+   },
+   "dated": 0,
+   "date_means": null,
+   "licence": "CC BY 4.0 (Ville de Bruxelles)",
+   "spec": [
+    "ods",
+    "bxl",
+    "toilettes-urinoirs-publics-openbare-toiletten-urinoirs-vbx"
+   ],
+   "sha256_16": "04191f61d752360b"
+  },
+  {
+   "city": "brussels",
+   "key": "bxl_water_vivaqua",
+   "records": 13,
+   "kinds": {
+    "drinking_water": 13
+   },
+   "dated": 0,
+   "date_means": null,
+   "licence": "CC BY 4.0",
+   "spec": [
+    "ods",
+    "bxl",
+    "bornes-d-eau-potable-gerees-par-la-region-drinkwatertappunten-beheerd-door-het-gewest-vivaqua"
+   ],
+   "sha256_16": "0e0e388043f2136d"
+  },
+  {
+   "city": "brussels",
+   "key": "bxl_water_sncb",
+   "records": 4,
+   "kinds": {
+    "drinking_water": 4
+   },
+   "dated": 0,
+   "date_means": null,
+   "licence": "CC BY 4.0",
+   "spec": [
+    "ods",
+    "bxl",
+    "bornes-eau-potable-gratuite-des-gares-sncb-gratis-drinkwatertappunten-van-nmbs-stations"
+   ],
+   "sha256_16": "8a23eb7ccfd67e21"
+  },
+  {
+   "city": "brussels",
+   "key": "bxl_playgrounds",
+   "records": 71,
+   "kinds": {
+    "playground": 71
+   },
+   "dated": 0,
+   "date_means": null,
+   "licence": "CC BY 4.0 (Ville de Bruxelles)",
+   "spec": [
+    "ods",
+    "bxl",
+    "aires-de-jeux-et-espaces-sportifs-geres-par-la-ville-de-bruxelles"
+   ],
+   "sha256_16": "a2acddda9b9c404c"
+  },
+  {
+   "city": "brussels",
+   "key": "bxl_glass",
+   "records": 1035,
+   "kinds": {
+    "recycling": 1035
+   },
+   "dated": 0,
+   "date_means": null,
+   "licence": "CC BY 4.0 (Bruxelles-Propreté)",
+   "spec": [
+    "ods",
+    "bxl",
+    "bulles-a-verre-glasbollen"
+   ],
+   "sha256_16": "f5137987b57cbb17"
+  },
+  {
+   "city": "ghent",
+   "key": "gent_fietsenstallingen",
+   "records": 7356,
+   "kinds": {
+    "bicycle_parking": 7356
+   },
+   "dated": 0,
+   "date_means": null,
+   "licence": "Modellicentie Gratis Hergebruik (Stad Gent)",
+   "spec": [
+    "ods",
+    "gent",
+    "fietsenstallingen-gent"
+   ],
+   "sha256_16": "4130be7d5233796e"
+  },
+  {
+   "city": "ghent",
+   "key": "gent_sanitair",
+   "records": 0,
+   "kinds": {},
+   "dated": 0,
+   "date_means": null,
+   "licence": "Modellicentie Gratis Hergebruik (Stad Gent)",
+   "spec": [
+    "ods",
+    "gent",
+    "publiek-sanitair-gent"
+   ],
+   "sha256_16": "e3b0c44298fc1c14"
+  },
+  {
+   "city": "ghent",
+   "key": "gent_drinkwater",
+   "records": 50,
+   "kinds": {
+    "drinking_water": 50
+   },
+   "dated": 0,
+   "date_means": null,
+   "licence": "Modellicentie Gratis Hergebruik (Stad Gent)",
+   "spec": [
+    "ods",
+    "gent",
+    "drinkwaterplekken-gent"
+   ],
+   "sha256_16": "50a97977b4b3d6cd"
+  },
+  {
+   "city": "ghent",
+   "key": "gent_speelterreinen",
+   "records": 245,
+   "kinds": {
+    "playground": 245
+   },
+   "dated": 0,
+   "date_means": null,
+   "licence": "Modellicentie Gratis Hergebruik (Stad Gent)",
+   "spec": [
+    "ods",
+    "gent",
+    "speelterreinen-gent"
+   ],
+   "sha256_16": "49edbb355f6df78e"
+  },
+  {
+   "city": "ghent",
+   "key": "gent_buurtsport",
+   "records": 19,
+   "kinds": {
+    "fitness_station": 19
+   },
+   "dated": 0,
+   "date_means": null,
+   "licence": "Modellicentie Gratis Hergebruik (Stad Gent)",
+   "spec": [
+    "ods",
+    "gent",
+    "infrastructuur-buurtsport-gent"
+   ],
+   "sha256_16": "92681a0a53fc83de"
+  },
+  {
+   "city": "liege",
+   "key": "liege_aed",
+   "records": 97,
+   "kinds": {
+    "defibrillator": 97
+   },
+   "dated": 97,
+   "date_means": "recorded",
+   "licence": "CC BY (Ville de Liège, ODWB)",
+   "spec": [
+    "ods",
+    "odwb",
+    "defibrillateurs"
+   ],
+   "sha256_16": "f5a0299f26e65022"
+  },
+  {
+   "city": "liege",
+   "key": "liege_arceaux",
+   "records": 746,
+   "kinds": {
+    "bicycle_parking": 746
+   },
+   "dated": 746,
+   "date_means": "recorded",
+   "licence": "CC BY (Ville de Liège)",
+   "spec": [
+    "ods",
+    "liege",
+    "arceaux-velos"
+   ],
+   "sha256_16": "dae7a74acf880415"
+  },
+  {
+   "city": "liege",
+   "key": "liege_velocite_box",
+   "records": 74,
+   "kinds": {
+    "bicycle_parking": 74
+   },
+   "dated": 73,
+   "date_means": "installed",
+   "licence": "CC BY (Ville de Liège)",
+   "spec": [
+    "ods",
+    "liege",
+    "velocite-box-velos"
+   ],
+   "sha256_16": "66f19ba310effbbd"
+  },
+  {
+   "city": "liege",
+   "key": "liege_toilettes",
+   "records": 5,
+   "kinds": {
+    "toilets": 5
+   },
+   "dated": 0,
+   "date_means": null,
+   "licence": "CC BY (Ville de Liège)",
+   "spec": [
+    "ods",
+    "liege",
+    "toilettes-publiques"
+   ],
+   "sha256_16": "0b8ca20be6cbd937"
+  },
+  {
+   "city": "liege",
+   "key": "liege_verre",
+   "records": 235,
+   "kinds": {
+    "recycling": 235
+   },
+   "dated": 0,
+   "date_means": null,
+   "licence": "CC BY (Ville de Liège)",
+   "spec": [
+    "ods",
+    "liege",
+    "bulles-a-verre"
+   ],
+   "sha256_16": "254ab4bbfafb9e4d"
+  },
+  {
+   "city": "liege",
+   "key": "liege_textile",
+   "records": 68,
+   "kinds": {
+    "recycling": 68
+   },
+   "dated": 0,
+   "date_means": null,
+   "licence": "CC BY (Ville de Liège)",
+   "spec": [
+    "ods",
+    "liege",
+    "bulles-textile"
+   ],
+   "sha256_16": "a2685fc210eed359"
+  }
+ ]
+}

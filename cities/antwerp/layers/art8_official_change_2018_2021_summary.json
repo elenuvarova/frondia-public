@@ -1,0 +1,133 @@
+{
+ "city": "antwerp",
+ "computed": "2026-10-09",
+ "units": 457,
+ "comparable": 450,
+ "max_gap": 0.04,
+ "inputs": {
+  "wvl2018": "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_WoodyVegetationLayer_2018/ImageServer",
+  "wvl2021": "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_WoodyVegetationLayer_2021/ImageServer",
+  "clc2018": "https://image.discomap.eea.europa.eu/arcgis/rest/services/CLC_plus/CLMS_CLCplus_RASTER_2018_010m_eu/ImageServer",
+  "clc2021": "https://image.discomap.eea.europa.eu/arcgis/rest/services/CLC_plus/CLMS_CLCplus_RASTER_2021_010m_eu/ImageServer"
+ },
+ "values_present": {
+  "wvl2018": [
+   0,
+   1
+  ],
+  "wvl2021": [
+   0,
+   1
+  ],
+  "clc2018": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   7,
+   9,
+   10
+  ],
+  "clc2021": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   7,
+   9,
+   10
+  ]
+ },
+ "calibration": {
+  "ndvi": {
+   "threshold": 0.045845,
+   "mean": 0.000503,
+   "sd": 0.022333,
+   "n": 457,
+   "unbiased": true
+  },
+  "canopy": {
+   "threshold": 0.070967,
+   "mean": -7e-06,
+   "sd": 0.040275,
+   "n": 457,
+   "unbiased": true
+  },
+  "green": {
+   "threshold": 0.052854,
+   "mean": 0.000156,
+   "sd": 0.0236,
+   "n": 457,
+   "unbiased": true
+  }
+ },
+ "city_mean": {
+  "canopy_2018": 0.164754,
+  "canopy_2021": 0.20083,
+  "green_2018": 0.495271,
+  "green_2021": 0.499093
+ },
+ "raw_median": {
+  "ndvi": 0.0334,
+  "canopy": 0.047206,
+  "green": -0.005024
+ },
+ "raw_beyond_threshold": {
+  "ndvi": 89,
+  "canopy": 136,
+  "green": 20
+ },
+ "verdicts": {
+  "ndvi": {
+   "шум": 429,
+   "прирост": 9,
+   "потеря": 12
+  },
+  "canopy": {
+   "шум": 431,
+   "потеря": 7,
+   "прирост": 12
+  },
+  "green": {
+   "шум": 432,
+   "прирост": 12,
+   "потеря": 6
+  }
+ },
+ "agreement_with_ndvi": {
+  "canopy": {
+   "n": 450,
+   "changed_either": 38,
+   "changed_same": 2,
+   "noise_both": 412,
+   "noise_either": 448
+  },
+  "green": {
+   "n": 450,
+   "changed_either": 36,
+   "changed_same": 3,
+   "noise_both": 414,
+   "noise_either": 447
+  }
+ },
+ "r_canopy_eff_vs_ndvi_eff": 0.204,
+ "independent": {
+  "source": "Groenkaart Vlaanderen 2018 и 2021, высокая зелень (> 3 м), аэрофото 1 м",
+  "units": 457,
+  "official_canopy_2018": 0.164754,
+  "official_canopy_2021": 0.20083,
+  "aerial_high_2018": 0.158416,
+  "aerial_high_2021": 0.171803,
+  "example": {
+   "id": "11002Q091",
+   "name": "PARK",
+   "area_ha": 16.54,
+   "official_2018": 0.075689,
+   "official_2021": 0.62485,
+   "aerial_2018": 0.412695,
+   "aerial_2021": 0.474159
+  }
+ }
+}

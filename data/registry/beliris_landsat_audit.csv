@@ -1,0 +1,30 @@
+project,end_year,park,osm,area_ha,window,scenes_before,scenes_after,ndvi_before,ndvi_after,effect,threshold,gap,verdict
+Restauration de l'Atomium,2006,Parc d'Osseghem - Ossegempark,way/16303371,18.48,2003–2005 → 2008–2011,15,23,0.7791,0.7939,-0.001,0.0422,0.0044,шум
+Logements sociaux : Cité Hellemans,2006,Parc de la Porte de Hal - Hallepoortpark,relation/17376399,2.29,2003–2005 → 2008–2011,16,24,0.4757,0.5053,0.0183,0.0422,-0.0021,шум
+Le Muséum des Sciences naturelles : une nouvelle salle pour les dinosaures,2009,Parc Léopold - Leopoldpark,way/14592122,7.61,2006–2008 → 2011–2014,19,25,0.5949,0.6319,0.0065,0.0422,-0.0004,шум
+Restauration du circuit sud du Palais des Beaux-Arts,2009,Parc de Bruxelles - Warandepark,way/3517578,11.57,2006–2008 → 2011–2014,19,25,0.5723,0.6158,0.0099,0.0422,-0.0,шум
+Réaménagement des abords de la gare du Luxembourg ,2010,Parc Léopold - Leopoldpark,way/14592122,7.61,2007–2009 → 2012–2015,18,30,0.6011,0.6419,0.0108,0.0428,0.0005,шум
+Étangs d'Ixelles: restauration,2011,Jardin du Roi - Koningstuin,way/23173132,1.46,2008–2010 → 2013–2016,20,33,0.6289,0.5361,-0.1141,0.0342,-0.0026,ПОТЕРЯЛ
+Prolongement de la ligne 94,2011,Étangs du Leybeek - Leybeekvijvers,way/23634256,2.17,2008–2010 → 2013–2016,20,33,0.6989,0.7285,0.0039,0.0342,-0.0017,шум
+Restauration du Bois de la Cambre,2012,Île Robinson - Robinsoneiland,way/9621741,1.15,2009–2011 → 2014–2017,19,29,0.6708,0.7372,0.0444,0.0394,-0.0001,ПОЗЕЛЕНЕЛ
+Réaménagement de la place Cardinal Mercier,2012,Parc Paul Garcet - Paul Garcetpark,way/23902379,1.14,2009–2011 → 2014–2017,19,29,0.6734,0.7186,0.0175,0.0394,-0.0039,шум
+Restauration du Parc Josaphat,2012,Parc Josaphat - Josaphatpark,way/31465238,27.27,2009–2011 → 2014–2017,19,29,0.6816,0.7203,0.0102,0.0394,-0.0026,шум
+Réaménagement du Parc de Biestebroeck,2012,Parc de Biestebroeck - Biestebroeckpark,way/32252612,1.53,2009–2011 → 2014–2017,19,29,0.5933,0.6101,-0.0153,0.0394,-0.0007,шум
+Restauration de l'Église Notre-Dame de Laeken,2012,Square du vingt-et-un-juillet - Square van de 21ste juli,way/1106650800,1.68,2009–2011 → 2014–2017,19,29,0.6716,0.6965,0.0016,0.0394,0.0007,шум
+Maison intercommunautaire Al Andalous,2012,Parc de Forest - Park van Vorst,way/5451317,13.42,2009–2011 → 2014–2017,19,29,0.6996,0.7309,0.0011,0.0394,-0.0002,шум
+Rénovation des logements sociaux Minimes,2012,Parc d'Egmont - Egmontpark,way/1084906419,1.28,2009–2011 → 2014–2017,19,29,0.6754,0.7006,-0.0025,0.0394,-0.0019,шум
+Construction du tunnel ferroviaire Schuman-Josaphat,2012,Square Marie-Louise - Maria-Louizasquare,relation/8971918,2.33,2009–2011 → 2014–2017,19,29,0.3912,0.4068,-0.0218,0.0394,0.0005,шум
+Revitalisation des abords des logements sociaux « Les Villas »,2012,Parc Élisabeth - Elisabethpark,relation/15655925,20.32,2009–2011 → 2014–2017,19,29,0.6466,0.683,0.0142,0.0394,-0.0003,шум
+Rénovation du Couloir de la Gare Centrale,2013,Parc de Bruxelles - Warandepark,way/3517578,11.57,2010–2012 → 2015–2018,17,35,0.6067,0.6157,0.0271,0.0455,0.0012,шум
+Rénovation du Stade du Crossing,2013,Parc Josaphat - Josaphatpark,way/31465238,27.27,2010–2012 → 2015–2018,17,35,0.7104,0.697,0.007,0.0455,-0.0002,шум
+Contrat de quartier Rives-Ouest,2013,Park Ouest,way/1134956557,1.31,2010–2012 → 2015–2018,17,35,0.3863,0.4131,0.0188,0.0455,-0.0002,шум
+Réfection des toitures du Château du Karreveld,2014,Parc du Karreveld - Karreveldpark,way/30293368,3.3,2011–2013 → 2016–2019,18,37,0.6451,0.6257,0.0041,0.0398,-0.0004,шум
+Un nouveau parc à Bruxelles : le parc de la Ligne 28,2014,Parc de la Ligne 28 - Park van Lijn 28,way/783856763,2.25,2011–2013 → 2016–2019,18,37,0.447,0.454,0.0244,0.0398,0.0011,шум
+Contrat de quartier : Léopold à Léopold,2014,Square Prince Charles - Prins Karelsquare,way/38802456,1.19,2011–2013 → 2016–2019,18,37,0.743,0.7491,0.0435,0.0398,-0.001,ПОЗЕЛЕНЕЛ
+Rénovation de la station de métro Arts-Loi,2015,Parc de Bruxelles - Warandepark,way/3517578,11.57,2012–2014 → 2017–2020,21,39,0.6158,0.6111,0.0327,0.042,0.0001,шум
+Construction d'un centre de jour et d'hébergement,2015,Jardin botanique - Kruidtuin,relation/5643094,4.83,2012–2014 → 2017–2020,21,39,0.5324,0.5264,0.0214,0.042,0.0015,шум
+Restauration du parc du Karreveld,2015,Parc du Karreveld - Karreveldpark,way/30293368,3.3,2012–2014 → 2017–2020,21,39,0.6474,0.6212,0.0087,0.042,0.0003,шум
+Rénovation du pôle multimodal Schuman,2016,Square Ambiorix - Ambiorixsquare,relation/8971920,2.29,2013–2015 → 2018–2021,25,40,0.5185,0.5061,0.0043,0.0383,0.0016,шум
+Réaméagement du Parc Léopold - Zone Nord,2016,Parc Léopold - Leopoldpark,way/14592122,7.61,2013–2015 → 2018–2021,25,40,0.641,0.6152,-0.0037,0.0383,0.0007,шум
+Restauration du parc Marie-José,2016,Parc Marie-José - Marie-Josépark,way/147913929,6.53,2013–2015 → 2018–2021,25,40,0.6981,0.7029,0.0282,0.0383,0.0033,шум
+Modernisation des Ateliers et de l'Administration à La Monnaie ,2016,Jardin de René Pechère - René Pechèretuin,way/21775928,1.45,2013–2015 → 2018–2021,25,40,0.2477,0.2986,0.0579,0.0383,0.0011,ПОЗЕЛЕНЕЛ

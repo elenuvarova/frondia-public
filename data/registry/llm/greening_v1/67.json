@@ -1,0 +1,31 @@
+{
+ "id": 67,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "77c575620fc266fe",
+ "run_at": "2026-09-26T14:51:03+00:00",
+ "output": {
+  "label": "yes",
+  "measures": [
+   {
+    "quote": "créer un espace vert en intérieur d'ilot accessible au quartier",
+    "kind": "new_green_space",
+    "status": "action",
+    "place": null,
+    "verbatim": true
+   },
+   {
+    "quote": "réaménager un parc et des voiries",
+    "kind": "park_redesign",
+    "status": "action",
+    "place": null,
+    "verbatim": true
+   }
+  ],
+  "why": "The clause \"créer un espace vert en intérieur d'ilot accessible au quartier\" is a firm commitment (verb \"créer\" within a list of actions the neighbourhood \"bénéficiera\") to add new green cover, which makes the contract label \"yes\"."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.035905400000000004,
+ "duration_ms": 10653
+}

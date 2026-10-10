@@ -1,0 +1,327 @@
+{
+ "register": {
+  "version": "greening_v1",
+  "model": "claude-sonnet-5",
+  "prompt_sha": "5ca244c733fb3ba1",
+  "schema_sha": "04b2f4f2e080bbb2",
+  "contracts": 98,
+  "labels": {
+   "no": 58,
+   "yes": 33,
+   "weak": 7
+  }
+ },
+ "quotes_word_for_word": {
+  "k": 110,
+  "n": 110,
+  "value": 1.0,
+  "ci95": [
+   0.966,
+   1.0
+  ]
+ },
+ "testset": {
+  "seed": "facta-gold-2026-09-26",
+  "rule": "contracts whose page text before 'Budgets' has at least 600 characters, the ten development contracts excluded; the first 30 by sha256(seed:id)",
+  "pool": 42,
+  "ids": [
+   7,
+   45,
+   46,
+   47,
+   48,
+   49,
+   52,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59,
+   60,
+   61,
+   64,
+   65,
+   66,
+   71,
+   72,
+   74,
+   75,
+   76,
+   77,
+   78,
+   79,
+   80,
+   86,
+   94,
+   96
+  ]
+ },
+ "development": {
+  "note": "the prompt was written against these ten contracts, labelled by Claude on 1 September; their agreement is not an error rate",
+  "model_vs_claude": {
+   "agree": {
+    "k": 6,
+    "n": 10,
+    "value": 0.6,
+    "ci95": [
+     0.313,
+     0.832
+    ]
+   },
+   "confusion": {
+    "yes": {
+     "yes": 3,
+     "weak": 0,
+     "no": 0
+    },
+    "weak": {
+     "yes": 0,
+     "weak": 2,
+     "no": 0
+    },
+    "no": {
+     "yes": 1,
+     "weak": 3,
+     "no": 1
+    }
+   }
+  },
+  "rule_vs_claude": {
+   "yes": {
+    "precision": {
+     "k": 3,
+     "n": 9,
+     "value": 0.333,
+     "ci95": [
+      0.121,
+      0.646
+     ]
+    },
+    "recall": {
+     "k": 3,
+     "n": 3,
+     "value": 1.0,
+     "ci95": [
+      0.438,
+      1.0
+     ]
+    },
+    "error": {
+     "k": 6,
+     "n": 10,
+     "value": 0.6,
+     "ci95": [
+      0.313,
+      0.832
+     ]
+    },
+    "tp": 3,
+    "fp": 6,
+    "fn": 0
+   }
+  },
+  "elena_vs_claude": {
+   "k": 6,
+   "n": 10,
+   "value": 0.6,
+   "ci95": [
+    0.313,
+    0.832
+   ]
+  },
+  "model_vs_elena": {
+   "k": 8,
+   "n": 10,
+   "value": 0.8,
+   "ci95": [
+    0.49,
+    0.943
+   ]
+  }
+ },
+ "test": {
+  "kind": "model",
+  "labelled_by": "Claude Opus 5.5",
+  "how": "a second model with its own prompt (greening_check_v1: one label, the deciding quote and a reason), in a fresh process with tools, connectors and project files off, shown each contract's own text; it never saw the first reader's answers",
+  "labelled_from": "2026-09-26",
+  "labelled_to": "2026-09-26",
+  "n": 30,
+  "gold": {
+   "weak": 3,
+   "yes": 19,
+   "no": 8
+  },
+  "model": {
+   "error": {
+    "k": 1,
+    "n": 30,
+    "value": 0.033,
+    "ci95": [
+     0.006,
+     0.167
+    ]
+   },
+   "kappa": 0.933,
+   "yes": {
+    "precision": {
+     "k": 19,
+     "n": 20,
+     "value": 0.95,
+     "ci95": [
+      0.764,
+      0.991
+     ]
+    },
+    "recall": {
+     "k": 19,
+     "n": 19,
+     "value": 1.0,
+     "ci95": [
+      0.832,
+      1.0
+     ]
+    },
+    "error": {
+     "k": 1,
+     "n": 30,
+     "value": 0.033,
+     "ci95": [
+      0.006,
+      0.167
+     ]
+    },
+    "tp": 19,
+    "fp": 1,
+    "fn": 0
+   },
+   "any": {
+    "precision": {
+     "k": 22,
+     "n": 22,
+     "value": 1.0,
+     "ci95": [
+      0.851,
+      1.0
+     ]
+    },
+    "recall": {
+     "k": 22,
+     "n": 22,
+     "value": 1.0,
+     "ci95": [
+      0.851,
+      1.0
+     ]
+    },
+    "error": {
+     "k": 0,
+     "n": 30,
+     "value": 0.0,
+     "ci95": [
+      0.0,
+      0.114
+     ]
+    },
+    "tp": 22,
+    "fp": 0,
+    "fn": 0
+   },
+   "confusion": {
+    "yes": {
+     "yes": 19,
+     "weak": 0,
+     "no": 0
+    },
+    "weak": {
+     "yes": 1,
+     "weak": 2,
+     "no": 0
+    },
+    "no": {
+     "yes": 0,
+     "weak": 0,
+     "no": 8
+    }
+   }
+  },
+  "rule": {
+   "yes": {
+    "precision": {
+     "k": 18,
+     "n": 20,
+     "value": 0.9,
+     "ci95": [
+      0.699,
+      0.972
+     ]
+    },
+    "recall": {
+     "k": 18,
+     "n": 19,
+     "value": 0.947,
+     "ci95": [
+      0.754,
+      0.991
+     ]
+    },
+    "error": {
+     "k": 3,
+     "n": 30,
+     "value": 0.1,
+     "ci95": [
+      0.035,
+      0.256
+     ]
+    },
+    "tp": 18,
+    "fp": 2,
+    "fn": 1
+   },
+   "any": {
+    "precision": {
+     "k": 20,
+     "n": 20,
+     "value": 1.0,
+     "ci95": [
+      0.839,
+      1.0
+     ]
+    },
+    "recall": {
+     "k": 20,
+     "n": 22,
+     "value": 0.909,
+     "ci95": [
+      0.722,
+      0.975
+     ]
+    },
+    "error": {
+     "k": 2,
+     "n": 30,
+     "value": 0.067,
+     "ci95": [
+      0.018,
+      0.213
+     ]
+    },
+    "tp": 20,
+    "fp": 0,
+    "fn": 2
+   }
+  },
+  "disagreements": [
+   {
+    "id": 7,
+    "name": "Christine",
+    "gold": "weak",
+    "model": "yes",
+    "rule": "yes",
+    "note": "Local green spaces and the greening of block interiors and façades are framed only as what the neighbourhood \"doit\" (must) receive, a stated need or priority, with no commitment verb that plans or finances a change to vegetation cover.",
+    "model_why": "The clause \"une suppression des friches urbaines réinvesties par des bâtiments et des espaces verts de proximité\" commits to creating proximity green spaces as part of the planned investments, which is an action changing vegetation cover, so the contract is labeled yes."
+   }
+  ]
+ },
+ "evaluated_on": "2026-09-26"
+}

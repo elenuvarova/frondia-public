@@ -1,0 +1,242 @@
+{
+ "city": "antwerp",
+ "display_name": "Antwerpen",
+ "baseline_year": 2024,
+ "window": "2017–2019 → 2021–2024",
+ "units_total": 458,
+ "units_measured": 457,
+ "units_comparable": 423,
+ "population": 710992,
+ "baseline": {
+  "ndvi_wmean": 0.39260902948682364,
+  "trees_wmean": 0.07826194346110557,
+  "grass_wmean": 0.04317105089989541,
+  "built_wmean": 0.6245165478885272
+ },
+ "trend": {
+  "ndvi_eff_median": 0.0008983936425460137,
+  "ndvi_loss_sectors": 10,
+  "ndvi_loss_pop": 4425,
+  "ndvi_gain_sectors": 6,
+  "ndvi_gain_pop": 3983,
+  "trees_loss_sectors": 10,
+  "trees_loss_pop": 6227,
+  "trees_gain_sectors": 6,
+  "trees_gain_pop": 1909,
+  "built_up_sectors": 7,
+  "built_up_pop": 6782,
+  "built_down_sectors": 9,
+  "built_down_pop": 3983
+ },
+ "thresholds": {
+  "ndvi": 0.04916,
+  "trees": 0.02775,
+  "built": 0.0263
+ },
+ "thresholds_source": {
+  "ndvi": "нулевое распределение по 457 единицам, 95-й процентиль, среднее -0.00002, ст. отклонение 0.02226",
+  "trees": "нулевое распределение по 457 единицам, 95-й процентиль, среднее -0.00009, ст. отклонение 0.01234",
+  "built": "нулевое распределение по 457 единицам, 95-й процентиль, среднее -0.00008, ст. отклонение 0.01344"
+ },
+ "thresholds_unbiased": {
+  "ndvi": true,
+  "trees": true,
+  "built": true
+ },
+ "thresholds_mean": {
+  "ndvi": -2.0454749633583443e-05,
+  "trees": -8.529420377800344e-05,
+  "built": -7.94310722100656e-05
+ },
+ "thresholds_instrument_manifest": {
+  "ndvi": 0.04582,
+  "trees": 0.02781,
+  "built": 0.02789
+ },
+ "equity_income_terciles": [
+  {
+   "label": "нижний",
+   "n": 124,
+   "income_median": 25228.5,
+   "ndvi_2024_wmean": 0.32304768415451524,
+   "trees_2024_wmean": 0.061902062420204185,
+   "ndvi_eff_mean": 0.004612751907918148,
+   "loss_sectors": 2,
+   "gain_sectors": 1
+  },
+  {
+   "label": "средний",
+   "n": 124,
+   "income_median": 31474.5,
+   "ndvi_2024_wmean": 0.41335015997901386,
+   "trees_2024_wmean": 0.07559248916998429,
+   "ndvi_eff_mean": -0.0009265058647260845,
+   "loss_sectors": 2,
+   "gain_sectors": 1
+  },
+  {
+   "label": "верхний",
+   "n": 126,
+   "income_median": 38329.0,
+   "ndvi_2024_wmean": 0.5364390178437991,
+   "trees_2024_wmean": 0.12128875791381456,
+   "ndvi_eff_mean": -0.001716366768469358,
+   "loss_sectors": 3,
+   "gain_sectors": 3
+  }
+ ],
+ "top_ndvi_loss": [
+  {
+   "id": "11002E19-",
+   "name": "OUDE SCHIPPERSDOKKEN(ZUIDWIJK)",
+   "commune": "Antwerpen",
+   "eff": -0.112,
+   "population": 0,
+   "trees_eff": -0.0051
+  },
+  {
+   "id": "11002Q2AA",
+   "name": "'T LAAR",
+   "commune": "Merksem",
+   "eff": -0.1043,
+   "population": 1450,
+   "trees_eff": -0.0818
+  },
+  {
+   "id": "11002Q222",
+   "name": "RIETSCHOORVELDEN",
+   "commune": "Merksem",
+   "eff": -0.0792,
+   "population": 513,
+   "trees_eff": -0.0379
+  },
+  {
+   "id": "11002Q2PP",
+   "name": "ME-MERKSEMSE POLDER",
+   "commune": "Merksem",
+   "eff": -0.0669,
+   "population": 9,
+   "trees_eff": -0.0281
+  },
+  {
+   "id": "11013A21-",
+   "name": "ROZENHOF",
+   "commune": "Edegem",
+   "eff": -0.063,
+   "population": 573,
+   "trees_eff": -0.0
+  },
+  {
+   "id": "46013B091",
+   "name": "BAZEL - VERSPR. BEW.- WEST",
+   "commune": "Kruibeke",
+   "eff": -0.0626,
+   "population": 1352,
+   "trees_eff": -0.0362
+  },
+  {
+   "id": "11002P2AN",
+   "name": "EK-LAAR",
+   "commune": "Ekeren",
+   "eff": -0.0605,
+   "population": 0,
+   "trees_eff": -0.0003
+  },
+  {
+   "id": "11056B032",
+   "name": "'T HOEKSEN",
+   "commune": "Zwijndrecht",
+   "eff": -0.0574,
+   "population": 293,
+   "trees_eff": -0.0174
+  },
+  {
+   "id": "11029A191",
+   "name": "GASTHUISHOEVEN",
+   "commune": "Mortsel",
+   "eff": -0.0572,
+   "population": 100,
+   "trees_eff": -0.0119
+  },
+  {
+   "id": "11056B17-",
+   "name": "HEIDAM",
+   "commune": "Zwijndrecht",
+   "eff": -0.0492,
+   "population": 135,
+   "trees_eff": -0.0136
+  }
+ ],
+ "top_trees_loss": [
+  {
+   "id": "11002Q2AA",
+   "name": "'T LAAR",
+   "commune": "Merksem",
+   "eff": -0.0818,
+   "population": 1450
+  },
+  {
+   "id": "11002Q222",
+   "name": "RIETSCHOORVELDEN",
+   "commune": "Merksem",
+   "eff": -0.0379,
+   "population": 513
+  },
+  {
+   "id": "46013B091",
+   "name": "BAZEL - VERSPR. BEW.- WEST",
+   "commune": "Kruibeke",
+   "eff": -0.0362,
+   "population": 1352
+  },
+  {
+   "id": "11002C29-",
+   "name": "STADSPARK (STATIONSWIJK)",
+   "commune": "Antwerpen",
+   "eff": -0.0335,
+   "population": 0
+  },
+  {
+   "id": "11056B053",
+   "name": "BOSKOUTER",
+   "commune": "Zwijndrecht",
+   "eff": -0.0331,
+   "population": 424
+  },
+  {
+   "id": "46013A0PV",
+   "name": "STERHOEK-MOLENBERG",
+   "commune": "Kruibeke",
+   "eff": -0.0325,
+   "population": 1235
+  },
+  {
+   "id": "46013A032",
+   "name": "KROMSTRAAT",
+   "commune": "Kruibeke",
+   "eff": -0.0307,
+   "population": 494
+  },
+  {
+   "id": "11056B091",
+   "name": "FORT VAN KRUIBEKE - SLIJKHOEK",
+   "commune": "Zwijndrecht",
+   "eff": -0.0303,
+   "population": 138
+  },
+  {
+   "id": "11002Q2PP",
+   "name": "ME-MERKSEMSE POLDER",
+   "commune": "Merksem",
+   "eff": -0.0281,
+   "population": 9
+  },
+  {
+   "id": "46003H081",
+   "name": "HAASDONK - VERSPREIDE BEWONING",
+   "commune": "Beveren",
+   "eff": -0.028,
+   "population": 612
+  }
+ ]
+}

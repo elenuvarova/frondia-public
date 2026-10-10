@@ -1,0 +1,60 @@
+{
+ "base": [
+  "2016-01-01",
+  "2018-12-31"
+ ],
+ "site_base": 0.25298219394921145,
+ "ctrl_base": 0.2671929462715725,
+ "threshold_audit": 0.0373,
+ "seasons": [
+  {
+   "season": 2020,
+   "scenes": 7,
+   "site": 0.3777,
+   "control": 0.2793,
+   "effect": 0.1126
+  },
+  {
+   "season": 2021,
+   "scenes": 9,
+   "site": 0.5683,
+   "control": 0.3045,
+   "effect": 0.278
+  },
+  {
+   "season": 2022,
+   "scenes": 9,
+   "site": 0.3415,
+   "control": 0.297,
+   "effect": 0.0587
+  },
+  {
+   "season": 2023,
+   "scenes": 12,
+   "site": 0.5106,
+   "control": 0.3153,
+   "effect": 0.2095
+  },
+  {
+   "season": 2024,
+   "scenes": 6,
+   "site": 0.642,
+   "control": 0.3357,
+   "effect": 0.3205
+  },
+  {
+   "season": 2025,
+   "scenes": 9,
+   "site": 0.4034,
+   "control": 0.3101,
+   "effect": 0.1076
+  },
+  {
+   "season": 2026,
+   "scenes": 12,
+   "site": 0.4174,
+   "control": 0.3147,
+   "effect": 0.1168
+  }
+ ]
+}

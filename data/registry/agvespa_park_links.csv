@@ -1,0 +1,115 @@
+project,slug,status,theme,completed_year,completed_basis,park,park_area_ha,dist_m,name_match,link
+Keiligbrug stadspark,keiligbrug-stadspark,Gerealiseerd,Stedelijk patrimonium,2020,done_event,Stadspark,11.45,22,True,след
+Lokalen voor scouts en voetbalclub in Bouckenborghpark,lokalen-voor-scouts-en-voetbalclub-bouckenborghpark,Gerealiseerd,Publiek gebouw,2025,done_event,Bouckenborgpark,15.83,33,True,след
+Park Spoor Noord,park-spoor-noord,Gerealiseerd,Stedelijke ontwikkeling Openbaar domein,2009,done_event,Park Spoor Noord,19.48,72,True,след
+Runcvoorthof,runcvoorthof,Gerealiseerd,Wonen Openbaar domein,,unknown,Runcvoortpark,3.63,91,True,след
+Spoor Oost,spoor-oost,Gerealiseerd,Groene Singel Openbaar domein,2016,done_event,Park Spoor Oost,4.77,114,True,след
+Kasteel Meerlenhof,kasteel-meerlenhof,Gerealiseerd,Eigen patrimonium,,unknown,Meerlenhof,1.39,123,True,след
+Wijkkantoor politie Halewijnlaan Linkeroever,wijkkantoor-politie-halewijnlaan-linkeroever,Gerealiseerd,Publieke gebouwen,,unknown,Linkeroeverpark,1.38,132,True,след
+Blue Gate Antwerp,blue-gate-antwerp,In realisatie,Stad aan het water,,unknown,Blue Gate,9.68,148,True,след
+Belvedère park Sorghvliedt,belvedere-park-sorghvliedt,Gerealiseerd,Stedelijk patrimonium,2017,done_event,Park Sorghvliedt,16.15,175,True,след
+Stadsloketten in koetshuis park Sorghvliedt,stadsloketten-koetshuis-park-sorghvliedt,Gerealiseerd,,,unknown,Park Sorghvliedt,16.15,184,True,след
+Opleidingsgebouw Park Spoor Noord,opleidingsgebouw-park-spoor-noord,Gerealiseerd,Publieke gebouwen,,unknown,Park Spoor Noord,19.48,199,True,след
+Droogdokkeneiland,droogdokkeneiland,In realisatie,Stad aan het water Openbaar domein,2018,done_event,Droogdokkenpark - Belvédère,1.58,232,True,след
+Zuidpark,zuidpark,Gerealiseerd,Stad aan het water Openbaar domein,2024,done_event,Zuidpark,6.28,240,True,след
+Tentoonstellingsruimte Middelheimmuseum,tentoonstellingsruimte-middelheimmuseum,Gerealiseerd,,,unknown,Middelheimpark,22.64,250,True,след
+Kasteel Den Brandt,kasteel-den-brandt,In realisatie,AG Vespa-patrimonium,,unknown,Nachtegalenpark Den Brandt,21.03,302,True,след
+Jeugdkamer Park Groot Schijn,jeugdkamer-park-groot-schijn,Gerealiseerd,Publieke gebouwen,2023,done_event,Park Groot Schijn,32.36,316,True,след
+Nieuwbouw volkstuintjes Park Groot Schijn,nieuwbouw-volkstuintjes-park-groot-schijn,Gerealiseerd,Stedelijk patrimonium,,unknown,Park Groot Schijn,32.36,328,True,след
+Eksterlaer,eksterlaer,In realisatie,Stedelijke ontwikkeling,,unknown,Eksterlaer,2.87,336,True,след
+Tentoonstellingsruimte Middelheimmuseum,tentoonstellingsruimte-middelheimmuseum,Gerealiseerd,,,unknown,Middelheim-Laag,11.16,339,True,след
+Districtshuis Antwerpen,districtshuis-antwerpen,Gerealiseerd,Stedelijk patrimonium,2021,done_event,Harmoniepark,1.59,82,False,кандидат
+Gymhal Terlinden,gymhal-terlinden,Gerealiseerd,Stedelijk patrimonium,,unknown,Roosendaelpark,5.21,101,False,кандидат
+Kinderdagverblijf Parkvilla en groenstelplaats,kinderdagverblijf-parkvilla-en-groenstelplaats,Gerealiseerd,Publieke gebouwen,,unknown,Roosendaelpark,5.21,116,False,кандидат
+Parkvilla,parkvilla,Gerealiseerd,AG Vespa-patrimonium,,unknown,Roosendaelpark,5.21,118,False,кандидат
+Basisschool Kosmos,basisschool-kosmos,Gerealiseerd,Publieke gebouwen,,unknown,Nachtegalenpark - Vogelzang,34.46,122,False,кандидат
+Selderstraat 46-48,selderstraat-46-48,Gerealiseerd,Wonen,,unknown,Stuivenbergplein,1.84,134,False,кандидат
+Selderstraat 43-45-47,selderstraat-43-45-47,Gerealiseerd,Wonen,,unknown,Stuivenbergplein,1.84,135,False,кандидат
+Sporthal Ekeren,sporthal-ekeren,Gerealiseerd,Stedelijk patrimonium,2018,done_event,Hagelkruispark,4.93,139,False,кандидат
+Sint-Bernardsesteenweg 471,sint-bernardsesteenweg-471,Gerealiseerd,Wonen,,unknown,Hollebeekvallei,1.18,140,False,кандидат
+Grimsbystraat 2 – Liverpoollaan 18 - Dublinstraat 18-20,grimsbystraat-2-liverpoollaan-18-dublinstraat-18-20,Gerealiseerd,Wonen,,unknown,Squarepark,1.27,142,False,кандидат
+Stadsloketten in koetshuis park Sorghvliedt,stadsloketten-koetshuis-park-sorghvliedt,Gerealiseerd,,,unknown,Broydenborg,2.29,146,False,кандидат
+Districtshuis Hoboken,districtshuis-hoboken,Gerealiseerd,Stedelijk patrimonium,2019,done_event,Broydenborg,2.29,153,False,кандидат
+Belvedère park Sorghvliedt,belvedere-park-sorghvliedt,Gerealiseerd,Stedelijk patrimonium,2017,done_event,Broydenborg,2.29,153,False,кандидат
+Groene Singel,groene-singel,In realisatie,Groene Singel Openbaar domein,,unknown,Konijnenwei,8.75,155,False,кандидат
+Sint-Jan-Evangelistkerk,sint-jan-evangelistkerk-0,In realisatie,Publiek gebouw,,unknown,Krugerpark,1.03,159,False,кандидат
+Veldstraat 2,veldstraat-2,Gerealiseerd,Wonen,,unknown,Stuivenbergplein,1.84,159,False,кандидат
+Selderstraat 68,selderstraat-68,Gerealiseerd,Wonen,,unknown,Stuivenbergplein,1.84,162,False,кандидат
+Museumcafé MIKA,museumcafe-mika,Gerealiseerd,AG Vespa-patrimonium,,unknown,Middelheimpark,22.64,165,False,кандидат
+Dubbele basisschool Studio Dynamo en secundaire school Groenhout,dubbele-basisschool-studio-dynamo-en-secundaire-school-groenhout,Gerealiseerd,Publieke gebouwen,,unknown,Zuidpark,6.28,166,False,кандидат
+Stelplaats en kantoren groendienst en horecazaak,stelplaats-en-kantoren-groendienst-en-horecazaak,Gerealiseerd,Publieke gebouwen,,unknown,Stadspark,11.45,169,False,кандидат
+Districtshuis Hoboken,districtshuis-hoboken,Gerealiseerd,Stedelijk patrimonium,2019,done_event,Park Sorghvliedt,16.15,175,False,кандидат
+Districtshuis Antwerpen,districtshuis-antwerpen,Gerealiseerd,Stedelijk patrimonium,2021,done_event,Koning Albertpark,4.85,187,False,кандидат
+Gravinstraat 15 - Gijselsstraat 146-148,gravinstraat-15-gijselsstraat-146-148,Gerealiseerd,Wonen,,unknown,Krugerpark,1.03,191,False,кандидат
+Museumcafé MIKA,museumcafe-mika,Gerealiseerd,AG Vespa-patrimonium,,unknown,Nachtegalenpark,13.31,194,False,кандидат
+Wilgenstraat,godshuis-van-der-biest,Gerealiseerd,Stedelijk patrimonium Publieke gebouwen,2021,done_event,Stuivenbergplein,1.84,201,False,кандидат
+Campus Hardenvoort,campus-hardenvoort,Gerealiseerd,Publieke gebouwen,,unknown,Park Spoor Noord,19.48,201,False,кандидат
+"Restauratie Pomphuis, renovatie Ketelmakerij en nieuwbouw",restauratie-pomphuis-renovatie-ketelmakerij-en-nieuwbouw,In realisatie,,,unknown,Droogdokkenpark - Belvédère,1.58,206,False,кандидат
+Districtshuis Ekeren,districtshuis-ekeren,Gerealiseerd,Stedelijk patrimonium,2018,done_event,Veltwijckpark,9.35,207,False,кандидат
+Museumcafé MIKA,museumcafe-mika,Gerealiseerd,AG Vespa-patrimonium,,unknown,Middelheim-Laag,11.16,207,False,кандидат
+Bostonstraat 2 - 28 - 30 - 44 - 46,bostonstraat-2-28-30-44-46,Gerealiseerd,Wonen,,unknown,Squarepark,1.27,215,False,кандидат
+Bostonstraat 22 - 24,bostonstraat-22-24,Gerealiseerd,Grond- en pandenbeleid,,unknown,Squarepark,1.27,215,False,кандидат
+Glasgowstraat - Liverpoollaan,glasgowstraat-liverpoollaan,Gerealiseerd,Wonen,,unknown,Squarepark,1.27,216,False,кандидат
+Viséstraat 30,visestraat-30,Gerealiseerd,Wonen,,unknown,Park Spoor Noord,19.48,225,False,кандидат
+Parkloods,parkloods,Gerealiseerd,Publieke gebouwen,,unknown,Park Spoor Noord,19.48,226,False,кандидат
+Districtshuis Antwerpen,districtshuis-antwerpen,Gerealiseerd,Stedelijk patrimonium,2021,done_event,Tuin Provinciehuis,2.56,233,False,кандидат
+Park Brialmont,park-brialmont,Gerealiseerd,Groene Singel Openbaar domein,2024,done_event,De Villegaspark,2.05,233,False,кандидат
+Park Brialmont,park-brialmont,Gerealiseerd,Groene Singel Openbaar domein,2024,done_event,Recreatief natuurpark Wolvenberg,3.31,236,False,кандидат
+Wijkkantoor politie Turnhoutsebaan en appartementen Zegelstraat 344,wijkkantoor-politie-turnhoutsebaan-en-appartementen-zegelstraat-344,Gerealiseerd,Publieke gebouwen Wonen,,unknown,Krugerpark,1.03,242,False,кандидат
+Gravinstraat 31-35 - Gijselsstraat 162-168,gravinstraat-31-35-gijselsstraat-162-168,Gerealiseerd,Wonen,,unknown,Krugerpark,1.03,244,False,кандидат
+Beukenlaan 16 - Reconstructie tempeltje,beukenlaan-16-reconstructie-tempeltje,Gerealiseerd,AG Vespa-patrimonium,,unknown,Middelheim-Laag,11.16,245,False,кандидат
+Buurtsporthal en jeugdcentrum IGLO,buurtsporthal-en-jeugdcentrum-iglo,Gerealiseerd,Publieke gebouwen,,unknown,Linkeroeverpark,1.38,249,False,кандидат
+Dubbele basisschool Studio Dynamo en secundaire school Groenhout,dubbele-basisschool-studio-dynamo-en-secundaire-school-groenhout,Gerealiseerd,Publieke gebouwen,,unknown,Clara Peetershof,1.23,257,False,кандидат
+Beukenlaan 16 - Reconstructie tempeltje,beukenlaan-16-reconstructie-tempeltje,Gerealiseerd,AG Vespa-patrimonium,,unknown,Nachtegalenpark Den Brandt,21.03,261,False,кандидат
+Kasteel Den Brandt,kasteel-den-brandt,In realisatie,AG Vespa-patrimonium,,unknown,Middelheim-Laag,11.16,267,False,кандидат
+Florastraat 143 - 147 - 155 - 159 & Terlostraat 19-21,florastraat-143-147-155-159-terlostraat-19-21,Gerealiseerd,Wonen,,unknown,Krugerpark,1.03,268,False,кандидат
+Kasteel Meerlenhof,kasteel-meerlenhof,Gerealiseerd,Eigen patrimonium,,unknown,Broydenborg,2.29,272,False,кандидат
+Wijkkantoor politie Kioskplaats,wijkkantoor-politie-kioskplaats,Gerealiseerd,Publieke gebouwen,,unknown,Broydenborg,2.29,274,False,кандидат
+Stadsloketten in koetshuis park Sorghvliedt,stadsloketten-koetshuis-park-sorghvliedt,Gerealiseerd,,,unknown,Meerlenhof,1.39,276,False,кандидат
+Beukenlaan 16 - Reconstructie tempeltje,beukenlaan-16-reconstructie-tempeltje,Gerealiseerd,AG Vespa-patrimonium,,unknown,Nachtegalenpark,13.31,276,False,кандидат
+Sporthal De Rode Loop,sporthal-de-rode-loop,Gerealiseerd,Stedelijk patrimonium,2019,done_event,Runcvoortpark,3.63,281,False,кандидат
+Colmar,colmar,Gerealiseerd,AG VESPA-patrimonium,,unknown,Domein Hertoghe,3.53,283,False,кандидат
+Bredastraat 33,bredastraat-33,Gerealiseerd,AG VESPA-patrimonium,,unknown,Park Spoor Noord,19.48,284,False,кандидат
+Districtshuis Hoboken,districtshuis-hoboken,Gerealiseerd,Stedelijk patrimonium,2019,done_event,Meerlenhof,1.39,292,False,кандидат
+Belvedère park Sorghvliedt,belvedere-park-sorghvliedt,Gerealiseerd,Stedelijk patrimonium,2017,done_event,Meerlenhof,1.39,292,False,кандидат
+Nieuw Zuid,nieuw-zuid,Gerealiseerd,Stad aan het water Openbaar domein,2025,done_event,Park aan de Stroom,7.78,293,False,кандидат
+Kattenberg 53-55,kattenberg-53-55,Gerealiseerd,Wonen,,unknown,Krugerpark,1.03,294,False,кандидат
+Basisschool De Zwaantjes,basisschool-de-zwaantjes,In realisatie,Publieke gebouwen,,unknown,Hollebeekvallei,1.18,295,False,кандидат
+Basisschool De Beren en kinderdagverblijf Neuze Neuze,basisschool-de-beren-en-kinderdagverblijf-neuze-neuze,Gerealiseerd,Publieke gebouwen,,unknown,Kruisdijkpark,2.17,295,False,кандидат
+Dubbele basisschool Het Vliegertje,dubbele-basisschool-het-vliegertje,Gerealiseerd,Publieke gebouwen,,unknown,Drakenhof,6.04,296,False,кандидат
+Kasteel Den Brandt,kasteel-den-brandt,In realisatie,AG Vespa-patrimonium,,unknown,Nachtegalenpark,13.31,298,False,кандидат
+Site Sint-Catharinaplein,site-sint-catharinaplein,In realisatie,,,unknown,Kielpark,17.06,303,False,кандидат
+Stedelijke kinderopvang Kadee,stedelijke-kinderopvang-kadee,Gerealiseerd,Stedelijk patrimonium Publiek gebouw,2024,done_event,Kielpark,17.06,304,False,кандидат
+Tentoonstellingsruimte Middelheimmuseum,tentoonstellingsruimte-middelheimmuseum,Gerealiseerd,,,unknown,Nachtegalenpark,13.31,305,False,кандидат
+Runcvoorthof,runcvoorthof,Gerealiseerd,Wonen Openbaar domein,,unknown,Roosendaelpark,5.21,306,False,кандидат
+Tentoonstellingsruimte Middelheimmuseum,tentoonstellingsruimte-middelheimmuseum,Gerealiseerd,,,unknown,Groenzone Craeybeckxtunnel,5.69,307,False,кандидат
+Red Star Line Museum,red-star-line-museum,Gerealiseerd,Publieke gebouwen,,unknown,Droogdokkenpark - Belvédère,1.58,312,False,кандидат
+Touwstraat 39,touwstraat-39,Gerealiseerd,Wonen,,unknown,Park Spoor Oost,4.77,318,False,кандидат
+Dubbele basisschool en sporthal Nieuw Zuid,dubbele-basisschool-en-sporthal-nieuw-zuid,Gerealiseerd,Publieke gebouwen,,unknown,Park aan de Stroom,7.78,319,False,кандидат
+Paleisstraat 122-126,paleisstraat-122-126,In realisatie,AG Vespa Patrimonium,,unknown,Clara Peetershof,1.23,330,False,кандидат
+Stedelijk Lyceum Expo,stedelijk-lyceum-expo,In realisatie,Publieke gebouwen,,unknown,Kielpark,17.06,331,False,кандидат
+Kantoorgebouw Stedelijk Onderwijs Antwerpen,kantoorgebouw-stedelijk-onderwijs-antwerpen,Gerealiseerd,Publieke gebouwen,,unknown,Stadspark,11.45,339,False,кандидат
+Driekoningenstraat 39-41,driekoningenstraat-39-41,Gerealiseerd,Wonen,,unknown,De Villegaspark,2.05,340,False,кандидат
+Bouwblok Jan van Gentstraat,bouwblok-jan-van-gentstraat,Gerealiseerd,Stedelijke ontwikkeling Openbaar domein,2020,done_event,Zuidpark,6.28,343,False,кандидат
+Montevideowijk,montevideowijk,In realisatie,Stad aan het water Openbaar domein,2016,done_event,Droogdokkenpark - Belvédère,1.58,347,False,кандидат
+Technische Cluster Noord,technische-cluster-noord,In realisatie,Stedelijk patrimonium,,unknown,Squarepark,1.27,348,False,кандидат
+Sporthal De Rode Loop,sporthal-de-rode-loop,Gerealiseerd,Stedelijk patrimonium,2019,done_event,Roosendaelpark,5.21,351,False,кандидат
+Lange Slachterijstraat 61-63,lange-slachterijstraat-61-63,Gerealiseerd,Wonen,,unknown,Stuivenbergplein,1.84,352,False,кандидат
+Parkvilla,parkvilla,Gerealiseerd,AG Vespa-patrimonium,,unknown,Runcvoortpark,3.63,352,False,кандидат
+Appelstraat 23,appelstraat-23,Gerealiseerd,AG Vespa-patrimonium,,unknown,Krugerpark,1.03,353,False,кандидат
+Jongerenontmoetingscentrum Berchem,jongerenontmoetingscentrum-berchem,Gerealiseerd,Publieke gebouwen,,unknown,Recreatief natuurpark Wolvenberg,3.31,365,False,кандидат
+Den Bell,den-bell,Gerealiseerd,Stedelijk patrimonium,2023,done_event,Clara Peetershof,1.23,371,False,кандидат
+Zuidpark,zuidpark,Gerealiseerd,Stad aan het water Openbaar domein,2024,done_event,Clara Peetershof,1.23,374,False,кандидат
+Parkloods,parkloods,Gerealiseerd,Publieke gebouwen,,unknown,Speeltuin Noordschippersdok,1.06,374,False,кандидат
+Collectie Centrum Antwerpen,collectie-centrum-antwerpen,In realisatie,,2030,done_event,Mastvest,7.25,375,False,кандидат
+Collectie Centrum Antwerpen,collectie-centrum-antwerpen,In realisatie,,2030,done_event,Hof Van Leysen,4.19,375,False,кандидат
+Wijkkantoor politie Kristus-Koningplein,wijkkantoor-politie-kristus-koningplein,Gerealiseerd,Publieke gebouwen,,unknown,Hagelkruispark,4.93,375,False,кандидат
+Statiestraat 71,statiestraat-71,Gerealiseerd,Wonen,,unknown,De Villegaspark,2.05,379,False,кандидат
+Jongerenontmoetingscentrum Berchem,jongerenontmoetingscentrum-berchem,Gerealiseerd,Publieke gebouwen,,unknown,Leeuwerikpark,3.79,381,False,кандидат
+Gymhal Terlinden,gymhal-terlinden,Gerealiseerd,Stedelijk patrimonium,,unknown,Runcvoortpark,3.63,385,False,кандидат
+Jan de Laetstraat 37,jan-de-laetstraat-37,Gerealiseerd,Wonen,,unknown,Krugerpark,1.03,385,False,кандидат
+Neerland,neerland,In realisatie,Stedelijke ontwikkeling,2026,done_event,Park van Eden,20.63,386,False,кандидат
+Park Brialmont,park-brialmont,Gerealiseerd,Groene Singel Openbaar domein,2024,done_event,Brilschans,12.44,390,False,кандидат
+Wijnegemstraat 36,wijnegemstraat-36,Gerealiseerd,Wonen,,unknown,Krugerpark,1.03,390,False,кандидат
+Dubbele basisschool Het Vliegertje,dubbele-basisschool-het-vliegertje,Gerealiseerd,Publieke gebouwen,,unknown,Floris Primspark,1.02,392,False,кандидат
+Eksterlaer,eksterlaer,In realisatie,Stedelijke ontwikkeling,,unknown,Boekenbergpark,10.04,392,False,кандидат

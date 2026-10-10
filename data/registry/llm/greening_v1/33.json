@@ -1,0 +1,16 @@
+{
+ "id": 33,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "762bdd638572a340",
+ "run_at": "2026-09-26T14:49:05+00:00",
+ "output": {
+  "label": "no",
+  "measures": [],
+  "why": "The text is only budget figures and a navigation/table-of-contents list (e.g. \"Chiffres-clés\", \"Partenariat\", \"Dimension environnementale\") with no sentence describing any actual greening action, intention, or state."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.029137399999999997,
+ "duration_ms": 2625
+}

@@ -1,0 +1,147 @@
+/* ── Frondia atlas · interface design system ─────────────────────────────────
+   The product interface (a map with floating cards) has its own system, separate from the
+   landing's on purpose: the two will diverge, so what they have in common is copied here,
+   not shared. Only what the atlas uses is defined.
+   References — Figma dNvUEJQwB2R8dFPRmHctOp, page "Frondia · DS Interface":
+   layout  — Felt, measured on 8 screens (section 71:5 "Atlas · principal layout — Felt web app";
+             the ladder with its usage: section 112:62; masses Felt ↔ atlas: section 115:2):
+             floating cards 12 from the edge, side panel 267, drawer 298, padding 16, bar 46,
+             spacing ladder 7 · 10 · 15 · 24 · 35 — small steps hold a group, large ones separate groups;
+   type    — the small end of David's system (labels 12, UI 14, numbers 14, titles 24, reading 35;
+             page "Frondia · DS Landing", section 96:4);
+   colour  — anthropic.com's palette (Refero record); compared with two forest palettes on page
+             "Frondia · Direction — metaphor & colour", section 113:2 (neutral recommended, pending
+             Elena's decision); data ramps from the validator.
+   Order: primitives (@frondia/shared/brand.css) → 1 roles → 2 type → 3 spacing → 4 components. */
+
+/* ── 1 · roles: what each primitive does in the interface ─────────────────── */
+:root {
+  --paper: var(--ivory-medium);         /* bar, cards, drawer */
+  --paper-2: var(--ivory-dark);         /* hover */
+  --paper-3: var(--oat);                /* switch track */
+  --stage: var(--ivory-dark);           /* the map's ground */
+  --ink: var(--slate-dark);
+  --ink-2: var(--slate-medium);
+  --ink-3: var(--slate-light);          /* 5.67 : 1 on paper */
+  --ink-4: var(--cloud-medium);         /* lines only, never text */
+  /* the "no fair comparison" hatch, as on the landing: cloud-medium on ivory-dark was 1.8 : 1, under WCAG 1.4.11's 3 : 1;
+     cloud-dark on ivory-medium is 3.15 : 1 (re-check 2) */
+  --hatch: var(--cloud-dark);
+  --hatch-ground: var(--paper);
+  --rule: rgba(20, 20, 19, .14);        /* Slate Dark at 14% */
+  --rule-2: rgba(20, 20, 19, .32);      /* Slate Dark at 32% */
+  --noise: var(--cloud-light);          /* within noise: verdict chips, the few-residents fill */
+  --noise-bar: var(--cloud-dark);       /* within noise, a histogram's bars: 3.2 : 1 on the panel (WCAG 1.4.11; cloud-light was 1.34) */
+
+  --ease: cubic-bezier(.2, .7, .1, 1);
+
+  color-scheme: light;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 16px/24px var(--sans);   /* David body: 16 / 24, +0.01em */
+  letter-spacing: .01em;
+  font-optical-sizing: auto;
+}
+::selection { background: var(--ink); color: var(--paper); }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 2px; }
+
+/* ── 2 · type — the small end of David's system ───────────────────────────── */
+:root {
+  --serif: var(--font-instrument-serif);
+  --sans: var(--font-geist);           /* in place of Suisse Int'l */
+  --mono: var(--font-fragment-mono);   /* in place of Monument Grotesk Mono */
+}
+.display-s, h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  margin: 0;
+  text-wrap: balance;
+}
+.display-s { font-size: 24px; line-height: 1.125; letter-spacing: .01em; }                   /* David 24 / 27 */
+.small { font-size: 14px; line-height: 20px; letter-spacing: .01em; color: var(--ink-3); }   /* David 14 / 20 */
+.mono {                                   /* David tag · label: Monument Mono 12 / 16.8, tracking 0 */
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 16.8px;
+  font-feature-settings: "tnum" 1;
+  letter-spacing: 0;
+}
+.label {                                  /* David caps label: Suisse 600 · 12 / 18, +0.1em */
+  font-family: var(--sans);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.num-l {                                  /* David big number: 64 / 70, +0.5 px */
+  font-family: var(--serif); font-size: 64px; line-height: 70px; letter-spacing: .5px; font-variant-numeric: lining-nums;
+}
+.num-l + .label {                         /* David stat label under a big number: 16 / 22, +0.1em */
+  font-size: 16px; line-height: 22px; font-weight: 400; letter-spacing: .1em; text-transform: none; color: var(--ink-2);
+}
+
+/* ── 3 · spacing — Felt's principal layout ────────────────────────────────── */
+:root {
+  --s-7: 7px;       /* ties a title to its kicker, a list to its header */
+  --s-10: 10px;     /* hangs a chart on its numbers */
+  --s-15: 15px;     /* between related blocks: the default */
+  --s-24: 24px;     /* opens a new group */
+  --s-35: 35px;     /* the ladder's top step, between whole parts of a card (not used yet) */
+  --inset: 12px;    /* floating cards from the stage's edge */
+  --pad: 16px;      /* inside a card */
+  --bar: 46px;      /* top bar */
+  --panel: 267px;   /* lens panel, left */
+  --drawer: 298px;  /* sector or audit drawer, right */
+}
+
+/* ── 4 · components ──────────────────────────────────────────────────────── */
+
+/* pill — the audit link in a sector's drawer */
+.pill {
+  display: inline-flex; align-items: center; gap: 10px;
+  height: 42px; padding: 0 20px; border-radius: 999px;
+  font: 400 14px/14px var(--mono); letter-spacing: 0; text-decoration: none;   /* David button: Monument Mono 14 / 14 */
+  border: 1px solid transparent; cursor: pointer; white-space: nowrap;
+  transition: transform .35s var(--ease), background-color .25s, color .25s, border-color .25s;
+}
+.pill:hover { transform: translateY(-1px); }
+.pill .arr { font-family: var(--mono); font-size: 14px; transition: transform .35s var(--ease); }
+.pill:hover .arr { transform: translateX(3px); }
+.pill--ink { background: var(--ink); color: var(--paper); }
+.pill--sm { height: 34px; padding: 0 14px; }
+.pill--line { border-color: var(--rule-2); color: var(--ink); background: none; }
+.pill--line:hover { border-color: var(--ink-3); }
+
+/* wordmark */
+.wordmark { font-family: var(--serif); font-size: 35px; line-height: 1; letter-spacing: .01em; text-decoration: none; } /* David card title 35 */
+
+/* verdict chip */
+.chip {
+  display: inline-flex; align-items: center; gap: 8px; height: 26px; padding: 0 11px 0 9px;
+  border-radius: 999px; font: 400 12px/16.8px var(--mono); border: 1px solid var(--rule);   /* David tag */
+  background: var(--paper); color: var(--ink); white-space: nowrap;
+}
+.chip i { width: 8px; height: 8px; border-radius: 50%; background: var(--noise); }
+.chip--up i { background: var(--gain-2); }
+.chip--down i { background: var(--loss-3); }
+.chip--refused i { background: transparent; border: 1.5px solid var(--ink-3); }
+/* a refusal's words are the longest a chip carries: in a longer language they wrap inside the chip instead of running
+   out of the drawer (plan 5: 80 px past it at 1440). It keeps its own width up to the card's padding (English's is
+   already 1.3 px wider than the drawer's column at 1024–1440, left as drawn), and one line keeps the 26 px */
+.chip--refused { white-space: normal; height: auto; min-height: 26px; width: max-content; max-width: calc(100% + var(--pad)); }
+
+/* segmented control — city and lens */
+.seg { display: inline-flex; padding: 3px; border: 1px solid var(--rule); border-radius: 999px; background: rgba(240, 238, 230, .6); }
+.seg button {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 0; background: none; cursor: pointer; height: 32px; padding: 0 14px; border-radius: 999px;
+  font: 400 14px/14px var(--mono); color: var(--ink-2); white-space: nowrap; transition: background-color .25s, color .25s;   /* David button */
+}
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+/* phone: the mono button face is a fifth wider than v1's sans; the pair drops to David's 12-px tag size to fit 390 */
+@media (max-width: 480px) { .seg button { font-size: 12px; line-height: 12px; padding: 0 7px; height: 30px; } }

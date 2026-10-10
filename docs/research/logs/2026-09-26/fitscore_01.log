@@ -1,0 +1,37 @@
+Raw data directory: /home/user/facta/pipelines/neighbourhood_fit_score/pipeline/data/raw
+
+  ✓ belgium-latest.osm.pbf — file present, skipping download
+
+  Downloading statbel_sectors.zip …
+  ↓ statbel_sectors.zip  1/29 MB (3%)  ↓ statbel_sectors.zip  2/29 MB (7%)  ↓ statbel_sectors.zip  3/29 MB (10%)  ↓ statbel_sectors.zip  4/29 MB (14%)  ↓ statbel_sectors.zip  5/29 MB (17%)  ↓ statbel_sectors.zip  6/29 MB (21%)  ↓ statbel_sectors.zip  7/29 MB (24%)  ↓ statbel_sectors.zip  8/29 MB (27%)  ↓ statbel_sectors.zip  9/29 MB (31%)  ↓ statbel_sectors.zip  10/29 MB (34%)  ↓ statbel_sectors.zip  11/29 MB (38%)  ↓ statbel_sectors.zip  12/29 MB (41%)  ↓ statbel_sectors.zip  13/29 MB (44%)  ↓ statbel_sectors.zip  14/29 MB (48%)  ↓ statbel_sectors.zip  15/29 MB (51%)  ↓ statbel_sectors.zip  16/29 MB (55%)  ↓ statbel_sectors.zip  17/29 MB (58%)  ↓ statbel_sectors.zip  18/29 MB (62%)  ↓ statbel_sectors.zip  19/29 MB (65%)  ↓ statbel_sectors.zip  20/29 MB (68%)  ↓ statbel_sectors.zip  21/29 MB (72%)  ↓ statbel_sectors.zip  22/29 MB (75%)  ↓ statbel_sectors.zip  23/29 MB (79%)  ↓ statbel_sectors.zip  24/29 MB (82%)  ↓ statbel_sectors.zip  25/29 MB (86%)  ↓ statbel_sectors.zip  26/29 MB (89%)  ↓ statbel_sectors.zip  27/29 MB (92%)  ↓ statbel_sectors.zip  28/29 MB (96%)  ↓ statbel_sectors.zip  29/29 MB (99%)  ↓ statbel_sectors.zip  29/29 MB (100%)  ✓ statbel_sectors.zip  29 MB          
+  Extracting statbel_sectors.zip …
+  📦 statbel_sectors.zip: 7 file(s)
+     → Licence open data_FR.pdf
+     → Licence open data_NL.pdf
+     → sh_statbel_statistical_sectors_31370_20240101.sqlite
+     → sh_statbel_statistical_sectors_31370_20240101-readme-de.doc
+     → sh_statbel_statistical_sectors_31370_20240101-readme-en.doc
+     → sh_statbel_statistical_sectors_31370_20240101-readme-fr.doc
+     → sh_statbel_statistical_sectors_31370_20240101-readme-nl.doc
+
+  Downloading statbel_population.zip …
+  ↓ statbel_population.zip  0/0 MB (100%)  ✓ statbel_population.zip  0 MB          
+  Extracting statbel_population.zip …
+  📦 statbel_population.zip: 1 file(s)
+     → OPENDATA_SECTOREN_2024.txt
+
+
+  ⚠  stib_gtfs.zip — no URL configured
+     Download STIB GTFS manually:
+     1. https://opendata.stib-mivb.be/
+     2. Datasets → 'GTFS Files (Production)' → Download
+     3. Save as: /home/user/facta/pipelines/neighbourhood_fit_score/pipeline/data/raw/stib_gtfs.zip
+     Or: set env var STIB_GTFS_URL=<direct-zip-url>
+
+──────────────────────────────────────────────────
+  ✓ Ready:   osm_pbf, statbel_sectors, statbel_population
+  ⚠  Missing: stib_gtfs
+    STIB GTFS is required for transit scoring (Week 3).
+    Pipeline steps 02–04 can run without it.
+
+Next: python 02_sectors.py

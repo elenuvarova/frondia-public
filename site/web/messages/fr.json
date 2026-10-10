@@ -1,0 +1,1630 @@
+{
+  "common": {
+    "skip": "Aller au contenu",
+    "nav": {
+      "home": "Frondia, accueil",
+      "main": "Menu principal",
+      "law": "Article 8",
+      "method": "Méthode",
+      "audits": "Audits",
+      "atlas": "Ouvrir l’atlas",
+      "atlasShort": "Atlas",
+      "languages": "Langue"
+    },
+    "footer": {
+      "label": "Pied de page",
+      "motto": ", la croissance, pas le bruissement.",
+      "links": {
+        "atlas": "Atlas",
+        "law": "Article 8",
+        "method": "Méthode",
+        "audits": "Audits",
+        "faq": "Questions",
+        "data": "Données",
+        "register": "Registre",
+        "privacy": "Vie privée"
+      },
+      "built": "Conçu et réalisé par <a>Elena Uvarova</a>.",
+      "translation": "Traduit automatiquement avec Claude et relu par un second modèle ; pas encore relu par un locuteur natif.",
+      "privacy": "Aucun cookie sans votre accord. Les visites sont comptées de façon anonyme sur le propre serveur de ce site ; Microsoft Clarity ne fonctionne qu’avec votre permission.",
+      "credits": "Contains modified Copernicus Sentinel data 2017–2026. Landsat courtesy of the U.S. Geological Survey. Dynamic World: Google and World Resources Institute. CLCplus Backbone and HRL Woody Vegetation Layer: © European Union, Copernicus Land Monitoring Service. Statistical sectors and income © Statbel. Parks © OpenStreetMap contributors (ODbL). Project registers: beliris.be, quartiers.brussels, agvespa.be."
+    },
+    "notFound": {
+      "tab": "Page introuvable · Frondia",
+      "home": "Retour à l’accueil",
+      "kicker": "Erreur 404 · aucune page ici",
+      "heading": "Rien n’a poussé <em>ici.</em>",
+      "lede": "Aucune page n’a jamais été mesurée à cette adresse : c’est du bruissement, pas de la croissance. L’atlas et tous les documents sont toujours à leur place."
+    },
+    "unavailable": "Les mesures de cette page n’ont pas pu être chargées.",
+    "consent": {
+      "label": "Choix des cookies",
+      "text": "Frondia compte les visites de façon anonyme sur son propre serveur, sans cookies. Avec votre permission, il utilise aussi Microsoft Clarity, qui dépose des cookies et enregistre la manière dont la page est utilisée, pour voir où elle est difficile à lire.",
+      "short": "Microsoft Clarity peut-il déposer des cookies et enregistrer votre visite ?",
+      "accept": "Accepter",
+      "decline": "Refuser",
+      "privacy": "Vie privée"
+    },
+    "cities": {
+      "brussels": "Bruxelles",
+      "antwerp": "Anvers",
+      "ghent": "Gand",
+      "liege": "Liège",
+      "charleroi": "Charleroi"
+    },
+    "sectorFallback": "Secteur {id}",
+    "regions": {
+      "brussels": "Région de Bruxelles-Capitale",
+      "flanders": "Région flamande",
+      "wallonia": "Région wallonne"
+    },
+    "objects": {
+      "one": {
+        "benches": "banc",
+        "bicycle_repair": "station de réparation vélo",
+        "bike_parking": "parking vélos",
+        "defibrillators": "défibrillateur",
+        "dog_areas": "espace canin",
+        "drinking_water": "fontaine d’eau potable",
+        "fitness_stations": "appareil de fitness extérieur",
+        "picnic_tables": "table de pique-nique",
+        "playgrounds": "aire de jeux",
+        "public_bookcases": "boîte à livres",
+        "recycling": "point de recyclage",
+        "shelters": "abri",
+        "toilets": "WC public",
+        "waste_bins": "poubelle"
+      },
+      "many": {
+        "benches": "Bancs",
+        "bicycle_repair": "Stations de réparation vélo",
+        "bike_parking": "Parkings vélos",
+        "defibrillators": "Défibrillateurs",
+        "dog_areas": "Espaces canins",
+        "drinking_water": "Fontaines d’eau potable",
+        "fitness_stations": "Fitness en plein air",
+        "picnic_tables": "Tables de pique-nique",
+        "playgrounds": "Aires de jeux",
+        "public_bookcases": "Boîtes à livres",
+        "recycling": "Points de recyclage",
+        "shelters": "Abris",
+        "toilets": "Toilettes publiques",
+        "waste_bins": "Poubelles"
+      },
+      "a": {
+        "benches": "un banc",
+        "bicycle_repair": "une station de réparation vélo",
+        "bike_parking": "un parking vélos",
+        "defibrillators": "un défibrillateur",
+        "dog_areas": "un espace canin",
+        "drinking_water": "une fontaine d’eau potable",
+        "fitness_stations": "un appareil de fitness extérieur",
+        "picnic_tables": "une table de pique-nique",
+        "playgrounds": "une aire de jeux",
+        "public_bookcases": "une boîte à livres",
+        "recycling": "un point de recyclage",
+        "shelters": "un abri",
+        "toilets": "un WC public",
+        "waste_bins": "une poubelle"
+      },
+      "no": {
+        "benches": "aucun banc",
+        "bicycle_repair": "aucune station de réparation vélo",
+        "bike_parking": "aucun parking vélos",
+        "defibrillators": "aucun défibrillateur",
+        "dog_areas": "aucun espace canin",
+        "drinking_water": "aucune fontaine d’eau potable",
+        "fitness_stations": "aucun appareil de fitness extérieur",
+        "picnic_tables": "aucune table de pique-nique",
+        "playgrounds": "aucune aire de jeux",
+        "public_bookcases": "aucune boîte à livres",
+        "recycling": "aucun point de recyclage",
+        "shelters": "aucun abri",
+        "toilets": "aucun WC public",
+        "waste_bins": "aucune poubelle"
+      }
+    },
+    "sep": {
+      "dot": " · ",
+      "list": ", ",
+      "semi": " ; ",
+      "rank": "n° {n}"
+    },
+    "pointsSpoken": "{n, plural, one {point de pourcentage} other {points de pourcentage}}",
+    "charts": {
+      "hist": "Distribution de {n} effets par secteur ; seuil ±{thr}",
+      "beforeAfter": "{before} % avant, {after} % après",
+      "series": {
+        "aria": "Effet par été, {from}–{to} : au-dessus du seuil pendant {above} des {n} étés",
+        "point": "{season} : {effect}{scenes, select, none {} other { · {scenes} scènes}}",
+        "caption": "Au-delà du bruit pendant <b>{above} des {n} étés</b>, {from}–{to}{opened, select, none {} other { · ouvert en {opened}}}{gap, select, none {} other { · aucun été dans la série : {gap}}}"
+      },
+      "rings": {
+        "absent": "{year} : aucun été dans la série{note, select, none {} other { — {note}}}",
+        "ring": "{year} : {effect} · {beyond, select, yes {{k}× le seuil} other {dans le bruit}}{scenes, select, none {} other { · {scenes} scènes}}{note, select, none {} other { — {note}}}",
+        "control": "Zone témoin {k} : {name}{km, select, none {} other { · {km} km}}",
+        "aria": "{place} : depuis {completed}, au-delà du bruit pendant {above} {summers, plural, one {sur # été} other {des # étés}}. La largeur d’un anneau est l’effet par rapport à {n} zones témoins, seuil {thr}."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Vie privée",
+    "lede": "Ce que ce site enregistre, où cela va, et comment changer d’avis.",
+    "who": "Frondia est géré par Elena Uvarova, Belgique. Contact : <mail>{email}</mail>.",
+    "counts": "{langs, select, many {Comptage des visites. Le site compte les pages vues, quelques clics (ouvrir l’atlas, un audit ou une question, télécharger un fichier, changer de langue) et votre choix de cookies avec Umami, qui tourne sur notre propre serveur en Allemagne (Hetzner) ; les pages vues sont aussi comptées par un second Umami à nous, sur le même serveur, pour une vue d’ensemble de tous nos sites. Aucun cookie n’est déposé, aucune adresse IP n’est conservée, et les navigateurs qui envoient Do Not Track ne sont pas comptés. Ces chiffres ne permettent pas de vous identifier : ce sont des totaux sans données personnelles, conservés tant que le site existe.} other {Comptage des visites. Le site compte les pages vues, quelques clics (ouvrir l’atlas, un audit ou une question, télécharger un fichier) et votre choix de cookies avec Umami, qui tourne sur notre propre serveur en Allemagne (Hetzner) ; les pages vues sont aussi comptées par un second Umami à nous, sur le même serveur, pour une vue d’ensemble de tous nos sites. Aucun cookie n’est déposé, aucune adresse IP n’est conservée, et les navigateurs qui envoient Do Not Track ne sont pas comptés. Ces chiffres ne permettent pas de vous identifier : ce sont des totaux sans données personnelles, conservés tant que le site existe.}}",
+    "clarity": "Enregistrements de sessions. Uniquement si vous cliquez sur Accepter, le site charge Microsoft Clarity, qui dépose des cookies et enregistre les clics, le défilement et les mouvements de la souris pour montrer où la page est difficile à utiliser. Clarity est un service de Microsoft ; les données sont conservées dans le cloud Azure de Microsoft et peuvent être transférées à Microsoft aux États-Unis sur la base de clauses contractuelles types (Microsoft Ireland Operations Limited). Les enregistrements sont conservés 30 jours. Votre choix lui-même, Accepter ou Refuser, est conservé pendant un an dans le stockage local de votre navigateur, et non dans un cookie.",
+    "pause": "Si vous mettez en pause le mouvement de la photo en haut de la page d’accueil, ce choix est conservé dans le stockage de session de votre navigateur jusqu’à la fermeture de l’onglet, pour que la photo reste immobile pendant votre visite. Il ne contient aucune donnée personnelle et ne quitte jamais votre navigateur.",
+    "none": "Pas de publicité, pas de vente de données. Frondia lui-même ne vous suit pas d’un site à l’autre ; si vous acceptez Clarity, Microsoft peut déposer un cookie qui reconnaît votre navigateur sur d’autres sites utilisant Clarity. Les polices et les cartes sont servies par ce site.",
+    "basis": "Base légale. Clarity ne fonctionne qu’avec votre consentement, que vous pouvez retirer à tout moment sur cette page. Le comptage anonyme et les journaux du serveur reposent sur l’intérêt légitime : faire fonctionner le site et en assurer la sécurité.",
+    "hosting": "Le site tourne sur un serveur en Allemagne (Hetzner). Son serveur web conserve pendant une courte durée des journaux techniques, adresses IP comprises, pour assurer son fonctionnement et sa sécurité.",
+    "rights": "Vous pouvez demander quelles données nous détenons sur vous, les faire rectifier ou effacer, et introduire une réclamation auprès de l’Autorité de protection des données belge (gegevensbeschermingsautoriteit.be / autoriteprotectiondonnees.be).",
+    "change": "Modifier votre choix",
+    "meta": {
+      "title": "Vie privée — Frondia",
+      "description": "Ce que ce site enregistre, où cela va, et comment changer d’avis."
+    }
+  },
+  "landing": {
+    "meta": {
+      "title": "Frondia — ce qui a vraiment changé",
+      "description": "Un atlas de preuves pour cinq villes belges, Bruxelles, Anvers, Gand, Liège et Charleroi : ce qui manque à chaque secteur, quoi placer où, et ce qui a vraiment changé dans sa verdure, au regard d’un seuil de bruit mesuré sur la ville elle-même."
+    },
+    "words": [
+      "Zéro",
+      "Une",
+      "Deux",
+      "Trois",
+      "Quatre",
+      "Cinq",
+      "Six",
+      "Sept",
+      "Huit",
+      "Neuf",
+      "Dix",
+      "Onze",
+      "Douze",
+      "Treize",
+      "Quatorze",
+      "Quinze",
+      "Seize",
+      "Dix-sept",
+      "Dix-huit",
+      "Dix-neuf",
+      "Vingt"
+    ],
+    "cta": {
+      "atlas": "Ouvrir l’atlas",
+      "decides": "Comment il tranche",
+      "method": "Lire la méthode"
+    },
+    "of": "{k} sur {n}",
+    "srSuffix": " : {name}",
+    "loadError": {
+      "text": "Les mesures de cette page n’ont pas pu être chargées.",
+      "reload": "Recharger",
+      "atlas": "Ouvrir l’atlas"
+    },
+    "hero": {
+      "kicker": "Atlas de preuves · {count} villes belges",
+      "title": "Ce qui a vraiment <em>changé.</em>",
+      "lede": "Chaque été, la verdure de la ville bruisse — et chaque nouvelle édition de sa carte aussi. Frondia distingue le bruissement de la croissance.",
+      "caption": "Une illustration, pas une mesure.",
+      "pause": "Mettre le mouvement en pause"
+    },
+    "anyway": {
+      "rule": "La ville bruisse chaque été",
+      "ruleRight": "{city} · de {before} à {after}",
+      "title": "Entre 2017 et 2024, tout Bruxelles a verdi. <em>{words} zones ont vraiment poussé.</em>",
+      "body": "Comparez chaque secteur à son propre passé, et {share} de la ville semble « significativement plus verte ». Comparez-le à douze lieux qui lui ressemblaient au départ, et il n’en reste que {k}.",
+      "tiles": {
+        "raw": "semblent plus verts, en comparant seulement avant et après",
+        "effect": "plus verts au-delà du bruit, par rapport à 12 zones témoins",
+        "threshold": "seuil à {city} · {p} % plus large à {other}",
+        "ninove": "Porte de Ninove, par rapport à son seuil d’audit"
+      },
+      "rawMap": "Le bruissement : {n} secteurs de Bruxelles semblent plus verts, chacun comparé seulement à son propre passé",
+      "rawLabel": "Le bruissement",
+      "rawCap": "secteurs semblent significativement plus verts, chacun comparé seulement à son propre passé",
+      "effectMap": "La croissance : {up} secteurs plus verts et {down} en perte au-delà du bruit, par rapport aux zones témoins",
+      "effectLabel": "La croissance",
+      "effectCap": "plus verts au-delà du bruit par rapport à 12 zones témoins · {down} en perte · {refused} sous hachures : pas de comparaison équitable",
+      "close": "Soustraire douze lieux restés les mêmes : c’est tout le produit, en une seule étape."
+    },
+    "proof": {
+      "rule": "Les cartes bruissent aussi",
+      "ruleRight": "Anvers {a}–{b} · Bruxelles {c}–{d}",
+      "title": "La carte a changé. <em>Les arbres, bien moins.</em>",
+      "body": "Une nouvelle édition d’une carte peut bouger plus qu’une ville. Avant de lire un changement, Frondia se demande ce qui a bougé : le sol, ou la manière de le dessiner.",
+      "change": "{a} → {b}",
+      "source": "{credit} · {licence}",
+      "photo": "Photo aérienne, {year}",
+      "alt": "{place}, photo aérienne, {year}, le secteur cerné d’un trait crème",
+      "editions": {
+        "place": "{name} ({district}), Anvers",
+        "officialLabel": "Carte officielle du couvert arboré",
+        "officialCap": "<en>Copernicus Woody Vegetation</en>, éditions {a} et {b}",
+        "aerialLabel": "Photos aériennes",
+        "aerialCap": "Groenkaart Vlaanderen, arbres de plus de 3 m, les mêmes étés",
+        "close": "L’édition {a} retire les bois compacts de 5 ha ou plus ; celle de {b}, non. Lue comme un changement, la carte officielle dit que chacune des {count} villes a gagné de {min} à {max} points de couvert arboré. Sur les secteurs d’Anvers et de Gand que couvrent les photos aériennes, elle a gagné {oa} et {og} ; les photos aériennes indiquent {pa} et {pg}."
+      },
+      "region": {
+        "place": "{name} ({district}), Bruxelles",
+        "mapLabel": "La propre carte de la Région",
+        "mapCap": "Bruxelles Environnement, couverture végétale {a} et {b}",
+        "effectLabel": "Points de pourcentage face à douze lieux",
+        "effectCap": "au-delà du bruit propre à la carte, soit {thr} points par secteur",
+        "close": "Sur toute la Région, la même carte indique {s21} en {a} et {s23} en {b}. Face à douze lieux comparables, {loss} secteurs perdent au-delà du bruit et {gain} gagnent ; la plus forte perte est celle de la photo. Le reste est un glissement sur toute la ville. Bruxelles Environnement désigne la poursuite de l’urbanisation comme cause principale, et l’amélioration de la cartographie comme cause secondaire."
+      }
+    },
+    "law": {
+      "rule": "Pour qui",
+      "ruleRight": "Règlement (UE) 2024/1991",
+      "title": "Depuis 2024, la loi oblige l’Europe à <em>compter ses espaces verts urbains.</em>",
+      "p1": "Article 8 du règlement relatif à la restauration de la nature : pas de perte nette d’espaces verts urbains ni de couvert arboré urbain de 2024 à 2030, puis une tendance à l’augmentation, suivie à l’aide de Copernicus. La Belgique a manqué l’échéance du 1er septembre 2026 pour son plan national de restauration : les volets de Bruxelles et de Wallonie n’étaient pas prêts.",
+      "p2": "Les villes où les espaces verts dépassent déjà 45 % et le couvert arboré 10 % sont exemptées. Calcul selon la méthode de la Commission elle-même, par commune :",
+      "stats": {
+        "exempt": "communes de Bruxelles exemptées",
+        "region": "Bruxelles comme une seule région : moins de 45 %",
+        "cityExempt": "{city} : plus de 45 %, exemption",
+        "cityExemptWater": "{city} : plus de 45 %, exemption · {v} hors plans d’eau",
+        "cityBelow": "{city} : moins de 45 %",
+        "cityBelowFarmland": "{city} : moins de 45 % · {v} en comptant les terres agricoles"
+      },
+      "communes": "Trouvez votre commune : son test, ses hectares, ce qui a changé depuis 2024",
+      "close": "Les couches officielles disent <em>combien</em>. Frondia dit si cela a <em>changé</em> au-delà du bruit, et pourquoi. En corrélation de rang, les deux concordent : la couche officielle de couvert arboré et les trois instruments de couvert arboré qu’utilise Frondia sont corrélés à r = {lo}–{hi} dans les {count} villes."
+    },
+    "audiences": [
+      {
+        "key": "regions",
+        "who": "Les Régions qui font rapport au titre de l’article 8",
+        "text": "Si les espaces verts et le couvert arboré ont progressé ou reculé depuis l’état de référence de 2024, secteur par secteur, avec le bruit mesuré et chaque perte nommée. Bruxelles Environnement à Bruxelles ; en Flandre, l’ANB et l’INBO, qui assure le suivi ; en Wallonie, le SPW.",
+        "cta": "Voir les villes dans l’atlas"
+      },
+      {
+        "key": "municipalities",
+        "who": "Les communes qui ont aménagé quelque chose",
+        "text": "Quels secteurs manquent de services, de commerces à portée, d’ombre ou d’un banc ; où placer les prochains objets ; et si un nouveau parc a changé le sol, été après été.",
+        "cta": "Ouvrir un audit"
+      },
+      {
+        "key": "funders",
+        "who": "Les bailleurs de fonds",
+        "text": "Un contrôle inscrit dans la subvention avant le début des travaux. Le contour, l’état de référence et les zones témoins sont fixés avec une date, pour que personne ne puisse, après coup, ajuster le tracé au résultat.",
+        "cta": "Comment le contour est fixé"
+      }
+    ],
+    "threshold": {
+      "rule": "Comment il tranche",
+      "ruleRight": "Méthode",
+      "title": "Le seuil est <em>mesuré,</em> pas choisi.",
+      "steps": [
+        "Chaque secteur de la ville joue une fois le rôle d’une intervention fictive.",
+        "Il est apparié à douze secteurs qui avaient au départ la même verdure et la même chaleur estivale, et qui sont assez éloignés pour ne pas partager ses chantiers.",
+        "Son « effet » est enregistré. Rien ne s’y est passé : la dispersion de l’ensemble des {n} effets est donc le bruit propre de la méthode. Le seuil de la ville est là où s’arrêtent 95 % de cette dispersion : ±{thr} à {city}."
+      ],
+      "hist": {
+        "effect": "Effets par rapport aux zones témoins · {city} · {n} secteurs",
+        "raw": "Changement par rapport à son propre passé · {city} · {n} secteurs",
+        "group": "Ce que montre l’histogramme",
+        "rawButton": "Avant / après",
+        "effectButton": "Face aux zones témoins",
+        "marker": "Porte de Ninove",
+        "effectNote": "Centré sur zéro : moyenne {mean}. La méthode n’invente pas d’effets là où rien ne s’est passé.",
+        "rawNote": "Toute la distribution glisse vers la droite : un déplacement à l’échelle de la ville qu’aucun projet n’a causé à lui seul."
+      }
+    },
+    "showcase": {
+      "rule": "Une carte, trois questions",
+      "ruleRight": "Le produit",
+      "title": "Chaque secteur répond à <em>trois questions.</em>",
+      "body": "L’atlas réunit quatre outils antérieurs sur une même unité, le secteur statistique de Statbel : ce qui manque à un quartier, quoi placer où, et si quelque chose a vraiment changé. Les deux premières questions décrivent et recommandent. La troisième vérifie, au regard du bruit propre de la ville.",
+      "threeAria": "{title} : {cta} dans l’atlas",
+      "maps": {
+        "need": "Services du quotidien pour une famille, Bruxelles : le cinquième le moins bien desservi, en plus foncé",
+        "place": "Où placer les prochaines toilettes publiques à Bruxelles : dix nommées, dix pour comparaison, vingt suivantes",
+        "change": "Ce qui a changé à Bruxelles : plus vert et en perte au-delà du bruit, par rapport aux zones témoins"
+      },
+      "auditRule": "Dans un audit",
+      "browserAria": "Ouvrir l’audit de la Porte de Ninove dans l’atlas",
+      "browserBar": "frondia · atlas · ?case=ninove",
+      "alt": "L’atlas Frondia sur l’audit de la Porte de Ninove : le panneau de la vue avec {up} secteurs plus verts et {down} en perte au-delà du bruit, la carte de Bruxelles avec des secteurs hachurés sans comparaison équitable, et la fiche d’audit avec un effet de {effect} par rapport à douze zones témoins nommées.",
+      "notes": [
+        "<b>La vue.</b> Soustrayez les zones témoins, et une ville plus verte se réduit à ce qui a vraiment poussé. La légende est le bruit propre de la méthode.",
+        "<b>La carte.</b> Les secteurs hachurés n’avaient pas de comparaison équitable et ne reçoivent aucun verdict.",
+        "<b>L’audit.</b> {effect} par rapport à douze zones témoins, chacune avec son nom et sa distance, pour que chacun puisse vérifier."
+      ]
+    },
+    "three": [
+      {
+        "key": "need",
+        "title": "Ce qui manque",
+        "text": "Les services du quotidien pour une famille, de l’école à l’arrêt de tram : le cinquième de la ville le moins bien desservi est le plus foncé. La même vue montre les commerces à portée, la chaleur estivale et la règle 3-30-300.",
+        "cta": "Ouvrir la vue"
+      },
+      {
+        "key": "place",
+        "title": "Ce qu’il faut placer",
+        "text": "Où placer les prochaines toilettes publiques, classées selon la demande que chacune couvrirait. Pour chacun des quatorze types d’objets, dix points ont été nommés en septembre 2026, avant que quiconque ne place quoi que ce soit.",
+        "cta": "Ouvrir les points"
+      },
+      {
+        "key": "change",
+        "title": "Ce qui a changé",
+        "text": "Plus vert ou plus brun au-delà du bruit propre de la ville, par rapport à douze lieux qui ressemblaient au secteur au départ. Seule cette étape mesure un changement ; les deux autres décrivent et recommandent.",
+        "cta": "Ouvrir le changement"
+      }
+    ],
+    "audits": {
+      "rule": "Trois lieux, mesurés",
+      "ruleRight": "Audits",
+      "title": "Trois lieux <em>mesurés au-delà du bruit,</em> chacun avec ses réserves noir sur blanc.",
+      "p1": "Un audit mesure l’emprise des travaux elle-même par rapport à douze secteurs nommés dans l’atlas, puis suit l’effet été après été, car un parc qui a verdi une fois puis s’est estompé raconte une autre histoire.",
+      "p2": "Son seuil est étalonné pour l’instrument et les années propres à l’audit ; il diffère donc du seuil de la ville ci-dessus. Faites glisser ou touchez une image pour comparer avant et après.",
+      "altBefore": "{place} avant les travaux, composite estival Sentinel-2 {window}",
+      "altAfter": "{place} après les travaux, composite estival Sentinel-2 {window}",
+      "tagBefore": "<b>Avant</b>{window}",
+      "tagAfter": "<b>Après</b>{window}",
+      "compare": "Comparer {place} avant et après les travaux",
+      "noImage": "Pas d’image avant/après : à 30 m, un parc de {ha} hectares fait environ quinze pixels de large. La série ci-dessous fait office de preuve.",
+      "meta": "{city} · {ha} ha · ouvert en {completed}",
+      "overThreshold": "{times} son seuil d’audit",
+      "standard": "Fenêtre standard",
+      "threshold": "Seuil d’audit",
+      "above": "Étés au-delà du bruit",
+      "controls": "Zones témoins",
+      "named": "{n} nommées",
+      "open": "Ouvrir l’audit dans l’atlas"
+    },
+    "cases": {
+      "ninove": {
+        "city": "Bruxelles",
+        "place": "Porte de Ninove",
+        "title": "Une friche au bord du canal est devenue un <em>parc-prairie</em>.",
+        "story": "Le parc de la Porte de Ninove a ouvert à l’automne 2019 sur un terrain vague, là où se rejoignent Anderlecht, Molenbeek et la Ville de Bruxelles.",
+        "reading": "Le sol imperméabilisé a reculé et l’herbe a progressé, et un second instrument le confirme. Le couvert arboré n’a pas franchi son propre seuil : c’est un parc-prairie, et le verdict le dit."
+      },
+      "droogdokkenpark": {
+        "city": "Anvers",
+        "place": "Droogdokkenpark",
+        "title": "+0,29 sur le papier. <em>La moitié</em> était un chantier.",
+        "story": "Le Belvédère a ouvert en septembre 2018 sur les anciennes cales sèches de l’Eilandje. La fenêtre « avant » standard a saisi les travaux en cours.",
+        "reading": "Avec une référence prise avant les travaux, l’effet défendable vaut la moitié du chiffre affiché, et encore trois fois le seuil. Cette référence repose sur les deux scènes exploitables de l’été 2016.",
+        "imageNote": "L’image « avant » est la fenêtre standard 2017–19, quand les travaux avaient déjà commencé. Le chiffre ci-dessus utilise à la place la référence de 2016."
+      },
+      "spoor-noord": {
+        "city": "Anvers",
+        "place": "Park Spoor Noord",
+        "title": "Une gare de triage est devenue <em>dix-neuf hectares</em> d’herbe.",
+        "story": "La gare de triage de la SNCB a ouvert comme parc en 2008–2009. Sentinel-2 n’existait pas encore : l’audit utilise donc Landsat, qui remonte à 2006.",
+        "reading": "Le seul été dans le bruit est la sécheresse de 2018, quand un parc herbeux perd son avance sur tout ce qui l’entoure. Il n’y a pas de second instrument pour ces années."
+      }
+    },
+    "refuse": {
+      "rule": "Ce que Frondia refuse d’affirmer",
+      "ruleRight": "Limites",
+      "title": "Un outil qui répond à tout par un chiffre ne sert à rien. <em>Celui-ci dit où il s’arrête.</em>",
+      "body": "Chaque règle ci-dessous a été ajoutée après qu’un résultat convaincant mais faux est apparu sans elle. Les chiffres disent combien de fois chacune s’est déclenchée sur des données réelles.",
+      "nums": {
+        "cooling": "{v} °C",
+        "coolingLabel": "plancher de bruit pour la température de surface",
+        "refusedLabel": "verdicts de parcs refusés",
+        "monitoringLabel": "baisses sur une saison confirmées · {cons} étaient des chantiers",
+        "restorationsLabel": "anciens projets de parcs dans le bruit",
+        "causeLabel": "Zavelenberg, le plus fort à Bruxelles"
+      }
+    },
+    "refusals": [
+      {
+        "key": "cooling",
+        "head": "Refroidissement",
+        "text": "Notre plancher de bruit pour la température de surface est supérieur à l’effet qu’un nouveau parc peut raisonnablement avoir sur elle. C’est pourquoi aucun passage de ce site ne dit qu’un parc « rafraîchit la rue d’un degré »."
+      },
+      {
+        "key": "refused",
+        "head": "Lieux sans comparaison équitable",
+        "text": "Un parc au bord de l’échelle n’a rien de semblable à quoi être comparé. Quand les zones témoins diffèrent trop au départ, Frondia refuse de se prononcer."
+      },
+      {
+        "key": "monitoring",
+        "head": "Alertes d’une seule saison",
+        "text": "Un seul été brun, c’est plus souvent la météo qu’une perte. Une baisse n’est publiée que si un second instrument indépendant voit le couvert arboré disparaître et qu’aucun chantier n’apparaît."
+      },
+      {
+        "key": "restorations",
+        "head": "Restaurations",
+        "text": "Refaire les allées, les étangs et les fontaines d’un parc déjà vert ne se voit pas depuis l’espace. Les anciens projets de parcs, dont sept grandes restaurations, chacun mesuré avec sa propre fenêtre et son propre seuil, restent dans le bruit."
+      },
+      {
+        "key": "cause",
+        "head": "Causes sans documents",
+        "text": "Le plus fort verdissement de Bruxelles, Zavelenberg, est une réserve naturelle où le pâturage a cessé après le décès de l’agriculteur. Sans document, aucune cause n’est nommée."
+      }
+    ],
+    "questions": {
+      "rule": "Questions",
+      "ruleRight": "FAQ",
+      "title": "Ce qu’on <em>demande d’abord.</em>",
+      "canopyR": "r = {lo}–{hi}",
+      "cityFirst": "{name} ({n} secteurs comparables)",
+      "city": "{name} ({n})",
+      "widerFirst": "à {name}, il est {p} % plus large qu’à Bruxelles",
+      "narrowerFirst": "à {name}, il est {p} % plus étroit qu’à Bruxelles",
+      "wider": "à {name}, {p} % plus large",
+      "narrower": "à {name}, {p} % plus étroit"
+    },
+    "faq": [
+      {
+        "id": "scope",
+        "q": "Frondia ne parle-t-il que de verdure ?",
+        "a": "Non. L’atlas montre aussi ce qui manque à chaque secteur, des services du quotidien et des commerces à portée jusqu’à la chaleur estivale et la règle 3-30-300, et où placer le prochain objet public, parmi quatorze types. Seul l’indice de végétation est mesuré comme un changement au regard du bruit propre de la ville ; le reste, ce sont des états et des recommandations, et l’atlas les présente comme tels."
+      },
+      {
+        "id": "trees",
+        "q": "Mesure-t-il les arbres, ou seulement le « vert » ?",
+        "a": "L’instrument principal est l’indice de végétation (NDVI) de Sentinel-2. Un second, Dynamic World, distingue les arbres, l’herbe et le sol imperméabilisé, et une perte de couvert arboré n’est publiée que si les deux concordent. En corrélation de rang, le couvert arboré de Frondia et les couches de couvert arboré officielles et indépendantes concordent à {canopyR}."
+      },
+      {
+        "id": "outline",
+        "q": "Qui trace le contour d’un projet ? Pourrait-on le tracer pour qu’il colle au résultat ?",
+        "a": "Le contour est fixé avant tout calcul : un polygone de parc nommé dans OpenStreetMap, ou le tracé du client lui-même. Pour les travaux pas encore commencés, le contour, l’état de référence et les douze zones témoins sont enregistrés avec une date et une empreinte (hash). Six projets à Bruxelles sont enregistrés ainsi aujourd’hui."
+      },
+      {
+        "id": "wrong",
+        "q": "À quelle fréquence le détecteur se trompe-t-il ?",
+        "a": "Vérifié par rapport à une carte indépendante tirée de photographies aériennes, la Groenkaart Vlaanderen 2018 contre 2021 et 2024, à Anvers et à Gand, avec les mêmes zones témoins et son propre seuil de bruit. Là où la carte aérienne ne voit aucun changement au-delà du bruit, le satellite concorde pour {spec}. Là où le satellite dit que le couvert arboré a changé au-delà du bruit, la carte ne concorde que pour {agree} ; les désaccords les plus nets, vérifiés sur photos aériennes, étaient des prairies luxuriantes après la sécheresse de 2018 prises pour des arbres et l’étang d’un parc à nouveau rempli. Un changement au-delà du bruit est donc un candidat, pas une preuve : une perte n’est nommée que lorsqu’un second instrument et des documents concordent."
+      },
+      {
+        "id": "official",
+        "q": "En quoi est-ce différent des couches officielles Copernicus ?",
+        "a": "Ces couches disent combien d’espaces verts et de couvert arboré compte une ville. Frondia dit si cela a changé au-delà du bruit propre de la ville, où, et, documents à l’appui, pourquoi. Il s’appuie sur elles."
+      },
+      {
+        "id": "small",
+        "q": "Et les arbres d’alignement et les petites places ?",
+        "a": "En dessous d’environ un hectare, le signal se noie : quatre rues plantées dans un secteur de 19 hectares ajoutent à peu près un demi-hectare de couvert arboré, dilué quarante fois. Pour les petits objets, Frondia vérifie autre chose : si l’objet est apparu aux points nommés à l’avance, avec des points non nommés comme comparaison."
+      },
+      {
+        "id": "cities",
+        "q": "Quelles villes, et peut-on passer à une autre ?",
+        "a": "{cities}. Le seuil appartient au couple formé par la ville et l’instrument : {wider}. Une nouvelle ville reçoit son propre étalonnage."
+      },
+      {
+        "id": "current",
+        "q": "Est-ce à jour ?",
+        "a": "Des composites estivaux de 2017 à 2026. Le suivi tourne chaque saison, {seasons} jusqu’ici dans chaque ville, et chaque saison reçoit son propre seuil."
+      }
+    ]
+  },
+  "dossier": {
+    "meta": {
+      "title": "Dossier · {name} · Frondia",
+      "titleNone": "Dossier · Frondia"
+    },
+    "kicker": "Dossier · {commune} · secteur {id}",
+    "title": "{name} : {gap, select, half {la moitié du couvert arboré médian de la ville} below {couvert arboré {p} % sous la médiane de la ville} at {couvert arboré à la médiane de la ville} other {couvert arboré {p} % au-dessus de la médiane de la ville}}, {pop} habitants",
+    "standfirst": "Pourquoi l’argent du verdissement devrait aller à ce secteur, et comment le résultat sera vérifié avec la méthode même qui a mesuré son état.",
+    "facts": [
+      {
+        "k": "Unité",
+        "v": "secteur Statbel"
+      },
+      {
+        "k": "État de référence",
+        "v": "été 2024"
+      },
+      {
+        "k": "Images",
+        "v": "Sentinel-2, Dynamic World"
+      },
+      {
+        "k": "Mesuré jusqu’à",
+        "v": "été {last}"
+      }
+    ],
+    "print": "Imprimer ou enregistrer en PDF",
+    "inAtlas": "Ouvrir dans l’atlas",
+    "online": "Cette page",
+    "missing": "Ce secteur n’est pas dans la partie mesurée de la ville : il n’a donc pas de dossier. Choisissez-en un autre dans l’atlas.",
+    "noPick": "La règle publique ne retient aucun secteur à {city}. Elle demande une commune que la loi compte, et {city} bénéficie de l’exemption de l’article 8, paragraphe 1 : {green} d’espaces verts dans ses centres urbains et pôles urbains. Chaque secteur a quand même son dossier ; choisissez-en un dans l’atlas.",
+    "picked": "Comment le secteur a été choisi. Par une règle, pas à la main : le tiers aux revenus les plus bas, le tiers au couvert arboré le plus faible, une température de surface estivale supérieure d’au moins {minHeat} °C à la médiane de la ville, une commune qui ne remplit pas les conditions de l’exemption de l’article 8, paragraphe 1, au moins {minRes} habitants ; parmi ces secteurs, celui qui compte le plus d’enfants de moins de 15 ans. Secteurs retenus : {n} ; ce dossier porte sur le premier.",
+    "money": "{v} €",
+    "passport": {
+      "eyebrow": "Fiche d’identité",
+      "title": "Qui vit ici et ce qu’il y a autour",
+      "residents": "habitants",
+      "children": "enfants de moins de 15 ans",
+      "seniors": "65 ans et plus",
+      "income": "revenu imposable médian, Statbel 2023",
+      "canopy": "couvert arboré, probabilité de classe",
+      "built": "bâti et imperméabilisé, probabilité de classe"
+    },
+    "standing": "Pour le couvert arboré, le secteur se situe dans les {tp} % les plus bas de la ville ; pour la verdure, dans les {np} % les plus bas.",
+    "income": {
+      "both": "Le revenu est sous la limite du tiers inférieur ({cut} €) : deux manques se rejoignent ici, peu de verdure et peu d’argent.",
+      "one": "Le revenu médian du secteur est de {inc} €, alors que la limite du tiers inférieur est de {cut} €.",
+      "none": "Il n’y a pas de chiffre de revenu pour ce secteur."
+    },
+    "scale": {
+      "eyebrow": "État",
+      "title": "Où se situe le secteur sur l’échelle de la ville",
+      "median": "médiane de la ville",
+      "rows": {
+        "t24": "Couvert arboré",
+        "n24": "Indice de végétation",
+        "b24": "Bâti"
+      },
+      "reading": "{side, select, at {à la médiane de la ville} below {{p} % sous la médiane de la ville} other {{p} % au-dessus de la médiane de la ville}}",
+      "note": "Le trait est la médiane de la ville, la barre le secteur. Les valeurs de classe sont des probabilités, pas des parts du sol : comparez-les entre secteurs, mais ne les lisez pas comme des pourcentages de surface."
+    },
+    "trend": {
+      "eyebrow": "Tendance",
+      "title": "Cela ne s’améliorera pas tout seul",
+      "body": "Par rapport à douze secteurs témoins, sur les étés {w}, l’indice de végétation a varié de {ne} pour un seuil de significativité (plancher de bruit) de {nt}, et le couvert arboré de {te} pour un seuil de {tt}.",
+      "means": {
+        "noise": "Le changement n’a pas franchi le seuil : le secteur fait du surplace.",
+        "down": "L’indice de végétation a baissé significativement par rapport aux secteurs comparables.",
+        "up": "L’indice de végétation a augmenté significativement par rapport aux secteurs comparables.",
+        "refused": "Aucun secteur témoin comparable n’existe pour celui-ci : aucun verdict n’est donc rendu."
+      },
+      "background": "La comparaison se fait avec des zones témoins, pas avec le passé du secteur lui-même. Sans soustraire les zones témoins, le déplacement de {shift} à l’échelle de la ville fait paraître {kRaw} des {n} secteurs ({share}) « significativement plus verts » ; une fois la soustraction faite, il n’en reste que {kEff}.",
+      "after": "Après l’état de référence, au cours des saisons {span} : {items}.",
+      "afterItem": "{year}, {kind} ({effect} NDVI)",
+      "afterNone": "Après l’état de référence, au cours des saisons {span}, rien dans le secteur n’a franchi le seuil.",
+      "kinds": {
+        "construction": "chantier, selon le second instrument",
+        "confirmed": "perte de couvert arboré, les deux instruments concordent",
+        "unconfirmed": "perte de verdure que le second instrument n’a pas confirmée",
+        "gained": "gain de verdure au-delà du seuil"
+      },
+      "notProof": {
+        "lead": "Ce que cela ne prouve pas.",
+        "body": "L’absence de croissance ne prouve pas que la ville n’a rien fait : des travaux que la méthode ne voit pas ont pu avoir lieu ici. Par construction, la restauration d’espaces verts existants n’apparaît pas dans ces chiffres, et les plantations d’alignement dispersées se noient dans la surface du secteur."
+      },
+      "law": {
+        "counted": {
+          "lead": "Ce secteur entre dans le décompte de la loi.",
+          "body": "{commune} ne remplit pas les conditions de l’exemption de l’article 8, paragraphe 1 : {green} d’espaces verts dans ses centres urbains et pôles urbains, pour un seuil de 45 % (méthode de la Commission, CLCplus 2021). Tout ce qui est planté ou perdu ici entre dans le total national, qui doit respecter l’absence de perte nette."
+        },
+        "exempt": {
+          "lead": "La commune peut sortir du champ de la loi.",
+          "body": "{commune} remplit les conditions de l’exemption de l’article 8, paragraphe 1 : {green} d’espaces verts dans ses centres urbains et pôles urbains, pour un seuil de 45 %. Si l’État l’exclut, les changements ici n’entrent pas dans le total national, et le dossier repose sur l’équité et la chaleur plutôt que sur la loi."
+        }
+      }
+    },
+    "fair": {
+      "eyebrow": "Équité",
+      "title": "{kind, select, less {Le tiers le plus pauvre de la ville vit avec moins de la moitié du couvert arboré} half {Le tiers le plus pauvre de la ville vit avec la moitié du couvert arboré} share {Le tiers le plus pauvre a {p} % de couvert arboré en moins que le plus riche} other {Le couvert arboré est réparti presque également entre les groupes de revenus}}",
+      "head": [
+        "Groupe",
+        "Revenu médian",
+        "Couvert arboré 2024",
+        "Verdure 2024"
+      ],
+      "rows": {
+        "lowest": "Tiers aux revenus les plus bas",
+        "highest": "Tiers le plus aisé"
+      },
+      "asOf": "Niveaux de l’été 2024, pondérés par la population ; tiers de revenus par secteur, Statbel 2023.",
+      "note": "Le couvert arboré du tiers inférieur vaut {ratio} de celui du tiers supérieur. Le règlement (UE) 2024/1991 exige qu’il n’y ait pas de perte nette d’espaces verts et de couvert arboré d’ici 2030, mais ne dit rien de leur répartition entre quartiers ; l’indicateur 11.7 des Nations unies et le Tree Equity Score le font.",
+      "group": {
+        "below": "Le secteur est sous la moyenne, même pour son propre groupe.",
+        "level": "Pour son groupe, le secteur n’est pas en dessous de la moyenne : le manque est ici partagé par tout le tiers inférieur.",
+        "out": "Le secteur n’appartient pas au tiers aux revenus les plus bas."
+      },
+      "kids": {
+        "lead": "Qui manque d’ombre ici.",
+        "body": "Enfants de moins de 15 ans dans le secteur : {k} ({kp} de ses habitants) ; personnes de 65 ans et plus : {o} ({op}), dont {o80} de plus de 80 ans. Ce sont les groupes que la chaleur met le plus en danger. À l’échelle de la ville, {third} des enfants vivent dans le tiers des secteurs au couvert arboré le plus faible{hardest, select, yes {, si bien que le manque d’ombre n’est pas partagé équitablement et qu’il les frappe le plus durement} other {, soit à peu près leur part dans la ville}}.",
+        "inThird": "Ce secteur fait partie de ce tiers."
+      },
+      "rule": {
+        "lead": "La règle 3-30-300 et la chaleur.",
+        "leadBoth": "La règle et la chaleur se rejoignent ici.",
+        "canopyFail": "le couvert arboré couvre {c} du secteur au lieu de 30 %",
+        "parkFail": "{p} de sa surface se trouve à moins de 300 m d’un parc, au lieu de la moitié",
+        "body": "Selon la règle 3-30-300 de la foresterie urbaine, {verdict, select, none {aucune des deux parties mesurables de la règle n’est respectée : {fails}} one {une partie de la règle n’est pas respectée : {fails}} other {les deux parties mesurables de la règle sont respectées}}. La température de surface estivale est ici de {lst} °C, soit {exc} °C {side, select, above {au-dessus de} other {en dessous de}} la médiane de la ville. Moins il y a de couvert arboré, plus il fait chaud : à l’échelle de la ville, le lien est {strength, select, deterministic {presque déterministe} strong {fort} other {sensible}} (r = {r}){both, select, yes {, et ce secteur se trouve à la mauvaise extrémité des deux échelles à la fois} other {}}. La température décrit ici un état : le projet ne mesure pas le refroidissement qu’apporterait une intervention, car le seuil de significativité est pour cela supérieur à l’effet réaliste d’un parc."
+      }
+    },
+    "place": {
+      "eyebrow": "Ce qu’il faut placer ici",
+      "title": "Où City Planner place les premiers objets",
+      "lede": "Points classés du planificateur situés dans ce secteur : {n}. Les dix premiers de chaque type ont été nommés le {date}, les dix suivants servent de comparaison : l’apparition d’un objet sera vérifiée dans l’historique de la carte, à l’adresse même que nomme ce dossier.",
+      "tree": "Les arbres sont classés par secteur : couvert arboré sous {target}, sol plus chaud que la médiane de la ville, habitants exposés aux deux. Ce secteur occupe le rang {rank} de la liste de sa ville. {role, select, named {Il fait partie des dix désignés le {date}, avant le contrôle ;} other {Il fait partie des dix suivants, conservés comme comparaison pour les dix désignés le {date} ;}} {reg, select, yes {le contrôle compte d’abord les plantations inscrites au registre de la ville après sa copie du {copy}, puis le couvert arboré face à douze lieux comparables quand les jeunes arbres seront visibles d’en haut.} other {la ville ne publie pas de registre des arbres : le contrôle porte donc sur le couvert arboré face à douze lieux comparables, quand les jeunes arbres seront visibles d’en haut.}}",
+      "none": "Aucun des vingt premiers candidats de City Planner, quel que soit le type, ne se trouve dans ce secteur.",
+      "role": {
+        "named": "nommé",
+        "control": "comparaison"
+      }
+    },
+    "cases": {
+      "eyebrow": "Ce qu’une intervention peut apporter",
+      "title": "Trois cas mesurés plutôt que des promesses",
+      "head": {
+        "intervention": "Intervention",
+        "effect": "Effet",
+        "threshold": "Seuil",
+        "times": "Fois",
+        "reading": "Lecture"
+      },
+      "what": {
+        "ninove": "friche au bord du canal → parc, {ha} ha",
+        "droogdokkenpark": "anciens docks → un parc sur les quais",
+        "spoor-noord": "gare de triage → parc, {ha} ha"
+      },
+      "series": "Au-delà du bruit pendant {k} des {n} étés après l’ouverture.",
+      "note": "Ce n’est pas une prévision pour ce secteur, mais la fourchette mesurée sur des travaux comparables : un changement de couverture sur la majeure partie d’un site donne un effet de plus de deux fois le seuil, qui tient des années. L’ampleur dépend de ce qui s’y trouvait avant : une friche donne plus qu’un quai déjà vert.",
+      "left": {
+        "lead": "Ce que ce tableau laisse de côté, à dessein.",
+        "body": "Le refroidissement : le seuil de significativité pour la température de surface est de 1,32 °C, plus que l’effet réaliste d’un parc urbain ; ce tableau n’avance donc aucun chiffre en degrés. Le coût d’un effet : les prix ne se comparent qu’au sein d’un même type de travaux, et les budgets des projets comparables ne sont publiés qu’en partie."
+      }
+    },
+    "commitment": {
+      "eyebrow": "Engagement",
+      "title": "Ce que nous vérifierons exactement, et quand nous refuserons de nous prononcer",
+      "items": [
+        {
+          "lead": "L’emprise des travaux est fixée avant leur début.",
+          "body": "Le polygone, son empreinte (hash) et la date entrent au registre avant le premier jour des travaux. Il devient impossible de le tracer après coup autour de ce qui a verdi."
+        },
+        {
+          "lead": "Les zones témoins sont nommées en même temps.",
+          "body": "{controls} secteurs qui ressemblent au site dans son état d’avant les travaux, aucun à moins de {km} km. La liste est publiée avant la mesure ; si aucune zone témoin comparable n’existe, c’est consigné comme un refus, sans ajustement."
+        },
+        {
+          "lead": "Le seuil vient de l’étalonnage de la ville,",
+          "body": "et non d’un choix fait selon le résultat : la distribution sous hypothèse nulle est calculée avec le même appariement et les mêmes images que l’audit lui-même, comme le seuil de la tendance ci-dessus."
+        },
+        {
+          "lead": "La fenêtre de comparaison part de la date d’achèvement :",
+          "body": "un état de référence avant le début des travaux, l’évaluation deux ans après leur fin. Si les travaux tombent dans une fenêtre, l’audit refuse de calculer."
+        },
+        {
+          "lead": "Le verdict exige deux instruments.",
+          "body": "L’indice de végétation et les classes d’occupation du sol, tirés des mêmes images : le premier dit que quelque chose a changé, le second dit quoi exactement, jusqu’à « désimperméabilisé mais pas planté »."
+        },
+        {
+          "lead": "Un refus est un résultat publié.",
+          "body": "Moins de {minScenes} images dans une fenêtre, un écart avec les zones témoins supérieur à {maxGap}, des travaux hors de la fenêtre : aucun verdict n’est rendu, et c’est publié aux côtés des résultats."
+        }
+      ]
+    },
+    "limits": {
+      "eyebrow": "Limites",
+      "title": "Ce que la méthode ne mesurera pas, même quand tout est bien fait",
+      "items": [
+        "Le refroidissement de l’air ou de la surface : le bruit de ce canal dépasse un effet réaliste.",
+        "La restauration d’espaces verts existants : refaire les allées et les étangs ne change pas la végétation.",
+        "Les plantations d’alignement dispersées, mesurées à l’échelle d’un secteur : un demi-hectare de nouveau couvert arboré sur dix-neuf hectares s’y perd.",
+        "La cause d’un changement : le satellite nomme le lieu, les documents nomment la cause. Sans document, un changement est publié comme une mesure, pas comme le mérite de quiconque.",
+        "Les jeunes plantations, les premières années : de jeunes arbres sur une prairie paraissent moins verts que l’herbe qu’ils ont remplacée, et un vrai verdissement peut se mesurer comme une perte."
+      ]
+    },
+    "colophon": [
+      {
+        "k": "Sources",
+        "v": "La couche article 8 du jeu de données de la ville (niveaux de 2024 et tendance par rapport aux zones témoins), le manifeste de la ville (les seuils et leur origine), les cas d’audit, le registre des points nommés, Statbel (secteurs, population, revenus, recensement de 2021). Images : Copernicus Sentinel-2 avec le masque Cloud Score+, Google Dynamic World V1."
+      },
+      {
+        "k": "Preuves",
+        "v": "Chaque chiffre renvoie à une couche du jeu de données de la ville, et les limites sont imprimées à côté des chiffres, pas en note de bas de page. Les preuves ne changent pas avec la formulation : chiffres, seuils et zones témoins sont recalculés à partir de ces fichiers."
+      }
+    ],
+    "data": {
+      "label": "Données",
+      "link": "Chaque couche derrière ce dossier en CSV, avec son manifeste →"
+    }
+  },
+  "commune": {
+    "meta": {
+      "title": "{name} · Commune · Frondia",
+      "titleIndex": "Communes · Frondia"
+    },
+    "find": {
+      "label": "Trouver une commune",
+      "placeholder": "Commune ou code INS",
+      "none": "Aucune commune des cinq villes ne correspond.",
+      "hint": "{n} communes à Bruxelles, Anvers, Gand, Liège et Charleroi",
+      "nis": "INS {code}"
+    },
+    "index": {
+      "kicker": "Communes",
+      "title": "Ce que la loi compte dans votre commune",
+      "lede": "L’article 8 du règlement relatif à la restauration de la nature compte les espaces verts urbains et le couvert arboré urbain commune par commune. Trouvez la vôtre : son test, son état zéro en hectares, et ce qui a changé depuis l’année de référence 2024."
+    },
+    "kicker": "Commune · {region} · INS {code}",
+    "title": "{name} : {exempt, select, yes {hors du décompte de l’article 8} other {dans le décompte de l’article 8}}",
+    "standfirst": "Ce que le règlement relatif à la restauration de la nature compte dans cette commune, ce qui a changé depuis l’année de référence 2024, et où regarder dans l’atlas.",
+    "facts": [
+      {
+        "k": "Habitants",
+        "v": "{pop}"
+      },
+      {
+        "k": "Superficie",
+        "v": "{area} km²"
+      },
+      {
+        "k": "Secteurs mesurés",
+        "v": "{measured} sur {sectors}"
+      },
+      {
+        "k": "UAL",
+        "v": "{lau}"
+      }
+    ],
+    "inAtlas": "Ouvrir dans l’atlas",
+    "data": "Données et fichier Reportnet",
+    "pc": "{v} %",
+    "ha": "{v} ha",
+    "ndvi": "{v} NDVI",
+    "law": {
+      "eyebrow": "Article 8, paragraphe 1",
+      "title": "{kind, select, exempt {Au-dessus des deux seuils : hors du décompte} both {Sous les deux seuils : dans le décompte} green {{p} pt sous le seuil des espaces verts : dans le décompte} other {Sous le seuil du couvert arboré : dans le décompte}}",
+      "green": "Espaces verts des centres urbains et pôles urbains",
+      "canopy": "Couvert arboré dans ces zones",
+      "perResident": "Couvert arboré par habitant, toute la commune",
+      "exempt": "Exemptée",
+      "counted": "Comptée",
+      "vsLine": "{p} pt {side, select, above {au-dessus} other {en dessous}} du seuil de {line} %",
+      "vsRegion": "{p} pt {side, select, above {au-dessus} other {en dessous}} de la région",
+      "m2": "m²",
+      "reading": "Ses centres urbains et pôles urbains comptent {green} % d’espaces verts et {canopy} % de couvert arboré. Une commune n’est exclue du total national qu’au-dessus de 45 % et de 10 % ; {name} {exempt, select, yes {l’est} other {ne l’est pas}}. {stable, select, yes {Le verdict tient sous chaque lecture de l’article 3, point 20, que le test applique.} other {L’une des autres lectures de l’article 3, point 20, renverse le verdict : voir le tableau.}}",
+      "region": "Les {n} communes ensemble : {green} % d’espaces verts et {canopy} % de couvert arboré ; la région dans son ensemble est donc {exempt, select, yes {exclue} other {comptée}}.",
+      "readings": {
+        "official": "Lecture officielle",
+        "with_arable": "Terres arables comptées comme espaces verts",
+        "without_water": "Eau non comptée comme espace vert",
+        "statbel_sectors": "Commune reconstituée à partir des secteurs Statbel"
+      },
+      "cols": [
+        "Lecture",
+        "Espaces verts",
+        "Couvert arboré",
+        "Verdict"
+      ],
+      "notComputed": "non calculé"
+    },
+    "base": {
+      "eyebrow": "L’état zéro",
+      "title": "En hectares, sur les dernières données ouvertes (2021)",
+      "cols": [
+        "Écosystème urbain",
+        "Superficie",
+        "Espaces verts",
+        "Couvert arboré"
+      ],
+      "ucuc": "Centres urbains et pôles urbains",
+      "lau": "Toute la commune",
+      "note": "Le format de l’état zéro national néerlandais (PBL, 25 août 2026), avec les deux délimitations que la Commission laisse au choix de chaque pays. La Woody Vegetation Layer 2021 n’est autorisée que pour les projets de plan ; la couche 2024 est partagée avec les autorités nationales, pas publiée."
+    },
+    "balance": {
+      "eyebrow": "Depuis l’année de référence {base}",
+      "title": "Couvert arboré {v} au-delà du bruit à l’été {s}",
+      "rows": {
+        "green": "Espaces verts urbains",
+        "trees": "Couvert arboré",
+        "built": "Bâti"
+      },
+      "cols": [
+        "Été {s}",
+        "Perdu",
+        "Gagné",
+        "Net"
+      ],
+      "note": "Des hectares selon la classification du sol de Dynamic World, additionnés sur les secteurs de cette commune qui ont bougé au-delà du bruit par rapport à leurs douze zones témoins. Ce ne sont pas les couches officielles, qui n’existent pas encore pour 2025 et 2026.",
+      "events": "Ce que les bulletins de saison signalent ici",
+      "none": "Aucun secteur de la commune n’a été signalé comme perte de couvert arboré ou comme chantier en {a} ou en {b}.",
+      "kinds": {
+        "canopyLoss": "perte de couvert arboré, deux instruments concordent",
+        "construction": "chantier"
+      }
+    },
+    "change": {
+      "eyebrow": "Étés {w}",
+      "title": "{up} {n, plural, one {secteur plus vert} other {secteurs plus verts}} et {down} en perte au-delà du bruit ; secteurs mesurés : {m}",
+      "green": "Indice de végétation par rapport aux zones témoins",
+      "built": "Sol bâti par rapport aux zones témoins",
+      "words": {
+        "up": "plus vert",
+        "down": "en perte",
+        "sealed": "imperméabilisé",
+        "unsealed": "désimperméabilisé"
+      },
+      "noneGreen": "Aucun secteur de la commune n’a bougé au-delà du bruit.",
+      "counts": "Sol bâti, au-delà du bruit : {up} en imperméabilisation, {down} en désimperméabilisation."
+    },
+    "record": {
+      "eyebrow": "Au registre",
+      "title": "Enregistré, audité, et le dossier",
+      "registered": "Enregistré avant les travaux",
+      "cases": "Audits",
+      "dossier": "Le dossier que retient la règle publique",
+      "refused": "aucun lieu comparable : refusé avant les travaux"
+    },
+    "trees": {
+      "eyebrow": "Le registre des arbres de la ville",
+      "title": "{n} arbres gérés par la ville",
+      "snapshot": "Un instantané du registre a été pris le {d}. À partir du suivant, les arbres qui en sortent (abattus, morts ou réinventoriés ; le registre ne dit pas lesquels) seront comptés par secteur.",
+      "total": "{n} arbres plantés de {a} à {b}, selon l’année de plantation inscrite au registre.",
+      "whereTitle": "Où sont allées les plantations, 2020–2025",
+      "cols": [
+        "Tiers des secteurs habités",
+        "Plantations",
+        "Habitants",
+        "Pour 1 000 habitants, ce tiers contre le reste",
+        "Pour 10 ha, ce tiers contre le reste"
+      ],
+      "rows": {
+        "least_canopy": "Couvert arboré le plus faible",
+        "poorest": "Le plus pauvre",
+        "hottest": "Le plus chaud"
+      },
+      "vs": "{a} contre {b}",
+      "reading": "Par habitant, moins d’arbres sont allés au tiers au couvert arboré le plus faible : {resIn} pour 1 000 habitants, contre {resOut} dans le reste. Par hectare, davantage : {haIn} pour 10 ha, contre {haOut}. Ces secteurs sont denses, si bien que les deux lectures sont vraies ; aucune ne dit si les arbres y étaient plus nécessaires.",
+      "source": "Le registre propre de la ville, {l}. Seuls les arbres gérés par la ville y figurent ; les jardins et terrains privés n’y sont pas."
+    },
+    "limits": [
+      "L’article 8, paragraphe 1, est mesuré avec la méthode de la Commission sur des données ouvertes de 2021 ; la Woody Vegetation Layer 2024 n’est pas publique.",
+      "La correspondance entre les classes CLCplus et l’article 3, point 20, est notre lecture ; c’est pourquoi le tableau recalcule le verdict selon les autres lectures.",
+      "Les hectares après l’année de référence viennent d’un classificateur satellitaire : un parc qui perd des arbres peut paraître plus bâti.",
+      "Un chiffre au-delà du bruit dit que quelque chose a changé, pas pourquoi. La cause vient des documents."
+    ],
+    "missing": "Aucune commune des cinq villes n’a ce code."
+  },
+  "data": {
+    "meta": {
+      "title": "Données · {city} · Frondia",
+      "titleNone": "Données · Frondia"
+    },
+    "kicker": "Données",
+    "title": "Chaque chiffre, et comment il a été obtenu",
+    "lede": "Chaque couche derrière l’atlas en CSV, et le fichier de l’article 8 au format GeoPackage que demande la Commission, avec ce qu’elle mesure, comment, à partir de quelle source et avec quel seuil, pour que tout chiffre du site puisse être recalculé à partir des seuls fichiers.",
+    "facts": [
+      {
+        "k": "Ville",
+        "v": "{name}"
+      },
+      {
+        "k": "Couches",
+        "v": "{n}"
+      },
+      {
+        "k": "Format",
+        "v": "{formats}"
+      },
+      {
+        "k": "Clé de jointure",
+        "v": "identifiant du secteur Statbel ; code UAL pour la loi"
+      }
+    ],
+    "city": "Ville",
+    "manifest": "Manifeste (JSON)",
+    "inAtlas": "Ouvrir l’atlas",
+    "download": "Télécharger {fmt}",
+    "details": "Méthode, source et colonnes",
+    "file": {
+      "rows": "{count, plural, one {{n} ligne} other {{n} lignes}}",
+      "polygons": "{count, plural, one {{n} polygone} other {{n} polygones}}",
+      "kb": "{kb} Ko"
+    },
+    "computed": "calculé le {d}",
+    "threshold": "Seuil {v}",
+    "noThreshold": "Pas de seuil de significativité (plancher de bruit) : un état",
+    "rows": {
+      "method": "Méthode",
+      "source": "Source",
+      "threshold": "Seuil",
+      "limits": "Limites",
+      "licence": "Licence",
+      "credit": "Crédits"
+    },
+    "columns": [
+      "Colonne",
+      "Contenu"
+    ],
+    "columnsLabel": "{title} : colonnes",
+    "groups": {
+      "changed": {
+        "label": "Ce qui a changé",
+        "title": "La tendance par rapport aux zones témoins, et chaque saison depuis l’état de référence de 2024."
+      },
+      "law": {
+        "label": "La loi",
+        "title": "Le test de la Commission elle-même pour exclure une commune de l’article 8, l’état zéro en hectares, et le fichier qu’un pays dépose."
+      },
+      "missing": {
+        "label": "Ce qui manque",
+        "title": "Des états, pas des changements : ce qui manque aujourd’hui à un secteur."
+      },
+      "place": {
+        "label": "Ce qu’il faut placer",
+        "title": "Les emplacements classés de City Planner et la couverture qu’ils apportent."
+      },
+      "checks": {
+        "label": "Recoupements",
+        "title": "Les instruments indépendants auxquels notre classe arbres est confrontée."
+      },
+      "sectors": {
+        "label": "Secteurs",
+        "title": "L’unité sur laquelle chaque fichier est joint."
+      }
+    },
+    "colophon": [
+      {
+        "k": "Licences",
+        "v": "Les couches de Frondia sont proposées sous CC BY 4.0, leurs sources étant créditées dans chaque couche. Les couches construites sur OpenStreetMap sont des bases de données dérivées et restent sous ODbL 1.0."
+      },
+      {
+        "k": "Pour citer",
+        "v": "Frondia, « '<'titre de la couche'>' », '<'ville'>', {site}, avec la date à laquelle la couche a été calculée."
+      },
+      {
+        "k": "Recalculer",
+        "v": "Le manifeste liste chaque colonne. Les limites des secteurs sont des données ouvertes de Statbel : faites la jointure sur id."
+      }
+    ],
+    "filesInEnglish": "Les fichiers et leur manifeste sont en anglais.",
+    "ld": {
+      "name": "Frondia — {city} : toutes les couches derrière l’atlas",
+      "country": "Belgique"
+    }
+  },
+  "register": {
+    "meta": {
+      "title": "Registre · Frondia"
+    },
+    "kicker": "Registre des interventions · Bruxelles",
+    "title": "Ce à quoi s’engagent les contrats de quartier",
+    "readAll": "Bruxelles a mené {total} contrats de quartier depuis 1994. Un modèle de langage a lu la page de chaque contrat et a relevé chaque mesure de verdissement dans les termes mêmes du contrat.",
+    "lede": "{all} {check}",
+    "notFinished": "La vérification n’est pas terminée.",
+    "facts": {
+      "contracts": "Contrats",
+      "described": "Décrits",
+      "readBy": "Lu par",
+      "reader": "Claude Sonnet 5"
+    },
+    "csv": "Registre (CSV)",
+    "checkFile": "La vérification (JSON)",
+    "of": "{k} sur {n}",
+    "range": "{lo}–{hi} %",
+    "rate": "{pct} · {range}",
+    "check": {
+      "interval": "{pct} · intervalle à 95 % {range}",
+      "quotesMissing": "Citations introuvables dans la page du contrat",
+      "readers": [
+        {
+          "who": "model",
+          "name": "Modèle de langage",
+          "sub": "Claude Sonnet 5, prompt greening_v1"
+        },
+        {
+          "who": "rule",
+          "name": "Règle",
+          "sub": "un mot de verdissement et une marque de futur dans une même phrase"
+        }
+      ],
+      "drawn": "{n} contrats tirés au sort avec la graine « {seed} » parmi les {pool} dont la page compte au moins 600 caractères propres, avant qu’aucun ne soit lu.",
+      "bars": "Chaque barre est l’intervalle de Wilson à 95 %, et son trait l’estimation.",
+      "quotesFound": "Chaque citation se retrouve mot pour mot dans la page de son contrat : {k} sur {n}.",
+      "pending": "Les 30 contrats sont en cours de vérification. Les taux apparaîtront ici une fois toutes les étiquettes reçues."
+    },
+    "dates": "du {from} au {to}",
+    "ref": {
+      "person": {
+        "label": "Vérifié à la main",
+        "title": "À quelle fréquence il se trompe",
+        "meta": "Vérifiés à la main",
+        "lede": "Après vérification à la main de {n} contrats, son étiquette diffère pour {k} d’entre eux.",
+        "wrong": "Contrats où son étiquette diffère de l’étiquette manuelle",
+        "missed": "Contrats qui s’engagent, manqués",
+        "groups": [
+          {
+            "key": "recall",
+            "title": "Trouve les contrats qui s’engagent",
+            "read": "Le modèle en trouve {mk} sur {mn} ; la règle, {rk} sur {rn}."
+          },
+          {
+            "key": "precision",
+            "title": "Juste quand il dit qu’un contrat s’engage",
+            "read": "Parmi les contrats qui s’engagent selon le modèle, {mk} sur {mn} le font vraiment ; parmi ceux de la règle, {rk} sur {rn}."
+          },
+          {
+            "key": "error",
+            "title": "Se trompe sur l’engagement d’un contrat",
+            "read": "Le modèle se trompe pour {mk} des {mn} contrats ; la règle, pour {rk}."
+          }
+        ],
+        "asof": "{drawn} Étiquetés par {by} sans voir la réponse d’aucun des deux lecteurs. {bars}",
+        "ref": "Étiquette manuelle",
+        "first": "Modèle",
+        "firstWhy": "La raison du modèle",
+        "none": "Il concorde avec l’étiquette manuelle pour les {n} contrats.",
+        "only": "Seulement les 30 vérifiés à la main",
+        "agree": "Vérifié à la main : concorde",
+        "differ": "Vérifié à la main : {g, select, yes {s’engage} weak {un objectif} no {aucune mesure} other {{g}}}",
+        "colophon": "{n} contrats, étiquetés par {by} ({dates}) ; la règle de référence a lu les mêmes pages."
+      },
+      "model": {
+        "label": "Vérifié par un second modèle",
+        "title": "À quelle fréquence deux lectures divergent",
+        "meta": "Lus deux fois",
+        "lede": "Une relecture par un autre modèle, qui n’a jamais vu ses réponses, diverge de la première pour {k} des {n} contrats.",
+        "wrong": "Contrats où les deux lectures donnent des étiquettes différentes",
+        "missed": "Contrats qui s’engagent selon la seconde lecture, manqués par la première",
+        "groups": [
+          {
+            "key": "recall",
+            "title": "Trouve les contrats qui s’engagent selon la seconde lecture",
+            "read": "Le modèle en trouve {mk} sur {mn} ; la règle, {rk} sur {rn}."
+          },
+          {
+            "key": "precision",
+            "title": "Quand il dit qu’un contrat s’engage, la seconde lecture concorde",
+            "read": "Parmi les contrats qui s’engagent selon le modèle, la seconde lecture concorde pour {mk} sur {mn} ; parmi ceux de la règle, pour {rk} sur {rn}."
+          },
+          {
+            "key": "error",
+            "title": "Diverge de la seconde lecture sur l’engagement d’un contrat",
+            "read": "Le modèle diverge pour {mk} des {mn} contrats ; la règle, pour {rk}."
+          }
+        ],
+        "asof": "{drawn} Relus par {by} avec son propre prompt, dans un nouveau processus qui n’a jamais vu les réponses du premier lecteur. Deux modèles d’une même famille peuvent mal lire une phrase de la même façon : leur accord surestime donc la justesse ; chaque citation et sa source figurent ci-dessous pour qu’une personne puisse les vérifier. {bars}",
+        "ref": "Seconde lecture",
+        "refWhy": "La raison de la seconde lecture",
+        "first": "Première lecture",
+        "firstWhy": "La raison de la première lecture",
+        "none": "Les deux lectures concordent pour les {n} contrats.",
+        "only": "Seulement les 30 lus deux fois",
+        "agree": "Seconde lecture : concorde",
+        "differ": "Seconde lecture : {g, select, yes {s’engage} weak {un objectif} no {aucune mesure} other {{g}}}",
+        "limit": "La vérification est un second modèle, pas une personne. Elle montre où la lecture est instable, pas où elle est juste : une personne qui lit le français peut contrôler n’importe quel contrat à partir de ses citations et de sa source.",
+        "colophon": "{n} contrats relus par {by} ({dates}) avec le prompt greening_check_v1 ; la règle de référence a lu les mêmes pages. Les étiquettes d’une personne remplaceront celles-ci une fois établies."
+      }
+    },
+    "miss": {
+      "label": "Désaccords",
+      "title": "Là où il lit un contrat autrement",
+      "rule": "Règle",
+      "short": {
+        "yes": "S’engage",
+        "weak": "Un objectif",
+        "no": "Aucune mesure"
+      },
+      "quotes": "Ses citations"
+    },
+    "method": {
+      "label": "Méthode",
+      "title": "Comment il lit",
+      "rules": [
+        "Il ne compte, n’estime ni ne classe jamais : chaque chiffre de ce site reste l’affaire du moteur de calcul.",
+        "Chaque mesure porte les mots sur lesquels elle repose, et une citation ne compte que si elle se retrouve mot pour mot dans la page du contrat.",
+        "Un contrat s’engage lorsqu’il prévoit, finance ou réalise une mesure qui modifie la couverture végétale. Un verdissement cité seulement comme objectif, besoin ou meilleur accès est un objectif. Une description de l’existant, un diagnostic ou un nom de lieu n’est pas une mesure.",
+        "Le prompt, le schéma de sortie et le modèle sont figés et hachés. Un prompt modifié est une nouvelle version, avec une nouvelle vérification.",
+        "Les 30 contrats de test ont été tirés au sort avec une graine avant qu’aucun ne soit lu. Les dix qui ont servi à écrire le prompt sont tenus à part et jamais comptés dans le taux.",
+        "Il a tourné via Claude Code depuis le compte personnel de l’autrice, avec les outils, les connecteurs et les fichiers du projet désactivés : il a vu le prompt et le texte d’un seul contrat, rien d’autre."
+      ]
+    },
+    "list": {
+      "label": "Le registre",
+      "title": "Nonante-huit contrats, dans leurs propres termes",
+      "show": "Afficher",
+      "filters": [
+        {
+          "k": "all",
+          "name": "Tous"
+        },
+        {
+          "k": "yes",
+          "name": "S’engage"
+        },
+        {
+          "k": "weak",
+          "name": "Un objectif"
+        },
+        {
+          "k": "no",
+          "name": "Aucune mesure"
+        },
+        {
+          "k": "blank",
+          "name": "Non décrit"
+        }
+      ],
+      "blank": "La page ne donne aucune description : seulement les crédits photo et le budget.",
+      "empty": "Aucun verdissement dans le texte.",
+      "reason": "Pourquoi cette étiquette",
+      "source": "Source",
+      "count": "{count, plural, one {{n} contrat} other {{n} contrats}}"
+    },
+    "limits": {
+      "label": "Limites",
+      "title": "Ce qu’il ne vous dit pas",
+      "items": [
+        "« S’engage » consigne une promesse faite dans un contrat. Savoir si le terrain a changé relève de l’atlas, qui ne peut répondre que là où existe une emprise d’environ un hectare ; la plupart de ces mesures sont des rues, des cours et des places plus petites.",
+        "Les contrats ne publient aucun périmètre sous une forme lisible par machine : une mesure ne peut donc pas être placée sur la carte. Son lieu est le nom que donne le texte.",
+        "Il lit le résumé publié sur quartiers.brussels, pas les documents de programme. Les pages de 41 contrats, tous lancés entre 1994 et 2006, n’ont aucun résumé.",
+        "Les projets Beliris et les parcs propres à la Région ne figurent pas dans ce registre."
+      ],
+      "last": "Trente contrats donnent un intervalle large, indiqué avec chaque taux. Le taux ne vaut que pour ce prompt et ce modèle."
+    },
+    "colophon": {
+      "source": {
+        "k": "Source",
+        "v": "{source}, {n} pages de contrats, lues le {fetched}."
+      },
+      "reader": {
+        "k": "Lecteur",
+        "v": "Claude Sonnet 5 via Claude Code en mode print, un appel par contrat, {to}."
+      },
+      "prompt": {
+        "k": "Prompt",
+        "v": "{version} · prompt {prompt} · schéma {schema}"
+      },
+      "check": {
+        "k": "Vérification",
+        "v": "En cours."
+      },
+      "files": {
+        "k": "Fichiers",
+        "v": "register.csv contient une ligne par mesure citée ; register_check.json contient la vérification avec chaque désaccord."
+      }
+    }
+  },
+  "atlas": {
+    "meta": {
+      "title": "Atlas · {city} · Frondia",
+      "titleView": "{view} · {city} · Atlas · Frondia",
+      "titleCase": "{place} · Audit · Atlas · Frondia",
+      "description": "Chaque secteur de Bruxelles, Anvers, Gand, Liège et Charleroi, trois questions : ce qui lui manque, ce qu’il faut y placer, et ce qui a vraiment changé dans sa verdure, au-delà du bruit propre à la ville.",
+      "sectorDescription": "{name}, {commune}, {city} : ce qui manque à ce secteur, ce qu’il faut y placer, et ce qui a changé dans sa verdure au-delà du bruit propre à la ville."
+    },
+    "bar": {
+      "home": "Frondia, accueil",
+      "city": "Ville",
+      "questions": "Question",
+      "decides": "Comment il tranche"
+    },
+    "q": {
+      "need": {
+        "short": "Manque",
+        "long": "Ce qui manque"
+      },
+      "place": {
+        "short": "Placer",
+        "long": "Ce qu’il faut placer"
+      },
+      "change": {
+        "short": "Changé",
+        "long": "Ce qui a changé"
+      }
+    },
+    "pan": {
+      "group": "Déplacer la carte",
+      "up": "Vers le haut",
+      "left": "Vers la gauche",
+      "right": "Vers la droite",
+      "down": "Vers le bas"
+    },
+    "zoom": {
+      "group": "Zoom",
+      "in": "Zoomer",
+      "out": "Dézoomer",
+      "reset": "Réinitialiser l’affichage"
+    },
+    "credit": {
+      "sentinel": "Contains modified Copernicus Sentinel data{years, select, none {} other { {years}}}",
+      "landsat": "Landsat courtesy of the U.S. Geological Survey",
+      "worldcover": "© ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data (2021) processed by ESA WorldCover consortium",
+      "statbel": "sectors © Statbel",
+      "osm": "map data © OpenStreetMap contributors"
+    },
+    "mapLabel": "{city} : {n} secteurs",
+    "reload": "Recharger",
+    "mapKeys": "Les flèches déplacent la carte, plus et moins zooment, Entrée ouvre le secteur au centre.",
+    "tip": {
+      "named": "point nommé",
+      "control": "point de comparaison",
+      "further": "autre candidat",
+      "notMeasured": "non mesuré",
+      "residents": "habitants : {n}",
+      "commune": "{name} · {green} d’espaces verts · {exempt, select, yes {exemptée} other {comptée}}",
+      "communeUntested": "{name} · non testée",
+      "built": "bâti {v}",
+      "raw": "brut {v}",
+      "effect": "effet {v}"
+    },
+    "verdict": {
+      "up": "Plus vert au-delà du bruit",
+      "down": "En perte au-delà du bruit",
+      "noise": "Dans le bruit",
+      "refused": "Aucune zone comparable — refusé",
+      "none": "Non mesuré"
+    },
+    "units": {
+      "m": "{v} m",
+      "km": "{v} km",
+      "ha": "{v} ha",
+      "c": "{v} °C",
+      "score": "{v}/100"
+    },
+    "need": {
+      "aria": "Ce qui manque",
+      "title": "{title} à {city}",
+      "lens": "Vue",
+      "weighted": "Pondéré pour",
+      "nearest": "Le plus proche",
+      "blank": {
+        "heat": "À la médiane de la ville ou en dessous",
+        "shops": "À moins de 300 m",
+        "r3": "Respecte les deux"
+      },
+      "few": "Moins de {min} habitants · secteurs : {n}",
+      "lacking": "Plus grands manques",
+      "canopy": "{v} de couvert arboré",
+      "notMeasured": "Pas encore mesuré à {city}.",
+      "seeIn": "Voir à {city} →",
+      "lenses": {
+        "services": {
+          "chip": "Services",
+          "title": "Services du quotidien",
+          "lede": "Dans quelle mesure un secteur répond à la vie quotidienne, d’une école et d’un médecin généraliste à un parc et un arrêt de tram, pondéré selon l’un des trois modes de vie.",
+          "legend": [
+            "Cinquième le mieux desservi",
+            "Deuxième cinquième",
+            "Cinquième médian",
+            "Quatrième cinquième",
+            "Cinquième le moins bien desservi"
+          ],
+          "source": "Neighbourhood Fit Score : 14 services à distance de marche, d’après OpenStreetMap et les secteurs Statbel. Les cinquièmes portent sur les secteurs où vivent 200 personnes ou plus.",
+          "limit": "Construit à partir d’OpenStreetMap : là où la carte est maigre, le score l’est aussi."
+        },
+        "shops": {
+          "chip": "Commerces",
+          "title": "Commerces à portée",
+          "lede": "À quelle distance se trouve, à vol d’oiseau, le commerce le plus proche de chaque secteur : boulangerie, café ou confiserie.",
+          "legend": [
+            "300 à 600 m",
+            "600 m à 1 km",
+            "1 à 1,5 km",
+            "1,5 à 2,5 km",
+            "Plus de 2,5 km"
+          ],
+          "source": "SpotFinder : le commerce le plus proche de chaque type, d’après OpenStreetMap.",
+          "limit": "À vol d’oiseau, pas à pied ; à moins de 300 m, le secteur reste en blanc."
+        },
+        "heat": {
+          "chip": "Chaleur",
+          "title": "Chaleur estivale",
+          "lede": "De combien le sol est plus chaud en été que dans le secteur médian de la ville. Le couvert arboré est le meilleur bouclier : à {city}, les deux sont liés avec r = {r}.",
+          "legend": [
+            "Jusqu’à 1 °C au-dessus",
+            "1 à 2 °C",
+            "2 à 3 °C",
+            "3 à 4 °C",
+            "Plus de 4 °C au-dessus"
+          ],
+          "source": "Température de surface Landsat 8 et 9, médiane des étés 2022 à 2025.",
+          "limit": "Un état, pas un effet : la méthode ne peut pas mesurer le refroidissement qu’apporterait un parc (plancher de bruit 1,32 °C)."
+        },
+        "r3": {
+          "chip": "3-30-300",
+          "title": "La règle 3-30-300",
+          "lede": "Deux de ses trois parties se mesurent d’en haut : 30 % de couvert arboré dans le quartier, et un parc d’un hectare ou plus à moins de 300 m.",
+          "legend": [
+            null,
+            "Respecte l’une des deux",
+            null,
+            "N’en respecte aucune",
+            null
+          ],
+          "source": "Couvert arboré d’après ESA WorldCover (10 m) ; parcs de 1 ha ou plus d’après OpenStreetMap.",
+          "limit": "La troisième partie, trois arbres visibles depuis chaque fenêtre, n’est ni mesurée ni devinée."
+        }
+      },
+      "scenario": {
+        "family": "Famille",
+        "remote": "Télétravail",
+        "senior": "Aînés"
+      },
+      "shop": {
+        "bakery": "Boulangerie",
+        "cafe": "Café",
+        "confectionery": "Confiserie"
+      },
+      "service": {
+        "cafe": "café",
+        "childcare": "crèche",
+        "convenience": "épicerie",
+        "gp": "médecin généraliste",
+        "hospital": "hôpital",
+        "library": "bibliothèque",
+        "park": "parc",
+        "pharmacy": "pharmacie",
+        "playground": "aire de jeux",
+        "restaurant": "restaurant",
+        "school": "école",
+        "sport": "terrain de sport",
+        "supermarket": "supermarché",
+        "transit": "transports en commun"
+      }
+    },
+    "equity": {
+      "title": "Qui en manque",
+      "thirds": [
+        "Tiers le plus pauvre",
+        "Tiers médian",
+        "Tiers le plus riche"
+      ],
+      "all": "Tous les habitants",
+      "kid": "Enfants de moins de 15 ans",
+      "old": "65 ans et plus",
+      "vs": "par rapport à l’ensemble des habitants",
+      "pts": "{n} {abs, plural, one {pt} other {pt}}",
+      "byIncome": {
+        "services": "Score moyen pour {o, select, family {une famille} remote {le télétravail} other {les aînés}}, sur 100, selon le revenu",
+        "shops": "Distance moyenne {o, select, bakery {à la boulangerie la plus proche} cafe {au café le plus proche} other {à la confiserie la plus proche}}, selon le revenu",
+        "heat": "Température estivale du sol par rapport au secteur médian de la ville, selon le revenu",
+        "r3": "Part des habitants vivant là où aucune des deux parties n’est respectée, selon le revenu"
+      },
+      "group": {
+        "services": "le tiers le moins bien desservi",
+        "shops": "le tiers le plus éloigné",
+        "heat": "le tiers le plus chaud",
+        "r3": "les secteurs qui ne respectent aucune des deux parties"
+      },
+      "cut": {
+        "services": "score de {v} ou moins",
+        "shops": "{v} ou plus loin",
+        "heat": "{v} ou plus"
+      },
+      "livesIn": "Qui vit dans {group}{cut, select, none {} other { ({cut})}}",
+      "reading": {
+        "services": "Le tiers le plus pauvre est {worse, select, yes {moins bien} other {mieux}} desservi que le plus riche : {p} contre {r}.",
+        "shops": "Le tiers le plus pauvre vit {worse, select, yes {plus loin d’} other {plus près d’}}{o, select, bakery {une boulangerie} cafe {un café} other {une confiserie}} que le plus riche : {p} contre {r}.",
+        "heat": "Le tiers le plus pauvre vit sur un sol {worse, select, yes {plus chaud} other {moins chaud}} que le plus riche : {p} contre {r}.",
+        "r3": "Le tiers le plus pauvre se trouve {worse, select, yes {plus} other {moins}} souvent que le plus riche là où aucune des deux parties n’est respectée : {p} contre {r}."
+      },
+      "ages": {
+        "none": "Les enfants et les personnes de 65 ans et plus vivent dans {group} à peu près aussi souvent que les autres habitants.",
+        "one": "{who, select, kid {Les enfants} other {Les personnes de 65 ans et plus}} vivent {more, select, yes {plus} other {moins}} souvent que l’ensemble des habitants dans {group} : {x} contre {all}.",
+        "split": "{more, select, kid {Les enfants} other {Les personnes de 65 ans et plus}} vivent plus souvent que l’ensemble des habitants dans {group}, {more, select, kid {les personnes de 65 ans et plus} other {les enfants}} moins souvent : {x} et {y} contre {all}.",
+        "both": "Les enfants et les personnes de 65 ans et plus vivent tous deux {more, select, yes {plus} other {moins}} souvent que l’ensemble des habitants dans {group} : {x} et {y} contre {all}."
+      },
+      "source": "Tiers des habitants selon le revenu imposable médian de leur secteur (Statbel 2023) : les plus pauvres sous {lo}, les plus riches au-dessus de {hi}. Âges issus du recensement de 2021.",
+      "money": "{v} €"
+    },
+    "place": {
+      "aria": "Ce qu’il faut placer",
+      "loading": "Chargement…",
+      "title": "{objects} à {city}",
+      "window": "{n} candidats parmi une réserve de {pool}",
+      "object": "Objet",
+      "today": "de la demande à moins de 500 m, aujourd’hui",
+      "allPlaced": "tous les {n} en place",
+      "legend": [
+        "Nommés : rangs 1 à 10",
+        "Comparaison : rangs 11 à 20",
+        "Autres candidats : 21 à 40"
+      ],
+      "lede": "Chaque point est classé selon la demande non satisfaite qu’il couvrirait à moins de 500 m, avec plus de poids pour les secteurs défavorisés.",
+      "source": "City Planner : un algorithme glouton sur une grille de demande, d’après OpenStreetMap et Statbel.",
+      "limit": "Une recommandation, pas un effet : un banc ne change aucune mesure satellitaire, on vérifie donc seulement son apparition.",
+      "mapped": "La couverture actuelle compte ce qu’OpenStreetMap a cartographié ; là où la carte est maigre, elle paraît plus basse que dans la rue.",
+      "named": "Les dix premiers de chaque type ont été nommés le {date}, avant que quiconque ne place quoi que ce soit ; les dix suivants servent de comparaison. Un été ultérieur montrera si des objets sont apparus là où Frondia les a nommés, plus souvent qu’aux points de comparaison.",
+      "register": {
+        "at": "D’après le registre propre de la ville, il y a déjà {a} à moins de 50 m de points de la vérification (points nommés : {named} ; points de comparaison : {control}). Ceux-ci en sortent, car une apparition à ces endroits ne relèverait que de la cartographie.",
+        "none": "D’après le registre propre de la ville, il n’y a {no} à moins de 50 m des points nommés ou des points de comparaison.",
+        "gap": "Points ayant, à moins de 500 m, un objet de ce type absent d’OpenStreetMap au moment où ils ont été nommés : {named} sur {namedN} parmi les points nommés, {control} sur {controlN} parmi les points de comparaison. Une partie du manque tenait à la carte.",
+        "caution": "Les {group, select, named {points nommés} other {points de comparaison}} se trouvent plus souvent dans de telles lacunes : la vérification indiquera donc que la cartographie peut expliquer une partie d’une éventuelle différence."
+      },
+      "snap": "Registres lus le {date} ; conservés désormais, pour qu’un objet qui apparaît puisse être daté.",
+      "namedFirst": "Nommés en premier",
+      "outside": "Hors des secteurs"
+    },
+    "more": {
+      "title": "Et avec {k} de plus ?",
+      "slider": "Combien en placer, par ordre de rang",
+      "read": "de la demande à moins de 500 m",
+      "today": "aujourd’hui",
+      "named": "10 nommés",
+      "zero": "Rien n’est encore placé : déplacez le curseur pour placer les objets suivants par ordre de rang.",
+      "all": "tous les {n}",
+      "valueText": "{k} : {p} de la demande à moins de 500 m",
+      "who": "Sur ces {k}, {poor, plural, one {# se trouve} other {# se trouvent}} là où vit le tiers le plus pauvre des habitants (revenu médian du secteur inférieur à {cut}).",
+      "whoOne": "Cet objet {poor, select, yes {se trouve} other {ne se trouve pas}} là où vit le tiers le plus pauvre des habitants (revenu médian du secteur inférieur à {cut})."
+    },
+    "change": {
+      "aria": "Ce qui a changé",
+      "title": "Ce qui a changé à {city}",
+      "window": "Étés {window} · Sentinel-2",
+      "fieldWindow": "Été {year} · Sentinel-2",
+      "view": "Affichage",
+      "views": {
+        "change": "Secteurs",
+        "communes": "Communes",
+        "field": "Terrain",
+        "photos": "Photos"
+      },
+      "subtract": "Soustraire les zones témoins",
+      "counts": {
+        "upEffect": "en verdissement au-delà du bruit",
+        "upRaw": "d’aspect plus vert",
+        "downEffect": "en perte au-delà du bruit",
+        "downRaw": "d’aspect plus brun"
+      },
+      "legend": {
+        "up": "Plus vert : seuil, 2×, 3×",
+        "down": "En perte : seuil, 2×, 3×",
+        "noise": "Dans le bruit — le terrain transparaît",
+        "refused": "Aucune zone comparable · {n}"
+      },
+      "threshold": "Seuil ±{thr} — mesuré à {city} sur {n} secteurs qui jouent chacun une fois le rôle d’« intervention ».",
+      "background": "À {city}, sans soustraire les zones témoins, le déplacement de {shift} à l’échelle de la ville fait paraître {k} des {n} secteurs ({share}) « significativement plus verts » ; une fois la soustraction faite, il n’en reste que {eff}.",
+      "top": "Plus grands changements au-delà du bruit",
+      "check": "Vérifié par rapport à une carte aérienne indépendante (Groenkaart Vlaanderen, 2018 contre 2021–24) : là où la carte aérienne ne voit aucun changement au-delà du bruit, cette carte concorde dans {sk} cas sur {sn} ; là où cette carte dit qu’un secteur a changé au-delà du bruit, la carte aérienne concorde dans {ck} cas sur {cn}. Un changement au-delà du bruit est un candidat, pas une preuve."
+    },
+    "photos": {
+      "window": "Étés {a} et {b} · Sentinel-2",
+      "tag": "Été {y}",
+      "handle": "Séparation entre l’été {a} et l’été {b}",
+      "valueText": "{p} % de la carte montre {a}, le reste {b}",
+      "lede": "Faites glisser la ligne : l’été {a} à sa gauche, l’été {b} à sa droite.",
+      "legend": {
+        "up": "Plus vert au-delà du bruit",
+        "down": "En perte au-delà du bruit",
+        "rawUp": "Paraît plus vert",
+        "rawDown": "Paraît plus brun"
+      },
+      "note": "Les photos sont pour l’œil, et aucun chiffre n’en est tiré : deux étés diffèrent aussi par la lumière, la brume et les récoltes. Les contours sont la mesure, faite sur les étés {window}."
+    },
+    "built": {
+      "measure": "Mesure",
+      "options": {
+        "green": "Verdure",
+        "built": "Sol bâti"
+      },
+      "lede": "Le sol bâti est ce que Dynamic World identifie comme bâtiments, routes et revêtements, comparé aux mêmes douze zones témoins que la verdure.",
+      "counts": {
+        "up": "en imperméabilisation au-delà du bruit",
+        "down": "en désimperméabilisation au-delà du bruit"
+      },
+      "legend": {
+        "up": "Imperméabilisé : seuil, 2×, 3×",
+        "down": "Désimperméabilisé : seuil, 2×, 3×",
+        "noise": "Dans le bruit — le terrain transparaît"
+      },
+      "limit": "Une probabilité de classe, pas une part du sol : la carte montre où l’imperméabilisation a bougé au-delà du bruit, pas combien d’hectares. Moins de bâti n’est pas toujours un parc : une démolition jusqu’au sol nu donne la même lecture.",
+      "rawOff": "Affiché uniquement par rapport aux zones témoins : ce calcul a conservé l’effet de chaque secteur, pas son propre avant-après.",
+      "top": "Plus grands écarts au-delà du bruit",
+      "passport": "Sol bâti par rapport aux zones témoins",
+      "word": {
+        "up": "imperméabilisé",
+        "down": "désimperméabilisé",
+        "noise": "dans le bruit",
+        "refused": "refusé",
+        "none": "non mesuré"
+      },
+      "histAria": "Distribution de {n} effets sur le sol bâti ; seuil ±{thr}",
+      "threshold": "Seuil ±{thr} — le bruit propre à ce calcul, mesuré à {city} sur {n} secteurs qui jouent chacun une fois le rôle d’« intervention »."
+    },
+    "communes": {
+      "title": "Communes que la loi compte à {city}",
+      "window": "Article 8, paragraphe 1 · données 2021",
+      "lede": "Une commune est exclue du total national des espaces verts urbains lorsque ses centres urbains et pôles urbains comptent plus de 45 % d’espaces verts et plus de 10 % de couvert arboré. Mesuré ici avec la méthode de la Commission elle-même, sur des données ouvertes.",
+      "exempt": "exemptée",
+      "counted": "comptée",
+      "scale": {
+        "lo": "0",
+        "mark": "45 %, exemption au-delà",
+        "hi": "100 %"
+      },
+      "listTitle": "Espaces verts des centres urbains et pôles urbains",
+      "untested": "Les autres communes de cette carte se trouvent hors d’Anvers et n’ont pas été testées.",
+      "legend": [
+        "Moins de 15 %",
+        "15 à 30 %",
+        "30 à 45 %",
+        "45 à 60 %",
+        "60 % et plus"
+      ],
+      "legendExempt": "Exemptée : contour à l’encre",
+      "legendUntested": "Hors de la commune testée",
+      "legendRegistered": "Enregistré avant les travaux : contour, sans remplissage",
+      "source": "La méthode de l’AEE et du JRC (NRR_Art8) reprise sur des données ouvertes : UAL (LAU 2024), degré d’urbanisation 2024, centres urbains et pôles urbains 2021 (grille de 1 km²), CLCplus Backbone 2021 pour les espaces verts, la Woody Vegetation Layer 2021 pour le couvert arboré. Les couches 2021 ne sont autorisées que pour les projets de plan.",
+      "region": "Les {n} ensemble : {g} d’espaces verts dans les centres urbains et pôles urbains ; la région dans son ensemble est donc comptée.",
+      "leaveOut": "Exclure les {n} retirerait du décompte {area} de la superficie de la région et {res} de ses habitants, mais {woody} de sa végétation ligneuse. Ce seraient alors {rest} communes denses, avec en moyenne {restGreen} d’espaces verts, qui devraient garantir qu’il n’y ait pas de perte nette.",
+      "canopyToo": "couvert arboré {c}, sous les 10 % aussi",
+      "unstable": {
+        "farmland": "{name} est à {pts} pt sous le seuil. En comptant les terres agricoles comme espaces verts, l’une des autres lectures de l’article 3, point 20, que le test applique, on obtient {g7}, et {name} bénéficierait de l’exemption : le verdict dépend de cette lecture.",
+        "water": "{name} est à {pts} pt au-dessus du seuil. Sans compter l’eau comme espace vert, l’une des autres lectures de l’article 3, point 20, que le test applique, on obtient {gnw}, et {name} ne bénéficierait pas de l’exemption : le verdict dépend de cette lecture.",
+        "other": "Pour {name}, le verdict change selon les autres lectures de l’article 3, point 20, que le test applique."
+      }
+    },
+    "balance": {
+      "title": "Depuis l’année de référence {base}",
+      "rows": {
+        "green": "Espaces verts urbains",
+        "trees": "Couvert arboré",
+        "built": "Bâti"
+      },
+      "net": "{v} net",
+      "split": "perdu {lost} · gagné {gained}",
+      "limit": "Des hectares tels qu’un classificateur satellitaire les lit, pas les couches officielles CLCplus et Woody Vegetation, qui n’existent pas encore pour 2025 et 2026. Un été comparé à un autre est plus bruité qu’une fenêtre de quatre ans. Un parc qui perd des arbres peut paraître plus bâti quand un pixel mixte change de classe.",
+      "lede": "L’été {base} comparé à l’été {s}, en hectares selon la classification du sol de Dynamic World ; les espaces verts urbains au sens du règlement : arbres, herbe, arbustes et eau, pas les terres agricoles. Un secteur ne compte que s’il a bougé au-delà du bruit par rapport à ses douze zones témoins.",
+      "raw": "Sans soustraire les zones témoins, {city} afficherait {g} d’espaces verts et {b} de bâti entre l’été 2024 et l’été {s}. Les classes varient d’un été à l’autre ; les zones témoins retirent cette variation.",
+      "preliminary": "L’été {y} compte moins de huit scènes exploitables : ses chiffres sont provisoires."
+    },
+    "registered": {
+      "title": "Enregistré avant les travaux",
+      "expects": {
+        "restoration": "ne prévoit aucun changement au-delà du bruit : une restauration ne change pas la végétation",
+        "park_redesign": "ne prévoit aucun changement, ou moins de sol imperméabilisé",
+        "boulevard_redesign": "prévoit moins de sol imperméabilisé",
+        "square_redesign": "prévoit moins de sol imperméabilisé et plus d’herbe",
+        "urban_development": "prévoit une perte : un nouveau quartier sur une prairie",
+        "park_creation": "prévoit plus d’arbres à mesure que les plantations poussent ; la verdure peut d’abord baisser, car de jeunes plantations sur de l’herbe peuvent se lire comme une perte",
+        "green_realisation": "prévoit moins de sol bâti là où des bâtiments sont démolis, et le reste de la vallée dans le bruit"
+      },
+      "refused": "refusé d’avance : aucune zone comparable",
+      "named": "12 zones témoins nommées",
+      "lede": "{city, select, brussels {Projets Beliris à Bruxelles} ghent {Projets du registre propre de la Ville de Gand} other {Projets}} fixés le {date}, avant le début de tout travail : {n}. Pour chacun : l’emprise avec son empreinte (hash), un état de référence 2023–25 et douze zones témoins nommées, ou un refus fixé d’avance. Un audit après les travaux ne peut pas déplacer la limite là où le terrain a verdi.",
+      "none": {
+        "antwerp": "Aucun pour l’instant. AG Vespa ne publie aucun statut « travaux non commencés » : un enregistrement ne peut donc venir ici que d’un flux d’appels d’offres.",
+        "liege": "Aucun pour l’instant. La Wallonie ne tient pas de registre comme Beliris. Les nouveaux parcs de Fontainebleau (travaux à partir de l’automne 2027) et de Chênée sont datés, mais leurs contours n’existent que sous forme de dessins dans les brochures de la ville : un enregistrement attend donc un contour décalqué.",
+        "charleroi": "Aucun pour l’instant. Le seul projet de verdissement d’un hectare ou plus pas encore commencé, le Square Hiernaux (un rond-point de 1,7 hectare appelé à devenir un square planté), n’a pas de contour publié : un enregistrement attend donc les plans du permis.",
+        "other": "Aucun pour l’instant. Aucune source listant les projets à {city} avant leurs travaux n’a été lue : rien n’a donc été fixé d’avance."
+      }
+    },
+    "passport": {
+      "aria": "Secteur {name}",
+      "head": "Secteur · {id} · {commune}",
+      "close": "Fermer le secteur",
+      "people": "Habitants : {n}{inc, select, none {} other { · revenu médian : {inc} €}}",
+      "dossier": "Dossier de ce secteur",
+      "few": "Moins de {min} personnes vivent ici : les chiffres restent valables, mais l’atlas ne colore ni ne classe le secteur.",
+      "services": "Services du quotidien · {scenario}",
+      "servicesValue": "/ 100 · plus faibles : {list}",
+      "nearest": "{shop, select, bakery {Boulangerie la plus proche} cafe {Café le plus proche} other {Confiserie la plus proche}}",
+      "heat": "Chaleur estivale",
+      "heatValue": "{v} °C par rapport à la ville",
+      "canopy": "Couvert arboré",
+      "r3": "3-30-300",
+      "r3Value": [
+        "n’en respecte aucune",
+        "respecte l’une des deux",
+        "respecte les deux"
+      ],
+      "ages": "Enfants · 65+",
+      "noProposals": "Aucun des vingt premiers candidats de City Planner, quel que soit le type, ne se trouve dans ce secteur.",
+      "role": {
+        "named": " · point nommé",
+        "control": " · comparaison"
+      },
+      "effect": "Effet par rapport aux zones témoins",
+      "times": "· {k}× le seuil (±{thr})",
+      "raw": "Changement propre, brut",
+      "gap": "Écart d’appariement avant",
+      "veg": "Végétation 2024",
+      "canopy24": "Couvert arboré 2024",
+      "builtValue": "· {word}{refused, select, yes {} other { (±{thr})}}",
+      "where": "Où il se situe dans le bruit de la ville",
+      "histAria": "Distribution des effets à {city} ; ce secteur : {v}",
+      "notMeasured": "Ce secteur n’a pas été mesuré dans cette fenêtre : il n’y a donc pas de verdict.",
+      "refused": "Aucun groupe de douze secteurs ne ressemblait assez à celui-ci au départ : aucun verdict n’est donc rendu. C’est un résultat, pas une lacune.",
+      "compared": "Comparé à douze secteurs qui avaient la même verdure et la même chaleur estivale en {before}. {noise, select, yes {La différence reste dans le bruit propre à la ville.} other {La différence sort du bruit propre à la ville.}}",
+      "audit": "Audit : {place}"
+    },
+    "case": {
+      "aria": "Audit {place}",
+      "head": "Audit · {city} · ouvert en {completed}",
+      "close": "Fermer l’audit",
+      "effect": "Effet par rapport à {n} zones témoins nommées",
+      "threshold": "· seuil {thr}",
+      "defensible": "Défendable, état de référence avant les travaux",
+      "footprint": "Emprise",
+      "above": "Étés au-delà du bruit",
+      "aboveValue": "{k} sur {n}",
+      "matched": "Zones témoins"
+    }
+  }
+}

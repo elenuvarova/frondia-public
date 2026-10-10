@@ -1,0 +1,315 @@
+{
+ "slug": "ninove",
+ "title": "Porte de Ninove",
+ "name": "Parc de la Porte de Ninove",
+ "city": "Брюссель",
+ "type": "создание нового парка",
+ "commune": "Bruxelles-Ville · Molenbeek · Anderlecht",
+ "area_ha": 2.25,
+ "completed": "осень 2019",
+ "budget": "28,5 млн € (весь узел)",
+ "osm": "way/25428277",
+ "source_url": "https://www.beliris.be/projets/porte-de-ninove-5.html",
+ "source_label": "Beliris, Réaménagement de la Porte de Ninove",
+ "window_before": "2017–2019",
+ "window_after": "2021–2024",
+ "image_note": "Сцен: 21 в окне «до», 36 в окне «после».",
+ "calibration_n": "686",
+ "verdict": "ЗНАЧИМО",
+ "population_note": "луговой парк на месте пустыря и парковки у канала",
+ "one_line": "Пустырь у канала стал парком: зелёность выросла на +0.25 против сопоставимых мест при пороге 0.036, покрытие раскрыто, засажено травой. Два прибора сошлись.",
+ "instruments": [
+  {
+   "key": "ndvi",
+   "label": "Зелёность (NDVI)",
+   "before": 0.282,
+   "after": 0.561,
+   "effect": 0.2463,
+   "threshold": 0.03618,
+   "significant": true,
+   "reading": "зелёность выросла — сильнейший эффект в Брюсселе"
+  },
+  {
+   "key": "built",
+   "label": "Застройка / запечатанность",
+   "before": 0.586,
+   "after": 0.459,
+   "effect": -0.1232,
+   "threshold": 0.02501,
+   "significant": true,
+   "reading": "асфальт и покрытие ушли"
+  },
+  {
+   "key": "grass",
+   "label": "Травяной покров",
+   "before": 0.072,
+   "after": 0.171,
+   "effect": 0.0978,
+   "threshold": 0.0094,
+   "significant": true,
+   "reading": "засажено лугом"
+  },
+  {
+   "key": "trees",
+   "label": "Древесная крона",
+   "before": 0.044,
+   "after": 0.052,
+   "effect": 0.0053,
+   "threshold": 0.01301,
+   "significant": false,
+   "reading": "деревьев не прибавилось — парк луговой"
+  },
+  {
+   "key": "bare",
+   "label": "Голая поверхность",
+   "before": 0.067,
+   "after": 0.049,
+   "effect": -0.0168,
+   "threshold": 0.00538,
+   "significant": true,
+   "reading": "голого грунта меньше"
+  },
+  {
+   "key": "shrub",
+   "label": "Кустарник",
+   "before": 0.052,
+   "after": 0.058,
+   "effect": 0.0037,
+   "threshold": 0.00465,
+   "significant": false,
+   "reading": "кустарник в пределах шума"
+  }
+ ],
+ "reading": "Против тех же двенадцати мест застройка упала на 0,123 при пороге 0,025, трава выросла на 0,098 при пороге 0,009 — превышение в 5 и 10 раз. Крона не прошла порог: это луговой парк, а не древесный, и так и надо говорить. Значения классов — вероятности, не доли площади; читать только изменение.",
+ "controls": [
+  {
+   "id": "21015A101",
+   "name": "GARE",
+   "ndvi_before": 0.28,
+   "d_ndvi_raw": 0.0403,
+   "dist_km": 4.5
+  },
+  {
+   "id": "21004E211",
+   "name": "RUE DE WAND",
+   "ndvi_before": 0.284,
+   "d_ndvi_raw": 0.0024,
+   "dist_km": 5.8
+  },
+  {
+   "id": "21009A22-",
+   "name": "UNIVERSITE",
+   "ndvi_before": 0.28,
+   "d_ndvi_raw": 0.0442,
+   "dist_km": 4.9
+  },
+  {
+   "id": "21015A22-",
+   "name": "MARBOTIN A. (RUE)",
+   "ndvi_before": 0.285,
+   "d_ndvi_raw": 0.03,
+   "dist_km": 4.6
+  },
+  {
+   "id": "21012A63-",
+   "name": "DUBRUCQ-NORD",
+   "ndvi_before": 0.279,
+   "d_ndvi_raw": 0.0358,
+   "dist_km": 2.2
+  },
+  {
+   "id": "21001B321",
+   "name": "ALBERT I- QUARTIER",
+   "ndvi_before": 0.279,
+   "d_ndvi_raw": 0.0364,
+   "dist_km": 1.5
+  },
+  {
+   "id": "21004B43-",
+   "name": "AMBIORIX-NORD (SQUARE)",
+   "ndvi_before": 0.279,
+   "d_ndvi_raw": 0.0244,
+   "dist_km": 3.5
+  },
+  {
+   "id": "21015A24-",
+   "name": "WAELHEM (RUE)",
+   "ndvi_before": 0.286,
+   "d_ndvi_raw": 0.0218,
+   "dist_km": 3.9
+  },
+  {
+   "id": "21009A151",
+   "name": "A. DELPORTE-NORD",
+   "ndvi_before": 0.286,
+   "d_ndvi_raw": 0.0352,
+   "dist_km": 4.2
+  },
+  {
+   "id": "21009A652",
+   "name": "HOPITAUX",
+   "ndvi_before": 0.277,
+   "d_ndvi_raw": 0.0394,
+   "dist_km": 4.1
+  },
+  {
+   "id": "21007A373",
+   "name": "CHARROI (RUE DE)",
+   "ndvi_before": 0.287,
+   "d_ndvi_raw": 0.0478,
+   "dist_km": 2.7
+  },
+  {
+   "id": "21015A54-",
+   "name": "EMERAUDE (AVENUE)",
+   "ndvi_before": 0.277,
+   "d_ndvi_raw": 0.031,
+   "dist_km": 4.1
+  }
+ ],
+ "control_gap": 0.0005,
+ "timing_check": {
+  "why": "Работы шли в 2017–2019 — внутри нашего окна «до». Окно могло поймать голый грунт стройплощадки и раздуть эффект. Проверка: база сдвинута на 2016 год, когда работы ещё не начались.",
+  "rows": [
+   {
+    "window": "2017–2019, стандарт",
+    "scenes": 21,
+    "ndvi_before": 0.282,
+    "effect": 0.2463,
+    "gap": 0.0005
+   },
+   {
+    "window": "2016, до работ",
+    "scenes": 2,
+    "ndvi_before": 0.267,
+    "effect": 0.261,
+    "gap": -0.0142
+   }
+  ],
+  "conclusion": "С базой до начала работ эффект +0.261 — не ниже, а выше. Гипотеза о завышении стройкой не подтвердилась: до работ здесь был пустырь с низкой зелёностью, а не озеленённая набережная. Оговорка честная: в 2016 году всего 2 сцены, Sentinel-2B запущен в марте 2017 — сама по себе проверка слабая, но она согласуется с трёхлетним окном."
+ },
+ "documents": [
+  {
+   "what": "площадь, сроки",
+   "source": "Bruxelles Environnement",
+   "detail": "2,4 га; проектирование с участием жителей в 2016, работы завершены в 2019; создан как новое зелёное пространство"
+  },
+  {
+   "what": "бюджет, исполнители",
+   "source": "Beliris",
+   "detail": "28 531 641 € TVAC, 98 % Beliris / 2 % BGHM; окончание — осень 2019; Tractebel, Arcadis, BUUR, Suède 36"
+  },
+  {
+   "what": "контекст узла",
+   "source": "perspective.brussels",
+   "detail": "переустройство Porte de Ninove: общественные пространства, мост, Малый пояс"
+  },
+  {
+   "what": "домен в реестре",
+   "source": "Beliris, AJAX-реестр",
+   "detail": "«public», не «vert» — сильнейший зелёный эффект города подшит как общественное пространство"
+  }
+ ],
+ "cluster": [
+  {
+   "name": "Réaménagement de la Porte de Ninove",
+   "domain": "public",
+   "dist_m": 140
+  },
+  {
+   "name": "Réaménagement de la Petite Ceinture Ouest",
+   "domain": "mobilite",
+   "dist_m": 212
+  },
+  {
+   "name": "Réalisation de la passerelle Porte de Ninove",
+   "domain": "mobilite",
+   "dist_m": 216
+  },
+  {
+   "name": "Contrat de quartier Chimiste",
+   "domain": "public",
+   "dist_m": 353
+  },
+  {
+   "name": "Contrat de quartier Heyvaert",
+   "domain": "public",
+   "dist_m": 495
+  }
+ ],
+ "limits": [
+  "охлаждение не измеряется: порог значимости температуры 1,32 °C больше реалистичных эффектов",
+  "бюджет 28,5 млн относится ко всему узлу — дороги, мост, площадь; парк 2,25 га внутри. «28,5 млн купили +0,25» — некорректно",
+  "эффект — совокупный результат пяти проектов кластера, не одной бюджетной строки",
+  "значения классов Dynamic World — вероятности, не доли площади",
+  "причина изменения со спутника не видна: связь с проектом — из документов Beliris и Bruxelles Environnement"
+ ],
+ "images": {
+  "before": "data/exports/way_25428277_before.png",
+  "after": "data/exports/way_25428277_after.png",
+  "delta": "data/exports/way_25428277_delta_relative.png"
+ },
+ "over_time": {
+  "base": [
+   "2016-01-01",
+   "2018-12-31"
+  ],
+  "site_base": 0.25298219394921145,
+  "ctrl_base": 0.2671929462715725,
+  "threshold_audit": 0.03618,
+  "seasons": [
+   {
+    "season": 2020,
+    "scenes": 7,
+    "site": 0.3777,
+    "control": 0.2793,
+    "effect": 0.1126
+   },
+   {
+    "season": 2021,
+    "scenes": 9,
+    "site": 0.5683,
+    "control": 0.3045,
+    "effect": 0.278
+   },
+   {
+    "season": 2022,
+    "scenes": 9,
+    "site": 0.3415,
+    "control": 0.297,
+    "effect": 0.0587
+   },
+   {
+    "season": 2023,
+    "scenes": 12,
+    "site": 0.5106,
+    "control": 0.3153,
+    "effect": 0.2095
+   },
+   {
+    "season": 2024,
+    "scenes": 6,
+    "site": 0.642,
+    "control": 0.3357,
+    "effect": 0.3205
+   },
+   {
+    "season": 2025,
+    "scenes": 9,
+    "site": 0.4034,
+    "control": 0.3101,
+    "effect": 0.1076
+   },
+   {
+    "season": 2026,
+    "scenes": 12,
+    "site": 0.4174,
+    "control": 0.3147,
+    "effect": 0.1168
+   }
+  ]
+ },
+ "_ctrl_d": 0.0324,
+ "verdict_line": "Пустырь у канала стал лугом: два прибора сошлись, контроль назван поимённо.",
+ "threshold_scheme": "схема самого дела: каждый сектор таблицы по очереди «вмешательство», 12 ближайших по NDVI «до», не ближе 1,5 км; 95-й процентиль модуля эффекта; тем же прогоном, что эффект; классы Dynamic World — против тех же мест"
+}

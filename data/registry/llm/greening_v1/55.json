@@ -1,0 +1,16 @@
+{
+ "id": 55,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "ecd2dbba0b87f960",
+ "run_at": "2026-09-26T14:50:09+00:00",
+ "output": {
+  "label": "no",
+  "measures": [],
+  "why": "The contract lists projects like renovating sidewalks, redesigning squares with an \"espace merveilleux\" concept (coloration, exotisme, mobilier urbain), and creating semi-pedestrian streets, none of which mention vegetation, trees, unsealing, or green space creation, so no greening measure is present."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.0337344,
+ "duration_ms": 6041
+}

@@ -1,0 +1,16 @@
+{
+ "id": 66,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "ef1fb55467048d7d",
+ "run_at": "2026-09-26T14:50:58+00:00",
+ "output": {
+  "measures": [],
+  "label": "no",
+  "why": "The text describes housing, economic conversion, a soft-mobility network and street layout solutions ('des interventions sur l'espace public du périmètre afin d'y mettre en place un réseau de déplacement doux, le traitement des traversées sous tunnel ainsi que la recherche de solutions d'aménagements pour la rue d'Aerschot') but contains no mention of parks, planting, unsealing, gardens or green roofs/façades, so there is no greening measure."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.043008199999999996,
+ "duration_ms": 10058
+}

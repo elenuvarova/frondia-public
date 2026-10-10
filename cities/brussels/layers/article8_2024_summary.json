@@ -1,0 +1,242 @@
+{
+ "city": "brussels",
+ "display_name": "Bruxelles / Brussel",
+ "baseline_year": 2024,
+ "window": "2017–2019 → 2021–2024",
+ "units_total": 724,
+ "units_measured": 686,
+ "units_comparable": 668,
+ "population": 1227004,
+ "baseline": {
+  "ndvi_wmean": 0.38237770215677136,
+  "trees_wmean": 0.06551029034531702,
+  "grass_wmean": 0.03734485714761345,
+  "built_wmean": 0.6651923457756737
+ },
+ "trend": {
+  "ndvi_eff_median": -0.0004483825365932583,
+  "ndvi_loss_sectors": 13,
+  "ndvi_loss_pop": 9793,
+  "ndvi_gain_sectors": 16,
+  "ndvi_gain_pop": 10199,
+  "trees_loss_sectors": 13,
+  "trees_loss_pop": 6635,
+  "trees_gain_sectors": 18,
+  "trees_gain_pop": 9117,
+  "built_up_sectors": 8,
+  "built_up_pop": 3238,
+  "built_down_sectors": 18,
+  "built_down_pop": 10305
+ },
+ "thresholds": {
+  "ndvi": 0.03451,
+  "trees": 0.01445,
+  "built": 0.02449
+ },
+ "thresholds_source": {
+  "ndvi": "нулевое распределение по 686 единицам, 95-й процентиль, среднее -0.00010, ст. отклонение 0.01775",
+  "trees": "нулевое распределение по 686 единицам, 95-й процентиль, среднее +0.00016, ст. отклонение 0.00643",
+  "built": "нулевое распределение по 686 единицам, 95-й процентиль, среднее -0.00023, ст. отклонение 0.01260"
+ },
+ "thresholds_unbiased": {
+  "ndvi": true,
+  "trees": true,
+  "built": true
+ },
+ "thresholds_mean": {
+  "ndvi": -9.962893680922256e-05,
+  "trees": 0.00015741623694669806,
+  "built": -0.00023148688046647226
+ },
+ "thresholds_instrument_manifest": {
+  "ndvi": 0.0373,
+  "trees": 0.0142,
+  "built": 0.02473
+ },
+ "equity_income_terciles": [
+  {
+   "label": "нижний",
+   "n": 206,
+   "income_median": 21386.0,
+   "ndvi_2024_wmean": 0.31302069285906414,
+   "trees_2024_wmean": 0.050975781134447534,
+   "ndvi_eff_mean": 0.0006460363827672628,
+   "loss_sectors": 4,
+   "gain_sectors": 5
+  },
+  {
+   "label": "средний",
+   "n": 206,
+   "income_median": 26540.0,
+   "ndvi_2024_wmean": 0.3995482423213528,
+   "trees_2024_wmean": 0.06722376221494994,
+   "ndvi_eff_mean": -0.0023770295397855996,
+   "loss_sectors": 5,
+   "gain_sectors": 4
+  },
+  {
+   "label": "верхний",
+   "n": 208,
+   "income_median": 31926.5,
+   "ndvi_2024_wmean": 0.494053619859048,
+   "trees_2024_wmean": 0.0904373950897946,
+   "ndvi_eff_mean": 9.015571713271551e-05,
+   "loss_sectors": 1,
+   "gain_sectors": 3
+  }
+ ],
+ "top_ndvi_loss": [
+  {
+   "id": "21012A2MJ",
+   "name": "CHEMIN DE FER",
+   "commune": "Molenbeek",
+   "eff": -0.0916,
+   "population": 65,
+   "trees_eff": -0.0502
+  },
+  {
+   "id": "21004G3MJ",
+   "name": "DOBBELENBERG",
+   "commune": "Bruxelles",
+   "eff": -0.0903,
+   "population": 521,
+   "trees_eff": -0.0183
+  },
+  {
+   "id": "21012A882",
+   "name": "DARING",
+   "commune": "Molenbeek",
+   "eff": -0.0876,
+   "population": 500,
+   "trees_eff": -0.0088
+  },
+  {
+   "id": "21001C70-",
+   "name": "BON AIR - CENTRE",
+   "commune": "Anderlecht",
+   "eff": -0.0794,
+   "population": 402,
+   "trees_eff": -0.0067
+  },
+  {
+   "id": "21006A323",
+   "name": "GERMINAL II",
+   "commune": "Evere",
+   "eff": -0.0734,
+   "population": 983,
+   "trees_eff": -0.0306
+  },
+  {
+   "id": "21007A51-",
+   "name": "CHATAIGNE",
+   "commune": "Forest",
+   "eff": -0.0553,
+   "population": 1203,
+   "trees_eff": -0.0094
+  },
+  {
+   "id": "21010A4MJ",
+   "name": "VUB",
+   "commune": "Jette",
+   "eff": -0.0493,
+   "population": 20,
+   "trees_eff": -0.0103
+  },
+  {
+   "id": "21006A21-",
+   "name": "HOME FAMILIAL BRABANT",
+   "commune": "Evere",
+   "eff": -0.0441,
+   "population": 1173,
+   "trees_eff": -0.0008
+  },
+  {
+   "id": "21002A492",
+   "name": "WOLUWE PARC",
+   "commune": "Auderghem",
+   "eff": -0.0408,
+   "population": 9,
+   "trees_eff": -0.0245
+  },
+  {
+   "id": "21001A350",
+   "name": "CERIA - ZONE D'HABITAT",
+   "commune": "Anderlecht",
+   "eff": -0.0379,
+   "population": 1521,
+   "trees_eff": 0.0065
+  }
+ ],
+ "top_trees_loss": [
+  {
+   "id": "21012A2MJ",
+   "name": "CHEMIN DE FER",
+   "commune": "Molenbeek",
+   "eff": -0.0502,
+   "population": 65
+  },
+  {
+   "id": "21006A323",
+   "name": "GERMINAL II",
+   "commune": "Evere",
+   "eff": -0.0306,
+   "population": 983
+  },
+  {
+   "id": "21007A783",
+   "name": "PARC DE FOREST",
+   "commune": "Forest",
+   "eff": -0.0272,
+   "population": 486
+  },
+  {
+   "id": "21011A29-",
+   "name": "PARC ELISABETH",
+   "commune": "Koekelberg",
+   "eff": -0.0272,
+   "population": 0
+  },
+  {
+   "id": "21002A492",
+   "name": "WOLUWE PARC",
+   "commune": "Auderghem",
+   "eff": -0.0245,
+   "population": 9
+  },
+  {
+   "id": "21009A2MJ",
+   "name": "CAMPUS UNIVERSITAIRE",
+   "commune": "Ixelles",
+   "eff": -0.0229,
+   "population": 1359
+  },
+  {
+   "id": "21019A09-",
+   "name": "WOLUWE (PARC DE)",
+   "commune": "Woluwe-Saint-Pierre",
+   "eff": -0.0223,
+   "population": 1
+  },
+  {
+   "id": "21012A851",
+   "name": "CONDOR",
+   "commune": "Molenbeek",
+   "eff": -0.021,
+   "population": 1959
+  },
+  {
+   "id": "21008A34-",
+   "name": "PARC ALBERT",
+   "commune": "Ganshoren",
+   "eff": -0.0186,
+   "population": 589
+  },
+  {
+   "id": "21004G3MJ",
+   "name": "DOBBELENBERG",
+   "commune": "Bruxelles",
+   "eff": -0.0183,
+   "population": 521
+  }
+ ]
+}

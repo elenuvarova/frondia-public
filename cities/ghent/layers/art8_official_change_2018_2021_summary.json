@@ -1,0 +1,132 @@
+{
+ "city": "ghent",
+ "computed": "2026-10-09",
+ "units": 201,
+ "comparable": 195,
+ "max_gap": 0.04,
+ "inputs": {
+  "wvl2018": "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_WoodyVegetationLayer_2018/ImageServer",
+  "wvl2021": "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_WoodyVegetationLayer_2021/ImageServer",
+  "clc2018": "https://image.discomap.eea.europa.eu/arcgis/rest/services/CLC_plus/CLMS_CLCplus_RASTER_2018_010m_eu/ImageServer",
+  "clc2021": "https://image.discomap.eea.europa.eu/arcgis/rest/services/CLC_plus/CLMS_CLCplus_RASTER_2021_010m_eu/ImageServer"
+ },
+ "values_present": {
+  "wvl2018": [
+   0,
+   1
+  ],
+  "wvl2021": [
+   0,
+   1
+  ],
+  "clc2018": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   7,
+   9,
+   10
+  ],
+  "clc2021": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   7,
+   9,
+   10
+  ]
+ },
+ "calibration": {
+  "ndvi": {
+   "threshold": 0.048131,
+   "mean": -0.000155,
+   "sd": 0.023873,
+   "n": 201,
+   "unbiased": true
+  },
+  "canopy": {
+   "threshold": 0.054051,
+   "mean": -0.001139,
+   "sd": 0.027353,
+   "n": 201,
+   "unbiased": true
+  },
+  "green": {
+   "threshold": 0.059403,
+   "mean": 0.001203,
+   "sd": 0.022009,
+   "n": 201,
+   "unbiased": true
+  }
+ },
+ "city_mean": {
+  "canopy_2018": 0.144065,
+  "canopy_2021": 0.179908,
+  "green_2018": 0.465664,
+  "green_2021": 0.473561
+ },
+ "raw_median": {
+  "ndvi": 0.031675,
+  "canopy": 0.031905,
+  "green": -0.004931
+ },
+ "raw_beyond_threshold": {
+  "ndvi": 41,
+  "canopy": 41,
+  "green": 6
+ },
+ "verdicts": {
+  "ndvi": {
+   "шум": 186,
+   "прирост": 5,
+   "потеря": 4
+  },
+  "canopy": {
+   "шум": 185,
+   "потеря": 5,
+   "прирост": 5
+  },
+  "green": {
+   "шум": 191,
+   "прирост": 4
+  }
+ },
+ "agreement_with_ndvi": {
+  "canopy": {
+   "n": 195,
+   "changed_either": 17,
+   "changed_same": 2,
+   "noise_both": 178,
+   "noise_either": 193
+  },
+  "green": {
+   "n": 195,
+   "changed_either": 12,
+   "changed_same": 0,
+   "noise_both": 183,
+   "noise_either": 194
+  }
+ },
+ "r_canopy_eff_vs_ndvi_eff": 0.2,
+ "independent": {
+  "source": "Groenkaart Vlaanderen 2018 и 2021, высокая зелень (> 3 м), аэрофото 1 м",
+  "units": 201,
+  "official_canopy_2018": 0.144065,
+  "official_canopy_2021": 0.179908,
+  "aerial_high_2018": 0.14271,
+  "aerial_high_2021": 0.144526,
+  "example": {
+   "id": "44021L391",
+   "name": "VALKENHUIS",
+   "area_ha": 174.73,
+   "official_2018": 0.271228,
+   "official_2021": 0.404068,
+   "aerial_2018": 0.182441,
+   "aerial_2021": 0.140361
+  }
+ }
+}

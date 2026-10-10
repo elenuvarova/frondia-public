@@ -1,0 +1,145 @@
+{
+ "city": "liege",
+ "display_name": "Liège",
+ "baseline_year": 2024,
+ "window": "2017–2019 → 2021–2024",
+ "units_total": 184,
+ "units_measured": 181,
+ "units_comparable": 163,
+ "population": 195453,
+ "baseline": {
+  "ndvi_wmean": 0.43876692442222687,
+  "trees_wmean": 0.13149104755111854,
+  "grass_wmean": 0.048458276202457025,
+  "built_wmean": 0.5329639704515486
+ },
+ "trend": {
+  "ndvi_eff_median": 0.0033831147171856334,
+  "ndvi_loss_sectors": 4,
+  "ndvi_loss_pop": 1711,
+  "ndvi_gain_sectors": 1,
+  "ndvi_gain_pop": 381,
+  "trees_loss_sectors": 3,
+  "trees_loss_pop": 1119,
+  "trees_gain_sectors": 5,
+  "trees_gain_pop": 3111,
+  "built_up_sectors": 3,
+  "built_up_pop": 3945,
+  "built_down_sectors": 4,
+  "built_down_pop": 1476
+ },
+ "thresholds": {
+  "ndvi": 0.05164,
+  "trees": 0.02334,
+  "built": 0.0419
+ },
+ "thresholds_source": {
+  "ndvi": "нулевое распределение по 181 единицам, 95-й процентиль, среднее +0.00065, ст. отклонение 0.02524",
+  "trees": "нулевое распределение по 181 единицам, 95-й процентиль, среднее +0.00062, ст. отклонение 0.01606",
+  "built": "нулевое распределение по 181 единицам, 95-й процентиль, среднее -0.00084, ст. отклонение 0.01953"
+ },
+ "thresholds_unbiased": {
+  "ndvi": true,
+  "trees": true,
+  "built": true
+ },
+ "thresholds_mean": {
+  "ndvi": 0.000647496456340347,
+  "trees": 0.0006176277342081191,
+  "built": -0.0008392265193370164
+ },
+ "thresholds_instrument_manifest": {
+  "ndvi": 0.05356,
+  "trees": 0.02454,
+  "built": 0.03821
+ },
+ "equity_income_terciles": [
+  {
+   "label": "нижний",
+   "n": 51,
+   "income_median": 21708.0,
+   "ndvi_2024_wmean": 0.3713907363631638,
+   "trees_2024_wmean": 0.10119077034283029,
+   "ndvi_eff_mean": 0.0008206143883320208,
+   "loss_sectors": 0,
+   "gain_sectors": 0
+  },
+  {
+   "label": "средний",
+   "n": 51,
+   "income_median": 25608.0,
+   "ndvi_2024_wmean": 0.4826515214627215,
+   "trees_2024_wmean": 0.13206699742622094,
+   "ndvi_eff_mean": 0.0016371663620946292,
+   "loss_sectors": 1,
+   "gain_sectors": 0
+  },
+  {
+   "label": "верхний",
+   "n": 52,
+   "income_median": 30567.5,
+   "ndvi_2024_wmean": 0.5815971840906651,
+   "trees_2024_wmean": 0.20264708756556737,
+   "ndvi_eff_mean": 0.0024081630638237853,
+   "loss_sectors": 2,
+   "gain_sectors": 1
+  }
+ ],
+ "top_ndvi_loss": [
+  {
+   "id": "62063C081",
+   "name": "LE WERIHET",
+   "commune": "Wandre",
+   "eff": -0.1203,
+   "population": 0,
+   "trees_eff": -0.1469
+  },
+  {
+   "id": "62063G172",
+   "name": "LHONEUX",
+   "commune": "Chênée",
+   "eff": -0.1177,
+   "population": 100,
+   "trees_eff": -0.0211
+  },
+  {
+   "id": "62063L02-",
+   "name": "DUPIREUX",
+   "commune": "Rocourt",
+   "eff": -0.1065,
+   "population": 674,
+   "trees_eff": -0.0027
+  },
+  {
+   "id": "62063C119",
+   "name": "RABOSEE",
+   "commune": "Wandre",
+   "eff": -0.0624,
+   "population": 937,
+   "trees_eff": -0.0276
+  }
+ ],
+ "top_trees_loss": [
+  {
+   "id": "62063C081",
+   "name": "LE WERIHET",
+   "commune": "Wandre",
+   "eff": -0.1469,
+   "population": 0
+  },
+  {
+   "id": "62063A74-",
+   "name": "JOSEPH-TRUFFAUT",
+   "commune": "Liège (north)",
+   "eff": -0.0449,
+   "population": 182
+  },
+  {
+   "id": "62063C119",
+   "name": "RABOSEE",
+   "commune": "Wandre",
+   "eff": -0.0276,
+   "population": 937
+  }
+ ]
+}

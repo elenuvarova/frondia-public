@@ -1,0 +1,77 @@
+lau_id,name,reading,green_pct,canopy_pct,exempt
+lau2024.BE.21001,Anderlecht,official,38.0321,19.3083,False
+lau2024.BE.21001,Anderlecht,with_arable,41.9127,19.3083,False
+lau2024.BE.21001,Anderlecht,without_water,36.7566,19.3083,False
+lau2024.BE.21001,Anderlecht,statbel_sectors,38.0867,19.4976,False
+lau2024.BE.21002,Auderghem / Oudergem,official,50.3984,45.4281,True
+lau2024.BE.21002,Auderghem / Oudergem,with_arable,50.4267,45.4281,True
+lau2024.BE.21002,Auderghem / Oudergem,without_water,49.0656,45.4281,True
+lau2024.BE.21002,Auderghem / Oudergem,statbel_sectors,51.4798,46.5326,True
+lau2024.BE.21003,Berchem-Sainte-Agathe / Sint-Agatha-Berchem,official,35.368,21.794,False
+lau2024.BE.21003,Berchem-Sainte-Agathe / Sint-Agatha-Berchem,with_arable,35.4747,21.794,False
+lau2024.BE.21003,Berchem-Sainte-Agathe / Sint-Agatha-Berchem,without_water,35.368,21.794,False
+lau2024.BE.21003,Berchem-Sainte-Agathe / Sint-Agatha-Berchem,statbel_sectors,37.2314,22.4411,False
+lau2024.BE.21004,Bruxelles / Brussel,official,35.1383,23.8838,False
+lau2024.BE.21004,Bruxelles / Brussel,with_arable,35.6995,23.8838,False
+lau2024.BE.21004,Bruxelles / Brussel,without_water,32.9032,23.8838,False
+lau2024.BE.21004,Bruxelles / Brussel,statbel_sectors,35.6552,24.4473,False
+lau2024.BE.21005,Etterbeek,official,14.4497,13.9332,False
+lau2024.BE.21005,Etterbeek,with_arable,14.5244,13.9332,False
+lau2024.BE.21005,Etterbeek,without_water,14.4248,13.9332,False
+lau2024.BE.21005,Etterbeek,statbel_sectors,14.4738,14.1488,False
+lau2024.BE.21006,Evere,official,36.8693,30.337,False
+lau2024.BE.21006,Evere,with_arable,36.945,30.337,False
+lau2024.BE.21006,Evere,without_water,36.863,30.337,False
+lau2024.BE.21006,Evere,statbel_sectors,35.8985,28.8575,False
+lau2024.BE.21007,Vorst (Brussel-Hoofdstad) / Forest (Bruxelles-Capitale),official,23.9147,14.1881,False
+lau2024.BE.21007,Vorst (Brussel-Hoofdstad) / Forest (Bruxelles-Capitale),with_arable,24.1678,14.1881,False
+lau2024.BE.21007,Vorst (Brussel-Hoofdstad) / Forest (Bruxelles-Capitale),without_water,23.8144,14.1881,False
+lau2024.BE.21007,Vorst (Brussel-Hoofdstad) / Forest (Bruxelles-Capitale),statbel_sectors,23.9904,14.3947,False
+lau2024.BE.21008,Ganshoren,official,43.3412,32.51,False
+lau2024.BE.21008,Ganshoren,with_arable,43.4354,32.51,False
+lau2024.BE.21008,Ganshoren,without_water,43.0834,32.51,False
+lau2024.BE.21008,Ganshoren,statbel_sectors,42.8718,32.1458,False
+lau2024.BE.21009,Ixelles / Elsene,official,22.1863,18.8089,False
+lau2024.BE.21009,Ixelles / Elsene,with_arable,22.2397,18.8089,False
+lau2024.BE.21009,Ixelles / Elsene,without_water,21.8202,18.8089,False
+lau2024.BE.21009,Ixelles / Elsene,statbel_sectors,21.5225,18.7679,False
+lau2024.BE.21010,Jette,official,41.7095,33.278,False
+lau2024.BE.21010,Jette,with_arable,41.9014,33.278,False
+lau2024.BE.21010,Jette,without_water,41.6482,33.278,False
+lau2024.BE.21010,Jette,statbel_sectors,42.1321,33.8076,False
+lau2024.BE.21011,Koekelberg,official,27.1386,19.5171,False
+lau2024.BE.21011,Koekelberg,with_arable,27.1946,19.5171,False
+lau2024.BE.21011,Koekelberg,without_water,27.1386,19.5171,False
+lau2024.BE.21011,Koekelberg,statbel_sectors,24.0186,17.6369,False
+lau2024.BE.21012,Molenbeek-Saint-Jean / Sint-Jans-Molenbeek,official,27.0466,15.4626,False
+lau2024.BE.21012,Molenbeek-Saint-Jean / Sint-Jans-Molenbeek,with_arable,27.1606,15.4626,False
+lau2024.BE.21012,Molenbeek-Saint-Jean / Sint-Jans-Molenbeek,without_water,26.8071,15.4626,False
+lau2024.BE.21012,Molenbeek-Saint-Jean / Sint-Jans-Molenbeek,statbel_sectors,26.7529,15.164,False
+lau2024.BE.21013,Saint-Gilles / Sint-Gillis,official,8.7393,7.2647,False
+lau2024.BE.21013,Saint-Gilles / Sint-Gillis,with_arable,8.7471,7.2647,False
+lau2024.BE.21013,Saint-Gilles / Sint-Gillis,without_water,8.7393,7.2647,False
+lau2024.BE.21013,Saint-Gilles / Sint-Gillis,statbel_sectors,8.2445,6.4697,False
+lau2024.BE.21014,Saint-Josse-ten-Noode / Sint-Joost-ten-Node,official,11.2431,11.1441,False
+lau2024.BE.21014,Saint-Josse-ten-Noode / Sint-Joost-ten-Node,with_arable,11.2888,11.1441,False
+lau2024.BE.21014,Saint-Josse-ten-Noode / Sint-Joost-ten-Node,without_water,10.9781,11.1441,False
+lau2024.BE.21014,Saint-Josse-ten-Noode / Sint-Joost-ten-Node,statbel_sectors,10.7373,10.9778,False
+lau2024.BE.21015,Schaerbeek / Schaarbeek,official,20.4964,18.3359,False
+lau2024.BE.21015,Schaerbeek / Schaarbeek,with_arable,20.5613,18.3359,False
+lau2024.BE.21015,Schaerbeek / Schaarbeek,without_water,20.397,18.3359,False
+lau2024.BE.21015,Schaerbeek / Schaarbeek,statbel_sectors,20.4052,18.7533,False
+lau2024.BE.21016,Uccle / Ukkel,official,60.848,52.6416,True
+lau2024.BE.21016,Uccle / Ukkel,with_arable,61.1486,52.6416,True
+lau2024.BE.21016,Uccle / Ukkel,without_water,60.8328,52.6416,True
+lau2024.BE.21016,Uccle / Ukkel,statbel_sectors,60.0603,51.9915,True
+lau2024.BE.21017,Watermael-Boitsfort / Watermaal-Bosvoorde,official,66.2148,57.8545,True
+lau2024.BE.21017,Watermael-Boitsfort / Watermaal-Bosvoorde,with_arable,66.2427,57.8545,True
+lau2024.BE.21017,Watermael-Boitsfort / Watermaal-Bosvoorde,without_water,65.1908,57.8545,True
+lau2024.BE.21017,Watermael-Boitsfort / Watermaal-Bosvoorde,statbel_sectors,66.1927,57.7717,True
+lau2024.BE.21018,Woluwe-Saint-Lambert / Sint-Lambrechts-Woluwe,official,36.5109,31.2793,False
+lau2024.BE.21018,Woluwe-Saint-Lambert / Sint-Lambrechts-Woluwe,with_arable,36.7311,31.2793,False
+lau2024.BE.21018,Woluwe-Saint-Lambert / Sint-Lambrechts-Woluwe,without_water,36.394,31.2793,False
+lau2024.BE.21018,Woluwe-Saint-Lambert / Sint-Lambrechts-Woluwe,statbel_sectors,35.7746,30.8836,False
+lau2024.BE.21019,Woluwe-Saint-Pierre / Sint-Pieters-Woluwe,official,52.1339,47.2688,True
+lau2024.BE.21019,Woluwe-Saint-Pierre / Sint-Pieters-Woluwe,with_arable,52.946,47.2688,True
+lau2024.BE.21019,Woluwe-Saint-Pierre / Sint-Pieters-Woluwe,without_water,51.2037,47.2688,True
+lau2024.BE.21019,Woluwe-Saint-Pierre / Sint-Pieters-Woluwe,statbel_sectors,51.2967,46.3259,True

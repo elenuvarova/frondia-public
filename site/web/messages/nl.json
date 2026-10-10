@@ -1,0 +1,1630 @@
+{
+  "common": {
+    "skip": "Naar de inhoud",
+    "nav": {
+      "home": "Frondia, startpagina",
+      "main": "Hoofdmenu",
+      "law": "Artikel 8",
+      "method": "Methode",
+      "audits": "Audits",
+      "atlas": "Open de atlas",
+      "atlasShort": "Atlas",
+      "languages": "Taal"
+    },
+    "footer": {
+      "label": "Voettekst",
+      "motto": ", de groei, niet het geritsel.",
+      "links": {
+        "atlas": "Atlas",
+        "law": "Artikel 8",
+        "method": "Methode",
+        "audits": "Audits",
+        "faq": "Vragen",
+        "data": "Gegevens",
+        "register": "Register",
+        "privacy": "Privacy"
+      },
+      "built": "Ontworpen en gebouwd door <a>Elena Uvarova</a>.",
+      "translation": "Machinaal vertaald met Claude en nagelezen door een tweede model; nog niet nagelezen door een moedertaalspreker.",
+      "privacy": "Geen cookies, tenzij u ze aanvaardt. Bezoeken worden anoniem geteld op de eigen server van deze site; Microsoft Clarity draait alleen met uw toestemming.",
+      "credits": "Contains modified Copernicus Sentinel data 2017–2026. Landsat courtesy of the U.S. Geological Survey. Dynamic World: Google and World Resources Institute. CLCplus Backbone and HRL Woody Vegetation Layer: © European Union, Copernicus Land Monitoring Service. Statistical sectors and income © Statbel. Parks © OpenStreetMap contributors (ODbL). Project registers: beliris.be, quartiers.brussels, agvespa.be."
+    },
+    "notFound": {
+      "tab": "Pagina niet gevonden · Frondia",
+      "home": "Terug naar het begin",
+      "kicker": "Fout 404 · hier staat geen pagina",
+      "heading": "Hier groeide <em>niets.</em>",
+      "lede": "Op dit adres is nooit een pagina gemeten: het is geritsel, geen groei. De atlas en alle documenten staan nog waar ze stonden."
+    },
+    "unavailable": "De metingen achter deze pagina zijn niet geladen.",
+    "consent": {
+      "label": "Cookiekeuze",
+      "text": "Frondia telt bezoeken anoniem op zijn eigen server, zonder cookies. Met uw toestemming gebruikt het ook Microsoft Clarity, dat cookies plaatst en vastlegt hoe de pagina gebruikt wordt, om te zien waar de pagina moeilijk leesbaar is.",
+      "short": "Mag Microsoft Clarity cookies plaatsen en uw bezoek vastleggen?",
+      "accept": "Aanvaarden",
+      "decline": "Weigeren",
+      "privacy": "Privacy"
+    },
+    "cities": {
+      "brussels": "Brussel",
+      "antwerp": "Antwerpen",
+      "ghent": "Gent",
+      "liege": "Luik",
+      "charleroi": "Charleroi"
+    },
+    "sectorFallback": "Sector {id}",
+    "regions": {
+      "brussels": "Brussels Hoofdstedelijk Gewest",
+      "flanders": "Vlaams Gewest",
+      "wallonia": "Waals Gewest"
+    },
+    "objects": {
+      "one": {
+        "benches": "zitbank",
+        "bicycle_repair": "fietsherstelpunt",
+        "bike_parking": "fietsenstalling",
+        "defibrillators": "defibrillator",
+        "dog_areas": "hondenweide",
+        "drinking_water": "drinkfontein",
+        "fitness_stations": "buitenfitnesstoestel",
+        "picnic_tables": "picknicktafel",
+        "playgrounds": "speeltuin",
+        "public_bookcases": "boekenruilkast",
+        "recycling": "recyclagepunt",
+        "shelters": "schuilhuisje",
+        "toilets": "openbaar toilet",
+        "waste_bins": "vuilbak"
+      },
+      "many": {
+        "benches": "Zitbanken",
+        "bicycle_repair": "Fietsherstelpunten",
+        "bike_parking": "Fietsenstallingen",
+        "defibrillators": "Defibrillatoren",
+        "dog_areas": "Hondenweides",
+        "drinking_water": "Drinkfonteinen",
+        "fitness_stations": "Buitenfitness",
+        "picnic_tables": "Picknicktafels",
+        "playgrounds": "Speeltuinen",
+        "public_bookcases": "Boekenruilkasten",
+        "recycling": "Recyclagepunten",
+        "shelters": "Schuilhuisjes",
+        "toilets": "Openbare toiletten",
+        "waste_bins": "Vuilbakken"
+      },
+      "a": {
+        "benches": "een zitbank",
+        "bicycle_repair": "een fietsherstelpunt",
+        "bike_parking": "een fietsenstalling",
+        "defibrillators": "een defibrillator",
+        "dog_areas": "een hondenweide",
+        "drinking_water": "een drinkfontein",
+        "fitness_stations": "een buitenfitnesstoestel",
+        "picnic_tables": "een picknicktafel",
+        "playgrounds": "een speeltuin",
+        "public_bookcases": "een boekenruilkast",
+        "recycling": "een recyclagepunt",
+        "shelters": "een schuilhuisje",
+        "toilets": "een openbaar toilet",
+        "waste_bins": "een vuilbak"
+      },
+      "no": {
+        "benches": "geen zitbank",
+        "bicycle_repair": "geen fietsherstelpunt",
+        "bike_parking": "geen fietsenstalling",
+        "defibrillators": "geen defibrillator",
+        "dog_areas": "geen hondenweide",
+        "drinking_water": "geen drinkfontein",
+        "fitness_stations": "geen buitenfitnesstoestel",
+        "picnic_tables": "geen picknicktafel",
+        "playgrounds": "geen speeltuin",
+        "public_bookcases": "geen boekenruilkast",
+        "recycling": "geen recyclagepunt",
+        "shelters": "geen schuilhuisje",
+        "toilets": "geen openbaar toilet",
+        "waste_bins": "geen vuilbak"
+      }
+    },
+    "sep": {
+      "dot": " · ",
+      "list": ", ",
+      "semi": "; ",
+      "rank": "nr. {n}"
+    },
+    "pointsSpoken": "{n, plural, one {procentpunt} other {procentpunten}}",
+    "charts": {
+      "hist": "Verdeling van {n} sectoreffecten; drempel ±{thr}",
+      "beforeAfter": "{before}% voor, {after}% na",
+      "series": {
+        "aria": "Effect per zomer, {from}–{to}: boven de drempel in {above} van de {n} zomers",
+        "point": "{season}: {effect}{scenes, select, none {} other { · {scenes} scènes}}",
+        "caption": "Boven de ruis in <b>{above} van de {n}</b> zomers, {from}–{to}{opened, select, none {} other { · geopend in {opened}}}{gap, select, none {} other { · geen zomer in de reeks: {gap}}}"
+      },
+      "rings": {
+        "absent": "{year}: geen zomer in de reeks{note, select, none {} other { — {note}}}",
+        "ring": "{year}: {effect} · {beyond, select, yes {{k}× de drempel} other {binnen de ruis}}{scenes, select, none {} other { · {scenes} scènes}}{note, select, none {} other { — {note}}}",
+        "control": "Vergelijkingsplaats {k}: {name}{km, select, none {} other { · {km} km}}",
+        "aria": "{place}: sinds {completed}, boven de ruis in {above} van {summers, plural, one {# zomer} other {# zomers}}. De breedte van een ring is het effect ten opzichte van {n} vergelijkingsplaatsen, drempel {thr}."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privacy",
+    "lede": "Wat deze site vastlegt, waar dat terechtkomt en hoe u van gedachten kunt veranderen.",
+    "who": "Frondia wordt beheerd door Elena Uvarova, België. Contact: <mail>{email}</mail>.",
+    "counts": "{langs, select, many {Bezoekerstellingen. De site telt paginaweergaven, enkele klikken (de atlas, een audit of een vraag openen, een bestand downloaden, van taal wisselen) en uw cookiekeuze met Umami, dat op onze eigen server in Duitsland (Hetzner) draait; paginaweergaven worden ook geteld door een tweede Umami van ons op dezelfde server, voor een overzicht van al onze sites. Er worden geen cookies geplaatst, er wordt geen IP-adres bewaard en browsers die Do Not Track sturen, worden niet geteld. De tellingen kunnen u niet identificeren: het zijn totalen zonder persoonsgegevens, bewaard zolang de site bestaat.} other {Bezoekerstellingen. De site telt paginaweergaven, enkele klikken (de atlas, een audit of een vraag openen, een bestand downloaden) en uw cookiekeuze met Umami, dat op onze eigen server in Duitsland (Hetzner) draait; paginaweergaven worden ook geteld door een tweede Umami van ons op dezelfde server, voor een overzicht van al onze sites. Er worden geen cookies geplaatst, er wordt geen IP-adres bewaard en browsers die Do Not Track sturen, worden niet geteld. De tellingen kunnen u niet identificeren: het zijn totalen zonder persoonsgegevens, bewaard zolang de site bestaat.}}",
+    "clarity": "Sessieopnamen. Alleen als u op Aanvaarden drukt, laadt de site Microsoft Clarity, dat cookies plaatst en klikken, scrollen en muisbewegingen vastlegt om te tonen waar de pagina moeilijk te gebruiken is. Clarity is een dienst van Microsoft; de gegevens worden bewaard in de Azure-cloud van Microsoft en kunnen op grond van standaardcontractbepalingen worden doorgegeven aan Microsoft in de Verenigde Staten (Microsoft Ireland Operations Limited). Opnamen worden 30 dagen bewaard. Uw keuze zelf, Aanvaarden of Weigeren, wordt een jaar lang bewaard in de lokale opslag van uw browser, niet in een cookie.",
+    "pause": "Als u de beweging van de foto bovenaan de startpagina pauzeert, wordt die keuze bewaard in de sessieopslag van uw browser tot u het tabblad sluit, zodat de foto stil blijft tijdens uw bezoek. Ze bevat geen persoonsgegevens en verlaat uw browser nooit.",
+    "none": "Geen reclame, geen verkoop van gegevens. Frondia zelf volgt u niet van site tot site; als u Clarity aanvaardt, kan Microsoft een cookie plaatsen dat uw browser herkent op andere sites die Clarity gebruiken. Lettertypen en kaarten komen van deze site zelf.",
+    "basis": "Rechtsgrond. Clarity draait alleen met uw toestemming, die u op deze pagina op elk moment kunt intrekken. De anonieme tellingen en de serverlogs berusten op gerechtvaardigd belang: de site laten draaien en beveiligen.",
+    "hosting": "De site draait op een server in Duitsland (Hetzner). De webserver bewaart korte tijd technische logs, met IP-adressen, om de site draaiende en veilig te houden.",
+    "rights": "U kunt vragen welke gegevens we over u bewaren, ze laten verbeteren of wissen, en een klacht indienen bij de Belgische Gegevensbeschermingsautoriteit (gegevensbeschermingsautoriteit.be / autoriteprotectiondonnees.be).",
+    "change": "Uw keuze wijzigen",
+    "meta": {
+      "title": "Privacy — Frondia",
+      "description": "Wat deze site vastlegt, waar dat terechtkomt en hoe u van gedachten kunt veranderen."
+    }
+  },
+  "landing": {
+    "meta": {
+      "title": "Frondia — wat er echt veranderd is",
+      "description": "Een bewijsatlas van vijf Belgische steden, Brussel, Antwerpen, Gent, Luik en Charleroi: wat elke sector mist, wat waar moet komen, en wat er in zijn groen echt veranderd is, getoetst aan een ruisdrempel die op de stad zelf gemeten is."
+    },
+    "words": [
+      "Nul",
+      "Één",
+      "Twee",
+      "Drie",
+      "Vier",
+      "Vijf",
+      "Zes",
+      "Zeven",
+      "Acht",
+      "Negen",
+      "Tien",
+      "Elf",
+      "Twaalf",
+      "Dertien",
+      "Veertien",
+      "Vijftien",
+      "Zestien",
+      "Zeventien",
+      "Achttien",
+      "Negentien",
+      "Twintig"
+    ],
+    "cta": {
+      "atlas": "Open de atlas",
+      "decides": "Hoe het beslist",
+      "method": "Lees de methode"
+    },
+    "of": "{k} van {n}",
+    "srSuffix": ": {name}",
+    "loadError": {
+      "text": "De metingen achter deze pagina zijn niet geladen.",
+      "reload": "Opnieuw laden",
+      "atlas": "Open de atlas"
+    },
+    "hero": {
+      "kicker": "Bewijsatlas · {count} Belgische steden",
+      "title": "Wat er echt <em>veranderd is.</em>",
+      "lede": "Elke zomer ritselt het groen van de stad — en elke nieuwe kaarteditie ritselt mee. Frondia onderscheidt geritsel van groei.",
+      "caption": "Een illustratie, geen meting.",
+      "pause": "Beweging pauzeren"
+    },
+    "anyway": {
+      "rule": "De stad ritselt elke zomer",
+      "ruleRight": "{city} · {before} tot {after}",
+      "title": "Tussen 2017 en 2024 werd heel Brussel groener. <em>{words} plaatsen groeiden echt.</em>",
+      "body": "Vergelijk elke sector met zijn eigen verleden, en {share} van de stad lijkt ‘significant groener’. Vergelijk hem met twaalf plaatsen die er vooraf hetzelfde uitzagen, en dan zijn het er nog {k}.",
+      "tiles": {
+        "raw": "lijken groener, alleen voor en na vergeleken",
+        "effect": "groener boven de ruis, ten opzichte van 12 vergelijkingsplaatsen",
+        "threshold": "drempel van {city} · die van {other} is {p}% breder",
+        "ninove": "Porte de Ninove ten opzichte van zijn auditdrempel"
+      },
+      "rawMap": "Het geritsel: {n} sectoren van Brussel lijken groener, elk alleen vergeleken met zijn eigen verleden",
+      "rawLabel": "Het geritsel",
+      "rawCap": "sectoren lijken significant groener, elk alleen vergeleken met zijn eigen verleden",
+      "effectMap": "De groei: {up} sectoren groener en {down} met verlies boven de ruis, ten opzichte van vergelijkingsplaatsen",
+      "effectLabel": "De groei",
+      "effectCap": "groener boven de ruis ten opzichte van 12 vergelijkingsplaatsen · {down} met verlies · {refused} gearceerd: geen eerlijke vergelijking",
+      "close": "Twaalf plaatsen aftrekken die hetzelfde bleven: dat is het hele product in één stap."
+    },
+    "proof": {
+      "rule": "Ook kaarten ritselen",
+      "ruleRight": "Antwerpen {a}–{b} · Brussel {c}–{d}",
+      "title": "De kaart veranderde. <em>De bomen veel minder.</em>",
+      "body": "Een nieuwe editie van een kaart kan meer verschuiven dan een stad. Voordat Frondia een verandering leest, vraagt het zich af wat er bewoog: de grond, of de manier waarop die in kaart werd gebracht.",
+      "change": "{a} → {b}",
+      "source": "{credit} · {licence}",
+      "photo": "Luchtfoto, {year}",
+      "alt": "{place}, luchtfoto, {year}, met de sector in crème omlijnd",
+      "editions": {
+        "place": "{name} ({district}), Antwerpen",
+        "officialLabel": "Officiële boomkronenkaart",
+        "officialCap": "<en>Copernicus Woody Vegetation</en>, edities {a} en {b}",
+        "aerialLabel": "Luchtfoto’s",
+        "aerialCap": "Groenkaart Vlaanderen, bomen hoger dan 3 m, dezelfde zomers",
+        "close": "De editie van {a} snijdt compacte bossen van 5 ha of meer weg; die van {b} niet. Gelezen als verandering zegt de officiële kaart dat elk van de {count} steden {min} tot {max} procentpunt boomkroonbedekking won. Over de sectoren van Antwerpen en Gent die de luchtfoto’s dekken, won ze {oa} en {og}; de luchtfoto’s zeggen {pa} en {pg}."
+      },
+      "region": {
+        "place": "{name} ({district}), Brussel",
+        "mapLabel": "De eigen kaart van het gewest",
+        "mapCap": "Leefmilieu Brussel, vegetatiebedekking {a} en {b}",
+        "effectLabel": "Procentpunt tegenover twaalf plaatsen",
+        "effectCap": "boven de eigen ruis van de kaart van {thr} procentpunt per sector",
+        "close": "Over het hele gewest geeft dezelfde kaart {s21} aan in {a} en {s23} in {b}. Tegenover twaalf vergelijkbare plaatsen verliezen {loss} sectoren boven de ruis en winnen er {gain}; het sterkste verlies staat op de foto. De rest is een verschuiving over de hele stad. Leefmilieu Brussel noemt de voortgaande verstedelijking de hoofdoorzaak, en betere kartering een kleinere."
+      }
+    },
+    "law": {
+      "rule": "Voor wie",
+      "ruleRight": "Verordening (EU) 2024/1991",
+      "title": "Sinds 2024 telt Europa het stedelijk groen <em>bij wet.</em>",
+      "p1": "Artikel 8 van de natuurherstelverordening: geen nettoverlies van stedelijke groene ruimte en stedelijke boomkroonbedekking van 2024 tot 2030, daarna een toenemende trend, gemonitord met Copernicus. België miste de deadline van 1 september 2026 voor zijn nationaal herstelplan: het Brusselse en het Waalse deel waren niet klaar.",
+      "p2": "Steden waar het groen al boven 45% en de kroonbedekking boven 10% ligt, zijn vrijgesteld. Berekend met de eigen methode van de Commissie, per gemeente:",
+      "stats": {
+        "exempt": "Brusselse gemeenten vrijgesteld",
+        "region": "Brussel als één gewest: onder 45%",
+        "cityExempt": "{city}: boven 45%, vrijgesteld",
+        "cityExemptWater": "{city}: boven 45%, vrijgesteld · {v} zonder water",
+        "cityBelow": "{city}: onder 45%",
+        "cityBelowFarmland": "{city}: onder 45% · {v} met landbouwgrond meegerekend"
+      },
+      "communes": "Zoek uw gemeente: haar toets, haar hectaren, wat er sinds 2024 veranderde",
+      "close": "Officiële lagen zeggen <em>hoeveel</em>. Frondia zegt of het boven de ruis <em>veranderd</em> is, en waarom. In rangorde stemmen ze overeen: de officiële laag voor kroonbedekking en de drie instrumenten voor kroonbedekking die Frondia gebruikt, correleren met r = {lo}–{hi} over de {count} steden."
+    },
+    "audiences": [
+      {
+        "key": "regions",
+        "who": "Gewesten die over artikel 8 rapporteren",
+        "text": "Of groene ruimte en kroonbedekking na de nulmeting van 2024 groeiden of krompen, sector per sector, met de ruis gemeten en elk verlies benoemd. Leefmilieu Brussel in Brussel; in Vlaanderen het ANB en het INBO, dat de monitoring uitvoert; in Wallonië de SPW.",
+        "cta": "Bekijk de steden in de atlas"
+      },
+      {
+        "key": "municipalities",
+        "who": "Gemeenten die iets gebouwd hebben",
+        "text": "Welke sectoren diensten missen, winkels binnen bereik, schaduw of een zitbank; waar de volgende objecten moeten komen; en of een nieuw park de bodem veranderde, zomer na zomer.",
+        "cta": "Open een audit"
+      },
+      {
+        "key": "funders",
+        "who": "Financiers",
+        "text": "Een toets die in de subsidie wordt vastgelegd voordat de werken beginnen. De omtrek, de nulmeting en de vergelijkingsplaatsen worden met een datum vastgelegd, zodat niemand achteraf de omtrek naar het resultaat kan tekenen.",
+        "cta": "Hoe de omtrek wordt vastgelegd"
+      }
+    ],
+    "threshold": {
+      "rule": "Hoe het beslist",
+      "ruleRight": "Methode",
+      "title": "De drempel wordt <em>gemeten,</em> niet gekozen.",
+      "steps": [
+        "Elke sector van de stad is één keer aan de beurt als fictieve ingreep.",
+        "Hij wordt gekoppeld aan twaalf sectoren die vooraf dezelfde groenheid en zomerhitte hadden en ver genoeg liggen om zijn bouwwerven niet te delen.",
+        "Zijn ‘effect’ wordt genoteerd. Er gebeurde daar niets, dus de spreiding van alle {n} effecten is de eigen ruis van de methode. De drempel van de stad ligt waar 95% ervan ophoudt: ±{thr} in {city}."
+      ],
+      "hist": {
+        "effect": "Effecten ten opzichte van vergelijkingsplaatsen · {city} · {n} sectoren",
+        "raw": "Verandering tegenover het eigen verleden · {city} · {n} sectoren",
+        "group": "Wat het histogram toont",
+        "rawButton": "Voor en na",
+        "effectButton": "Tegenover vergelijkingsplaatsen",
+        "marker": "Porte de Ninove",
+        "effectNote": "Gecentreerd rond nul: gemiddeld {mean}. De methode verzint geen effecten waar niets gebeurde.",
+        "rawNote": "De hele verdeling schuift naar rechts: een verschuiving over de hele stad die geen enkel project op zich veroorzaakte."
+      }
+    },
+    "showcase": {
+      "rule": "Eén kaart, drie vragen",
+      "ruleRight": "Het product",
+      "title": "Elke sector beantwoordt <em>drie vragen.</em>",
+      "body": "De atlas brengt vier eerdere tools samen op één eenheid, de statistische sector van Statbel: wat een buurt mist, wat waar moet komen, en of er echt iets veranderde. De eerste twee beschrijven en bevelen aan. De derde toetst aan de eigen ruis van de stad.",
+      "threeAria": "{title}: {cta} in de atlas",
+      "maps": {
+        "need": "Dagelijkse diensten voor een gezin, Brussel: het slechtst bediende vijfde het donkerst",
+        "place": "Waar de volgende openbare toiletten in Brussel komen: tien benoemd, tien ter vergelijking, twintig verder",
+        "change": "Wat er in Brussel veranderde: groener en verlies boven de ruis, ten opzichte van vergelijkingsplaatsen"
+      },
+      "auditRule": "Binnen een audit",
+      "browserAria": "Open de audit van Porte de Ninove in de atlas",
+      "browserBar": "frondia · atlas · ?case=ninove",
+      "alt": "De Frondia-atlas bij de audit van Porte de Ninove: het weergavepaneel met {up} sectoren groener en {down} met verlies boven de ruis, de kaart van Brussel met gearceerde sectoren zonder eerlijke vergelijking, en de auditkaart met een effect van {effect} ten opzichte van twaalf benoemde plaatsen.",
+      "notes": [
+        "<b>De weergave.</b> Trek de vergelijkingsplaatsen af, en een groenere stad krimpt tot wat echt groeide. De legende is de eigen ruis van de methode.",
+        "<b>De kaart.</b> Gearceerde sectoren hadden geen eerlijke vergelijking en krijgen geen oordeel.",
+        "<b>De audit.</b> {effect} ten opzichte van twaalf plaatsen, elk met naam en afstand, zodat iedereen ze kan nagaan."
+      ]
+    },
+    "three": [
+      {
+        "key": "need",
+        "title": "Wat ontbreekt",
+        "text": "Dagelijkse diensten voor een gezin, van een school tot een tramhalte: het slechtst bediende vijfde van de stad is het donkerst. Dezelfde weergave toont winkels binnen bereik, zomerhitte en de 3-30-300-regel.",
+        "cta": "Open de weergave"
+      },
+      {
+        "key": "place",
+        "title": "Wat waar komt",
+        "text": "Waar de volgende openbare toiletten moeten komen, gerangschikt naar de vraag die elk ervan zou dekken. Van elk van veertien soorten objecten werden in september 2026 tien punten benoemd, voordat iemand iets plaatste.",
+        "cta": "Open de punten"
+      },
+      {
+        "key": "change",
+        "title": "Wat er veranderde",
+        "text": "Groener of bruiner boven de eigen ruis van de stad, ten opzichte van twaalf plaatsen die er vooraf hetzelfde uitzagen. Alleen deze stap meet verandering; de andere twee beschrijven en bevelen aan.",
+        "cta": "Open de verandering"
+      }
+    ],
+    "audits": {
+      "rule": "Drie plaatsen, gemeten",
+      "ruleRight": "Audits",
+      "title": "Drie plaatsen <em>gemeten boven de ruis,</em> elk met zijn voorbehoud erbij.",
+      "p1": "Een audit meet het terrein van de werken zelf ten opzichte van twaalf sectoren die in de atlas benoemd zijn, en volgt het effect daarna zomer na zomer, want een park dat één keer groener werd en weer vervaagde, is een ander verhaal.",
+      "p2": "De drempel is geijkt op het eigen instrument en de eigen jaren van de audit, en verschilt dus van de stadsdrempel hierboven. Sleep of tik op een beeld om voor en na te vergelijken.",
+      "altBefore": "{place} voor de werken, Sentinel-2-zomercomposiet {window}",
+      "altAfter": "{place} na de werken, Sentinel-2-zomercomposiet {window}",
+      "tagBefore": "<b>Voor</b>{window}",
+      "tagAfter": "<b>Na</b>{window}",
+      "compare": "Vergelijk {place} voor en na de werken",
+      "noImage": "Geen beeld voor en na: bij 30 m is een park van {ha} hectare zo’n vijftien pixels breed. De reeks hieronder is het bewijs.",
+      "meta": "{city} · {ha} ha · geopend in {completed}",
+      "overThreshold": "{times} de auditdrempel",
+      "standard": "Standaardvenster",
+      "threshold": "Auditdrempel",
+      "above": "Zomers boven de ruis",
+      "controls": "Vergelijking",
+      "named": "{n} benoemd",
+      "open": "Open de audit in de atlas"
+    },
+    "cases": {
+      "ninove": {
+        "city": "Brussel",
+        "place": "Porte de Ninove",
+        "title": "Een braakland langs het kanaal werd een <em>weidepark</em>.",
+        "story": "Het Parc de la Porte de Ninove opende in het najaar van 2019 op een braakliggend terrein waar Anderlecht, Molenbeek en de Stad Brussel samenkomen.",
+        "reading": "Verharde grond nam af en gras nam toe, en een tweede instrument bevestigt dat. De kroonbedekking haalde haar eigen drempel niet: dit is een weidepark, en het oordeel zegt dat ook."
+      },
+      "droogdokkenpark": {
+        "city": "Antwerpen",
+        "place": "Droogdokkenpark",
+        "title": "+0,29 op papier. <em>De helft</em> was een bouwwerf.",
+        "story": "Het Belvédère opende in september 2018 op de oude droogdokken van het Eilandje. Het standaardvenster ‘voor’ viel midden in de werken.",
+        "reading": "Met een nulmeting van vóór de werken is het verdedigbare effect de helft van het getal op papier, en nog altijd driemaal de drempel. Die nulmeting steunt op de twee bruikbare opnamen van de zomer van 2016.",
+        "imageNote": "Het beeld ‘voor’ is het standaardvenster 2017–19, toen de werken al bezig waren. Het getal hierboven gebruikt in plaats daarvan de nulmeting van 2016."
+      },
+      "spoor-noord": {
+        "city": "Antwerpen",
+        "place": "Park Spoor Noord",
+        "title": "Een rangeerterrein werd <em>negentien hectare</em> gras.",
+        "story": "Het rangeerterrein van de NMBS werd in 2008–2009 als park geopend. Sentinel-2 bestond toen nog niet, dus de audit gebruikt Landsat, dat teruggaat tot 2006.",
+        "reading": "De enige zomer binnen de ruis is de droogte van 2018, toen een graspark zijn voorsprong op alles eromheen verliest. Voor deze jaren is er geen tweede instrument."
+      }
+    },
+    "refuse": {
+      "rule": "Wat Frondia weigert te beweren",
+      "ruleRight": "Grenzen",
+      "title": "Een tool die op alles met een getal antwoordt, is nutteloos. <em>Deze zegt waar hij ophoudt.</em>",
+      "body": "Elke regel hieronder kwam erbij nadat zonder die regel een overtuigend maar fout resultaat opdook. De tellingen zeggen hoe vaak elke regel op echte data in werking trad.",
+      "nums": {
+        "cooling": "{v} °C",
+        "coolingLabel": "ruisvloer voor de oppervlaktetemperatuur",
+        "refusedLabel": "oordelen over parken geweigerd",
+        "monitoringLabel": "dalingen in één seizoen bevestigd · {cons} waren bouwwerven",
+        "restorationsLabel": "oudere parkprojecten binnen de ruis",
+        "causeLabel": "Zavelenberg, de sterkste in Brussel"
+      }
+    },
+    "refusals": [
+      {
+        "key": "cooling",
+        "head": "Afkoeling",
+        "text": "Onze ruisvloer voor de oppervlaktetemperatuur is groter dan wat een nieuw park er realistisch aan verandert. Daarom staat nergens op deze site dat een park ‘de straat een graad koeler maakt’."
+      },
+      {
+        "key": "refused",
+        "head": "Plaatsen zonder eerlijke vergelijking",
+        "text": "Een park aan de rand van de schaal heeft niets gelijkaardigs om mee vergeleken te worden. Als de vergelijkingsplaatsen vooraf te veel verschillen, weigert Frondia een oordeel te vellen."
+      },
+      {
+        "key": "monitoring",
+        "head": "Alarm na één seizoen",
+        "text": "Eén bruine zomer is vaker weer dan verlies. Een daling wordt alleen gepubliceerd als een tweede, onafhankelijk instrument de kroon ziet verdwijnen en er geen bouwwerf verschijnt."
+      },
+      {
+        "key": "restorations",
+        "head": "Renovaties",
+        "text": "Paden, vijvers en fonteinen herstellen in een park dat al groen is, is vanuit de ruimte niet te zien. Oudere parkprojecten, waaronder zeven grote renovaties, elk gemeten met een eigen venster en een eigen drempel, blijven binnen de ruis."
+      },
+      {
+        "key": "cause",
+        "head": "Oorzaken zonder documenten",
+        "text": "De sterkste vergroening van Brussel, Zavelenberg, is een natuurreservaat waar de begrazing stopte nadat de boer overleed. Zonder document wordt geen oorzaak genoemd."
+      }
+    ],
+    "questions": {
+      "rule": "Vragen",
+      "ruleRight": "FAQ",
+      "title": "Wat mensen <em>eerst vragen.</em>",
+      "canopyR": "r = {lo}–{hi}",
+      "cityFirst": "{name} ({n} vergelijkbare sectoren)",
+      "city": "{name} ({n})",
+      "widerFirst": "die van {name} is {p}% breder dan die van Brussel",
+      "narrowerFirst": "die van {name} is {p}% smaller dan die van Brussel",
+      "wider": "die van {name} is {p}% breder",
+      "narrower": "die van {name} is {p}% smaller"
+    },
+    "faq": [
+      {
+        "id": "scope",
+        "q": "Gaat Frondia alleen over groen?",
+        "a": "Nee. De atlas toont ook wat elke sector mist, van dagelijkse diensten en winkels binnen bereik tot zomerhitte en de 3-30-300-regel, en waar het volgende van veertien soorten openbare objecten moet komen. Alleen groenheid wordt gemeten als verandering ten opzichte van de eigen ruis van de stad; de rest zijn toestanden en aanbevelingen, en de atlas noemt ze ook zo."
+      },
+      {
+        "id": "trees",
+        "q": "Meet het bomen, of alleen ‘groen’?",
+        "a": "Het belangrijkste instrument is groenheid: de vegetatie-index van Sentinel-2. Een tweede, Dynamic World, onderscheidt bomen, gras en verharde grond, en een verlies aan kroonbedekking wordt alleen gepubliceerd als beide het eens zijn. In rangorde stemmen de kroonbedekking van Frondia en de officiële en onafhankelijke kroonlagen overeen met {canopyR}."
+      },
+      {
+        "id": "outline",
+        "q": "Wie tekent de omtrek van een project? Kan die naar het resultaat worden getekend?",
+        "a": "De omtrek ligt vast voordat er ook maar één getal berekend wordt: een benoemde parkpolygoon uit OpenStreetMap, of de eigen tekening van de opdrachtgever. Voor werken die nog niet begonnen zijn, worden de omtrek, de nulmeting en de twaalf vergelijkingsplaatsen geregistreerd met een datum en een hash. Zes Brusselse projecten zijn vandaag zo geregistreerd."
+      },
+      {
+        "id": "wrong",
+        "q": "Hoe vaak vergist de detector zich?",
+        "a": "Getoetst aan een onafhankelijke kaart op basis van luchtfoto’s, de Groenkaart Vlaanderen 2018 tegenover 2021 en 2024, in Antwerpen en Gent, met dezelfde vergelijkingsplaatsen en een eigen ruisdrempel. Waar de luchtfotokaart geen verandering boven de ruis ziet, is de satelliet het eens in {spec}. Waar de satelliet zegt dat de kroonbedekking boven de ruis veranderde, is de kaart het maar eens in {agree}; de scherpste verschillen, nagekeken op luchtfoto’s, waren weelderige weiden na de droogte van 2018 die als bomen gelezen werden, en een parkvijver die opnieuw gevuld werd. Een verandering boven de ruis is dus een kandidaat, geen bewijs: een verlies wordt alleen benoemd als een tweede instrument en documenten het eens zijn."
+      },
+      {
+        "id": "official",
+        "q": "Wat is het verschil met de officiële Copernicus-lagen?",
+        "a": "Die lagen zeggen hoeveel groen en kroonbedekking een stad heeft. Frondia zegt of dat boven de eigen ruis van de stad veranderde, waar, en, met documenten, waarom. Het bouwt op die lagen voort."
+      },
+      {
+        "id": "small",
+        "q": "En straatbomen en kleine pleinen?",
+        "a": "Onder ongeveer een hectare verdrinkt het signaal: vier beplante straten in een sector van 19 hectare voegen ruwweg een halve hectare kroonbedekking toe, veertig keer verdund. Voor kleine dingen toetst Frondia iets anders: of het object verscheen op punten die vooraf benoemd waren, met niet-benoemde punten als vergelijking."
+      },
+      {
+        "id": "cities",
+        "q": "Welke steden, en kan het naar een andere stad?",
+        "a": "{cities}. De drempel hoort bij het paar stad en instrument: {wider}. Een nieuwe stad krijgt haar eigen ijking."
+      },
+      {
+        "id": "current",
+        "q": "Hoe actueel is het?",
+        "a": "Zomercomposieten van 2017 tot 2026. De monitoring loopt elk seizoen, tot nu toe {seasons} in elke stad, en elk seizoen krijgt zijn eigen drempel."
+      }
+    ]
+  },
+  "dossier": {
+    "meta": {
+      "title": "Dossier · {name} · Frondia",
+      "titleNone": "Dossier · Frondia"
+    },
+    "kicker": "Dossier · {commune} · sector {id}",
+    "title": "{name}: {gap, select, half {de helft van de mediane kroonbedekking van de stad} below {kroonbedekking {p}% onder de mediaan van de stad} at {kroonbedekking op de mediaan van de stad} other {kroonbedekking {p}% boven de mediaan van de stad}}, {pop} inwoners",
+    "standfirst": "Waarom geld voor vergroening naar deze sector moet gaan, en hoe het resultaat getoetst wordt met dezelfde methode die de toestand ervan mat.",
+    "facts": [
+      {
+        "k": "Eenheid",
+        "v": "Statbel-sector"
+      },
+      {
+        "k": "Nulmeting",
+        "v": "zomer 2024"
+      },
+      {
+        "k": "Beelden",
+        "v": "Sentinel-2, Dynamic World"
+      },
+      {
+        "k": "Gemeten tot",
+        "v": "zomer {last}"
+      }
+    ],
+    "print": "Afdrukken of opslaan als pdf",
+    "inAtlas": "Open in de atlas",
+    "online": "Deze pagina",
+    "missing": "Deze sector ligt niet in het gemeten deel van de stad, dus er is geen dossier voor. Kies een andere in de atlas.",
+    "noPick": "De openbare regel kiest in {city} geen sector. Hij vraagt een gemeente die de wet meetelt, en {city} is vrijgesteld op grond van artikel 8, lid 1: {green} groen in de stedelijke centra en clusters. Elke sector heeft wel zijn dossier; kies er een in de atlas.",
+    "picked": "Hoe de sector gekozen werd. Volgens een regel, niet met de hand: het laagste derde naar inkomen, het laagste derde naar kroonbedekking, een zomerse oppervlaktetemperatuur minstens {minHeat} °C boven de mediaan van de stad, een gemeente die niet onder de vrijstelling van artikel 8, lid 1 valt, minstens {minRes} inwoners; en daarvan de sector met de meeste kinderen onder 15. Er voldoen er {n}; dit dossier gaat over de eerste.",
+    "money": "€ {v}",
+    "passport": {
+      "eyebrow": "Steekkaart",
+      "title": "Wie hier woont en wat er in de buurt is",
+      "residents": "inwoners",
+      "children": "kinderen onder 15",
+      "seniors": "65 jaar en ouder",
+      "income": "mediaan belastbaar inkomen, Statbel 2023",
+      "canopy": "kroonbedekking, kans per klasse",
+      "built": "bebouwd en verhard, kans per klasse"
+    },
+    "standing": "Naar kroonbedekking hoort de sector bij de laagste {tp}% van de stad, naar groenheid bij de laagste {np}%.",
+    "income": {
+      "both": "Het inkomen ligt onder de grens van het laagste derde (€ {cut}): hier komen twee tekorten samen, weinig groen en weinig geld.",
+      "one": "Het mediane inkomen van de sector is € {inc}; de grens van het laagste derde ligt op € {cut}.",
+      "none": "Voor deze sector is er geen inkomenscijfer."
+    },
+    "scale": {
+      "eyebrow": "Toestand",
+      "title": "Waar de sector staat op de schaal van de stad",
+      "median": "stadsmediaan",
+      "rows": {
+        "t24": "Boomkroonbedekking",
+        "n24": "Groenheid",
+        "b24": "Bebouwd"
+      },
+      "reading": "{side, select, at {op de mediaan van de stad} below {{p}% onder de mediaan van de stad} other {{p}% boven de mediaan van de stad}}",
+      "note": "Het streepje is de mediaan van de stad, de balk de sector. Klassewaarden zijn waarschijnlijkheden, geen gedeelten van de grond: vergelijk ze tussen sectoren, maar lees ze niet als percentages van de oppervlakte."
+    },
+    "trend": {
+      "eyebrow": "Trend",
+      "title": "Vanzelf wordt het niet beter",
+      "body": "Ten opzichte van twaalf vergelijkingssectoren veranderde de groenheid over de zomers {w} met {ne}, bij een significantiedrempel van {nt}, en de kroonbedekking met {te}, bij een drempel van {tt}.",
+      "means": {
+        "noise": "De verandering bleef onder de drempel: de sector staat stil.",
+        "down": "De groenheid daalde significant ten opzichte van vergelijkbare sectoren.",
+        "up": "De groenheid steeg significant ten opzichte van vergelijkbare sectoren.",
+        "refused": "Voor deze sector bestaan geen vergelijkbare sectoren, dus er wordt geen oordeel gegeven."
+      },
+      "background": "De vergelijking gebeurt met vergelijkingsplaatsen, niet met het eigen verleden van de sector. Zonder de vergelijkingsplaatsen af te trekken, laat de verschuiving van {shift} over de hele stad {kRaw} van de {n} sectoren ({share}) ‘significant groener’ lijken; na aftrek blijven er {kEff} over.",
+      "after": "Na de nulmeting, in de seizoenen {span}: {items}.",
+      "afterItem": "{year}, {kind} ({effect} NDVI)",
+      "afterNone": "Na de nulmeting, in de seizoenen {span}, overschreed niets in de sector de drempel.",
+      "kinds": {
+        "construction": "bouwwerf, volgens het tweede instrument",
+        "confirmed": "verlies aan kroonbedekking, beide instrumenten zijn het eens",
+        "unconfirmed": "verlies aan groenheid dat het tweede instrument niet bevestigde",
+        "gained": "winst aan groenheid boven de drempel"
+      },
+      "notProof": {
+        "lead": "Wat dit niet bewijst.",
+        "body": "Geen groei is geen bewijs dat de stad niets deed: hier kunnen werken zijn uitgevoerd die de methode niet ziet. Herstel van bestaand groen is door de opzet van de methode niet in deze cijfers te zien, en verspreide straatbeplanting verdrinkt in de oppervlakte van de sector."
+      },
+      "law": {
+        "counted": {
+          "lead": "De wet telt deze sector mee.",
+          "body": "De gemeente {commune} komt niet in aanmerking voor de vrijstelling van artikel 8, lid 1: {green} groen in de stedelijke centra en clusters, bij een drempel van 45% (de methode van de Commissie, CLCplus 2021). Wat hier geplant wordt of verloren gaat, telt mee in het nationale totaal, dat geen nettoverlies mag lijden."
+        },
+        "exempt": {
+          "lead": "De gemeente valt mogelijk buiten de wet.",
+          "body": "De gemeente {commune} komt in aanmerking voor de vrijstelling van artikel 8, lid 1: {green} groen in de stedelijke centra en clusters, bij een drempel van 45%. Als de lidstaat haar uitsluit, tellen veranderingen hier niet mee in het nationale totaal, en steunt het pleidooi eerder op rechtvaardigheid en hitte dan op de wet."
+        }
+      }
+    },
+    "fair": {
+      "eyebrow": "Rechtvaardigheid",
+      "title": "{kind, select, less {Het armste derde van de stad leeft met minder dan de helft van de kroonbedekking} half {Het armste derde van de stad leeft met de helft van de kroonbedekking} share {Het armste derde heeft {p}% minder kroonbedekking dan het rijkste} other {De kroonbedekking is bijna gelijk verdeeld over de inkomensgroepen}}",
+      "head": [
+        "Groep",
+        "Mediaan inkomen",
+        "Kroonbedekking 2024",
+        "Groenheid 2024"
+      ],
+      "rows": {
+        "lowest": "Laagste derde naar inkomen",
+        "highest": "Hoogste derde"
+      },
+      "asOf": "Niveaus van zomer 2024, gewogen naar bevolking; inkomensderden per sector, Statbel 2023.",
+      "note": "De kroonbedekking van het laagste derde is {ratio} van die van het hoogste derde. Verordening (EU) 2024/1991 eist tegen 2030 geen nettoverlies van groen en kroonbedekking, maar zegt niets over hoe die over de buurten verdeeld zijn; VN-indicator 11.7 en de Tree Equity Score doen dat wel.",
+      "group": {
+        "below": "De sector ligt zelfs voor zijn eigen groep onder het gemiddelde.",
+        "level": "Voor zijn groep doet de sector het niet slechter dan gemiddeld: het tekort wordt hier gedeeld door het hele laagste derde.",
+        "out": "De sector hoort niet bij het laagste inkomensderde."
+      },
+      "kids": {
+        "lead": "Wie hier schaduw mist.",
+        "body": "Kinderen onder 15 in de sector: {k} ({kp} van de inwoners); mensen van 65 jaar en ouder: {o} ({op}), van wie {o80} ouder dan 80. Dat zijn de groepen voor wie hitte het gevaarlijkst is. In de hele stad woont {third} van alle kinderen in het derde van de sectoren met de minste kroonbedekking{hardest, select, yes {, dus het tekort aan schaduw is niet gelijk verdeeld, en het treft hen het hardst} other {, ongeveer hun aandeel in de stad}}.",
+        "inThird": "Deze sector hoort bij dat derde."
+      },
+      "rule": {
+        "lead": "De 3-30-300-regel en hitte.",
+        "leadBoth": "Hier komen de regel en de hitte samen.",
+        "canopyFail": "de kroonbedekking beslaat {c} van de sector in plaats van 30%",
+        "parkFail": "{p} van de oppervlakte ligt binnen 300 m van een park in plaats van de helft",
+        "body": "Volgens de 3-30-300-regel van de stadsbosbouw {verdict, select, none {is aan geen van beide meetbare delen van de regel voldaan: {fails}} one {is aan één deel van de regel niet voldaan: {fails}} other {is aan beide meetbare delen van de regel voldaan}}. De zomerse oppervlaktetemperatuur is hier {lst} °C, {exc} °C {side, select, above {boven} other {onder}} de mediaan van de stad. Hoe minder kroonbedekking, hoe warmer: in de hele stad is het verband {strength, select, deterministic {bijna deterministisch} strong {sterk} other {merkbaar}} (r = {r}){both, select, yes {, en deze sector zit op beide schalen tegelijk aan het slechte uiteinde} other {}}. De temperatuur beschrijft hier een toestand: het project meet niet of een ingreep afkoeling brengt, omdat de significantiedrempel daarvoor groter is dan een realistisch parkeffect."
+      }
+    },
+    "place": {
+      "eyebrow": "Wat hier komt",
+      "title": "Waar City Planner de eerste objecten plaatst",
+      "lede": "Gerangschikte punten van de planner in deze sector: {n}. De eerste tien van elke soort werden op {date} benoemd, de volgende tien zijn hun vergelijking: of er een object verschijnt, wordt getoetst aan de geschiedenis van de kaart, op hetzelfde adres dat dit dossier noemt.",
+      "tree": "Bomen worden per sector gerangschikt: minder dan {target} boomkroon, een bodem warmer dan de mediaan van de stad, bewoners die met beide leven. Deze sector staat op nummer {rank} van de lijst van zijn stad. {role, select, named {Hij hoort bij de tien die op {date} werden genoemd, vóór de controle;} other {Hij hoort bij de volgende tien, bewaard als vergelijking voor de tien die op {date} werden genoemd;}} {reg, select, yes {de controle telt eerst de aanplantingen in het register van de stad na de kopie van {copy}, en daarna de boomkroon tegenover twaalf vergelijkbare plaatsen, zodra jonge bomen van boven te zien zijn.} other {de stad publiceert geen bomenregister, dus de controle is de boomkroon tegenover twaalf vergelijkbare plaatsen, zodra jonge bomen van boven te zien zijn.}}",
+      "none": "Geen van de eerste twintig kandidaten van City Planner, van welke soort ook, valt in deze sector.",
+      "role": {
+        "named": "benoemd",
+        "control": "vergelijking"
+      }
+    },
+    "cases": {
+      "eyebrow": "Wat een ingreep kan opleveren",
+      "title": "Drie gemeten gevallen in plaats van beloften",
+      "head": {
+        "intervention": "Ingreep",
+        "effect": "Effect",
+        "threshold": "Drempel",
+        "times": "Keer",
+        "reading": "Lezing"
+      },
+      "what": {
+        "ninove": "braakland langs het kanaal → park, {ha} ha",
+        "droogdokkenpark": "oude dokken → een park aan de kade",
+        "spoor-noord": "rangeerterrein → park, {ha} ha"
+      },
+      "series": "Boven de ruis in {k} van de {n} zomers na de opening.",
+      "note": "Dit is geen voorspelling voor deze sector, maar de bandbreedte die bij vergelijkbare werken gemeten is: een verandering van bodembedekking over het grootste deel van een terrein geeft een effect van meer dan twee keer de drempel, en dat houdt jaren stand. De grootte hangt af van wat er vroeger lag: braakland levert meer op dan een kade die al groen was.",
+      "left": {
+        "lead": "Wat deze tabel bewust weglaat.",
+        "body": "Afkoeling: de significantiedrempel voor de oppervlaktetemperatuur kwam uit op 1,32 °C, meer dan het realistische effect van een stadspark, dus hier staan geen beweringen over graden. De kostprijs van een effect: prijzen zijn alleen binnen één soort werken vergelijkbaar, en de budgetten van vergelijkbare projecten zijn maar gedeeltelijk gepubliceerd."
+      }
+    },
+    "commitment": {
+      "eyebrow": "Engagement",
+      "title": "Wat we precies zullen toetsen, en wanneer we een oordeel weigeren",
+      "items": [
+        {
+          "lead": "De omtrek van de werken ligt vast voordat ze beginnen.",
+          "body": "De polygoon, zijn hash en de datum gaan het register in vóór de eerste werkdag. Achteraf de omtrek tekenen rond wat groen werd, wordt zo onmogelijk."
+        },
+        {
+          "lead": "Tegelijk worden de vergelijkingsplaatsen benoemd.",
+          "body": "{controls} sectoren die op het terrein lijken in zijn toestand vóór de werken, geen enkele dichter dan {km} km. De lijst wordt vóór de meting gepubliceerd; als er geen vergelijkbare plaatsen bestaan, wordt dat als weigering geregistreerd, niet bijgesteld."
+        },
+        {
+          "lead": "De drempel komt uit de ijking van de stad,",
+          "body": "niet gekozen naar het resultaat: de nulverdeling wordt berekend met dezelfde koppeling en dezelfde beelden als de audit zelf, zoals de drempel van de trend hierboven."
+        },
+        {
+          "lead": "Het vergelijkingsvenster wordt opgebouwd vanaf de opleveringsdatum:",
+          "body": "een nulmeting voordat de werken beginnen, de beoordeling twee jaar nadat ze eindigen. Vallen de werken binnen een venster, dan weigert de audit te rekenen."
+        },
+        {
+          "lead": "Voor een oordeel zijn twee instrumenten nodig.",
+          "body": "Groenheid en klassen van bodembedekking uit dezelfde beelden: het eerste zegt dat er iets veranderde, het tweede wat precies, tot ‘onthard maar niet beplant’ toe."
+        },
+        {
+          "lead": "Een weigering is een gepubliceerde uitkomst.",
+          "body": "Minder dan {minScenes} beelden in een venster, een verschil met de vergelijkingsplaatsen groter dan {maxGap}, werken buiten het venster: dan volgt geen oordeel, en dat wordt naast de resultaten gepubliceerd."
+        }
+      ]
+    },
+    "limits": {
+      "eyebrow": "Grenzen",
+      "title": "Wat de methode niet zal meten, ook als alles goed gebeurt",
+      "items": [
+        "Afkoeling van lucht of oppervlak: de ruis van dat kanaal is groter dan een realistisch effect.",
+        "Herstel van bestaand groen: paden en vijvers herstellen verandert de vegetatie niet.",
+        "Verspreide straatbeplanting, gemeten op het niveau van een sector: een halve hectare nieuwe kroonbedekking op negentien hectare gaat verloren.",
+        "De oorzaak van een verandering: de satelliet noemt de plaats, documenten noemen de oorzaak. Zonder document wordt een verandering gepubliceerd als meting, niet als iemands verdienste.",
+        "Jonge aanplant in de eerste jaren: jonge boompjes op een weide ogen voor de satelliet minder groen dan het gras dat ze vervingen, en echte vergroening kan als verlies gemeten worden."
+      ]
+    },
+    "colophon": [
+      {
+        "k": "Bronnen",
+        "v": "De laag artikel 8 van het stadspakket (niveaus van 2024 en de trend ten opzichte van de vergelijkingsplaatsen), het stadsmanifest (drempels en hun herkomst), de auditgevallen, het register van benoemde punten, Statbel (sectoren, bevolking, inkomen, de volkstelling van 2021). Beelden: Copernicus Sentinel-2 met het Cloud Score+-masker, Google Dynamic World V1."
+      },
+      {
+        "k": "Bewijs",
+        "v": "Elk getal leidt naar een laag van het stadspakket, en de grenzen staan naast de getallen, niet in een voetnoot. Het bewijs verandert niet met de formulering: getallen, drempels en vergelijkingsplaatsen worden uit die bestanden herberekend."
+      }
+    ],
+    "data": {
+      "label": "Gegevens",
+      "link": "Elke laag achter dit dossier als CSV, met zijn manifest →"
+    }
+  },
+  "commune": {
+    "meta": {
+      "title": "{name} · Gemeente · Frondia",
+      "titleIndex": "Gemeenten · Frondia"
+    },
+    "find": {
+      "label": "Zoek een gemeente",
+      "placeholder": "Gemeente of NIS-code",
+      "none": "Geen gemeente van de vijf steden komt overeen.",
+      "hint": "{n} gemeenten in Brussel, Antwerpen, Gent, Luik en Charleroi",
+      "nis": "NIS {code}"
+    },
+    "index": {
+      "kicker": "Gemeenten",
+      "title": "Wat de wet meetelt in uw gemeente",
+      "lede": "Artikel 8 van de natuurherstelverordening telt stedelijk groen en boomkroonbedekking gemeente per gemeente. Zoek de uwe: haar toets, haar nulmeting in hectare, en wat er sinds het basisjaar 2024 veranderde."
+    },
+    "kicker": "Gemeente · {region} · NIS {code}",
+    "title": "{name}: {exempt, select, yes {buiten de telling van artikel 8} other {meegeteld voor artikel 8}}",
+    "standfirst": "Wat de natuurherstelverordening in deze gemeente meetelt, wat er sinds het basisjaar 2024 veranderde, en waar u in de atlas moet kijken.",
+    "facts": [
+      {
+        "k": "Inwoners",
+        "v": "{pop}"
+      },
+      {
+        "k": "Oppervlakte",
+        "v": "{area} km²"
+      },
+      {
+        "k": "Gemeten sectoren",
+        "v": "{measured} van {sectors}"
+      },
+      {
+        "k": "LBE",
+        "v": "{lau}"
+      }
+    ],
+    "inAtlas": "Open in de atlas",
+    "data": "Gegevens en het Reportnet-bestand",
+    "pc": "{v}%",
+    "ha": "{v} ha",
+    "ndvi": "{v} NDVI",
+    "law": {
+      "eyebrow": "Artikel 8, lid 1",
+      "title": "{kind, select, exempt {Boven beide grenzen: buiten de telling} both {Onder beide grenzen: meegeteld} green {{p} procentpunt onder de grens voor groen: meegeteld} other {Onder de grens voor kroonbedekking: meegeteld}}",
+      "green": "Groen in stedelijke centra en clusters",
+      "canopy": "Boomkroonbedekking in die zones",
+      "perResident": "Boomkroonbedekking per inwoner, hele gemeente",
+      "exempt": "Vrijgesteld",
+      "counted": "Meegeteld",
+      "vsLine": "{p} procentpunt {side, select, above {boven} other {onder}} de grens van {line}%",
+      "vsRegion": "{p} procentpunt {side, select, above {boven} other {onder}} het gewest",
+      "m2": "m²",
+      "reading": "In haar stedelijke centra en clusters is {green}% groen en bedraagt de boomkroonbedekking {canopy}%. Een gemeente valt alleen buiten de nationale telling boven 45% en 10%; {name} {exempt, select, yes {valt erbuiten} other {valt er niet buiten}}. {stable, select, yes {Het oordeel blijft overeind onder elke lezing van artikel 3, punt 20 die de toets doorrekent.} other {Een van de andere lezingen van artikel 3, punt 20 keert het oordeel om: zie de tabel.}}",
+      "region": "Alle {n} gemeenten samen: {green}% groen en {canopy}% kroonbedekking, dus het gewest als geheel wordt {exempt, select, yes {niet meegeteld} other {meegeteld}}.",
+      "readings": {
+        "official": "Officiële lezing",
+        "with_arable": "Akkerland meegeteld als groen",
+        "without_water": "Water niet meegeteld als groen",
+        "statbel_sectors": "Gemeente opgebouwd uit Statbel-sectoren"
+      },
+      "cols": [
+        "Lezing",
+        "Groen",
+        "Kroonbedekking",
+        "Oordeel"
+      ],
+      "notComputed": "niet berekend"
+    },
+    "base": {
+      "eyebrow": "De nulmeting",
+      "title": "In hectare, op de recentste open gegevens (2021)",
+      "cols": [
+        "Stedelijk ecosysteem",
+        "Oppervlakte",
+        "Groen",
+        "Kroonbedekking"
+      ],
+      "ucuc": "Stedelijke centra en clusters",
+      "lau": "De hele gemeente",
+      "note": "De vorm van de nationale nulmeting van Nederland (PBL, 25 augustus 2026), met de twee afbakeningen die de Commissie aan een land overlaat. De Woody Vegetation Layer 2021 is alleen toegestaan voor ontwerpplannen; de laag van 2024 wordt gedeeld met nationale overheden, niet gepubliceerd."
+    },
+    "balance": {
+      "eyebrow": "Sinds het basisjaar {base}",
+      "title": "{v} kroonbedekking boven de ruis tot zomer {s}",
+      "rows": {
+        "green": "Stedelijk groen",
+        "trees": "Boomkroonbedekking",
+        "built": "Bebouwd"
+      },
+      "cols": [
+        "Zomer {s}",
+        "Verloren",
+        "Gewonnen",
+        "Netto"
+      ],
+      "note": "Hectare zoals Dynamic World de grond indeelt, opgeteld over de sectoren van deze gemeente die ten opzichte van hun twaalf vergelijkingsplaatsen boven de ruis veranderden. Niet de officiële lagen, die voor 2025 en 2026 nog niet bestaan.",
+      "events": "Wat de seizoensbulletins hier noemen",
+      "none": "Geen enkele sector hier werd in {a} of {b} aangeduid als verlies aan kroonbedekking of als bouwwerf.",
+      "kinds": {
+        "canopyLoss": "verlies aan kroonbedekking, twee instrumenten zijn het eens",
+        "construction": "bouwwerf"
+      }
+    },
+    "change": {
+      "eyebrow": "Zomers {w}",
+      "title": "{up} {n, plural, one {sector} other {sectoren}} groener en {down} met verlies boven de ruis, op {m} gemeten",
+      "green": "Groenheid ten opzichte van vergelijkingsplaatsen",
+      "built": "Bebouwde grond ten opzichte van vergelijkingsplaatsen",
+      "words": {
+        "up": "groener",
+        "down": "verlies",
+        "sealed": "verhard",
+        "unsealed": "onthard"
+      },
+      "noneGreen": "Geen enkele sector hier veranderde boven de ruis.",
+      "counts": "Bebouwde grond: {up} verhard en {down} onthard boven de ruis."
+    },
+    "record": {
+      "eyebrow": "Vastgelegd",
+      "title": "Geregistreerd, geaudit en het dossier",
+      "registered": "Geregistreerd vóór de werken",
+      "cases": "Audits",
+      "dossier": "Het dossier dat de openbare regel kiest",
+      "refused": "geen vergelijkbare plaatsen: geweigerd vóór de werken"
+    },
+    "trees": {
+      "eyebrow": "Het bomenregister van de stad",
+      "title": "{n} bomen in beheer van de stad",
+      "snapshot": "Op {d} werd een momentopname van het register gemaakt. Vanaf de volgende worden de bomen die eruit verdwijnen (gekapt, dood of opnieuw opgemeten; het register zegt niet welke) per sector geteld.",
+      "total": "{n} bomen geplant van {a} tot {b}, volgens het plantjaar in het register zelf.",
+      "whereTitle": "Waar de aanplant terechtkwam, 2020–2025",
+      "cols": [
+        "Derde van de bewoonde sectoren",
+        "Aanplant",
+        "Inwoners",
+        "Per 1.000 inwoners, dit derde tegenover de rest",
+        "Per 10 ha, dit derde tegenover de rest"
+      ],
+      "rows": {
+        "least_canopy": "Minste kroonbedekking",
+        "poorest": "Armste",
+        "hottest": "Warmste"
+      },
+      "vs": "{a} vs. {b}",
+      "reading": "Per inwoner gingen er minder bomen naar het derde met de minste kroonbedekking: {resIn} per 1.000 inwoners, tegenover {resOut} in de rest. Per hectare gingen er meer naartoe: {haIn} per 10 ha, tegenover {haOut}. Die sectoren zijn dicht bevolkt, dus beide lezingen kloppen; geen van beide zegt of de bomen daar meer nodig waren.",
+      "source": "Het eigen register van de stad, {l}. Alleen bomen die de stad beheert; tuinen en privégrond staan er niet in."
+    },
+    "limits": [
+      "Artikel 8, lid 1 wordt gemeten met de methode van de Commissie op open gegevens van 2021; de Woody Vegetation Layer 2024 is niet openbaar.",
+      "CLCplus-klassen koppelen aan artikel 3, punt 20 is onze lezing; daarom rekent de tabel het oordeel ook door onder de andere lezingen.",
+      "De hectaren na het basisjaar komen van een satellietclassificatie: een park dat bomen verliest, kan als meer bebouwd uitkomen.",
+      "Een getal boven de ruis zegt dat er iets veranderde, niet waarom. De oorzaak komt uit documenten."
+    ],
+    "missing": "Geen gemeente van de vijf steden heeft deze code."
+  },
+  "data": {
+    "meta": {
+      "title": "Gegevens · {city} · Frondia",
+      "titleNone": "Gegevens · Frondia"
+    },
+    "kicker": "Gegevens",
+    "title": "Elk getal, en hoe het tot stand kwam",
+    "lede": "Elke laag achter de atlas als CSV, en het bestand voor artikel 8 als het GeoPackage dat de Commissie vraagt, met wat het meet, hoe, uit welke bron en met welke drempel, zodat elk getal op de site alleen uit de bestanden opnieuw te berekenen is.",
+    "facts": [
+      {
+        "k": "Stad",
+        "v": "{name}"
+      },
+      {
+        "k": "Lagen",
+        "v": "{n}"
+      },
+      {
+        "k": "Formaat",
+        "v": "{formats}"
+      },
+      {
+        "k": "Koppelsleutel",
+        "v": "id van de Statbel-sector; LBE-code voor de wet"
+      }
+    ],
+    "city": "Stad",
+    "manifest": "Manifest (JSON)",
+    "inAtlas": "Open de atlas",
+    "download": "{fmt} downloaden",
+    "details": "Methode, bron en kolommen",
+    "file": {
+      "rows": "{count, plural, one {{n} rij} other {{n} rijen}}",
+      "polygons": "{count, plural, one {{n} polygoon} other {{n} polygonen}}",
+      "kb": "{kb} kB"
+    },
+    "computed": "berekend op {d}",
+    "threshold": "Drempel {v}",
+    "noThreshold": "Geen significantiedrempel: een toestand",
+    "rows": {
+      "method": "Methode",
+      "source": "Bron",
+      "threshold": "Drempel",
+      "limits": "Grenzen",
+      "licence": "Licentie",
+      "credit": "Bronvermelding"
+    },
+    "columns": [
+      "Kolom",
+      "Wat ze bevat"
+    ],
+    "columnsLabel": "{title}: kolommen",
+    "groups": {
+      "changed": {
+        "label": "Wat veranderde",
+        "title": "De trend ten opzichte van vergelijkingsplaatsen, en elk seizoen sinds de nulmeting van 2024."
+      },
+      "law": {
+        "label": "De wet",
+        "title": "De eigen toets van de Commissie om een gemeente buiten artikel 8 te laten, de nulmeting in hectare, en het bestand dat een land oplaadt."
+      },
+      "missing": {
+        "label": "Wat ontbreekt",
+        "title": "Toestanden, geen veranderingen: wat een sector vandaag mist."
+      },
+      "place": {
+        "label": "Wat waar komt",
+        "title": "De gerangschikte plaatsen van City Planner en de dekking die ze opleveren."
+      },
+      "checks": {
+        "label": "Kruiscontroles",
+        "title": "Onafhankelijke instrumenten waaraan onze boomklasse getoetst wordt."
+      },
+      "sectors": {
+        "label": "Sectoren",
+        "title": "De eenheid waarop elk bestand gekoppeld wordt."
+      }
+    },
+    "colophon": [
+      {
+        "k": "Licenties",
+        "v": "De lagen van Frondia worden aangeboden onder CC BY 4.0, met de bronnen vermeld in elke laag. Lagen die op OpenStreetMap gebouwd zijn, zijn afgeleide databanken en blijven onder de ODbL 1.0."
+      },
+      {
+        "k": "Citeren als",
+        "v": "Frondia, ‘'<'titel van de laag'>'’, '<'stad'>', {site}, met de datum waarop de laag berekend werd."
+      },
+      {
+        "k": "Herberekenen",
+        "v": "Het manifest somt elke kolom op. De sectorgrenzen zijn open gegevens van Statbel: koppel op id."
+      }
+    ],
+    "filesInEnglish": "De bestanden en hun manifest zijn in het Engels.",
+    "ld": {
+      "name": "Frondia — {city}: elke laag achter de atlas",
+      "country": "België"
+    }
+  },
+  "register": {
+    "meta": {
+      "title": "Register · Frondia"
+    },
+    "kicker": "Register van ingrepen · Brussel",
+    "title": "Waartoe de wijkcontracten zich verbinden",
+    "readAll": "Brussel heeft sinds 1994 {total} wijkcontracten uitgevoerd. Een taalmodel las de pagina van elk contract en somde elke vergroeningsmaatregel op in de eigen woorden van het contract.",
+    "lede": "{all} {check}",
+    "notFinished": "De controle is nog niet af.",
+    "facts": {
+      "contracts": "Contracten",
+      "described": "Beschreven",
+      "readBy": "Gelezen door",
+      "reader": "Claude Sonnet 5"
+    },
+    "csv": "Register (CSV)",
+    "checkFile": "De controle (JSON)",
+    "of": "{k} van {n}",
+    "range": "{lo}–{hi}%",
+    "rate": "{pct} · {range}",
+    "check": {
+      "interval": "{pct} · 95%-interval {range}",
+      "quotesMissing": "Citaten niet gevonden op de pagina van het contract",
+      "readers": [
+        {
+          "who": "model",
+          "name": "Taalmodel",
+          "sub": "Claude Sonnet 5, prompt greening_v1"
+        },
+        {
+          "who": "rule",
+          "name": "Regel",
+          "sub": "een vergroeningswoord en een toekomstsignaal in één zin"
+        }
+      ],
+      "drawn": "{n} contracten getrokken met de seed ‘{seed}’ uit de {pool} waarvan de pagina minstens 600 eigen tekens telt, voordat er één gelezen werd.",
+      "bars": "Elke balk is het Wilson-interval van 95%, en het streepje de schatting.",
+      "quotesFound": "Elk citaat staat woord voor woord op de pagina van zijn contract: {k} van {n}.",
+      "pending": "De 30 contracten worden gecontroleerd. De percentages verschijnen hier zodra elk label binnen is."
+    },
+    "dates": "{from} tot {to}",
+    "ref": {
+      "person": {
+        "label": "Met de hand gecontroleerd",
+        "title": "Hoe vaak het zich vergist",
+        "meta": "Met de hand gecontroleerd",
+        "lede": "Bij een controle met de hand van {n} contracten wijkt zijn label in {k} gevallen af.",
+        "wrong": "Contracten waar zijn label afwijkt van het handlabel",
+        "missed": "Contracten die zich verbinden, gemist",
+        "groups": [
+          {
+            "key": "recall",
+            "title": "Vindt de contracten die zich verbinden",
+            "read": "Het model vindt er {mk} van {mn}; de regel {rk} van {rn}."
+          },
+          {
+            "key": "precision",
+            "title": "Juist wanneer het zegt dat een contract zich verbindt",
+            "read": "Van de contracten die zich volgens het model verbinden, doen {mk} van {mn} dat ook; van die van de regel {rk} van {rn}."
+          },
+          {
+            "key": "error",
+            "title": "Vergist zich over de vraag of een contract zich verbindt",
+            "read": "Het model vergist zich bij {mk} van {mn} contracten; de regel bij {rk}."
+          }
+        ],
+        "asof": "{drawn} Gelabeld door {by} zonder het antwoord van een van beide lezers te zien. {bars}",
+        "ref": "Handlabel",
+        "first": "Model",
+        "firstWhy": "De reden van het model",
+        "none": "Het komt in alle {n} gevallen overeen met het handlabel.",
+        "only": "Alleen de 30 met de hand gecontroleerde",
+        "agree": "Met de hand gecontroleerd: klopt",
+        "differ": "Met de hand gecontroleerd: {g, select, yes {verbindt zich} weak {een doel} no {geen maatregel} other {{g}}}",
+        "colophon": "{n} contracten, gelabeld door {by} ({dates}); de regel als referentie las dezelfde pagina’s."
+      },
+      "model": {
+        "label": "Gecontroleerd door een tweede model",
+        "title": "Hoe vaak twee lezingen verschillen",
+        "meta": "Twee keer gelezen",
+        "lede": "Opnieuw gelezen door een ander model dat zijn antwoorden nooit zag: de twee lezingen verschillen bij {k} van {n} contracten.",
+        "wrong": "Contracten waar de twee lezingen verschillende labels geven",
+        "missed": "Contracten die zich volgens de tweede lezing verbinden, gemist door de eerste",
+        "groups": [
+          {
+            "key": "recall",
+            "title": "Vindt de contracten die zich volgens de tweede lezing verbinden",
+            "read": "Het model vindt er {mk} van {mn}; de regel {rk} van {rn}."
+          },
+          {
+            "key": "precision",
+            "title": "Als het zegt dat een contract zich verbindt, is de tweede lezing het eens",
+            "read": "Van de contracten die zich volgens het model verbinden, is de tweede lezing het eens bij {mk} van {mn}; van die van de regel bij {rk} van {rn}."
+          },
+          {
+            "key": "error",
+            "title": "Wijkt af van de tweede lezing over de vraag of een contract zich verbindt",
+            "read": "Het model wijkt af bij {mk} van {mn} contracten; de regel bij {rk}."
+          }
+        ],
+        "asof": "{drawn} Opnieuw gelezen door {by} met een eigen prompt, in een nieuw proces dat de antwoorden van de eerste lezer nooit zag. Twee modellen uit één familie kunnen een zin op dezelfde manier verkeerd lezen, dus hun overeenstemming overschat de nauwkeurigheid; elk citaat en zijn bron staan hieronder, zodat een mens ze kan nagaan. {bars}",
+        "ref": "Tweede lezing",
+        "refWhy": "De reden van de tweede lezing",
+        "first": "Eerste lezing",
+        "firstWhy": "De reden van de eerste lezing",
+        "none": "De twee lezingen komen in alle {n} gevallen overeen.",
+        "only": "Alleen de 30 die twee keer gelezen zijn",
+        "agree": "Tweede lezing: eens",
+        "differ": "Tweede lezing: {g, select, yes {verbindt zich} weak {een doel} no {geen maatregel} other {{g}}}",
+        "limit": "De controle is een tweede model, geen mens. Ze toont waar de lezing onstabiel is, niet waar ze juist is: wie Frans leest, kan elk contract nagaan aan de hand van zijn citaten en zijn bron.",
+        "colophon": "{n} contracten opnieuw gelezen door {by} ({dates}) met de prompt greening_check_v1; de regel als referentie las dezelfde pagina’s. Labels van een mens vervangen deze zodra ze er zijn."
+      }
+    },
+    "miss": {
+      "label": "Verschillen",
+      "title": "Waar het een contract anders leest",
+      "rule": "Regel",
+      "short": {
+        "yes": "Verbindt zich",
+        "weak": "Een doel",
+        "no": "Geen maatregel"
+      },
+      "quotes": "Zijn citaten"
+    },
+    "method": {
+      "label": "Methode",
+      "title": "Hoe het leest",
+      "rules": [
+        "Het telt, schat en rangschikt nooit: elk getal op deze site blijft bij de rekenmotor.",
+        "Elke maatregel draagt de woorden waarop hij steunt, en een citaat telt alleen als het woord voor woord op de pagina van het contract staat.",
+        "Een contract verbindt zich wanneer het een maatregel plant, financiert of uitvoert die de vegetatiebedekking verandert. Vergroening die alleen als doel, behoefte of betere toegang genoemd wordt, is een doel. Een beschrijving van wat bestaat, een diagnose of een plaatsnaam is geen maatregel.",
+        "De prompt, het uitvoerschema en het model liggen vast en zijn gehasht. Een gewijzigde prompt is een nieuwe versie met een nieuwe controle.",
+        "De 30 testcontracten werden met een seed getrokken voordat er één gelezen werd. De tien waarop de prompt geschreven werd, blijven apart en tellen nooit mee in het percentage.",
+        "Het draaide via Claude Code op het eigen account van de auteur, met tools, connectoren en projectbestanden uitgeschakeld: het zag de prompt en de tekst van één contract, niets anders."
+      ]
+    },
+    "list": {
+      "label": "Het register",
+      "title": "Achtennegentig contracten, in hun eigen woorden",
+      "show": "Tonen",
+      "filters": [
+        {
+          "k": "all",
+          "name": "Alle"
+        },
+        {
+          "k": "yes",
+          "name": "Verbindt zich"
+        },
+        {
+          "k": "weak",
+          "name": "Een doel"
+        },
+        {
+          "k": "no",
+          "name": "Geen maatregel"
+        },
+        {
+          "k": "blank",
+          "name": "Niet beschreven"
+        }
+      ],
+      "blank": "De pagina geeft geen beschrijving: alleen fotocredits en het budget.",
+      "empty": "Geen vergroening in de tekst.",
+      "reason": "Waarom dit label",
+      "source": "Bron",
+      "count": "{count, plural, one {{n} contract} other {{n} contracten}}"
+    },
+    "limits": {
+      "label": "Grenzen",
+      "title": "Wat het u niet vertelt",
+      "items": [
+        "‘Verbindt zich’ legt een belofte uit een contract vast. Of het terrein veranderde, is de vraag van de atlas, en die kan hij alleen beantwoorden waar een gebied van ongeveer een hectare bestaat; de meeste van deze maatregelen zijn straten, binnenplaatsen en pleinen die kleiner zijn.",
+        "De contracten publiceren geen omtrek in machineleesbare vorm, dus een maatregel kan niet op de kaart geplaatst worden. Zijn plaats is de naam die de tekst geeft.",
+        "Het leest de samenvatting op quartiers.brussels, niet de programmadocumenten. De pagina’s van 41 contracten, allemaal gestart tussen 1994 en 2006, hebben helemaal geen samenvatting.",
+        "Projecten van Beliris en de eigen parken van het gewest staan niet in dit register."
+      ],
+      "last": "Dertig contracten geven een breed interval, dat bij elk percentage vermeld staat. Het percentage geldt alleen voor deze prompt en dit model."
+    },
+    "colophon": {
+      "source": {
+        "k": "Bron",
+        "v": "{source}, {n} contractpagina’s, gelezen op {fetched}."
+      },
+      "reader": {
+        "k": "Lezer",
+        "v": "Claude Sonnet 5 via Claude Code in printmodus, één aanroep per contract, {to}."
+      },
+      "prompt": {
+        "k": "Prompt",
+        "v": "{version} · prompt {prompt} · schema {schema}"
+      },
+      "check": {
+        "k": "Controle",
+        "v": "Bezig."
+      },
+      "files": {
+        "k": "Bestanden",
+        "v": "register.csv bevat één rij per geciteerde maatregel; register_check.json bevat de controle met elk verschil."
+      }
+    }
+  },
+  "atlas": {
+    "meta": {
+      "title": "Atlas · {city} · Frondia",
+      "titleView": "{view} · {city} · Atlas · Frondia",
+      "titleCase": "{place} · Audit · Atlas · Frondia",
+      "description": "Elke sector van Brussel, Antwerpen, Gent, Luik en Charleroi, drie vragen: wat er ontbreekt, wat er moet komen, en wat er echt veranderde aan het groen, boven de eigen ruis van de stad.",
+      "sectorDescription": "{name}, gemeente {commune}, {city}: wat deze sector mist, wat er moet komen, en wat er aan het groen veranderde boven de eigen ruis van de stad."
+    },
+    "bar": {
+      "home": "Frondia, startpagina",
+      "city": "Stad",
+      "questions": "Vraag",
+      "decides": "Hoe het beslist"
+    },
+    "q": {
+      "need": {
+        "short": "Tekort",
+        "long": "Wat ontbreekt"
+      },
+      "place": {
+        "short": "Plaatsen",
+        "long": "Wat waar komt"
+      },
+      "change": {
+        "short": "Veranderd",
+        "long": "Wat er veranderde"
+      }
+    },
+    "pan": {
+      "group": "Kaart verschuiven",
+      "up": "Omhoog",
+      "left": "Naar links",
+      "right": "Naar rechts",
+      "down": "Omlaag"
+    },
+    "zoom": {
+      "group": "Zoomen",
+      "in": "Inzoomen",
+      "out": "Uitzoomen",
+      "reset": "Beeld herstellen"
+    },
+    "credit": {
+      "sentinel": "Contains modified Copernicus Sentinel data{years, select, none {} other { {years}}}",
+      "landsat": "Landsat courtesy of the U.S. Geological Survey",
+      "worldcover": "© ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data (2021) processed by ESA WorldCover consortium",
+      "statbel": "sectors © Statbel",
+      "osm": "map data © OpenStreetMap contributors"
+    },
+    "mapLabel": "{city}: {n} sectoren",
+    "reload": "Opnieuw laden",
+    "mapKeys": "De pijltjestoetsen verschuiven de kaart, plus en min zoomen, Enter opent de sector in het midden.",
+    "tip": {
+      "named": "benoemd punt",
+      "control": "vergelijkingspunt",
+      "further": "verdere kandidaat",
+      "notMeasured": "niet gemeten",
+      "residents": "inwoners: {n}",
+      "commune": "{name} · {green} groen · {exempt, select, yes {vrijgesteld} other {meegeteld}}",
+      "communeUntested": "{name} · niet getoetst",
+      "built": "bebouwd {v}",
+      "raw": "ruw {v}",
+      "effect": "effect {v}"
+    },
+    "verdict": {
+      "up": "Groener boven de ruis",
+      "down": "Verlies boven de ruis",
+      "noise": "Binnen de ruis",
+      "refused": "Geen vergelijkbare plaatsen — geweigerd",
+      "none": "Niet gemeten"
+    },
+    "units": {
+      "m": "{v} m",
+      "km": "{v} km",
+      "ha": "{v} ha",
+      "c": "{v} °C",
+      "score": "{v}/100"
+    },
+    "need": {
+      "aria": "Wat ontbreekt",
+      "title": "{title} in {city}",
+      "lens": "Weergave",
+      "weighted": "Gewogen voor",
+      "nearest": "Dichtstbijzijnde",
+      "blank": {
+        "heat": "Op of onder de mediaan van de stad",
+        "shops": "Binnen 300 m",
+        "r3": "Voldoet aan beide"
+      },
+      "few": "Minder dan {min} inwoners · sectoren: {n}",
+      "lacking": "Grootste tekorten",
+      "canopy": "{v} kroonbedekking",
+      "notMeasured": "Nog niet gemeten in {city}.",
+      "seeIn": "Bekijk het in {city} →",
+      "lenses": {
+        "services": {
+          "chip": "Diensten",
+          "title": "Dagelijkse diensten",
+          "lede": "Hoe goed een sector het dagelijkse leven bedient, van een school en een huisarts tot een park en een tramhalte, gewogen voor een van drie leefsituaties.",
+          "legend": [
+            "Best bediende vijfde",
+            "Tweede vijfde",
+            "Middelste vijfde",
+            "Vierde vijfde",
+            "Slechtst bediende vijfde"
+          ],
+          "source": "Neighbourhood Fit Score: 14 diensten op wandelafstand, uit OpenStreetMap en de sectoren van Statbel. De vijfden zijn die van de sectoren waar 200 mensen of meer wonen.",
+          "limit": "Gebouwd op OpenStreetMap: waar de kaart dun is, is de score dat ook."
+        },
+        "shops": {
+          "chip": "Winkels",
+          "title": "Winkels binnen bereik",
+          "lede": "Hoe ver elke sector van de dichtstbijzijnde bakkerij, het dichtstbijzijnde café of de dichtstbijzijnde snoepwinkel ligt, in vogelvlucht.",
+          "legend": [
+            "300 tot 600 m",
+            "600 m tot 1 km",
+            "1 tot 1,5 km",
+            "1,5 tot 2,5 km",
+            "Meer dan 2,5 km"
+          ],
+          "source": "SpotFinder: de dichtstbijzijnde winkel van elke soort, uit OpenStreetMap.",
+          "limit": "In vogelvlucht, niet te voet; dichter dan 300 m blijft leeg."
+        },
+        "heat": {
+          "chip": "Hitte",
+          "title": "Zomerhitte",
+          "lede": "Hoeveel warmer de grond in de zomer wordt dan in de mediane sector van de stad. Kroonbedekking is het sterkste schild: in {city} hangen de twee samen met r = {r}.",
+          "legend": [
+            "Tot 1 °C warmer",
+            "1 tot 2 °C",
+            "2 tot 3 °C",
+            "3 tot 4 °C",
+            "Meer dan 4 °C warmer"
+          ],
+          "source": "Oppervlaktetemperatuur van Landsat 8 en 9, de mediaan van de zomers 2022 tot 2025.",
+          "limit": "Een toestand, geen effect: of een park afkoeling brengt, kan de methode niet meten (ruisvloer 1,32 °C)."
+        },
+        "r3": {
+          "chip": "3-30-300",
+          "title": "De 3-30-300-regel",
+          "lede": "Twee van de drie delen zijn van bovenaf te meten: 30% kroonbedekking in de buurt, en een park van een hectare of meer binnen 300 m.",
+          "legend": [
+            null,
+            "Voldoet aan een van de twee",
+            null,
+            "Voldoet aan geen van beide",
+            null
+          ],
+          "source": "Kroonbedekking uit ESA WorldCover (10 m); parken van 1 ha of meer uit OpenStreetMap.",
+          "limit": "Het derde deel, drie bomen in zicht vanuit elk raam, wordt niet gemeten en niet geraden."
+        }
+      },
+      "scenario": {
+        "family": "Gezin",
+        "remote": "Telewerk",
+        "senior": "Senioren"
+      },
+      "shop": {
+        "bakery": "Bakkerij",
+        "cafe": "Café",
+        "confectionery": "Snoepwinkel"
+      },
+      "service": {
+        "cafe": "café",
+        "childcare": "kinderopvang",
+        "convenience": "buurtwinkel",
+        "gp": "huisarts",
+        "hospital": "ziekenhuis",
+        "library": "bibliotheek",
+        "park": "park",
+        "pharmacy": "apotheek",
+        "playground": "speeltuin",
+        "restaurant": "restaurant",
+        "school": "school",
+        "sport": "sportterrein",
+        "supermarket": "supermarkt",
+        "transit": "openbaar vervoer"
+      }
+    },
+    "equity": {
+      "title": "Wie komt tekort",
+      "thirds": [
+        "Armste derde",
+        "Middelste derde",
+        "Rijkste derde"
+      ],
+      "all": "Alle inwoners",
+      "kid": "Kinderen onder 15",
+      "old": "65 jaar en ouder",
+      "vs": "ten opzichte van alle inwoners",
+      "pts": "{n} {abs, plural, one {pt} other {pt}}",
+      "byIncome": {
+        "services": "Gemiddelde score voor {o, select, family {een gezin} remote {telewerk} other {senioren}}, op 100, naar inkomen",
+        "shops": "Gemiddelde afstand tot {o, select, bakery {de dichtstbijzijnde bakkerij} cafe {het dichtstbijzijnde café} other {de dichtstbijzijnde snoepwinkel}}, naar inkomen",
+        "heat": "Zomerse grondtemperatuur ten opzichte van de mediane sector van de stad, naar inkomen",
+        "r3": "Aandeel dat woont waar aan geen van beide delen voldaan is, naar inkomen"
+      },
+      "group": {
+        "services": "het slechtst bediende derde",
+        "shops": "het verste derde",
+        "heat": "het warmste derde",
+        "r3": "de sectoren die aan geen van beide delen voldoen"
+      },
+      "cut": {
+        "services": "score {v} of minder",
+        "shops": "{v} of verder",
+        "heat": "{v} of meer"
+      },
+      "livesIn": "Wie woont in {group}{cut, select, none {} other { ({cut})}}",
+      "reading": {
+        "services": "Het armste derde is {worse, select, yes {minder goed} other {beter}} bediend dan het rijkste: {p} tegenover {r}.",
+        "shops": "Het armste derde woont {worse, select, yes {verder van} other {dichter bij}} een {o, select, bakery {bakkerij} cafe {café} other {snoepwinkel}} dan het rijkste: {p} tegenover {r}.",
+        "heat": "Het armste derde woont op {worse, select, yes {warmere} other {minder warme}} grond dan het rijkste: {p} tegenover {r}.",
+        "r3": "Het armste derde woont {worse, select, yes {vaker} other {minder vaak}} waar aan geen van beide delen voldaan is dan het rijkste: {p} tegenover {r}."
+      },
+      "ages": {
+        "none": "Kinderen en mensen van 65 jaar en ouder wonen ongeveer even vaak in {group} als alle anderen.",
+        "one": "{who, select, kid {Kinderen} other {Mensen van 65 jaar en ouder}} wonen {more, select, yes {vaker} other {minder vaak}} in {group} dan de inwoners in het algemeen: {x} tegenover {all}.",
+        "split": "{more, select, kid {Kinderen} other {Mensen van 65 jaar en ouder}} wonen vaker in {group} dan de inwoners in het algemeen, {more, select, kid {mensen van 65 jaar en ouder} other {kinderen}} minder vaak: {x} en {y} tegenover {all}.",
+        "both": "Kinderen en mensen van 65 jaar en ouder wonen allebei {more, select, yes {vaker} other {minder vaak}} in {group} dan de inwoners in het algemeen: {x} en {y} tegenover {all}."
+      },
+      "source": "Derden van de inwoners naar het mediane belastbare inkomen van hun sector (Statbel 2023): de armsten onder {lo}, de rijksten boven {hi}. Leeftijden uit de volkstelling van 2021.",
+      "money": "€ {v}"
+    },
+    "place": {
+      "aria": "Wat waar komt",
+      "loading": "Laden…",
+      "title": "{objects} in {city}",
+      "window": "{n} kandidaten uit een pool van {pool}",
+      "object": "Object",
+      "today": "van de vraag binnen 500 m, vandaag",
+      "allPlaced": "als alle {n} geplaatst zijn",
+      "legend": [
+        "Benoemd: rang 1 tot 10",
+        "Vergelijking: rang 11 tot 20",
+        "Verdere kandidaten: 21 tot 40"
+      ],
+      "lede": "Elk punt is gerangschikt naar hoeveel onvervulde vraag het binnen 500 m zou dekken, met meer gewicht voor achtergestelde sectoren.",
+      "source": "City Planner: een gulzig algoritme op een raster van de vraag, uit OpenStreetMap en Statbel.",
+      "limit": "Een aanbeveling, geen effect: een zitbank verandert geen satellietmeting, dus alleen of ze verschijnt wordt getoetst.",
+      "mapped": "De dekking van vandaag telt wat OpenStreetMap in kaart heeft gebracht; waar de kaart dun is, valt ze lager uit dan op straat.",
+      "named": "De eerste tien van elke soort werden op {date} benoemd, voordat iemand iets plaatste; de volgende tien zijn hun vergelijking. Een latere zomer toont of er objecten verschenen waar Frondia ze benoemde, vaker dan op de vergelijkingspunten.",
+      "register": {
+        "at": "Volgens het eigen register van de stad is er al {a} binnen 50 m van punten uit de toetsing (benoemde punten: {named}; vergelijkingspunten: {control}). Die vallen eruit, want een verschijning daar zou alleen kartering zijn.",
+        "none": "Volgens het eigen register van de stad is er {no} binnen 50 m van de benoemde punten of de vergelijkingspunten.",
+        "gap": "Punten met binnen 500 m zo’n object dat in OpenStreetMap ontbrak toen ze benoemd werden: {named} van de {namedN} benoemde punten, {control} van de {controlN} vergelijkingspunten. Een deel van het tekort lag aan de kaart.",
+        "caution": "De {group, select, named {benoemde punten} other {vergelijkingspunten}} liggen vaker in zulke lacunes, dus de toetsing zal vermelden dat kartering een deel van een eventueel verschil kan verklaren."
+      },
+      "snap": "Registers gelezen op {date}; ze worden voortaan bewaard, zodat een object dat verschijnt gedateerd kan worden.",
+      "namedFirst": "Eerst benoemd",
+      "outside": "Buiten de sectoren"
+    },
+    "more": {
+      "title": "En met nog {k}?",
+      "slider": "Hoeveel er geplaatst worden, in volgorde van rang",
+      "read": "van de vraag binnen 500 m",
+      "today": "vandaag",
+      "named": "10 benoemd",
+      "zero": "Nog niets geplaatst: verschuif de schuifregelaar om de volgende objecten in volgorde van rang te plaatsen.",
+      "all": "alle {n}",
+      "valueText": "{k}: {p} van de vraag binnen 500 m",
+      "who": "Van deze {k} {poor, plural, one {staat er #} other {staan er #}} waar het armste derde van de inwoners woont (mediaan inkomen van de sector onder {cut}).",
+      "whoOne": "Dit object {poor, select, yes {staat} other {staat niet}} waar het armste derde van de inwoners woont (mediaan inkomen van de sector onder {cut})."
+    },
+    "change": {
+      "aria": "Wat er veranderde",
+      "title": "Wat er veranderde in {city}",
+      "window": "Zomers {window} · Sentinel-2",
+      "fieldWindow": "Zomer {year} · Sentinel-2",
+      "view": "Beeld",
+      "views": {
+        "change": "Sectoren",
+        "communes": "Gemeenten",
+        "field": "Terrein",
+        "photos": "Foto’s"
+      },
+      "subtract": "Vergelijkingsplaatsen aftrekken",
+      "counts": {
+        "upEffect": "groener boven de ruis",
+        "upRaw": "schijnbaar groener",
+        "downEffect": "verlies boven de ruis",
+        "downRaw": "schijnbaar bruiner"
+      },
+      "legend": {
+        "up": "Groener: drempel, 2×, 3×",
+        "down": "Verlies: drempel, 2×, 3×",
+        "noise": "Binnen de ruis — het terrein schijnt door",
+        "refused": "Geen vergelijkbare plaatsen · {n}"
+      },
+      "threshold": "Drempel ±{thr} — gemeten op {n} sectoren van {city} die elk één keer ‘ingreep’ speelden.",
+      "background": "Zonder de vergelijkingsplaatsen af te trekken, laat de verschuiving van {shift} over de hele stad {k} van de {n} sectoren van {city} ({share}) ‘significant groener’ lijken; na aftrek blijven er {eff} over.",
+      "top": "Grootste veranderingen boven de ruis",
+      "check": "Getoetst aan een onafhankelijke luchtfotokaart (Groenkaart Vlaanderen, 2018 tegenover 2021–24): waar de luchtfotokaart geen verandering boven de ruis ziet, is deze kaart het daarmee eens in {sk} van de {sn} gevallen; waar deze kaart zegt dat een sector boven de ruis veranderde, is de luchtfotokaart het eens in {ck} van de {cn}. Een verandering boven de ruis is een kandidaat, geen bewijs."
+    },
+    "photos": {
+      "window": "Zomers {a} en {b} · Sentinel-2",
+      "tag": "Zomer {y}",
+      "handle": "Scheiding tussen zomer {a} en zomer {b}",
+      "valueText": "{p}% van de kaart toont {a}, de rest {b}",
+      "lede": "Versleep de lijn: zomer {a} links ervan, zomer {b} rechts.",
+      "legend": {
+        "up": "Groener boven de ruis",
+        "down": "Verlies boven de ruis",
+        "rawUp": "Lijkt groener",
+        "rawDown": "Lijkt bruiner"
+      },
+      "note": "De foto’s zijn er voor het oog, en er wordt geen enkel getal uit gehaald: twee zomers verschillen ook in licht, nevel en oogst. De omtrekken zijn de meting, gedaan op de zomers {window}."
+    },
+    "built": {
+      "measure": "Maatstaf",
+      "options": {
+        "green": "Groenheid",
+        "built": "Bebouwde grond"
+      },
+      "lede": "Bebouwde grond is wat Dynamic World als gebouwen, wegen en verharding leest, afgezet tegen dezelfde twaalf vergelijkingsplaatsen als de groenheid.",
+      "counts": {
+        "up": "verhard boven de ruis",
+        "down": "onthard boven de ruis"
+      },
+      "legend": {
+        "up": "Verhard: drempel, 2×, 3×",
+        "down": "Onthard: drempel, 2×, 3×",
+        "noise": "Binnen de ruis — het terrein schijnt door"
+      },
+      "limit": "Een kans per klasse, geen aandeel van de grond: de kaart toont waar de verharding boven de ruis veranderde, niet hoeveel hectare. Minder bebouwd is niet altijd een park: afbraak tot op de kale grond geeft hetzelfde beeld.",
+      "rawOff": "Alleen getoond ten opzichte van de vergelijkingsplaatsen: deze doorrekening bewaarde het effect van elke sector, niet zijn eigen voor en na.",
+      "top": "Grootste verschuivingen boven de ruis",
+      "passport": "Bebouwde grond ten opzichte van vergelijkingsplaatsen",
+      "word": {
+        "up": "verhard",
+        "down": "onthard",
+        "noise": "binnen de ruis",
+        "refused": "geweigerd",
+        "none": "niet gemeten"
+      },
+      "histAria": "Verdeling van {n} effecten op bebouwde grond; drempel ±{thr}",
+      "threshold": "Drempel ±{thr} — de eigen ruis van deze doorrekening, gemeten op {n} sectoren van {city} die elk één keer ‘ingreep’ speelden."
+    },
+    "communes": {
+      "title": "Gemeenten die de wet meetelt in {city}",
+      "window": "Artikel 8, lid 1 · gegevens 2021",
+      "lede": "Een gemeente valt buiten de nationale telling van stedelijk groen als haar stedelijke centra en clusters voor meer dan 45% groen zijn en meer dan 10% boomkroonbedekking hebben. Hier gemeten met de eigen methode van de Commissie, op open gegevens.",
+      "exempt": "vrijgesteld",
+      "counted": "meegeteld",
+      "scale": {
+        "lo": "0",
+        "mark": "45%, daarboven vrijgesteld",
+        "hi": "100%"
+      },
+      "listTitle": "Groen in stedelijke centra en clusters",
+      "untested": "De andere gemeenten op deze kaart liggen buiten Antwerpen en werden niet getoetst.",
+      "legend": [
+        "Minder dan 15%",
+        "15 tot 30%",
+        "30 tot 45%",
+        "45 tot 60%",
+        "60% en meer"
+      ],
+      "legendExempt": "Vrijgesteld: omlijnd in inkt",
+      "legendUntested": "Buiten de getoetste gemeente",
+      "legendRegistered": "Geregistreerd vóór de werken: omtrek, geen vulling",
+      "source": "De methode van het EEA en het JRC (NRR_Art8), herhaald op open gegevens: LBE (LAU 2024), urbanisatiegraad 2024, stedelijke centra en clusters 2021 (raster van 1 km²), CLCplus Backbone 2021 voor groen, de Woody Vegetation Layer 2021 voor kroonbedekking. De lagen van 2021 zijn alleen toegestaan voor ontwerpplannen.",
+      "region": "Alle {n} samen: {g} groen in stedelijke centra en clusters, dus het gewest als geheel wordt meegeteld.",
+      "leaveOut": "Als alle {n} wegvallen, verdwijnt {area} van de oppervlakte van het gewest en {res} van zijn inwoners uit de telling, maar {woody} van zijn houtige vegetatie. De plicht om geen nettoverlies te lijden zou dan rusten op {rest} dichtbevolkte gemeenten, met gemiddeld {restGreen} groen.",
+      "canopyToo": "kroonbedekking {c}, ook onder 10%",
+      "unstable": {
+        "farmland": "{name} ligt {pts} procentpunt onder de grens. Met akkerland meegeteld als groen, een van de andere lezingen van artikel 3, punt 20 die de toets doorrekent, komt de gemeente op {g7}, en dan zou {name} vrijgesteld zijn: het oordeel hangt af van die lezing.",
+        "water": "{name} ligt {pts} procentpunt boven de grens. Zonder water als groen mee te tellen, een van de andere lezingen van artikel 3, punt 20 die de toets doorrekent, komt de gemeente op {gnw}, en dan zou {name} niet vrijgesteld zijn: het oordeel hangt af van die lezing.",
+        "other": "Het oordeel over {name} verandert onder de andere lezingen van artikel 3, punt 20 die de toets doorrekent."
+      }
+    },
+    "balance": {
+      "title": "Sinds het basisjaar {base}",
+      "rows": {
+        "green": "Stedelijk groen",
+        "trees": "Boomkroonbedekking",
+        "built": "Bebouwd"
+      },
+      "net": "{v} netto",
+      "split": "verloren {lost} · gewonnen {gained}",
+      "limit": "Hectare zoals een satellietclassificatie ze leest, niet de officiële lagen CLCplus en Woody Vegetation, die voor 2025 en 2026 nog niet bestaan. De ene zomer tegenover de andere is ruiziger dan een venster van vier jaar. Een park dat bomen verliest, kan als meer bebouwd uitkomen wanneer een gemengde pixel van klasse verandert.",
+      "lede": "Zomer {base} tegenover zomer {s}, in hectare zoals Dynamic World de grond indeelt; stedelijk groen zoals de verordening het leest: bomen, gras, struiken en water, geen akkerland. Een sector telt alleen mee als hij ten opzichte van zijn twaalf vergelijkingsplaatsen boven de ruis veranderde.",
+      "raw": "Zonder de vergelijkingsplaatsen af te trekken, zou {city} tussen zomer 2024 en zomer {s} {g} groen en {b} bebouwd laten zien. De klassen verschuiven van de ene zomer op de andere; de vergelijkingsplaatsen halen die verschuiving eruit.",
+      "preliminary": "Zomer {y} heeft minder dan acht bruikbare opnamen: de cijfers ervan zijn voorlopig."
+    },
+    "registered": {
+      "title": "Geregistreerd vóór de werken",
+      "expects": {
+        "restoration": "verwacht geen verandering boven de ruis: een restauratie verandert de vegetatie niet",
+        "park_redesign": "verwacht geen verandering, of minder verharde grond",
+        "boulevard_redesign": "verwacht minder verharde grond",
+        "square_redesign": "verwacht minder verharde grond en meer gras",
+        "urban_development": "verwacht een verlies: een nieuwe wijk op grasland",
+        "park_creation": "verwacht meer bomen naarmate de aanplant groeit; de groenheid kan eerst dalen, want jonge aanplant op gras kan als verlies uitkomen",
+        "green_realisation": "verwacht minder bebouwde grond waar gebouwen verdwijnen, en de rest van de vallei binnen de ruis"
+      },
+      "refused": "vooraf geweigerd: geen vergelijkbare plaatsen",
+      "named": "12 vergelijkingsplaatsen benoemd",
+      "lede": "{city, select, brussels {Beliris-projecten} ghent {Projecten uit het eigen register van de Stad Gent} other {Projecten}} die op {date} werden vastgelegd, voordat er werken begonnen: {n}. Voor elk: de omtrek met een hash, een nulmeting 2023–25 en twaalf benoemde vergelijkingsplaatsen, of een vooraf vastgelegde weigering. Een audit na de werken kan de grens niet meer verleggen naar waar het groen werd.",
+      "none": {
+        "antwerp": "Nog geen. AG Vespa publiceert geen status ‘werken niet gestart’, dus een registratie kan hier alleen uit een aanbestedingsfeed komen.",
+        "liege": "Nog geen. Wallonië houdt geen register bij zoals Beliris. De nieuwe parken in Fontainebleau (werken vanaf de herfst van 2027) en Chênée zijn gedateerd, maar hun omtrek bestaat alleen als tekening in de brochures van de stad, dus een registratie wacht op een overgetrokken omtrek.",
+        "charleroi": "Nog geen. Het enige vergroeningsproject van een hectare of meer dat nog niet gestart is, Square Hiernaux (een rotonde van 1,7 hectare die een beplant plein moet worden), heeft geen gepubliceerde omtrek, dus een registratie wacht op de plannen uit de vergunning.",
+        "other": "Nog geen. Er is nog geen bron gelezen die de projecten van {city} vóór hun werken opsomt, dus niets werd vooraf vastgelegd."
+      }
+    },
+    "passport": {
+      "aria": "Sector {name}",
+      "head": "Sector · {id} · {commune}",
+      "close": "Sector sluiten",
+      "people": "Inwoners: {n}{inc, select, none {} other { · mediaan inkomen € {inc}}}",
+      "dossier": "Dossier van deze sector",
+      "few": "Hier wonen minder dan {min} mensen: de cijfers blijven staan, maar de atlas kleurt of rangschikt de sector niet.",
+      "services": "Dagelijkse diensten · {scenario}",
+      "servicesValue": "/ 100 · zwakst: {list}",
+      "nearest": "Dichtstbijzijnde {shop, select, bakery {bakkerij} cafe {café} other {snoepwinkel}}",
+      "heat": "Zomerhitte",
+      "heatValue": "{v} °C t.o.v. de stad",
+      "canopy": "Boomkroonbedekking",
+      "r3": "3-30-300",
+      "r3Value": [
+        "voldoet aan geen van beide",
+        "voldoet aan één",
+        "voldoet aan beide"
+      ],
+      "ages": "Kinderen · 65+",
+      "noProposals": "Geen van de eerste twintig kandidaten van City Planner, van welke soort ook, valt in deze sector.",
+      "role": {
+        "named": " · benoemd",
+        "control": " · vergelijking"
+      },
+      "effect": "Effect ten opzichte van vergelijkingsplaatsen",
+      "times": "· {k}× de drempel (±{thr})",
+      "raw": "Eigen verandering, ruw",
+      "gap": "Verschil met de vergelijking vooraf",
+      "veg": "Vegetatie 2024",
+      "canopy24": "Kroonbedekking 2024",
+      "builtValue": "· {word}{refused, select, yes {} other { (±{thr})}}",
+      "where": "Waar hij staat in de ruis van de stad",
+      "histAria": "Verdeling van de effecten in {city}; deze sector {v}",
+      "notMeasured": "Deze sector werd in dit venster niet gemeten, dus er is geen oordeel.",
+      "refused": "Vooraf leken geen twaalf sectoren genoeg op deze, dus er wordt geen oordeel gegeven. Dat is een resultaat, geen leemte.",
+      "compared": "Vergeleken met twaalf sectoren die in {before} dezelfde groenheid en zomerhitte hadden. {noise, select, yes {Het verschil valt binnen de eigen ruis van de stad.} other {Het verschil valt buiten de eigen ruis van de stad.}}",
+      "audit": "Audit: {place}"
+    },
+    "case": {
+      "aria": "Audit {place}",
+      "head": "Audit · {city} · geopend in {completed}",
+      "close": "Audit sluiten",
+      "effect": "Effect ten opzichte van {n} benoemde vergelijkingsplaatsen",
+      "threshold": "· drempel {thr}",
+      "defensible": "Verdedigbaar, nulmeting vóór de werken",
+      "footprint": "Terrein",
+      "above": "Zomers boven de ruis",
+      "aboveValue": "{k} van {n}",
+      "matched": "Vergelijkingsplaatsen"
+    }
+  }
+}

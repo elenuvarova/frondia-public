@@ -1,0 +1,169 @@
+/* ── the sector dossier (phase 2b) ────────────────────────────────────────────
+   Principal layout: anthropic.com's article pages, measured headless on six of them at 1440
+   (Figma, "Frondia · DS Landing", principal · a document): the head centred, a reading column of 640,
+   figures and tables 880, 16 between paragraphs, 32 above a small heading and 8 under it, 64 above a
+   section, 96 from the head to the body. Type is the landing's (David's system): the title is his
+   H2 50 / 55, a section title 35 / 36.75, reading text Geist 18 at the principal's leading (1.5). */
+.doc { --doc-col: 640px; --doc-wide: 880px; padding-top: max(clamp(112px, 12vw, 160px), calc(var(--nav-h, 0px) + 38px)); padding-bottom: var(--s-128); }
+/* a phone's two-row bar (≤ 560 px with the language switch, tokens.css) is 44 px taller: the page starts below it. And
+   always at least 38 px under the bar as measured (--nav-h, Nav.tsx), the gap a one-row bar has: a reader's text spacing
+   can wrap the bar to a third row (WCAG 1.4.12; round-1 re-check, 6 Oct 2026) */
+@media (max-width: 560px) { :root:has(.nav .lang--top) .doc { padding-top: max(156px, calc(var(--nav-h, 0px) + 38px)); } }
+.doc > * { max-width: var(--doc-col); margin-inline: auto; }
+.doc > .doc-sec--wide, .doc > .doc-head { max-width: var(--doc-wide); }
+.doc-sec--wide > :not(.doc-figures):not(.doc-scale):not(.doc-table-wrap):not(.data-list):not(.reg-wide) { max-width: var(--doc-col); margin-inline: auto; }
+
+/* head: centred, as the principal's (category · title · date) */
+.doc-head { text-align: center; display: flex; flex-direction: column; align-items: center; gap: var(--s-16); }
+.doc-head h1 { max-width: 20em; }
+.doc-head .label { margin: 0; }
+.doc-standfirst { max-width: 40ch; margin: 0; }
+/* the document's facts as label and value on a hairline (Dovetail), four across, two on a phone */
+.doc-meta { width: min(100%, var(--doc-col)); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 var(--s-16); margin: var(--s-16) 0 0; text-align: left; border-top: 1px solid var(--rule-2); padding-top: var(--s-12); }
+.doc-meta div { display: flex; flex-direction: column; gap: 2px; }
+.doc-meta dd { margin: 0; color: var(--ink); }
+@media (max-width: 720px) { .doc-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: var(--s-12); } }
+.doc-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s-12); margin-top: var(--s-8); }
+.doc-head + .doc-sec { margin-top: var(--s-96); }
+
+
+/* sections */
+.doc-sec { margin-top: var(--s-64); }
+.doc-sec-head .label { margin: 0; }
+.doc-h2 { font-size: clamp(28px, 2.6vw, 35px); line-height: 1.05; letter-spacing: .01em; margin: var(--s-8) 0 var(--s-32); }   /* David 35 / 36.75 */
+.doc-sec p, .doc-col p { font-size: 18px; line-height: 27px; letter-spacing: .01em; margin: 0; text-wrap: pretty; }
+.doc-sec p + p, .doc-col p + p, .doc-sec p + .doc-callout, .doc-col p + .doc-callout, .doc-callout + .doc-callout { margin-top: var(--s-16); }
+.doc-sec > .doc-col, .doc-sec > .doc-table-wrap + .doc-col, .doc-scale + .doc-col, .doc-figures + .doc-col { margin-top: var(--s-32); }
+.doc .doc-small, .doc-foot p { font-size: 14px; line-height: 20px; color: var(--ink-3); }
+
+/* passport: key figures three across (Sana): hairlines only between cells, no outer box, the number
+   top-left and its label at the foot of the cell */
+.doc-figures { --cols: 3; display: grid; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); margin: 0; }
+.doc-figures > div { display: flex; flex-direction: column-reverse; justify-content: space-between; gap: var(--s-20); min-height: 132px; padding: var(--s-16) var(--s-20) var(--s-16); }
+.doc-figures > div:not(:nth-child(3n + 1)) { border-left: 1px solid var(--rule-2); }
+.doc-figures > div:nth-child(n + 4) { border-top: 1px solid var(--rule-2); }
+.doc-figures dt { font-size: 14px; line-height: 20px; color: var(--ink-3); }
+.doc-figures dd { margin: 0; font-family: var(--serif); font-size: 35px; line-height: 36.75px; letter-spacing: .01em; font-variant-numeric: lining-nums; display: flex; align-items: baseline; gap: var(--s-12); }
+.doc-figures dd small { font-family: var(--mono); font-size: 12px; line-height: 16.8px; color: var(--ink-3); letter-spacing: 0; }
+@media (max-width: 720px) {
+  .doc-figures { --cols: 2; }
+  .doc-figures > div { min-height: 112px; padding: var(--s-12) var(--s-12) var(--s-12); }
+  .doc-figures > div:not(:nth-child(3n + 1)) { border-left: 0; }
+  .doc-figures > div:nth-child(n + 4) { border-top: 0; }
+  .doc-figures > div:nth-child(2n) { border-left: 1px solid var(--rule-2); }
+  .doc-figures > div:nth-child(n + 3) { border-top: 1px solid var(--rule-2); }
+  .doc-figures dd { font-size: 28px; line-height: 30px; }
+}
+
+/* where it stands: the sector's bar and the city's median as a tick crossing it */
+.doc-scale { display: grid; gap: var(--s-16); }
+.doc-scale-row { display: grid; grid-template-columns: minmax(150px, 220px) minmax(0, 1fr) 64px; align-items: center; gap: var(--s-20); border-top: 1px solid var(--rule); padding-top: var(--s-16); }
+.doc-scale-name { font-size: 16px !important; line-height: 22px !important; display: flex; flex-direction: column; }
+.doc-scale-name small { font-family: var(--mono); font-size: 12px; line-height: 16.8px; color: var(--ink-3); }
+.doc-scale-track { position: relative; height: 10px; background: var(--rule); border-radius: 2px; }
+.doc-scale-track i { position: absolute; inset: 0 auto 0 0; background: var(--ink); border-radius: 2px; }
+.doc-scale-track u { position: absolute; top: -5px; bottom: -5px; width: 2px; margin-left: -1px; background: var(--ink); box-shadow: 0 0 0 2px var(--paper); }
+.doc-scale-v { text-align: right; font-size: 14px !important; }
+/* the reading in words under the bar (Klima) */
+.doc-scale-read { grid-column: 2 / 4; font-size: 14px !important; line-height: 20px !important; color: var(--ink-3); margin-top: calc(-1 * var(--s-12)) !important; }
+@media (max-width: 560px) {
+  .doc-scale-row { grid-template-columns: minmax(0, 1fr) 56px; }
+  .doc-scale-track { grid-column: 1 / -1; grid-row: 2; }
+  .doc-scale-read { grid-column: 1 / -1; margin-top: 0 !important; }
+}
+
+/* a note inside the document (Notion's callout): a tint lighter than the page, no border, a bold
+   first sentence running into the text; on paper it is framed by rules instead (see print) */
+.doc-callout { background: var(--paper-2); border-radius: 16px; padding: var(--s-20) var(--s-20); }
+.doc-callout p { font-size: 16px !important; line-height: 24px !important; }
+.doc-callout strong { font-weight: 600; }
+
+/* tables: rows are groups, numbers right-aligned in mono */
+.doc-table-wrap { overflow-x: auto; }
+.doc-table-wrap:focus-visible { outline-offset: 4px; }
+.doc-table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 22px; }
+.doc-table th, .doc-table td { text-align: left; padding: var(--s-12) var(--s-12) var(--s-12) 0; border-top: 1px solid var(--rule); vertical-align: top; }
+.doc-table thead th { font-family: var(--sans); font-size: 12px; line-height: 18px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); border-top: 0; padding-top: 0; }
+.doc-table tbody th { font-weight: 400; }
+.doc-table th small { display: block; font-size: 14px; line-height: 20px; color: var(--ink-3); }
+.doc-table .num { text-align: right; font-family: var(--mono); font-size: 14px; font-feature-settings: "tnum" 1; white-space: nowrap; }
+.doc-table thead .num { font-family: var(--sans); font-size: 12px; }
+.doc-table tr.is-here th, .doc-table tr.is-here td { border-top: 1px solid var(--ink); font-weight: 600; }
+.doc-table td:last-child { padding-right: 0; }
+/* the data's as-of line right under the table (Stripe) */
+.doc-asof { font-size: 14px !important; line-height: 20px !important; color: var(--ink-3); margin: var(--s-8) 0 0 !important; }
+.doc-phone { display: none !important; }
+@media (max-width: 560px) {
+  .doc-wide-only { display: none; }
+  .doc-phone { display: block !important; margin-top: 4px; }
+  .doc-table { font-size: 15px; line-height: 21px; }
+  .doc-table th, .doc-table td { padding-right: var(--s-8); }
+  .doc-table thead .num { white-space: normal; }
+  .doc-table .num { font-size: 13px; }
+}
+
+/* what to place here */
+.doc-points { list-style: none; margin: var(--s-16) 0 0; padding: 0; }
+.doc-points li { display: flex; justify-content: space-between; gap: var(--s-16); padding: var(--s-12) 0; border-top: 1px solid var(--rule); font-size: 16px; line-height: 22px; }
+.doc-points .mono { color: var(--ink-3); }
+/* the text beside the value may shrink and break a long name («Oude Schippersdokken(Zuidwijk)»): under a reader's text
+   spacing at 320 the two values ran 48 px past the screen (WCAG 1.4.12; P5-12, plan 5 fix wave). The value never wraps */
+.doc-points li > span:first-child { min-width: 0; overflow-wrap: break-word; }
+.doc-points li > .mono { flex: none; }
+
+/* the commitment and the limits */
+.doc-pledges, .doc-limits { margin: 0; padding-left: 1.4em; display: grid; gap: var(--s-16); }
+.doc-pledges li, .doc-limits li { font-size: 18px; line-height: 27px; letter-spacing: .01em; padding-left: .2em; }
+.doc-pledges li::marker { font-family: var(--mono); font-size: 14px; color: var(--ink-3); }
+.doc-pledges strong { font-weight: 600; }
+
+.doc-foot { margin-top: var(--s-96); }
+/* the colophon as rows on hairlines, a label on the left (OpenAI's research footer) */
+.doc-colophon { margin: 0; }
+.doc-colophon div { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: var(--s-20); padding: var(--s-12) 0; border-top: 1px solid var(--rule); }
+.doc-colophon dt { font-size: 14px; line-height: 20px; color: var(--ink-3); }
+.doc-colophon dd { margin: 0; font-size: 14px; line-height: 20px; color: var(--ink-2); overflow-wrap: anywhere; }
+.doc-colophon dd.mono { font-size: 12px; }
+/* minmax(0, …) as above: a bare 1fr kept the column at its longest line's min-content, and Safari's min-content of a
+   Dutch paragraph with soft hyphens is the whole paragraph (2285 px on /nl/dossier at 320 under WCAG's text spacing;
+   re-check 2 after plan 5) */
+@media (max-width: 560px) { .doc-colophon div { grid-template-columns: minmax(0, 1fr); gap: 2px; } }
+/* the fairness note in Dutch ties «is 0,56 van die van het hoogste» into one run (tie(): a number and four short words).
+   Under WCAG's text spacing (1.4.12) at 320 that run is wider than the column, and Safari, given hyphens: auto, breaks it
+   only at «hoogs-te», past the edge: the page scrolled 10–14 px sideways (30+ at 300). With hyphens: manual the run
+   breaks where it must, as in Chromium, and the paragraph reflows. Only this paragraph: no other dossier text has such a
+   run (every dossier, en/nl/fr, 300–440 px, both engines; round-3 re-check, 6 Oct 2026, fixed in the small-fixes round) */
+:lang(nl) #fairness .doc-col > p { hyphens: manual; }
+.doc-print-head { display: none; }
+.doc-missing { text-align: center; margin: var(--s-96) auto; }
+/* the explanation is the page's h1 (a page with no heading: axe's page-has-heading-one, re-check 2, 3 Oct; design wave,
+   5 Oct), set as the line of text it was: the headings' serif, balance and size do not apply */
+h1.doc-missing { font: inherit; letter-spacing: inherit; text-wrap: wrap; }
+
+/* print: A4, the document only — no bar, no buttons, no footer; ink on white */
+@media print {
+  @page { size: A4; margin: 16mm 16mm 18mm; }
+  :root:has(main.doc) { --paper: #fff; --paper-2: #fff; }
+  body:has(main.doc) { background: #fff; }
+  :root:has(main.doc) .nav, :root:has(main.doc) .footer, .doc .doc-actions { display: none !important; }
+  .doc { padding: 0; }
+  .doc > *, .doc > .doc-sec--wide { max-width: none; }
+  .doc-head h1 { font-size: 30pt; line-height: 1.05; }
+  .doc-h2 { font-size: 18pt; margin-bottom: 10pt; }
+  .doc-sec-head { break-inside: avoid; break-after: avoid; }
+  .doc-sec-head + * { break-before: avoid; }
+  .doc-sec p, .doc-col p, .doc-pledges li, .doc-limits li { font-size: 10.5pt; line-height: 1.45; }
+  .doc-callout { background: none; border-radius: 0; border-top: 1px solid #1d1d1b; border-bottom: 1px solid rgba(29, 29, 27, .3); padding: 6pt 0; break-inside: avoid; }
+  .doc-callout p, .doc-table { font-size: 9.5pt !important; line-height: 1.4 !important; }
+  .doc-figures dd { font-size: 20pt; line-height: 1.1; }
+  .doc-sec { margin-top: 20pt; }
+  .doc-head + .doc-sec { margin-top: 24pt; }
+  .doc-table-wrap, .doc-scale, .doc-figures, .doc-pledges li { break-inside: avoid; }
+  .doc-print-head { display: flex; justify-content: space-between; font: 400 8pt/1 var(--mono); color: #555; margin-bottom: 14pt; }
+  .doc-print-head span:first-child { font: 400 14pt/1 var(--serif); color: #1d1d1b; }
+  .doc-figures > div { min-height: 0; padding: 6pt 8pt; }
+  .doc-scale-row { padding-top: 6pt; }
+  .doc-colophon div { padding: 5pt 0; }
+  /* :where keeps the old bare `a` specificity, so .pill--ink and the like still win */
+  :where(.doc) a { color: inherit; text-decoration: none; }
+}

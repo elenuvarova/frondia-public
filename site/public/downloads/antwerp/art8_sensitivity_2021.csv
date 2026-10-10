@@ -1,0 +1,5 @@
+lau_id,name,reading,green_pct,canopy_pct,exempt
+lau2024.BE.11002,Antwerpen / Anvers,official,39.6877,19.9595,False
+lau2024.BE.11002,Antwerpen / Anvers,with_arable,41.7731,19.9595,False
+lau2024.BE.11002,Antwerpen / Anvers,without_water,34.5151,19.9595,False
+lau2024.BE.11002,Antwerpen / Anvers,statbel_sectors,,,

@@ -1,0 +1,2389 @@
+{
+ "version": "greening_v1",
+ "model": "claude-sonnet-5",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "contracts": [
+  {
+   "id": 1,
+   "name": "Fontainas",
+   "commune": "Bruxelles",
+   "years": [
+    1994,
+    1998
+   ],
+   "url": "https://quartiers.brussels/1/q/1",
+   "label": "no",
+   "why": "The text contains only budget figures, project counts, and navigation/menu labels (e.g. 'Fonctionnement', 'Périmètre d'intervention', 'Commission de quartier') with no description of any greening action, intention, or state, so no measure can be extracted.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:17+00:00"
+  },
+  {
+   "id": 2,
+   "name": "Alhambra",
+   "commune": "Bruxelles",
+   "years": [
+    1994,
+    1998
+   ],
+   "url": "https://quartiers.brussels/1/q/2",
+   "label": "no",
+   "why": "The text is only a list of budget figures and section headings (e.g. \"Dimension environnementale\", \"Critères techniques et environnementaux\") with no sentence describing an actual green space, planting, unsealing, or other vegetation/ground-cover measure, so no measure could be quoted.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:16+00:00"
+  },
+  {
+   "id": 3,
+   "name": "Gilles",
+   "commune": "Saint-Gilles",
+   "years": [
+    1994,
+    1998
+   ],
+   "url": "https://quartiers.brussels/1/q/3",
+   "label": "no",
+   "why": "The text contains only budget figures, navigation menu items, and generic contract categories (e.g. \"Dimension environnementale\", \"Critères techniques et environnementaux\") with no concrete description of any greening measure, so it receives label \"no\".",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:15+00:00"
+  },
+  {
+   "id": 4,
+   "name": "Gray",
+   "commune": "Ixelles",
+   "years": [
+    1994,
+    1998
+   ],
+   "url": "https://quartiers.brussels/1/q/4",
+   "label": "no",
+   "why": "The text contains only budget figures, generic navigation labels (\"Définition\", \"Fonctionnement\", \"Participation\", etc.) and no description of any concrete greening action, intention, or state, so no measure can be extracted.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:16+00:00"
+  },
+  {
+   "id": 5,
+   "name": "Baptiste",
+   "commune": "Molenbeek",
+   "years": [
+    1994,
+    1998
+   ],
+   "url": "https://quartiers.brussels/1/q/5",
+   "label": "no",
+   "why": "The text contains only budget figures and section headers/menu labels (e.g. \"Cinq types d'actions\", \"Fonctionnement\", \"Chiffres-clés\") with no description of any actual greening measure such as a park, garden, unsealing, or planting project.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:24+00:00"
+  },
+  {
+   "id": 6,
+   "name": "Wielemans",
+   "commune": "Forest",
+   "years": [
+    1994,
+    1998
+   ],
+   "url": "https://quartiers.brussels/1/q/6",
+   "label": "no",
+   "why": "The text is only budget figures, credits, and navigation menu labels (e.g. \"Chiffres-clés\", \"Programmes\", \"Financements\") with no mention of any park, green space, planting, unsealing, or other vegetation-related measure, so no greening measure can be identified.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:21+00:00"
+  },
+  {
+   "id": 7,
+   "name": "Christine",
+   "commune": "Bruxelles",
+   "years": [
+    1997,
+    2001
+   ],
+   "url": "https://quartiers.brussels/1/q/7",
+   "label": "yes",
+   "why": "The clause \"une suppression des friches urbaines réinvesties par des bâtiments et des espaces verts de proximité\" commits to creating proximity green spaces as part of the planned investments, which is an action changing vegetation cover, so the contract is labeled yes.",
+   "measures": [
+    {
+     "quote": "une suppression des friches urbaines réinvesties par des bâtiments et des espaces verts de proximité.",
+     "kind": "new_green_space",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "une verdurisation et embellissement de certains intérieurs d?ilots, de certains bâtiments en rupture de gabarit et de certaines façades",
+     "kind": "other_greening",
+     "status": "action",
+     "place": "intérieurs d'îlots",
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:43+00:00"
+  },
+  {
+   "id": 8,
+   "name": "Pavillon",
+   "commune": "Schaerbeek",
+   "years": [
+    1997,
+    2001
+   ],
+   "url": "https://quartiers.brussels/1/q/8",
+   "label": "no",
+   "why": "The text is only budget figures and a list of section headings (e.g. \"Dimension environnementale\", \"Critères techniques et environnementaux\") with no described action, intention, or state involving vegetation cover or sealed ground.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:23+00:00"
+  },
+  {
+   "id": 9,
+   "name": "Rempart des Moines",
+   "commune": "Bruxelles",
+   "years": [
+    1997,
+    2001
+   ],
+   "url": "https://quartiers.brussels/1/q/9",
+   "label": "no",
+   "why": "The text is only a budget summary and navigation menu (copyrights, budget figures, \"45 logements\", \"9 projets socio-économiques\", menu headings like \"Programmes\", \"Financements\", \"Chiffres-clés\") with no description of any actual greening measure, so it is labeled \"no\".",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:27+00:00"
+  },
+  {
+   "id": 10,
+   "name": "Rosée",
+   "commune": "Anderlecht",
+   "years": [
+    1997,
+    2001
+   ],
+   "url": "https://quartiers.brussels/1/q/10",
+   "label": "no",
+   "why": "The text is only a budget summary and a table-of-contents-style list of section headings (e.g. \"Définition\", \"Périmètre d'intervention\", \"Dimension environnementale\", \"Historique et évolution\") with no description of any actual park, planting, unsealing, or other greening action, so there is nothing to count as a measure.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:29+00:00"
+  },
+  {
+   "id": 11,
+   "name": "Duchesse de Brabant",
+   "commune": "Molenbeek",
+   "years": [
+    1999,
+    2003
+   ],
+   "url": "https://quartiers.brussels/1/q/11",
+   "label": "no",
+   "why": "The text is only budget figures, headings and navigation labels (e.g. \"Chiffres-clés\", \"Programmes\", \"Financements\") with no sentence describing any actual greening action, intention or state, so no measure can be extracted.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:29+00:00"
+  },
+  {
+   "id": 12,
+   "name": "Révision",
+   "commune": "Anderlecht",
+   "years": [
+    1999,
+    2003
+   ],
+   "url": "https://quartiers.brussels/1/q/12",
+   "label": "no",
+   "why": "The text only lists budget figures, housing units, a crèche, and socio-economic projects with no mention of any park, green space, planting, unsealing, or other greening action.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:33+00:00"
+  },
+  {
+   "id": 13,
+   "name": "Bossuet",
+   "commune": "Saint-Josse",
+   "years": [
+    1999,
+    2003
+   ],
+   "url": "https://quartiers.brussels/1/q/13",
+   "label": "no",
+   "why": "The text contains only budget figures and navigation menu items (e.g. \"Programmes Financements Chiffres-clés\") with no description of any actual greening measure.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:34+00:00"
+  },
+  {
+   "id": 14,
+   "name": "Nord",
+   "commune": "Bruxelles",
+   "years": [
+    1999,
+    2003
+   ],
+   "url": "https://quartiers.brussels/1/q/14",
+   "label": "no",
+   "why": "The text is only a menu of section titles and budget/statistics figures with no descriptive sentences about any specific greening measure, so no quote qualifies as a park, restoration, unsealing, street-greening, garden or green-roof action, intention, or state.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:37+00:00"
+  },
+  {
+   "id": 15,
+   "name": "Brabant",
+   "commune": "Schaerbeek",
+   "years": [
+    2000,
+    2004
+   ],
+   "url": "https://quartiers.brussels/1/q/15",
+   "label": "no",
+   "why": "The text only lists budget figures, funding sources and menu/section headings (e.g. \"Définition\", \"Chiffres-clés\") with no description of any actual greening measure.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:37+00:00"
+  },
+  {
+   "id": 16,
+   "name": "Etangs Noirs",
+   "commune": "Molenbeek",
+   "years": [
+    2000,
+    2004
+   ],
+   "url": "https://quartiers.brussels/1/q/16",
+   "label": "no",
+   "why": "The text is only budget figures, project counts (logements, crèche, projets socio-économiques) and navigation menu labels, with no mention of any park, green space, planting, unsealing or similar greening measure.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:40+00:00"
+  },
+  {
+   "id": 17,
+   "name": "Aviation",
+   "commune": "Anderlecht",
+   "years": [
+    2000,
+    2004
+   ],
+   "url": "https://quartiers.brussels/1/q/17",
+   "label": "no",
+   "why": "The text is only budget figures, copyright notices, and navigation/menu headings (e.g. \"Dimension environnementale\", \"Critères techniques et environnementaux\") with no sentence describing an actual greening action, intention, or state, so no measure can be quoted.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:43+00:00"
+  },
+  {
+   "id": 18,
+   "name": "Rue Verte",
+   "commune": "Saint-Josse",
+   "years": [
+    2000,
+    2004
+   ],
+   "url": "https://quartiers.brussels/1/q/18",
+   "label": "no",
+   "why": "The text contains only budget figures, credits, and navigation menu labels (e.g. 'Dimension environnementale' as a section title) with no actual description of any greening action, intention, or state.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:44+00:00"
+  },
+  {
+   "id": 19,
+   "name": "Tanneurs",
+   "commune": "Bruxelles",
+   "years": [
+    2000,
+    2004
+   ],
+   "url": "https://quartiers.brussels/1/q/19",
+   "label": "no",
+   "why": "The text is only budget figures and navigation menu labels (e.g. \"Définition\", \"Fonctionnement\", \"Périmètre d'intervention\") with no descriptive sentences about any greening measure, so there is nothing to quote and the contract is labeled \"no\".",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:46+00:00"
+  },
+  {
+   "id": 20,
+   "name": "Aerschot",
+   "commune": "Schaerbeek",
+   "years": [
+    2001,
+    2005
+   ],
+   "url": "https://quartiers.brussels/1/q/20",
+   "label": "no",
+   "why": "The text contains only budget figures and menu/navigation headings (e.g. \"22 logements\", \"7 projets socio-économiques\", \"Chiffres-clés\") with no mention of any greening measure such as parks, planting, unsealing or gardens.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:48+00:00"
+  },
+  {
+   "id": 21,
+   "name": "Chimiste",
+   "commune": "Anderlecht",
+   "years": [
+    2001,
+    2005
+   ],
+   "url": "https://quartiers.brussels/1/q/21",
+   "label": "no",
+   "why": "The text is only a list of budget figures and menu/section headings (e.g. \"Budgets Région\", \"Cinq types d'actions\", \"Fonctionnement\") with no description of any concrete greening action, intention, or state.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:51+00:00"
+  },
+  {
+   "id": 22,
+   "name": "Fonderie Pierron",
+   "commune": "Molenbeek",
+   "years": [
+    2001,
+    2005
+   ],
+   "url": "https://quartiers.brussels/1/q/22",
+   "label": "no",
+   "why": "The text contains only budget figures and navigation menu headings (e.g. 'Dimension environnementale' as a menu item) with no actual description of any greening measure being carried out, planned, or existing.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:50+00:00"
+  },
+  {
+   "id": 23,
+   "name": "Square Delhaye",
+   "commune": "Saint-Josse",
+   "years": [
+    2001,
+    2005
+   ],
+   "url": "https://quartiers.brussels/1/q/23",
+   "label": "no",
+   "why": "The text is only a budget table and a navigation menu of section titles (e.g. \"Fonctionnement\", \"Dimension environnementale\", \"Chiffres-clés\") with no sentence describing any actual greening action, intention, or state.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:50+00:00"
+  },
+  {
+   "id": 24,
+   "name": "Théodore Verhaegen",
+   "commune": "Saint-Gilles",
+   "years": [
+    2001,
+    2005
+   ],
+   "url": "https://quartiers.brussels/1/q/24",
+   "label": "no",
+   "why": "The text consists only of budget figures, generic infrastructure counts (\"18 logements 25 places dans 1 crèche 8 projets socio-économiques\"), and navigation menu labels (\"Définition\", \"Cinq types d'actions\", \"Fonctionnement\", etc.) with no description of any actual greening action, intention, or state.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:54+00:00"
+  },
+  {
+   "id": 25,
+   "name": "Blyckaerts",
+   "commune": "Ixelles",
+   "years": [
+    2002,
+    2006
+   ],
+   "url": "https://quartiers.brussels/1/q/25",
+   "label": "no",
+   "why": "The text is only a budget summary and a list of menu/section headings (e.g. \"Dimension environnementale\", \"Critères techniques et environnementaux\") with no actual description of any greening action, intention, or state of green space.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:55+00:00"
+  },
+  {
+   "id": 26,
+   "name": "Heyvaert",
+   "commune": "Molenbeek",
+   "years": [
+    2002,
+    2006
+   ],
+   "url": "https://quartiers.brussels/1/q/26",
+   "label": "no",
+   "why": "The text consists only of budget figures and navigation/menu headings with no description of any greening action, intention, or state.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:54+00:00"
+  },
+  {
+   "id": 27,
+   "name": "Jérusalem",
+   "commune": "Schaerbeek",
+   "years": [
+    2002,
+    2006
+   ],
+   "url": "https://quartiers.brussels/1/q/27",
+   "label": "no",
+   "why": "The text contains only budget figures and menu/section labels (e.g. \"Dimension environnementale\", \"Critères techniques et environnementaux\") with no concrete description of any greening action, intention, or state, so no measure can be identified.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:48:57+00:00"
+  },
+  {
+   "id": 28,
+   "name": "Ponts",
+   "commune": "Bruxelles",
+   "years": [
+    2002,
+    2006
+   ],
+   "url": "https://quartiers.brussels/1/q/28",
+   "label": "no",
+   "why": "The text contains only budget figures and navigation/menu section titles (e.g., \"Dimension environnementale\", \"Critères techniques et environnementaux\") with no concrete description of any park, garden, unsealing, or planting measure, so no greening measure can be identified.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:02+00:00"
+  },
+  {
+   "id": 29,
+   "name": "Monnaies",
+   "commune": "Saint-Gilles",
+   "years": [
+    2003,
+    2007
+   ],
+   "url": "https://quartiers.brussels/1/q/29",
+   "label": "no",
+   "why": "The text contains only budget figures, generic section headings (e.g. \"Dimension environnementale\", \"Chiffres-clés\") and housing/crèche/socio-economic project counts, with no sentence describing any park, garden, tree, unsealing or other vegetation/greening measure.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:04+00:00"
+  },
+  {
+   "id": 30,
+   "name": "Quartier Maritime",
+   "commune": "Molenbeek",
+   "years": [
+    2003,
+    2007
+   ],
+   "url": "https://quartiers.brussels/1/q/30",
+   "label": "no",
+   "why": "The text is only budget figures, credits, and navigation/menu headings (e.g. \"Définition\", \"Cinq types d'actions\", \"Chiffres-clés\") with no description of any concrete greening measure, so no measure can be extracted.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:00+00:00"
+  },
+  {
+   "id": 31,
+   "name": "Van Artevelde",
+   "commune": "Bruxelles",
+   "years": [
+    2003,
+    2007
+   ],
+   "url": "https://quartiers.brussels/1/q/31",
+   "label": "no",
+   "why": "The text is only a budget table and a list of section headings (Définition, Budgets, Programmes, Chiffres-clés, etc.) with no description of any concrete greening action, intention, or state, so no measure can be extracted.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:05+00:00"
+  },
+  {
+   "id": 32,
+   "name": "Vanhuffel",
+   "commune": "Koekelberg",
+   "years": [
+    2003,
+    2007
+   ],
+   "url": "https://quartiers.brussels/1/q/32",
+   "label": "no",
+   "why": "The text only lists budgets, housing/crèche/socio-economic figures and generic menu headings like \"Dimension environnementale\" with no concrete greening measure described.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:04+00:00"
+  },
+  {
+   "id": 33,
+   "name": "Conseil",
+   "commune": "Anderlecht",
+   "years": [
+    2004,
+    2008
+   ],
+   "url": "https://quartiers.brussels/1/q/33",
+   "label": "no",
+   "why": "The text is only budget figures and a navigation/table-of-contents list (e.g. \"Chiffres-clés\", \"Partenariat\", \"Dimension environnementale\") with no sentence describing any actual greening action, intention, or state.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:05+00:00"
+  },
+  {
+   "id": 34,
+   "name": "Meuse",
+   "commune": "Molenbeek",
+   "years": [
+    2004,
+    2008
+   ],
+   "url": "https://quartiers.brussels/1/q/34",
+   "label": "no",
+   "why": "The text is only budget figures, copyright notices and menu/category headings (e.g. \"Dimension environnementale\", \"Critères techniques et environnementaux\") with no sentence describing any actual greening action, intention or state, so no measure can be extracted.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:10+00:00"
+  },
+  {
+   "id": 35,
+   "name": "Malibran",
+   "commune": "Ixelles",
+   "years": [
+    2004,
+    2008
+   ],
+   "url": "https://quartiers.brussels/1/q/35",
+   "label": "no",
+   "why": "The text is only budget figures and menu/navigation headings (e.g. \"Fonctionnement Périmètre d'intervention Partenariat Dimension environnementale\") with no description of any actual park, planting, unsealing, or greening measure, so no measure can be identified.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:10+00:00"
+  },
+  {
+   "id": 36,
+   "name": "Princesse Elisabeth",
+   "commune": "Schaerbeek",
+   "years": [
+    2004,
+    2008
+   ],
+   "url": "https://quartiers.brussels/1/q/36",
+   "label": "no",
+   "why": "The text consists only of budget figures, photo credits, and menu/section headings (e.g. \"Définition\", \"Cinq types d'actions\", \"Fonctionnement\") with no description of any actual greening measure.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:10+00:00"
+  },
+  {
+   "id": 37,
+   "name": "Mommaerts",
+   "commune": "Molenbeek",
+   "years": [
+    2005,
+    2009
+   ],
+   "url": "https://quartiers.brussels/1/q/37",
+   "label": "no",
+   "why": "The text is only budget figures and a navigation/section list (e.g. 'Dimension environnementale' as a menu heading) with no actual sentence describing a park, planting, unsealing, garden or other greening action, so no measure can be extracted.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:14+00:00"
+  },
+  {
+   "id": 38,
+   "name": "Wayez",
+   "commune": "Anderlecht",
+   "years": [
+    2005,
+    2009
+   ],
+   "url": "https://quartiers.brussels/1/q/38",
+   "label": "no",
+   "why": "The text is only a budget table and a list of navigation/section headings (e.g. \"Dimension environnementale\", \"Critères techniques et environnementaux\") with no sentence describing an actual greening action, intention, or state.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:16+00:00"
+  },
+  {
+   "id": 39,
+   "name": "Kessels",
+   "commune": "Schaerbeek",
+   "years": [
+    2005,
+    2009
+   ],
+   "url": "https://quartiers.brussels/1/q/39",
+   "label": "no",
+   "why": "The text contains only budget figures, generic section headings (\"Cinq types d'actions\", \"Dimension environnementale\", \"Critères techniques et environnementaux\") and navigation labels, with no concrete mention of any park, green space, planting, unsealing, or garden measure.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:18+00:00"
+  },
+  {
+   "id": 40,
+   "name": "Léopold à Léopold",
+   "commune": "Bruxelles",
+   "years": [
+    2005,
+    2009
+   ],
+   "url": "https://quartiers.brussels/1/q/40",
+   "label": "no",
+   "why": "The text contains only budget figures, credits, and navigation/menu headings (e.g. 'Chiffres-clés', 'Financements') with no sentence describing any greening action, intention, or state of vegetation/sealed ground.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:18+00:00"
+  },
+  {
+   "id": 41,
+   "name": "Méridien de Bruxelles",
+   "commune": "Saint-Josse",
+   "years": [
+    2006,
+    2010
+   ],
+   "url": "https://quartiers.brussels/1/q/41",
+   "label": "no",
+   "why": "The text is only a budget table and a navigation menu of section titles (e.g. \"Dimension environnementale\", \"Critères techniques et environnementaux\") with no described action, intention or state involving vegetation cover or sealed ground.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:23+00:00"
+  },
+  {
+   "id": 42,
+   "name": "Les Quais",
+   "commune": "Bruxelles",
+   "years": [
+    2006,
+    2010
+   ],
+   "url": "https://quartiers.brussels/1/q/42",
+   "label": "no",
+   "why": "The text is only a budget table and a list of menu/section headings (e.g. \"Cinq types d'actions\", \"Périmètre d'intervention\") with no descriptive sentences about parks, planting, unsealing or any other greening action.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:21+00:00"
+  },
+  {
+   "id": 43,
+   "name": "Coeur de Jette",
+   "commune": "Jette",
+   "years": [
+    2006,
+    2010
+   ],
+   "url": "https://quartiers.brussels/1/q/43",
+   "label": "no",
+   "why": "The text contains only budget figures and navigation menu headings (e.g. 'Dimension environnementale', 'Chiffres-clés') with no descriptive sentence about any greening action, intention, or state.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:25+00:00"
+  },
+  {
+   "id": 44,
+   "name": "Denis",
+   "commune": "Forest",
+   "years": [
+    2006,
+    2010
+   ],
+   "url": "https://quartiers.brussels/1/q/44",
+   "label": "no",
+   "why": "The text is only budget figures, housing/crèche/socio-economic project counts, and navigation menu labels (e.g. \"25 logements 36 places dans 1 crèche 10 projets socio-économiques\"), with no mention of any park, green space, planting, unsealing or other greening action.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:23+00:00"
+  },
+  {
+   "id": 45,
+   "name": "Fontainas",
+   "commune": "Saint-Gilles",
+   "years": [
+    2007,
+    2011
+   ],
+   "url": "https://quartiers.brussels/1/q/45",
+   "label": "yes",
+   "why": "The clause \"réhabiliter et végétaliser le square Jacques Frank et les voiries qui l'entourent\" is listed among the firmly committed projects of the contract (\"développe les projets suivants\"), making it an action that changes vegetation cover, so the contract is labeled \"yes\".",
+   "measures": [
+    {
+     "quote": "réhabiliter et végétaliser le square Jacques Frank et les voiries qui l'entourent",
+     "kind": "park_redesign",
+     "status": "action",
+     "place": "square Jacques Frank",
+     "verbatim": true
+    },
+    {
+     "quote": "inciter les habitants à la rénovation, à la verdurisation des façades et aux économies d'énergie",
+     "kind": "green_roofs_facades",
+     "status": "intention",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:45+00:00"
+  },
+  {
+   "id": 46,
+   "name": "Rives Ouest",
+   "commune": "Molenbeek",
+   "years": [
+    2007,
+    2011
+   ],
+   "url": "https://quartiers.brussels/1/q/46",
+   "label": "yes",
+   "why": "The clause \"aménagement d'un parc\" is a firm commitment to create a new green space, which decides the \"yes\" label.",
+   "measures": [
+    {
+     "quote": "aménagement d'un parc",
+     "kind": "new_green_space",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "rendre le quartier plus vert",
+     "kind": "other_greening",
+     "status": "intention",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:31+00:00"
+  },
+  {
+   "id": 47,
+   "name": "Maison Rouge",
+   "commune": "Bruxelles",
+   "years": [
+    2007,
+    2011
+   ],
+   "url": "https://quartiers.brussels/1/q/47",
+   "label": "no",
+   "why": "The text lists social, housing, mobility and public-space projects (logements, trottoirs, voiries, éclairages, restructuration d'un îlot autour d'un centre de jeunes) but never mentions parks, plantations, unsealing, gardens or green roofs/façades, so no greening measure is present.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:30+00:00"
+  },
+  {
+   "id": 48,
+   "name": "Lemmens",
+   "commune": "Anderlecht",
+   "years": [
+    2007,
+    2011
+   ],
+   "url": "https://quartiers.brussels/1/q/48",
+   "label": "yes",
+   "why": "The contract commits to concrete greening actions such as \"plantation\" in public space works and \"des potagers urbains\" as part of the Liverpool plain redevelopment, both firm plans (verbs \"intervenir\" and \"réaménager\"), which changes vegetation cover and justifies the \"yes\" label.",
+   "measures": [
+    {
+     "quote": "intervenir sur les espaces publics: plantation",
+     "kind": "other_greening",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "réaménager la plaine de Liverpool en terrain multisports, une pataugeoire, un coin pour les 6-12 ans, une buvette, des potagers urbains, etc.",
+     "kind": "gardens_agriculture",
+     "status": "action",
+     "place": "plaine de Liverpool",
+     "verbatim": true
+    },
+    {
+     "quote": "aménager une nouvelle entrée pour le Parc de la Rosée sur l'ancien lit de la Petite Senne, situé au 35, Chaussée de Mons.",
+     "kind": "park_redesign",
+     "status": "action",
+     "place": "Parc de la Rosée",
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:58+00:00"
+  },
+  {
+   "id": 49,
+   "name": "Rouppe",
+   "commune": "Bruxelles",
+   "years": [
+    2008,
+    2012
+   ],
+   "url": "https://quartiers.brussels/1/q/49",
+   "label": "yes",
+   "why": "The clause \"créer un petit jardin public et une fresque murale\" is a firm commitment to create a new green space, which qualifies the contract as \"yes\".",
+   "measures": [
+    {
+     "quote": "intervenir sur les espaces publics: plantation, réfection de façades, trottoirs et voiries, installation de mobilier urbain, travaux sur les éclairages et tracé de pistes cyclables",
+     "kind": "street_greening",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "créer un petit jardin public et une fresque murale",
+     "kind": "new_green_space",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:45+00:00"
+  },
+  {
+   "id": 50,
+   "name": "Antoine",
+   "commune": "Forest",
+   "years": [
+    2008,
+    2012
+   ],
+   "url": "https://quartiers.brussels/1/q/50",
+   "label": "yes",
+   "why": "The quote \\\"réaménager des trottoirs, voiries, carrefours, jardins et cours d'école\\\" commits to redesigning jardins (green spaces) with the firm verb \\\"réaménager\\\", making it an action-level greening measure, so the contract is labeled \\\"yes\\\"; no other passage mentions vegetation or sealed-ground changes (the rest concerns housing, squares, a crèche, social cohesion and training programs).",
+   "measures": [
+    {
+     "quote": "réaménager des trottoirs, voiries, carrefours, jardins et cours d'école",
+     "kind": "park_redesign",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:50:35+00:00"
+  },
+  {
+   "id": 51,
+   "name": "Lazare",
+   "commune": "Molenbeek",
+   "years": [
+    2008,
+    2012
+   ],
+   "url": "https://quartiers.brussels/1/q/51",
+   "label": "yes",
+   "why": "The clause \"intervenir sur les espaces publics: plantation, réfection de trottoirs et de voiries, installation de mobilier urbain\" commits the contract to planting as part of the public space works, an action-status measure that changes vegetation cover.",
+   "measures": [
+    {
+     "quote": "intervenir sur les espaces publics: plantation, réfection de trottoirs et de voiries, installation de mobilier urbain",
+     "kind": "other_greening",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "créer une crèche, une antenne de quartier, un jardin récréatif avec un pavillon et un espace extrascolaire",
+     "kind": "new_green_space",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:49:58+00:00"
+  },
+  {
+   "id": 52,
+   "name": "Portaels",
+   "commune": "Schaerbeek",
+   "years": [
+    2008,
+    2012
+   ],
+   "url": "https://quartiers.brussels/1/q/52",
+   "label": "yes",
+   "why": "The contract commits to \"intervenir sur les espaces publics: éclairages, plantations et réfection de voiries\", a firm action that includes planting vegetation, which qualifies as a \"yes\" label.",
+   "measures": [
+    {
+     "quote": "intervenir sur les espaces publics: éclairages, plantations et réfection de voiries",
+     "kind": "street_greening",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "amélioration des parcours vers le Parc Josaphat et vers la promenade verte (rue Monplaisir)",
+     "kind": "other_greening",
+     "status": "intention",
+     "place": "Parc Josaphat",
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:50:02+00:00"
+  },
+  {
+   "id": 53,
+   "name": "Vue",
+   "commune": "Molenbeek",
+   "years": [
+    2009,
+    2013
+   ],
+   "url": "https://quartiers.brussels/1/q/53",
+   "label": "yes",
+   "why": "The quote \"plantation d'arbres\" is listed among committed interventions on public space (\"intervenir sur les espaces publics\"), and \"créer un jardin pédagogique\" is a firm project commitment, both changing vegetation cover, which qualifies the contract as \"yes\".",
+   "measures": [
+    {
+     "quote": "plantation d'arbres",
+     "kind": "street_greening",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "créer un jardin pédagogique",
+     "kind": "gardens_agriculture",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "rendre plus attractifs les espaces verts et les espaces publics",
+     "kind": "other_greening",
+     "status": "intention",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "organiser des actions collectives de végétalisation et de conseil en agriculture urbaine",
+     "kind": "gardens_agriculture",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:50:11+00:00"
+  },
+  {
+   "id": 54,
+   "name": "Pont de Luttre",
+   "commune": "Forest",
+   "years": [
+    2009,
+    2013
+   ],
+   "url": "https://quartiers.brussels/1/q/54",
+   "label": "yes",
+   "why": "The quote \"aménager un parc, des plaines de jeux et des espaces de rencontres\" is a firm commitment to create a new park, which is a greening action that changes vegetation cover.",
+   "measures": [
+    {
+     "quote": "aménager un parc, des plaines de jeux et des espaces de rencontres",
+     "kind": "new_green_space",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:50:14+00:00"
+  },
+  {
+   "id": 55,
+   "name": "Alsemberg",
+   "commune": "Saint-Gilles",
+   "years": [
+    2009,
+    2013
+   ],
+   "url": "https://quartiers.brussels/1/q/55",
+   "label": "no",
+   "why": "The contract lists projects like renovating sidewalks, redesigning squares with an \"espace merveilleux\" concept (coloration, exotisme, mobilier urbain), and creating semi-pedestrian streets, none of which mention vegetation, trees, unsealing, or green space creation, so no greening measure is present.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:50:09+00:00"
+  },
+  {
+   "id": 56,
+   "name": "Sceptre",
+   "commune": "Ixelles",
+   "years": [
+    2009,
+    2013
+   ],
+   "url": "https://quartiers.brussels/1/q/56",
+   "label": "yes",
+   "why": "The quote \"réhabiliter des espaces naturels délaissés et en friche, comme les talus des chemins de fer\" together with commitments to plantations, a \"park system\", green roofs and permeable soils are firm actions that change vegetation cover and sealed ground, so the contract is labeled yes.",
+   "measures": [
+    {
+     "quote": "réhabiliter des espaces naturels délaissés et en friche, comme les talus des chemins de fer",
+     "kind": "restoration",
+     "status": "action",
+     "place": "les talus des chemins de fer",
+     "verbatim": true
+    },
+    {
+     "quote": "renforcer le maillage vert par des plantations dans l'espace public",
+     "kind": "other_greening",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "en créant un « park system »",
+     "kind": "new_green_space",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "l'aménagement de toitures vertes",
+     "kind": "green_roofs_facades",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "de sols végétalisés et perméables",
+     "kind": "unsealing",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:50:30+00:00"
+  },
+  {
+   "id": 57,
+   "name": "Midi",
+   "commune": "Anderlecht",
+   "years": [
+    2010,
+    2014
+   ],
+   "url": "https://quartiers.brussels/1/q/57",
+   "label": "yes",
+   "why": "The quote \"implanter des potagers urbains sur plusieurs sites du périmètre\" is a firm commitment (part of the list of projects the contract 'va développer') that creates new vegetated/cultivated ground, which decides the \"yes\" label.",
+   "measures": [
+    {
+     "quote": "implanter des potagers urbains sur plusieurs sites du périmètre",
+     "kind": "gardens_agriculture",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "assainir et réaménager les espaces verts aux pieds des logements sociaux",
+     "kind": "restoration",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "offrir des équipements publics de proximité: espaces verts, salle de sport, crèche, extension d'une école primaire - centre de stage de vacances, etc.",
+     "kind": "new_green_space",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:50:26+00:00"
+  },
+  {
+   "id": 58,
+   "name": "Masui",
+   "commune": "Bruxelles",
+   "years": [
+    2010,
+    2014
+   ],
+   "url": "https://quartiers.brussels/1/q/58",
+   "label": "yes",
+   "why": "The quote \"aménager une friche verte, le tracé historique de la Senne, en un parc longitudinal\" is a firm commitment (verb of commitment \"aménager\") to turn a wasteland into a new park, which changes vegetation cover, so the contract is labeled yes.",
+   "measures": [
+    {
+     "quote": "aménager une friche verte, le tracé historique de la Senne, en un parc longitudinal formant un couloir de mobilité active entre le quartier Masui et le centre-ville",
+     "kind": "new_green_space",
+     "status": "action",
+     "place": "le tracé historique de la Senne",
+     "verbatim": true
+    },
+    {
+     "quote": "aménager des potagers collectifs",
+     "kind": "gardens_agriculture",
+     "status": "action",
+     "place": "axe Senne",
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:50:32+00:00"
+  },
+  {
+   "id": 59,
+   "name": "Helmet",
+   "commune": "Schaerbeek",
+   "years": [
+    2010,
+    2014
+   ],
+   "url": "https://quartiers.brussels/1/q/59",
+   "label": "yes",
+   "why": "The quote \"réaménager complètement le square Apollo et les abords des logements en espaces publics conviviaux, ludiques et à haute qualité écologique\" is a firm committed action (verb \"réaménager\") that redesigns a park, so the contract qualifies as \"yes\".",
+   "measures": [
+    {
+     "quote": "réaménager complètement le square Apollo et les abords des logements en espaces publics conviviaux, ludiques et à haute qualité écologique",
+     "kind": "park_redesign",
+     "status": "action",
+     "place": "square Apollo",
+     "verbatim": true
+    },
+    {
+     "quote": "activer et verduriser plusieurs intérieurs d'îlots",
+     "kind": "other_greening",
+     "status": "action",
+     "place": "intérieurs d'îlots",
+     "verbatim": true
+    },
+    {
+     "quote": "réaménager et végétaliser des entrées d'une école",
+     "kind": "other_greening",
+     "status": "action",
+     "place": "entrées d'une école",
+     "verbatim": true
+    },
+    {
+     "quote": "verduriser des façades",
+     "kind": "green_roofs_facades",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:50:35+00:00"
+  },
+  {
+   "id": 60,
+   "name": "Liedekerke",
+   "commune": "Saint-Josse",
+   "years": [
+    2010,
+    2014
+   ],
+   "url": "https://quartiers.brussels/1/q/60",
+   "label": "yes",
+   "why": "The contract firmly commits to \"aménager un parc de 3.200 m2 en intérieur d'îlot\" and to \"développer un axe vert\" with improved soil permeability, both stated with commitment verbs (\"va développer\"/\"aménager\"), which change vegetation and sealed ground cover, making the label \"yes\".",
+   "measures": [
+    {
+     "quote": "développer un axe vert",
+     "kind": "street_greening",
+     "status": "action",
+     "place": "l'ancien tracé du Maelbeek",
+     "verbatim": true
+    },
+    {
+     "quote": "améliorer la perméabilité des sols de 10 à 20% sur l'ancien tracé du Maelbeek",
+     "kind": "unsealing",
+     "status": "action",
+     "place": "l'ancien tracé du Maelbeek",
+     "verbatim": true
+    },
+    {
+     "quote": "aménager un parc de 3.200 m2 en intérieur d'îlot, entre les rues Potagère, du Moulin et de la Limite",
+     "kind": "new_green_space",
+     "status": "action",
+     "place": "intérieur d'îlot, entre les rues Potagère, du Moulin et de la Limite",
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:50:45+00:00"
+  },
+  {
+   "id": 61,
+   "name": "Scheut",
+   "commune": "Anderlecht",
+   "years": [
+    2011,
+    2015
+   ],
+   "url": "https://quartiers.brussels/1/q/61",
+   "label": "yes",
+   "why": "The contract commits to greening actions, notably \"verduriser et restaurer la Place Desmet ainsi que plusieurs voiries\", which uses a firm commitment verb to change vegetation cover, meeting the criterion for a \"yes\" label.",
+   "measures": [
+    {
+     "quote": "restructurer, réaménager et sécuriser le Parc Petit Scheut avec, entre autres, une plaine de jeux pour les petits",
+     "kind": "park_redesign",
+     "status": "action",
+     "place": "Parc Petit Scheut",
+     "verbatim": true
+    },
+    {
+     "quote": "verduriser et restaurer la Place Desmet ainsi que plusieurs voiries (rues de l'Agrafe, de l'Aguille, Ruquoy et Verdonck, etc.)",
+     "kind": "restoration",
+     "status": "action",
+     "place": "Place Desmet",
+     "verbatim": true
+    },
+    {
+     "quote": "verduriser et restaurer la Place Desmet ainsi que plusieurs voiries (rues de l'Agrafe, de l'Aguille, Ruquoy et Verdonck, etc.)",
+     "kind": "street_greening",
+     "status": "action",
+     "place": "rues de l'Agrafe, de l'Aguille, Ruquoy et Verdonck",
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:50:46+00:00"
+  },
+  {
+   "id": 62,
+   "name": "Jardin aux Fleurs",
+   "commune": "Bruxelles",
+   "years": [
+    2011,
+    2015
+   ],
+   "url": "https://quartiers.brussels/1/q/62",
+   "label": "yes",
+   "why": "The contract commits to concrete greening actions such as \"Le projet prévoit le réaménagement d'un grand parc urbain pour en faire un réservoir de biodiversité\" and the creation of several gardens (jardins) in the Fontainas and Abattoir hubs and on rue Vandenbranden, which are firm commitments changing vegetation/sealed ground, so the contract is labeled \"yes\".",
+   "measures": [
+    {
+     "quote": "Le projet prévoit le réaménagement d'un grand parc urbain pour en faire un réservoir de biodiversité",
+     "kind": "park_redesign",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "créer une nouvelle salle de sport, deux espaces co-accueillants, un jardin, et construire un espace horeca de rencontre et de convivialité dans le pôle Fontainas",
+     "kind": "gardens_agriculture",
+     "status": "action",
+     "place": "pôle Fontainas",
+     "verbatim": true
+    },
+    {
+     "quote": "créer un autre espace co-accueillant, des logements et un jardin dans le pôle Abattoir",
+     "kind": "gardens_agriculture",
+     "status": "action",
+     "place": "pôle Abattoir",
+     "verbatim": true
+    },
+    {
+     "quote": "aménager un jardin collectif sur un terrain en friche, rue Vandenbranden",
+     "kind": "gardens_agriculture",
+     "status": "action",
+     "place": "rue Vandenbranden",
+     "verbatim": true
+    },
+    {
+     "quote": "mener certaines opérations socio-économiques et citoyennes pour verduriser le quartier",
+     "kind": "other_greening",
+     "status": "intention",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:50:51+00:00"
+  },
+  {
+   "id": 63,
+   "name": "Koekelberg historique",
+   "commune": "Koekelberg",
+   "years": [
+    2011,
+    2015
+   ],
+   "url": "https://quartiers.brussels/1/q/63",
+   "label": "yes",
+   "why": "The quote \"créer une promenade verte le long de la ligne de train 28\" commits (verb \"créer\") to building a new green space, which alone makes this an action-level greening measure and yields the label \"yes\".",
+   "measures": [
+    {
+     "quote": "créer une promenade verte le long de la ligne de train 28",
+     "kind": "new_green_space",
+     "status": "action",
+     "place": "ligne de train 28",
+     "verbatim": true
+    },
+    {
+     "quote": "aménager des terrains au coeur de l'îlot Schmitz afin de pouvoir y accueillir des jardins collectifs (potagers) comprenant un site de compostage",
+     "kind": "gardens_agriculture",
+     "status": "action",
+     "place": "îlot Schmitz",
+     "verbatim": true
+    },
+    {
+     "quote": "réaménager et verduriser plusieurs voiries en sécurisant le déplacement des piétons",
+     "kind": "street_greening",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:50:45+00:00"
+  },
+  {
+   "id": 64,
+   "name": "Josaphat",
+   "commune": "Schaerbeek",
+   "years": [
+    2011,
+    2015
+   ],
+   "url": "https://quartiers.brussels/1/q/64",
+   "label": "yes",
+   "why": "The contract commits to developing \"jardins en intérieur d'îlots\" as part of the projects it \"va développer\", a firm commitment creating new green space, so the contract is labeled \"yes\".",
+   "measures": [
+    {
+     "quote": "jardins en intérieur d'îlots",
+     "kind": "gardens_agriculture",
+     "status": "action",
+     "place": "rue Van Dyck",
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:51:00+00:00"
+  },
+  {
+   "id": 65,
+   "name": "Autour de Léopold II",
+   "commune": "Molenbeek",
+   "years": [
+    2012,
+    2016
+   ],
+   "url": "https://quartiers.brussels/1/q/65",
+   "label": "yes",
+   "why": "The contract commits to concrete greening actions such as \"la création d’une espace vert\" and \"l’aménagement d’un nouvel espace vert collectif sur une friche dans la prolongation du parc de la Petite Senne\", which are firm plans that will change vegetation cover, so the label is yes.",
+   "measures": [
+    {
+     "quote": "la création d’une espace vert",
+     "kind": "new_green_space",
+     "status": "action",
+     "place": "Quai du Charbonnage, 86",
+     "verbatim": true
+    },
+    {
+     "quote": "le réaménagement des rues de l'Avenir et de Ribaucourt en favorisant la mobilité douce, la verdurisation, la redynamisation de l’axe commerçant Ribaucourt et la convivialité",
+     "kind": "street_greening",
+     "status": "action",
+     "place": "rues de l'Avenir et de Ribaucourt",
+     "verbatim": true
+    },
+    {
+     "quote": "l’aménagement d’un nouvel espace vert collectif sur une friche dans la prolongation du parc de la Petite Senne",
+     "kind": "new_green_space",
+     "status": "action",
+     "place": "une friche dans la prolongation du parc de la Petite Senne",
+     "verbatim": true
+    },
+    {
+     "quote": "la revalorisation du parc Saint-Rémy de manière qualitative et durable par le réaméganement de celui-ci et la sécurisation de ses abords",
+     "kind": "park_redesign",
+     "status": "action",
+     "place": "parc Saint-Rémy",
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:51:09+00:00"
+  },
+  {
+   "id": 66,
+   "name": "Progrès",
+   "commune": "Schaerbeek",
+   "years": [
+    2012,
+    2016
+   ],
+   "url": "https://quartiers.brussels/1/q/66",
+   "label": "no",
+   "why": "The text describes housing, economic conversion, a soft-mobility network and street layout solutions ('des interventions sur l'espace public du périmètre afin d'y mettre en place un réseau de déplacement doux, le traitement des traversées sous tunnel ainsi que la recherche de solutions d'aménagements pour la rue d'Aerschot') but contains no mention of parks, planting, unsealing, gardens or green roofs/façades, so there is no greening measure.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:50:58+00:00"
+  },
+  {
+   "id": 67,
+   "name": "Albert",
+   "commune": "Forest",
+   "years": [
+    2012,
+    2016
+   ],
+   "url": "https://quartiers.brussels/1/q/67",
+   "label": "yes",
+   "why": "The clause \"créer un espace vert en intérieur d'ilot accessible au quartier\" is a firm commitment (verb \"créer\" within a list of actions the neighbourhood \"bénéficiera\") to add new green cover, which makes the contract label \"yes\".",
+   "measures": [
+    {
+     "quote": "créer un espace vert en intérieur d'ilot accessible au quartier",
+     "kind": "new_green_space",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "réaménager un parc et des voiries",
+     "kind": "park_redesign",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:51:03+00:00"
+  },
+  {
+   "id": 68,
+   "name": "Bosnie",
+   "commune": "Saint-Gilles",
+   "years": [
+    2012,
+    2016
+   ],
+   "url": "https://quartiers.brussels/1/q/68",
+   "label": "yes",
+   "why": "The quote \"créer au sein du projet phare du site de l'ECAM, un parc urbain en intérieur d'îlot\" commits the contract to actually creating a new urban park, a firm action that changes vegetation cover, so the contract is labeled \"yes\".",
+   "measures": [
+    {
+     "quote": "La verdurisation du quartier, l'amélioration de ses qualités environnementales et du cadre de vie (espaces publics et intérieurs d'îlot) constitueront les enjeux fondamentaux du contrat de Quartier Durable.",
+     "kind": "other_greening",
+     "status": "intention",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "créer au sein du projet phare du site de l'ECAM, un parc urbain en intérieur d'îlot",
+     "kind": "new_green_space",
+     "status": "action",
+     "place": "site de l'ECAM",
+     "verbatim": true
+    },
+    {
+     "quote": "intervenir sur les espaces publics : plantations, installation de mobilier urbain, développement d'espaces ludiques",
+     "kind": "street_greening",
+     "status": "action",
+     "place": "espaces publics",
+     "verbatim": true
+    },
+    {
+     "quote": "favoriser la verdurisation du quartier via la création d'une pépinière et des actions sur les façades, les toitures et les balcons",
+     "kind": "gardens_agriculture",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "favoriser la verdurisation du quartier via la création d'une pépinière et des actions sur les façades, les toitures et les balcons",
+     "kind": "green_roofs_facades",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:51:29+00:00"
+  },
+  {
+   "id": 69,
+   "name": "Maelbeek",
+   "commune": "Ixelles",
+   "years": [
+    2013,
+    2017
+   ],
+   "url": "https://quartiers.brussels/1/q/69",
+   "label": "yes",
+   "why": "The quote \"le développement de potagers urbains sur la toiture du nouveau Colruyt\" commits (via \"développement\") to creating vegetated urban gardens, an action that changes vegetation cover, which qualifies the contract as \"yes\".",
+   "measures": [
+    {
+     "quote": "l'aménagement du jardin collectif de l'impasse des Moineaux (rue Gray)",
+     "kind": "gardens_agriculture",
+     "status": "action",
+     "place": "impasse des Moineaux (rue Gray)",
+     "verbatim": true
+    },
+    {
+     "quote": "le développement de potagers urbains sur la toiture du nouveau Colruyt",
+     "kind": "gardens_agriculture",
+     "status": "action",
+     "place": "toiture du nouveau Colruyt",
+     "verbatim": true
+    },
+    {
+     "quote": "le renforcement du maillage écologique, appuyée par un coordinateur maillage vert",
+     "kind": "other_greening",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:51:17+00:00"
+  },
+  {
+   "id": 70,
+   "name": "Axe Louvain",
+   "commune": "Saint-Josse",
+   "years": [
+    2013,
+    2017
+   ],
+   "url": "https://quartiers.brussels/1/q/70",
+   "label": "yes",
+   "why": "The contract commits to concrete greening actions such as \"réaménagement du Square Delhaye et de ses alentours\" and \"plantation d'arbres sur la chaussée de Louvain\", which are firm commitments that change vegetation cover, justifying a \"yes\" label.",
+   "measures": [
+    {
+     "quote": "réaménagement du square à l'angle des rues de la Pacification et de l'Artichaut",
+     "kind": "park_redesign",
+     "status": "action",
+     "place": "square à l'angle des rues de la Pacification et de l'Artichaut",
+     "verbatim": true
+    },
+    {
+     "quote": "réaménagement du Square Delhaye et de ses alentours",
+     "kind": "park_redesign",
+     "status": "action",
+     "place": "Square Delhaye",
+     "verbatim": true
+    },
+    {
+     "quote": "la prolongation de la Coulée verte",
+     "kind": "new_green_space",
+     "status": "action",
+     "place": "Coulée verte",
+     "verbatim": true
+    },
+    {
+     "quote": "plantation d'arbres sur la chaussée de Louvain",
+     "kind": "street_greening",
+     "status": "action",
+     "place": "chaussée de Louvain",
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:51:20+00:00"
+  },
+  {
+   "id": 71,
+   "name": "Compas",
+   "commune": "Anderlecht",
+   "years": [
+    2013,
+    2017
+   ],
+   "url": "https://quartiers.brussels/1/q/71",
+   "label": "yes",
+   "why": "The quote \"aménager un cheminement vert, le long du tracé de la petite Senne\" is a firm commitment (aménager) to create a green pathway, which changes vegetation cover, making the label \"yes\".\"",
+   "measures": [
+    {
+     "quote": "aménager un cheminement vert, le long du tracé de la petite Senne, qui traversa l'intérieur d'îlot du projet phare",
+     "kind": "other_greening",
+     "status": "action",
+     "place": "l'intérieur d'îlot du projet phare",
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:51:19+00:00"
+  },
+  {
+   "id": 72,
+   "name": "Bockstael",
+   "commune": "Bruxelles",
+   "years": [
+    2013,
+    2017
+   ],
+   "url": "https://quartiers.brussels/1/q/72",
+   "label": "yes",
+   "why": "The contract commits to creating '5 Pocket Park' and to transforming the derelict L28A block interior 'en vue de la transformer en espace vert ouvert sur le quartier', both firm actions that create new green space, so the label is 'yes'.",
+   "measures": [
+    {
+     "quote": "la création de 5 'Pocket Park' et l'intérieur d'îlot L28A",
+     "kind": "new_green_space",
+     "status": "action",
+     "place": "L28A",
+     "verbatim": true
+    },
+    {
+     "quote": "vise à utiliser l'espace en friche en intérieur d'îlot le long de la ligne de chemin de fer L28A en vue de la transformer en espace vert ouvert sur le quartier",
+     "kind": "new_green_space",
+     "status": "action",
+     "place": "intérieur d'îlot le long de la ligne de chemin de fer L28A",
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:51:43+00:00"
+  },
+  {
+   "id": 73,
+   "name": "Jonction",
+   "commune": "Bruxelles",
+   "years": [
+    2014,
+    2018
+   ],
+   "url": "https://quartiers.brussels/1/q/73",
+   "label": "no",
+   "why": "The text only describes the perimeter's location, budgets, and general ambitions like \"la qualité et l'augmentation de l'offre d'espace public destinés aux modes doux\" and \"la lutte contre l'insalubrité\", none of which mention parks, trees, gardens, unsealing, or any change to vegetation or sealed ground cover.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:51:26+00:00"
+  },
+  {
+   "id": 74,
+   "name": "Gray",
+   "commune": "Etterbeek",
+   "years": [
+    2014,
+    2018
+   ],
+   "url": "https://quartiers.brussels/1/q/74",
+   "label": "yes",
+   "why": "The sentence \"sera portée à l'aménagement...création de zones verdurisées\" commits (future tense \"sera portée\") to creating greened zones as part of the public space redevelopment, which qualifies as an action-level greening measure and drives the \"yes\" label.",
+   "measures": [
+    {
+     "quote": "Une attention particulière sera portée à l'aménagement d'un espace public générateur de cohésion sociale, de mobilité douce et innovant sur le plan environnemental (gestion des eaux de pluie, création de zones verdurisées, etc).",
+     "kind": "new_green_space",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:51:30+00:00"
+  },
+  {
+   "id": 75,
+   "name": "Petite Senne",
+   "commune": "Molenbeek",
+   "years": [
+    2014,
+    2018
+   ],
+   "url": "https://quartiers.brussels/1/q/75",
+   "label": "weak",
+   "why": "The only mention of green space, \\\"un fort potentiel de création de logements, d'équipements et d'espaces verts\\\", describes a potential/opportunity rather than a firm commitment (no budget or action item for espaces verts appears among the listed Infos), so it counts only as an intention, giving the contract a \\\"weak\\\" label.",
+   "measures": [
+    {
+     "quote": "qui dessinaient un fort potentiel de création de logements, d'équipements et d'espaces verts",
+     "kind": "new_green_space",
+     "status": "intention",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:51:38+00:00"
+  },
+  {
+   "id": 76,
+   "name": "Abbaye",
+   "commune": "Forest",
+   "years": [
+    2014,
+    2018
+   ],
+   "url": "https://quartiers.brussels/1/q/76",
+   "label": "no",
+   "why": "The only greening-related mention, \"le site de l'abbaye, son espace vert et ses abords\", simply names an already-existing green space as part of a strategic zone without any verb of commitment or aim to change vegetation cover, so the contract contains no actionable or intended greening measure and is labeled \"no\".",
+   "measures": [
+    {
+     "quote": "le site de l'abbaye, son espace vert et ses abords",
+     "kind": "other_greening",
+     "status": "state",
+     "place": "l'abbaye",
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:51:50+00:00"
+  },
+  {
+   "id": 77,
+   "name": "Biestebroeck",
+   "commune": "Anderlecht",
+   "years": [
+    2015,
+    2019
+   ],
+   "url": "https://quartiers.brussels/1/q/77",
+   "label": "yes",
+   "why": "The quote \"Le Pôle Ysewyn privilégiera la création d’un espace vert partagé entre le square Frison et la rue Ysewyn\" is a firm commitment (creation of) that changes vegetation cover, so the contract qualifies as \"yes\".",
+   "measures": [
+    {
+     "quote": "accueillera une crèche francophone de 49 places avec un jardin",
+     "kind": "other_greening",
+     "status": "action",
+     "place": "Pôle Bronze",
+     "verbatim": true
+    },
+    {
+     "quote": "Le Pôle Rauter permettra l’aménagement d’une extension du parc à l'arrière du Foyer anderlechtois",
+     "kind": "new_green_space",
+     "status": "action",
+     "place": "à l'arrière du Foyer anderlechtois (Pôle Rauter)",
+     "verbatim": true
+    },
+    {
+     "quote": "Le Pôle Ysewyn privilégiera la création d’un espace vert partagé entre le square Frison et la rue Ysewyn",
+     "kind": "new_green_space",
+     "status": "action",
+     "place": "entre le square Frison et la rue Ysewyn",
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:51:58+00:00"
+  },
+  {
+   "id": 78,
+   "name": "Morichar",
+   "commune": "Saint-Gilles",
+   "years": [
+    2015,
+    2019
+   ],
+   "url": "https://quartiers.brussels/1/q/78",
+   "label": "yes",
+   "why": "The quote \"établira une « liaison douce »... avec différentes interventions sur l’espace public (maillage vert et bleu)\" commits (établira) to concrete green/blue network interventions on public space, which counts as an action-status greening measure, giving the label \"yes\".",
+   "measures": [
+    {
+     "quote": "établira une « liaison douce » entre la porte de Hal et le parc de Forest, avec différentes interventions sur l’espace public (maillage vert et bleu)",
+     "kind": "other_greening",
+     "status": "action",
+     "place": "entre la porte de Hal et le parc de Forest",
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:51:49+00:00"
+  },
+  {
+   "id": 79,
+   "name": "Athénée",
+   "commune": "Ixelles",
+   "years": [
+    2016,
+    2020
+   ],
+   "url": "https://quartiers.brussels/1/q/79",
+   "label": "no",
+   "why": "The text mentions only renovations of sports halls, a public hall and façade, a childcare facility, housing, and unspecified \"opérations immobilières et d'espaces publics\" for several streets, with no mention of parks, green spaces, trees, gardens, unsealing, or other vegetation-related interventions, so no greening measure is present.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:51:50+00:00"
+  },
+  {
+   "id": 80,
+   "name": "Pogge",
+   "commune": "Schaerbeek",
+   "years": [
+    2016,
+    2020
+   ],
+   "url": "https://quartiers.brussels/1/q/80",
+   "label": "weak",
+   "why": "The text only names \"favoriser la nature en ville\" as a general objective without committing to any specific action that changes vegetation cover, while the concrete program items listed (crèche, équipement de proximité, rénovation de l'espace Vogler, garages vélo) are not greening measures, so the contract is labeled \"weak\".",
+   "measures": [
+    {
+     "quote": "favoriser la nature en ville",
+     "kind": "other_greening",
+     "status": "intention",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:51:59+00:00"
+  },
+  {
+   "id": 81,
+   "name": "Les Marolles",
+   "commune": "Bruxelles",
+   "years": [
+    2018,
+    2022
+   ],
+   "url": "https://quartiers.brussels/1/q/81",
+   "label": "weak",
+   "why": "The text only names improving access to green spaces as an aim (\"améliorer l’accessibilité aux espaces verts\") without committing to any concrete creation, redesign, unsealing or planting action, so it qualifies as an intention rather than an action.",
+   "measures": [
+    {
+     "quote": "améliorer l’accessibilité aux espaces verts",
+     "kind": "other_greening",
+     "status": "intention",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:47:17+00:00"
+  },
+  {
+   "id": 82,
+   "name": "Magritte",
+   "commune": "Jette",
+   "years": [
+    2018,
+    2022
+   ],
+   "url": "https://quartiers.brussels/1/q/82",
+   "label": "weak",
+   "why": "The only greening mention, \"la création d’espaces publics et d’espaces verts s’avérera donc nécessaire\", frames green space creation as a need rather than a firm commitment, so the contract is labeled weak.",
+   "measures": [
+    {
+     "quote": "Une restructuration de l’espace associée à la création d’espaces publics et d’espaces verts s’avérera donc nécessaire.",
+     "kind": "new_green_space",
+     "status": "intention",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:47:12+00:00"
+  },
+  {
+   "id": 83,
+   "name": "Senne",
+   "commune": "Forest",
+   "years": [
+    2018,
+    2022
+   ],
+   "url": "https://quartiers.brussels/1/q/83",
+   "label": "no",
+   "why": "The text lists priorities like housing quality, public space management, employment, and sustainable water management (\"gérer durablement l'eau\") but contains no mention of parks, green spaces, tree planting, unsealing, gardens, or any vegetation-cover measure, so no greening measure can be extracted.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:51:56+00:00"
+  },
+  {
+   "id": 84,
+   "name": "Stephenson",
+   "commune": "Schaerbeek",
+   "years": [
+    2019,
+    2023
+   ],
+   "url": "https://quartiers.brussels/1/q/84",
+   "label": "no",
+   "why": "The text only describes the perimeter, budget figures and generic administrative categories like 'Dimension environnementale' as a section heading, with no concrete mention of any park, tree planting, garden, unsealing or other vegetation/ground-cover change.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:51:57+00:00"
+  },
+  {
+   "id": 85,
+   "name": "Autour du Parc de l'Ouest",
+   "commune": "Molenbeek",
+   "years": [
+    2019,
+    2023
+   ],
+   "url": "https://quartiers.brussels/1/q/85",
+   "label": "no",
+   "why": "The text only describes the perimeter, the railway wasteland (\"une friche inaccessible\"), zoning, budgets and named places like \"Parc de l'Ouest\" without committing to or intending any concrete greening action such as creating, redesigning or unsealing green space.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:52:05+00:00"
+  },
+  {
+   "id": 86,
+   "name": "Peterbos",
+   "commune": "Anderlecht",
+   "years": [
+    2019,
+    2023
+   ],
+   "url": "https://quartiers.brussels/1/q/86",
+   "label": "no",
+   "why": "The text only describes the perimeter, budgets and existing character of the site (\"Le site du Peterbos constitue un parc habité... avec des dégagements visuels extrêmement généreux et verdurisés\"), with no commitment, intention, or plan for any greening action, so it is labeled \"no\".",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:52:04+00:00"
+  },
+  {
+   "id": 87,
+   "name": "Petite Colline",
+   "commune": "Schaerbeek",
+   "years": [
+    2020,
+    2024
+   ],
+   "url": "https://quartiers.brussels/1/q/87",
+   "label": "yes",
+   "why": "The quote \"Le premier pôle prévoit des interventions dans certains espaces publics afin d’améliorer leur verdurisation\" is a firm commitment (\"prévoit\") to greening interventions, so the contract earns a \"yes\" label.",
+   "measures": [
+    {
+     "quote": "des intérieurs d’ilots verdurisés",
+     "kind": "other_greening",
+     "status": "state",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "les intérieurs d’ilots moins verdurisés",
+     "kind": "other_greening",
+     "status": "state",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "Parc de la Reine Verte, seul espace vert du périmètre",
+     "kind": "other_greening",
+     "status": "state",
+     "place": "Parc de la Reine Verte",
+     "verbatim": true
+    },
+    {
+     "quote": "Le premier pôle prévoit des interventions dans certains espaces publics afin d’améliorer leur verdurisation",
+     "kind": "other_greening",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "une action visant à la verdurisation du quartier en ISP",
+     "kind": "other_greening",
+     "status": "intention",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:47:30+00:00"
+  },
+  {
+   "id": 88,
+   "name": "Midi",
+   "commune": "Saint-Gilles",
+   "years": [
+    2020,
+    2024
+   ],
+   "url": "https://quartiers.brussels/1/q/88",
+   "label": "weak",
+   "why": "The only forward-looking greening reference, \"qualité des espaces publics, végétalisés,\" names vegetation quality merely as something to work on without any committed action (no verb of commitment or specific project), so the contract is labeled weak rather than yes; the other mentions of imperméabilisation and lack of green space offer are only diagnostic state descriptions.",
+   "measures": [
+    {
+     "quote": "l’absence de grosses opportunités foncières, ou d’une offre satisfaisante en espaces verts",
+     "kind": "new_green_space",
+     "status": "state",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "son importante imperméabilisation du sol",
+     "kind": "unsealing",
+     "status": "state",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "qualité des espaces publics, végétalisés",
+     "kind": "other_greening",
+     "status": "intention",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:47:31+00:00"
+  },
+  {
+   "id": 89,
+   "name": "Bizet",
+   "commune": "Anderlecht",
+   "years": [
+    2020,
+    2024
+   ],
+   "url": "https://quartiers.brussels/1/q/89",
+   "label": "yes",
+   "why": "The contract commits to concrete vegetation-changing works such as \"qui sera lui-même également réaménagé et équipé d’un kiosque\" for the Parc de Résédas and \"la Rue Henri Deleers transformée en rue parc\", which are firm future-tense commitments, so the contract is labeled \"yes\".",
+   "measures": [
+    {
+     "quote": "L’espace public entre ce deux bâtiments doit mener les habitants vers le « parc système » au nord de la Place Bizet.",
+     "kind": "other_greening",
+     "status": "intention",
+     "place": "parc système",
+     "verbatim": true
+    },
+    {
+     "quote": "qui sera lui-même également réaménagé et équipé d’un kiosque",
+     "kind": "park_redesign",
+     "status": "action",
+     "place": "Parc de Résédas",
+     "verbatim": true
+    },
+    {
+     "quote": "Les jardins du Foyer Anderlechtois seront liés au parc ainsi que le site Agrorésédas qui doit d’abord être acquis.",
+     "kind": "other_greening",
+     "status": "action",
+     "place": "Les jardins du Foyer Anderlechtois",
+     "verbatim": true
+    },
+    {
+     "quote": "Ce site accueillera des projets d’agroécologie et d’alimentation durable.",
+     "kind": "gardens_agriculture",
+     "status": "action",
+     "place": "site Agrorésédas",
+     "verbatim": true
+    },
+    {
+     "quote": "la Rue Henri Deleers transformée en rue parc entre la Place Bizet et la Rue Walcourt",
+     "kind": "street_greening",
+     "status": "action",
+     "place": "Rue Henri Deleers",
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:47:30+00:00"
+  },
+  {
+   "id": 90,
+   "name": "Anvers",
+   "commune": "Bruxelles",
+   "years": [
+    2021,
+    2025
+   ],
+   "url": "https://quartiers.brussels/1/q/90",
+   "label": "yes",
+   "why": "The quote \"le programme visera la création de logements de qualité ainsi que la déminéralisation et verdurisation de l'espace public au nord\" commits the program itself (via the verb \"visera\" governing the greening works directly, not a purpose clause) to unsealing and greening public space, which is an action-level measure changing vegetation/sealed ground cover, so the contract is labeled \"yes\".",
+   "measures": [
+    {
+     "quote": "le programme visera la création de logements de qualité ainsi que la déminéralisation et verdurisation de l'espace public au nord",
+     "kind": "unsealing",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "le programme visera la création de logements de qualité ainsi que la déminéralisation et verdurisation de l'espace public au nord",
+     "kind": "other_greening",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "répondant à une multitude d'enjeux propres au périmètre (cohésion sociale, propreté, verdurisation, ISP, etc.)",
+     "kind": "other_greening",
+     "status": "intention",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:47:46+00:00"
+  },
+  {
+   "id": 91,
+   "name": "Jacquet",
+   "commune": "Koekelberg",
+   "years": [
+    2021,
+    2025
+   ],
+   "url": "https://quartiers.brussels/1/q/91",
+   "label": "weak",
+   "why": "The text only states greening as a need or aim (e.g. \"il convient de continuer à aérer et végétaliser la maille\") without any committing verb like \"sera aménagé\" or \"seront plantés\", so it qualifies as intention-level only, giving the label \"weak\".",
+   "measures": [
+    {
+     "quote": "il convient de continuer à aérer et végétaliser la maille et offrir des espaces ouverts qualitatifs aux habitants et usagers du périmètre",
+     "kind": "other_greening",
+     "status": "intention",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "Enjeu 5 : Inscrire le quartier dans le maillage vert et bleu.",
+     "kind": "other_greening",
+     "status": "intention",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "Le traitement des connexions et continuités fonctionnelles et végétales entre ces espaces permettrait de créer une première trame de ce maillage.",
+     "kind": "other_greening",
+     "status": "intention",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "Ces tracés visent clairement à inscrire des continuités écologiques et environnementales dans la maille urbaine du bas de Koekelberg.",
+     "kind": "other_greening",
+     "status": "intention",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:47:39+00:00"
+  },
+  {
+   "id": 92,
+   "name": "Etangs Noirs",
+   "commune": "Molenbeek",
+   "years": [
+    2021,
+    2025
+   ],
+   "url": "https://quartiers.brussels/1/q/92",
+   "label": "yes",
+   "why": "The text commits to action with \"la création d’espaces de jeux et d’espaces verts\" listed as Priority 7 of the program, which under the instructions counts as a firm plan (\"création de\"), giving the label \"yes\"; the mention of \"parc de la Fonderie\" is only a place-name reference describing the perimeter's boundary and is therefore recorded as a \"state\" mention.",
+   "measures": [
+    {
+     "quote": "la création d’espaces de jeux et d’espaces verts",
+     "kind": "new_green_space",
+     "status": "action",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "jusqu’au parc de la Fonderie situé au sud-est",
+     "kind": "other_greening",
+     "status": "state",
+     "place": "parc de la Fonderie",
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:47:51+00:00"
+  },
+  {
+   "id": 93,
+   "name": "Deux Cités",
+   "commune": "Forest",
+   "years": [
+    2022,
+    2026
+   ],
+   "url": "https://quartiers.brussels/1/q/93",
+   "label": "weak",
+   "why": "The text only names the park du Bempt as one of the program's eight thematic axes (\"Le parc du Bempt, un espace vert pour le quartier\") without any committing verb specifying what will actually be done to it, making it an intention rather than an action, and describes the Katanga area's sealed ground as a diagnosed state, so the contract earns \"weak\" rather than \"yes\".",
+   "measures": [
+    {
+     "quote": "B. Le parc du Bempt, un espace vert pour le quartier",
+     "kind": "park_redesign",
+     "status": "intention",
+     "place": "parc du Bempt",
+     "verbatim": true
+    },
+    {
+     "quote": "un espace public très minéralisé",
+     "kind": "unsealing",
+     "status": "state",
+     "place": "quartier Katanga",
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:47:56+00:00"
+  },
+  {
+   "id": 94,
+   "name": "Versailles",
+   "commune": "",
+   "years": [
+    2022,
+    2026
+   ],
+   "url": "https://quartiers.brussels/1/q/94",
+   "label": "no",
+   "why": "All green-related mentions, such as \"donnant la primauté à un vaste espace vert continu\", describe the historical, already-existing state of the site (from past construction phases) rather than any current commitment, intention or action in the contract's actual program, which only names building renovation (façades, chauffage) and a generic \"réaménagement d'espace public\" with no vegetation-changing commitment, so the label is \"no\".",
+   "measures": [
+    {
+     "quote": "Les volumes sont plus articulés et plus librement implantés sur un sol à dominante verte.",
+     "kind": "other_greening",
+     "status": "state",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "l’architecture se calme et se pare d’une brique rouge foncé qui tranche avec un sol largement planté.",
+     "kind": "other_greening",
+     "status": "state",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "Les parkings disparaissent complètement sous terre, donnant la primauté à un vaste espace vert continu.",
+     "kind": "new_green_space",
+     "status": "state",
+     "place": null,
+     "verbatim": true
+    },
+    {
+     "quote": "L’annulation d’un projet d’autoroute urbaine traversant le périmètre du Nord au Sud a permis le maintien d’un corridor de verdure au centre du site.",
+     "kind": "new_green_space",
+     "status": "state",
+     "place": "au centre du site",
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:52:44+00:00"
+  },
+  {
+   "id": 95,
+   "name": "Cité Moderne",
+   "commune": "",
+   "years": [
+    2022,
+    2026
+   ],
+   "url": "https://quartiers.brussels/1/q/95",
+   "label": "no",
+   "why": "The text only describes the neighbourhood's location, history, and administrative pôles (Centralité de quartier, Enfance & jeunesse, Axe Victor Bourgeois, socio-économique, Coordination) without any commitment, intention, or state description of vegetation cover or sealed ground changes; mentions like \"réserve naturelle du Zavelenberg\" and \"implantation de plusieurs équipements\" are place names/unrelated context, not greening measures.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:47:39+00:00"
+  },
+  {
+   "id": 96,
+   "name": "Villas de Ganshoren",
+   "commune": "",
+   "years": [
+    2023,
+    2027
+   ],
+   "url": "https://quartiers.brussels/1/q/96",
+   "label": "no",
+   "why": "The text only describes the neighbourhood's geographic perimeter, its housing stock, budget figures, and a list of administrative section headings, with no clause committing to, intending, or even describing any change to vegetation or sealed ground.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:52:05+00:00"
+  },
+  {
+   "id": 97,
+   "name": "Conscience",
+   "commune": "",
+   "years": [
+    2023,
+    2027
+   ],
+   "url": "https://quartiers.brussels/1/q/97",
+   "label": "no",
+   "why": "The only greening-related mention, \"plusieurs espaces verts\", merely describes existing amenities in the neighbourhood without any planned action or intention to create, redesign, or green new space, so the contract contains no committed greening measure and is labeled \"no\".",
+   "measures": [
+    {
+     "quote": "plusieurs espaces verts",
+     "kind": "other_greening",
+     "status": "state",
+     "place": null,
+     "verbatim": true
+    }
+   ],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:52:22+00:00"
+  },
+  {
+   "id": 98,
+   "name": "Petite Suisse",
+   "commune": "Ixelles",
+   "years": [
+    2023,
+    2027
+   ],
+   "url": "https://quartiers.brussels/1/q/98",
+   "label": "no",
+   "why": "The text is only a budget summary and a table-of-contents-style list of section headings (e.g. 'Dimension environnementale', 'Critères techniques et environnementaux') with no concrete description of any greening action, intention, or state, so no measure can be extracted.",
+   "measures": [],
+   "quotes_verbatim": true,
+   "model": "claude-sonnet-5",
+   "run_at": "2026-09-26T14:52:11+00:00"
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+[clean] dropped Belgian cafe-bars from amenity=cafe: 0 (explicit tags under-detect; cafe count is an UPPER BOUND)
+[clean] classified counts: {'cafe': 104, 'bakery': 109, 'confectionery': 21, 'gastro': 812, 'retail': 578, 'transit': 2291, 'offices': 543}
+[clean] NOTE: 'confectionery' (pastry+confectionery merged) is a thin sample -> LOW-CONFIDENCE; got 21
+[clean] documented diet:vegan eateries: 49 (undercounts reality)
+[clean] documented diet:vegetarian eateries: 144 (undercounts reality)
+[clean] documented diet:gluten_free eateries: 7 (undercounts reality)
+[clean] documented diet:halal eateries: 9 (undercounts reality)
+[clean] wrote 4458 clean points -> /home/user/facta/pipelines/spotfinder/pipeline/data/liege_osm_points_clean.geojson

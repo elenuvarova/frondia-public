@@ -1,0 +1,16 @@
+[
+  { "path": "/atlas" },
+  { "path": "/atlas?city=brussels" }, { "path": "/atlas?city=antwerp" }, { "path": "/atlas?city=ghent" }, { "path": "/atlas?city=liege" }, { "path": "/atlas?city=charleroi" },
+  { "path": "/atlas?city=brussels&q=need&lens=services" }, { "path": "/atlas?city=brussels&q=need&lens=shops" }, { "path": "/atlas?city=brussels&q=need&lens=heat" }, { "path": "/atlas?city=brussels&q=need&lens=r3" },
+  { "path": "/atlas?city=antwerp&q=need&lens=services" }, { "path": "/atlas?city=antwerp&q=need&lens=shops" }, { "path": "/atlas?city=antwerp&q=need&lens=heat" }, { "path": "/atlas?city=antwerp&q=need&lens=r3" },
+  { "path": "/atlas?city=ghent&q=need&lens=services" }, { "path": "/atlas?city=ghent&q=need&lens=shops" }, { "path": "/atlas?city=ghent&q=need&lens=heat" }, { "path": "/atlas?city=ghent&q=need&lens=r3" },
+  { "path": "/atlas?city=liege&q=need&lens=services" }, { "path": "/atlas?city=liege&q=need&lens=shops" }, { "path": "/atlas?city=liege&q=need&lens=heat" }, { "path": "/atlas?city=liege&q=need&lens=r3" },
+  { "path": "/atlas?city=charleroi&q=need&lens=services" }, { "path": "/atlas?city=charleroi&q=need&lens=shops" }, { "path": "/atlas?city=charleroi&q=need&lens=heat" }, { "path": "/atlas?city=charleroi&q=need&lens=r3" },
+  { "path": "/atlas?city=brussels&q=need&lens=services&for=senior" }, { "path": "/atlas?city=brussels&q=need&lens=shops&shop=cafe" },
+  { "path": "/atlas?city=brussels&q=place&obj=toilets" }, { "path": "/atlas?city=antwerp&q=place&obj=benches&n=25" }, { "path": "/atlas?city=ghent&q=place&obj=playgrounds&n=0" }, { "path": "/atlas?city=liege&q=place&obj=defibrillators" }, { "path": "/atlas?city=charleroi&q=place&obj=waste_bins" },
+  { "path": "/atlas?city=brussels&view=communes" }, { "path": "/atlas?city=antwerp&view=communes" }, { "path": "/atlas?city=ghent&view=communes" }, { "path": "/atlas?city=liege&view=communes" }, { "path": "/atlas?city=charleroi&view=communes" },
+  { "path": "/atlas?city=brussels&view=field" }, { "path": "/atlas?city=ghent&view=photos" }, { "path": "/atlas?city=brussels&m=built" }, { "path": "/atlas?city=antwerp&m=built" },
+  { "path": "/atlas?case=ninove" }, { "path": "/atlas?city=antwerp&case=droogdokkenpark" }, { "path": "/atlas?city=antwerp&case=spoor-noord" },
+  { "path": "/atlas?city=brussels&sector=21004E72-" }, { "path": "/atlas?city=antwerp&sector=11001A01-" }, { "path": "/atlas?city=ghent&sector=44021A00-" }, { "path": "/atlas?city=liege&sector=62063A00-" }, { "path": "/atlas?city=charleroi&sector=5201112MQ" },
+  { "path": "/atlas?city=paris" }, { "path": "/atlas?city=antwerp&sector=21004E72-" }, { "path": "/atlas?q=need&lens=junk" }
+]

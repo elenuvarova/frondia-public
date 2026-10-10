@@ -1,0 +1,10 @@
+{
+ "city": "antwerp",
+ "snapshot": "trees_antwerp_2026-09-27.csv.gz",
+ "date": "2026-09-27",
+ "trees": 134873,
+ "commune": "11002",
+ "in_sectors": 129250,
+ "previous": null,
+ "licence": "Stad Antwerpen open data"
+}

@@ -1,0 +1,24 @@
+{
+ "id": 50,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "bdb4ce12315c6d8c",
+ "run_at": "2026-09-26T14:50:35+00:00",
+ "output": {
+  "label": "yes",
+  "measures": [
+   {
+    "quote": "réaménager des trottoirs, voiries, carrefours, jardins et cours d'école",
+    "kind": "park_redesign",
+    "status": "action",
+    "place": null,
+    "verbatim": true
+   }
+  ],
+  "why": "The quote \\\"réaménager des trottoirs, voiries, carrefours, jardins et cours d'école\\\" commits to redesigning jardins (green spaces) with the firm verb \\\"réaménager\\\", making it an action-level greening measure, so the contract is labeled \\\"yes\\\"; no other passage mentions vegetation or sealed-ground changes (the rest concerns housing, squares, a crèche, social cohesion and training programs)."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.0458624,
+ "duration_ms": 63005
+}

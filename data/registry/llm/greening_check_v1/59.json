@@ -1,0 +1,17 @@
+{
+ "id": 59,
+ "version": "greening_check_v1",
+ "prompt_sha": "a75f853000ec9eaa",
+ "schema_sha": "e9bc62506ba62dd5",
+ "text_sha": "98814269027d10eb",
+ "run_at": "2026-09-26T15:44:40+00:00",
+ "output": {
+  "label": "yes",
+  "quote": "activer et verduriser plusieurs intérieurs d'îlots",
+  "why": "This is one of the projects the contract says it \"va développer\", so it commits to greening the inside of several housing blocks, and it also plans to plant at school entrances and green façades.",
+  "quote_verbatim": true
+ },
+ "model": "claude-opus-5-5",
+ "cost_usd": 0.0572598,
+ "duration_ms": 2765
+}

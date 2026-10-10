@@ -1,0 +1,16 @@
+{
+ "id": 32,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "73031eb483f1d1bb",
+ "run_at": "2026-09-26T14:49:04+00:00",
+ "output": {
+  "measures": [],
+  "label": "no",
+  "why": "The text only lists budgets, housing/crèche/socio-economic figures and generic menu headings like \"Dimension environnementale\" with no concrete greening measure described."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.028539400000000003,
+ "duration_ms": 3135
+}

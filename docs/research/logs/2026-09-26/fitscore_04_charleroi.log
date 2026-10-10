@@ -1,0 +1,19 @@
+─── Building charleroi boundary ───
+  Loading sector boundaries …
+  Brussels polygon buffered +2000 m
+
+─── Building walking network from data/raw/belgium-latest.osm.pbf ───
+  osmium: belgium-latest.osm.pbf → box 4.312906,50.330273,4.542794,50.515161 → highways → charleroi_walk_highways.osm
+  walk filter dropped 30,108 of 265,038 directed edges
+
+─── Adding travel_time attributes ───
+  Nodes: 19,820
+  Edges: 55,356
+  Avg edge length: 78.8 m
+
+─── Saving charleroi_walk.graphml ───
+  ✓ 27.3 MB
+  ✓ Stats written to graph_stats.json
+
+Next steps complete!
+Next: python 05_score.py --city charleroi

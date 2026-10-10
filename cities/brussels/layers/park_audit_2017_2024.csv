@@ -1,0 +1,153 @@
+osm,name,area_ha,ndvi_before,ndvi_effect,lst_effect,ctrl_gap,verdict,in_brussels
+way/25428277,Parc de la Porte de Ninove - Ninoofsepoortpark,2.25,0.282,0.2352,-0.182,-0.0057,ПОЗЕЛЕНЕЛ,yes
+way/120328479,Wilderveld,1.04,0.5474,0.1573,-0.942,0.0292,ПОЗЕЛЕНЕЛ,no
+way/1041055451,Keyenbergbos,3.15,0.6108,0.1207,-2.893,0.0523,контроль несопоставим,no
+way/763981420,Parc du Vogelzang - Vogelzangpark,4.73,0.5801,0.0968,-1.26,-0.0067,ПОЗЕЛЕНЕЛ,yes
+way/34625560,Eenenboom,1.46,0.5522,0.0935,-1.456,0.0123,ПОЗЕЛЕНЕЛ,no
+way/37184707,Parc de Haren - Park van Haren,1.38,0.6196,0.0719,0.538,0.0024,ПОЗЕЛЕНЕЛ,yes
+way/23173132,Jardin du Roi - Koningstuin,1.46,0.5058,0.0708,-1.129,0.0007,ПОЗЕЛЕНЕЛ,yes
+relation/17376399,Parc de la Porte de Hal - Hallepoortpark,2.29,0.547,0.0682,0.358,0.0289,ПОЗЕЛЕНЕЛ,yes
+way/706714057,Millenniumpark,1.24,0.6606,0.0653,1.208,0.0164,ПОЗЕЛЕНЕЛ,no
+way/1128296927,Kanaalpark,13.47,0.3905,0.0581,0.209,0.0152,ПОЗЕЛЕНЕЛ,no
+way/35272588,William Tyndalepark,1.14,0.3712,0.0545,1.805,0.0292,ПОЗЕЛЕНЕЛ,no
+way/23782038,Parc du Bempt - Bemptpark,16.56,0.5125,0.0543,-1.386,0.0467,контроль несопоставим,yes
+way/147682498,Park van Dilbeek,3.38,0.5454,0.054,-0.791,0.0003,ПОЗЕЛЕНЕЛ,no
+way/23607372,Parc des Étangs Mellaerts - Park van de Mellaertsvijvers,8.75,0.367,0.0514,-0.19,-0.1314,контроль несопоставим,yes
+way/117951224,Parc Tour et Taxis - Thurn en Taxispark,9.26,0.466,0.0495,-0.161,0.0103,ПОЗЕЛЕНЕЛ,yes
+way/30383373,Parc d'Evere - Park van Evere,1.94,0.6848,0.0488,-0.041,0.0376,ПОЗЕЛЕНЕЛ,yes
+way/1499468059,Zuun,1.33,0.5716,0.0482,-0.513,0.0108,ПОЗЕЛЕНЕЛ,yes
+way/969318460,Parc du Scheutbos - Scheutbospark,7.19,0.7107,0.0441,-0.615,0.0103,ПОЗЕЛЕНЕЛ,yes
+way/783856763,Parc de la Ligne 28 - Park van Lijn 28,2.25,0.4796,0.0439,0.101,0.0571,контроль несопоставим,yes
+way/23231090,Parc Jupiter - Jupiterpark,2.53,0.6587,0.0431,-1.628,0.015,ПОЗЕЛЕНЕЛ,yes
+relation/5643127,Parc Maximilien - Maximiliaanpark,7.37,0.5587,0.0418,-0.742,0.0185,ПОЗЕЛЕНЕЛ,yes
+way/23607686,Parc Ten Reuken - Ten Reukenpark,10.91,0.6406,0.0405,-0.78,-0.0222,ПОЗЕЛЕНЕЛ,yes
+way/35689477,Parc du bassin de Batelage - Schipperijdokpark,3.83,0.6135,0.0356,-0.953,0.0085,шум,yes
+way/75136497,Frankveld,14.04,0.7379,0.0352,-0.798,0.0121,шум,no
+way/40558123,Parc Gaucheret - Gaucheretpark,2.18,0.3206,0.0345,-1.349,-0.0043,шум,yes
+relation/8971920,Square Ambiorix - Ambiorixsquare,2.29,0.4965,0.0342,1.081,0.0056,шум,yes
+way/31723543,Leonardo Da Vincipark,3.57,0.6634,0.0338,0.385,0.0303,шум,no
+way/38790701,Parc de Laeken - Park van Laken,30.07,0.6666,0.0321,0.92,0.0073,шум,yes
+way/1084906419,Parc d'Egmont - Egmontpark,1.28,0.6782,0.032,0.739,0.0493,контроль несопоставим,yes
+way/33287680,Parc Tournay-Solvay - Tournay-Solvaypark,8.19,0.7453,0.0289,0.035,0.0169,шум,yes
+way/10589192,Square de la Pede - Pedesquare,2.29,0.4428,0.0284,-0.572,0.0406,контроль несопоставим,yes
+way/25430024,Parc des Muses - Muzenpark,1.63,0.6503,0.0279,0.106,0.0588,контроль несопоставим,yes
+way/902098698,Parc Joseph Lemaire - Joseph Lemairepark,1.36,0.7398,0.0279,-0.802,0.0581,контроль несопоставим,yes
+way/497374317,Parc Albert Ier - Albert I Park,1.83,0.7186,0.0271,0.131,0.0794,контроль несопоставим,yes
+way/10502619,Parc du Busselenberg - Busselenbergpark,1.1,0.5299,0.027,-0.226,0.0608,контроль несопоставим,yes
+way/32252804,Parc Scherdemael - Scherdemaelpark,8.58,0.6954,0.0263,0.768,0.008,шум,yes
+way/31442073,Square Prince Léopold - Prins Leopoldsquare,1.96,0.531,0.0259,-0.159,0.0113,шум,yes
+relation/8971918,Square Marie-Louise - Maria-Louizasquare,2.33,0.3273,0.0254,0.3,-0.0551,контроль несопоставим,yes
+way/14384466,Parc de Wolvendael - Wolvendaelpark,16.12,0.767,0.0249,-0.437,0.0349,шум,yes
+way/1007331226,Geboortebos 2005-2016,3.32,0.8079,0.0228,0.074,0.07,контроль несопоставим,no
+way/41376637,Park Rolleveld (Park Poot),7.58,0.7445,0.0224,0.314,0.0469,контроль несопоставим,no
+way/8104517,Parc Forestier - Bospark,4.98,0.7322,0.022,0.873,0.0527,контроль несопоставим,yes
+way/23607638,Parc Seny - Senypark,2.85,0.6995,0.022,-0.328,0.0238,шум,yes
+way/30105076,Jardin des Franciscaines - Franciscanessenhof,2.53,0.5832,0.0215,-0.212,0.0107,шум,yes
+way/743089158,Hoge Paal,1.41,0.7431,0.0206,-0.566,0.0383,шум,no
+way/862454958,Groene Beemd,5.93,0.641,0.0204,-0.775,-0.0196,шум,no
+way/38790735,Parc Jean Sobieski - Jan Sobieskipark,3.21,0.6786,0.0198,0.376,0.0105,шум,yes
+way/5451317,Parc de Forest - Park van Vorst,13.42,0.6499,0.0181,-2.218,0.0106,шум,yes
+way/23607854,Étangs de Watermael-Boitsfort - Vijvers van Watermaal-Bosvoorde,11.66,0.6755,0.0177,0.223,-0.0298,шум,yes
+way/23634256,Étangs du Leybeek - Leybeekvijvers,2.17,0.6367,0.0176,1.019,-0.0209,шум,yes
+relation/18270753,Parc de la Sauvagère - Sauvagere Park,5.27,0.8096,0.0174,0.615,0.0474,контроль несопоставим,yes
+way/75046021,Park Schaveys,50.1,0.8402,0.0172,0.113,0.0202,шум,no
+relation/13997222,Parc Roi Baudouin - Koning Boudewijnpark,39.22,0.7839,0.017,0.502,0.045,контроль несопоставим,yes
+way/44130351,Weule Put,1.63,0.6468,0.0167,-1.485,0.0563,контроль несопоставим,no
+way/23329766,Jan van Ruusbroecpark,5.7,0.6879,0.0161,-1.145,0.0248,шум,no
+way/1282746221,Pedepark,8.33,0.4137,0.016,-0.741,-0.098,контроль несопоставим,yes
+way/150276005,Parc des Étangs - Vijverspark,11.89,0.6064,0.0127,-1.352,0.0015,шум,yes
+way/913831735,Parc Jean Vives - Jean Vivespark,2.45,0.8089,0.0122,-0.129,0.0479,контроль несопоставим,yes
+way/23160812,Parc Georges Henri - Georges Henripark,3.71,0.5575,0.0119,1.721,0.0172,шум,yes
+way/4318238,Jardins de l'Abbaye de la Cambre - Tuinen van de Ter Kamerenabdij,7.05,0.5216,0.0117,-0.837,-0.001,шум,yes
+relation/15655925,Parc Élisabeth - Elisabethpark,20.32,0.6655,0.0113,-0.858,0.0239,шум,yes
+way/15890328,Parc Albert - Albertpark,2.57,0.7245,0.0107,0.385,0.0752,контроль несопоставим,yes
+way/23173068,Parc Tenbosch - Tenboschpark,2.04,0.7504,0.0107,-0.778,0.0687,контроль несопоставим,yes
+way/35036832,Parc Fond'Roy - Vronerodepark,7.26,0.7919,0.0105,0.355,0.0378,шум,yes
+way/30089206,Parc ING - ING Park,1.14,0.6297,0.0105,0.776,0.0787,контроль несопоставим,yes
+way/30663356,Parc Meudon - Meudonpark,5.3,0.776,0.0104,0.184,0.0943,контроль несопоставим,yes
+way/538325115,Breughelbroekpark,2.01,0.7419,0.0103,1.106,0.0298,шум,no
+relation/4258471,Parc du Slot - Park van het Slot,1.4,0.7085,0.0102,0.61,0.0648,контроль несопоставим,yes
+way/23160652,Rouge Cloître - Rood Klooster,35.44,0.6551,0.01,-0.214,-0.0297,шум,yes
+way/40639594,Park Missiehuis van Scheut,4.83,0.7168,0.01,-0.1,0.0416,контроль несопоставим,no
+relation/5962474,Parc de la Héronnière - Reigerbospark,8.39,0.7294,0.0098,0.484,0.0084,шум,yes
+way/23902379,Parc Paul Garcet - Paul Garcetpark,1.14,0.7127,0.0098,-0.604,0.0748,контроль несопоставим,yes
+way/38790613,Square Clémentine - Clementinasquare,1.16,0.5841,0.009,-0.459,0.0105,шум,yes
+way/74313832,Wilderspark,3.93,0.652,0.0082,0.325,0.0128,шум,no
+way/23607804,Parc Jagersveld - Jagersveldpark,2.83,0.7353,0.0081,0.801,0.0278,шум,yes
+way/14360335,Parc Duden - Dudenpark,24.75,0.7758,0.0079,-1.654,0.0413,контроль несопоставим,yes
+way/28938312,Hanssenspark,5.15,0.673,0.0071,1.396,0.0293,шум,no
+way/1000225309,Jardin de l'Arbre Ballon - Dikke Beuktuin,1.63,0.6517,0.0063,-0.144,0.0345,шум,yes
+way/452780703,Domein Winssinger,9.78,0.7858,0.006,-0.364,0.0341,шум,no
+way/14592122,Parc Léopold - Leopoldpark,7.61,0.6063,0.0059,1.137,0.0085,шум,yes
+way/507306357,Parc Crousse - Croussepark,1.2,0.7168,0.0048,-0.505,0.0731,контроль несопоставим,yes
+way/147682510,Sint Alenapark,3.26,0.8325,0.0044,0.045,0.0804,контроль несопоставим,no
+way/23176170,Parc Tercoigne - Tercoignepark,2.57,0.74,0.0042,0.005,0.037,шум,yes
+way/1253417201,Parc Jean Monnet - Jean Monnetpark,2.45,0.5198,0.0042,-0.632,-0.0016,шум,yes
+way/31975720,Park Mariadal,6.57,0.5601,0.004,0.543,0.0046,шум,no
+way/23766832,Parc Montjoie - Montjoiepark,3.52,0.6412,0.0032,0.077,0.0237,шум,yes
+way/22984028,Parc Walckiers - Walckierspark,6.4,0.8342,0.0024,-0.367,0.0963,контроль несопоставим,yes
+way/31465238,Parc Josaphat - Josaphatpark,27.27,0.6998,0.0021,0.324,0.0178,шум,yes
+way/16303371,Parc d'Osseghem - Ossegempark,18.48,0.7824,0.0012,0.859,0.0383,шум,yes
+way/9621741,Île Robinson - Robinsoneiland,1.15,0.7229,0.0007,-1.11,-0.0183,шум,yes
+way/25275400,Parc Jourdain - Park Jourdain,7.22,0.5687,-0.0001,-0.201,-0.0228,шум,no
+way/1106650800,Square du vingt-et-un-juillet - Square van de 21ste juli,1.68,0.698,-0.0001,0.762,0.0139,шум,yes
+way/835513441,Bemdekensveld,2.17,0.8212,-0.0004,-1.595,0.0833,контроль несопоставим,no
+way/42958627,Parc Jacques Brel - Jacques Brelpark,1.62,0.8238,-0.0005,0.136,0.0994,контроль несопоставим,yes
+way/35157671,Parc Titeca - Titecapark,5.3,0.7664,-0.0006,0.788,0.0458,контроль несопоставим,yes
+way/24826153,Parc de la Jeunesse - Jeugdpark,4.67,0.6616,-0.0006,0.237,0.0181,шум,yes
+way/48691445,Solarium,1.52,0.7839,-0.0007,0.956,0.0962,контроль несопоставим,yes
+way/9643939,Parc du Bon Pasteur - Goede Herderspark,14.09,0.7221,-0.0012,0.153,0.0476,контроль несопоставим,yes
+way/952489670,Parc du Doolegt - Doolegtpark,2.4,0.7839,-0.0014,-0.271,0.079,контроль несопоставим,yes
+way/30090317,Parc du Forum - Forumpark,6.18,0.5323,-0.002,-0.476,-0.0035,шум,yes
+way/23173157,Parc Brugmann - Brugmannpark,6.5,0.8519,-0.0022,-0.331,0.0935,контроль несопоставим,yes
+way/298902748,Parc Pannenhuis - Pannenhuispark,2.18,0.5211,-0.0022,-0.835,0.0661,контроль несопоставим,yes
+way/147913929,Parc Marie-José - Marie-Josépark,6.53,0.7111,-0.0023,0.056,0.0539,контроль несопоставим,yes
+way/30741860,Heymbos,4.87,0.6434,-0.0023,0.907,0.0075,шум,yes
+way/48959489,Jardin du Pavillon chinois - Tuin van het Chinees Paviljoen,3.52,0.6761,-0.0024,-0.555,0.0083,шум,yes
+way/72538151,Parc du Mennegat - Mennegatspark,1.12,0.7086,-0.0038,1.119,0.0536,контроль несопоставим,yes
+way/32252612,Parc de Biestebroeck - Biestebroeckpark,1.53,0.5077,-0.0049,1.097,0.061,контроль несопоставим,yes
+relation/5643094,Jardin botanique - Kruidtuin,4.83,0.5226,-0.005,-1.359,0.0023,шум,yes
+way/39250619,Domein Coloma,15.53,0.7358,-0.0051,0.205,0.0078,шум,no
+way/30293368,Parc du Karreveld - Karreveldpark,3.3,0.6214,-0.0064,-0.741,0.0094,шум,yes
+relation/16610859,Park Drie Fonteinen,75.11,0.7614,-0.0067,1.277,0.0289,шум,no
+way/9621578,Bois de la Cambre - Ter Kamerenbos,125.33,0.8095,-0.0075,-1.083,0.0298,шум,yes
+way/35695250,Speelbos Zellik,2.56,0.8568,-0.0093,1.374,0.0964,контроль несопоставим,no
+way/76729185,Parc Neerveld - Neerveldpark,1.4,0.7558,-0.0096,-0.198,0.0506,контроль несопоставим,yes
+way/32028575,WO Warandeberg,7.73,0.7805,-0.0097,-0.055,0.0383,шум,no
+relation/555230,Parc du Cinquantenaire - Jubelpark,33.81,0.4893,-0.0098,0.626,-0.0085,шум,yes
+relation/3030010,Jardin des sculptures - Beeldentuin,3.51,0.7803,-0.0114,-0.311,0.0746,контроль несопоставим,yes
+way/35640095,Parc Schuman - Schumanpark,8.76,0.5302,-0.0115,0.29,0.0035,шум,yes
+way/1147854481,Domein Chantemerle,1.5,0.751,-0.0117,-0.504,0.0462,контроль несопоставим,no
+relation/5643108,Parc Malou - Maloupark,10.22,0.7405,-0.0123,-0.463,0.0343,шум,yes
+way/23607107,Parc Hof ter Musschen - Hof ter Musschenpark,10.27,0.8225,-0.0143,-0.351,0.0784,контроль несопоставим,yes
+way/23634820,Parc de Roodebeek - Roodebeekpark,5.85,0.7873,-0.0155,0.306,0.0568,контроль несопоставим,yes
+way/23160828,Val d'Or - Gulledelle,6.18,0.8226,-0.017,0.31,0.0941,контроль несопоставим,yes
+way/9774751,Parc Astrid - Astridpark,15.65,0.5734,-0.018,-0.329,0.0003,шум,yes
+relation/12678616,Prinsenbos,15.85,0.8139,-0.0192,1.096,0.0539,контроль несопоставим,no
+way/1247594476,Gemeentelijk Park,4.28,0.6119,-0.0193,-1.968,0.0141,шум,no
+way/59849026,Hazeweide,3.02,0.7964,-0.0194,1.603,0.092,контроль несопоставим,no
+way/38802456,Square Prince Charles - Prins Karelsquare,1.19,0.788,-0.0208,0.058,0.0899,контроль несопоставим,yes
+way/35552189,Parc Hauwaert - Hauwaertpark,1.08,0.8218,-0.0218,-0.501,0.118,контроль несопоставим,yes
+way/1511462111,Park van Diegem,2.34,0.7335,-0.0222,0.994,0.0803,контроль несопоставим,no
+way/38790559,Jardin Colonial - Koloniale Tuin,2.41,0.7799,-0.0227,0.233,0.0384,шум,yes
+way/23595121,Parc des Sources - Ter Bronnenpark,7.98,0.8275,-0.0228,-0.292,0.0743,контроль несопоставим,yes
+way/23160718,Parc Parmentier - Parmentierpark,14.04,0.7541,-0.0237,-0.772,0.0299,шум,yes
+way/23160648,Parc du Bergoje - Bergojepark,1.64,0.8506,-0.024,-0.724,0.1395,контроль несопоставим,yes
+way/3517578,Parc de Bruxelles - Warandepark,11.57,0.6312,-0.027,-0.281,0.0113,шум,yes
+way/23236938,Parc Félix Hap - Félix Haptuin,1.34,0.6908,-0.0275,0.153,0.0673,контроль несопоставим,yes
+way/28488293,Feldheim Park,1.91,0.7212,-0.0319,0.941,0.0775,контроль несопоставим,no
+way/16089352,Parc de Woluwe - Woluwepark,73.36,0.7828,-0.0324,-0.024,0.0359,шум,yes
+way/48447555,Park van het Drijtorenhof,21.83,0.7439,-0.0372,0.98,0.0181,шум,no
+way/28803267,Square Palfyn - Palfynsquare,2.05,0.5313,-0.0372,0.007,0.0553,контроль несопоставим,yes
+way/68852752,Jardins du Fleuriste - Tuinen van de Bloemist,3.06,0.6873,-0.0406,0.85,0.0066,ПОТЕРЯЛ,yes
+way/1005061555,Asiat Park,5.7,0.4584,-0.0423,1.369,0.0235,ПОТЕРЯЛ,no
+way/83532208,Weule Put,1.08,0.5747,-0.0432,-1.591,0.0544,контроль несопоставим,no
+way/982668144,Kersenberg,1.82,0.6319,-0.0529,0.722,0.0201,ПОТЕРЯЛ,no
+way/81876705,Parc du Verregat - Verregatpark,3.1,0.4995,-0.0563,0.991,0.0315,ПОТЕРЯЛ,yes
+way/4731047,Parc Pierre Paulus - Pierre Pauluspark,1.21,0.7029,-0.0598,0.935,0.0709,контроль несопоставим,yes
+way/1092694436,Quai des Matériaux - Materialenkaai,2.55,0.1923,-0.0692,-1.074,-0.0007,ПОТЕРЯЛ,yes
+way/21775928,Jardin de René Pechère - René Pechèretuin,1.45,0.3421,-0.0827,-0.31,-0.0195,ПОТЕРЯЛ,yes
+way/23607788,Parc de la Royale Belge - Royale Belgepark,10.92,0.5772,-0.1082,-0.514,-0.0193,ПОТЕРЯЛ,yes
+way/1134956557,Park Ouest,1.31,0.4167,-0.1149,1.657,0.005,ПОТЕРЯЛ,yes
+way/1007327316,Geboortebos 2017-2025,1.53,0.7149,-0.1186,1.716,0.0102,ПОТЕРЯЛ,no
+way/859679164,Parc Bruyn - Bruynpark,1.24,0.772,-0.1983,1.215,0.0396,ПОТЕРЯЛ,yes

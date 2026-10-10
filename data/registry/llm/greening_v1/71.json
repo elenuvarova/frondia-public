@@ -1,0 +1,24 @@
+{
+ "id": 71,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "46d8f3d2c84bebe4",
+ "run_at": "2026-09-26T14:51:19+00:00",
+ "output": {
+  "measures": [
+   {
+    "quote": "aménager un cheminement vert, le long du tracé de la petite Senne, qui traversa l'intérieur d'îlot du projet phare",
+    "kind": "other_greening",
+    "status": "action",
+    "place": "l'intérieur d'îlot du projet phare",
+    "verbatim": true
+   }
+  ],
+  "label": "yes",
+  "why": "The quote \"aménager un cheminement vert, le long du tracé de la petite Senne\" is a firm commitment (aménager) to create a green pathway, which changes vegetation cover, making the label \"yes\".\""
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.0396424,
+ "duration_ms": 9260
+}

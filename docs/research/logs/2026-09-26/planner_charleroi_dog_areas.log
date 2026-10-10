@@ -1,0 +1,36 @@
+source: ../neighbourhood_fit_score/pipeline/data/raw/belgium-260925.osm.pbf (local extract, no Overpass)
+OSM source: /home/user/facta/pipelines/city_planner/../neighbourhood_fit_score/pipeline/data/raw/belgium-260925.osm.pbf (local extract, no Overpass)
+
+====================================================
+  Public Realm Planner — engine
+  city=charleroi  asset=dog_areas  budget=40  radius=500.0m
+====================================================
+
+[1/7] city boundary
+  loading Charleroi, Belgium boundary from OSM...
+[2/7] H3 analysis grid
+  grid: 1119 H3 cells at resolution 9
+[3/7] existing dog_areas
+  fetching dog_areas from OSM for charleroi...
+  loaded 1 existing assets
+[4/7] demand POIs
+  fetching demand POIs from OSM...
+  loaded 109 demand POIs
+[5/7] scoring
+  loading cached walk graph (charleroi_walk_31370_belgium-260925.osm.graphml)...
+  network gap: median 1500 m  covered ≤500 m: 0.4%
+  Charleroi deprivation: 273 sectors joined  (BIMD range 12.67–83.23)
+  deprivation source: real (273 zones joined)
+  score range: 7.6 – 92.2
+  median gap:  1500 m
+[6/7] candidates + optimisation
+  candidates: 448 after filtering
+  coverage: 0.2% → 50.0%  (+49.8%)
+[7/7] export
+  output → /home/user/facta/pipelines/city_planner/frontend/public/data/charleroi/dog_areas
+
+✓  Done in 3.2s
+   Output: /home/user/facta/pipelines/city_planner/frontend/public/data/charleroi/dog_areas
+   Coverage: 0.2% → 50.0%
+   Selected 40/40 locations
+

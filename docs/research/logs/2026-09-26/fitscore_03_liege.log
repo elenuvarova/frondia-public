@@ -1,0 +1,52 @@
+  osmium: /usr/bin/osmium  city: liege
+
+─── Step 1: Extract liege from Belgium PBF ───
+  Extracting liege bbox 5.51,50.55,5.69,50.7 from Belgium PBF …
+    ✓ liege.osm.pbf  (11.9 MB)
+
+─── Step 2: Export POIs to GeoJSON ───
+  Filtering POI tags from liege PBF …
+    ✓ liege_pois.osm.pbf  (0.8 MB)
+  Exporting POIs to GeoJSON …
+    ✓ liege_pois.geojson  (3.3 MB)
+
+─── Step 3: Categorise & filter ───
+  Reading liege_pois.geojson …
+  Raw features: 8,236
+  After categorisation: 7,685
+  Parks: 637 kept (≥0.5 ha), 1434 dropped
+
+─── Category counts ───
+  bench               1892  ⚠  low-confidence
+  sport               1028
+  school               863
+  restaurant           782
+  park                 637
+  convenience          263
+  pharmacy             161
+  supermarket          124
+  playground           100
+  cafe                  99
+  gp                    66  ⚠  low-confidence
+  community             60
+  hospital              46
+  library               41
+  veterinary            35
+  childcare             35
+  coworking             15  ⚠  low-confidence
+  dog_park               4  ⚠  low-confidence
+
+─── Step 4: Spatial join to sectors ───
+  Spatial join: 3,769 inside sectors, 2,482 outside/unmatched
+
+  ✓ 6,251 POIs → /home/user/facta/pipelines/neighbourhood_fit_score/pipeline/data/processed/liege/pois_all.geojson
+  ✓ Amenity table: 177 sectors × 18 categories
+
+─── Step 5: TEC transit ───
+  Stops in the city's bbox: 2,633
+  Monday 20260928: 37 services, 20,933 trips
+  Frequency computed for 2,629 served stops
+  Transit stops in sectors: 887
+  ✓ 2,633 transit stops → transit_stops.geojson
+
+Next: python 04_graph.py --city liege

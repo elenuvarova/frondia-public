@@ -1,0 +1,31 @@
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+# browser-test screenshots and logs from the Playwright MCP
+.playwright-mcp/
+
+# the merged projects' pipelines (pipelines/): code only; what they download and write stays local
+pipelines/**/.env
+pipelines/**/.venv/
+pipelines/**/__pycache__/
+pipelines/**/data/
+pipelines/city_planner/cache/
+pipelines/city_planner/frontend/
+pipelines/spotfinder/backend/
+
+# Local working material, never committed (9 Oct 2026: a git add -A swept them into a commit once)
+docs/vibecoding master/
+docs/design/imagery/refs/
+docs/design/imagery/gpt/
+docs/design/imagery/round2/
+
+# third-party screenshots used as design references: kept locally, linked from the README beside them, not redistributed
+docs/design/landing/refs/**/*.webp
+docs/design/landing/refs/**/*.jpg
+docs/design/landing/refs/**/*.png
+
+# local secrets never go in (the snapshot is public): only the empty templates
+.env
+.env.*
+!.env.example

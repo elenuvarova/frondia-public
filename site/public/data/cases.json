@@ -1,0 +1,525 @@
+[
+ {
+  "slug": "ninove",
+  "city": "brussels",
+  "name": "Parc de la Porte de Ninove",
+  "area_ha": 2.25,
+  "completed": 2019,
+  "window_before": "2017–2019",
+  "window_after": "2021–2024",
+  "calibration_n": 686,
+  "instruments": [
+   {
+    "key": "ndvi",
+    "before": 0.282,
+    "after": 0.561,
+    "effect": 0.2463,
+    "threshold": 0.03618,
+    "significant": true
+   },
+   {
+    "key": "built",
+    "before": 0.586,
+    "after": 0.459,
+    "effect": -0.1232,
+    "threshold": 0.02501,
+    "significant": true
+   },
+   {
+    "key": "grass",
+    "before": 0.072,
+    "after": 0.171,
+    "effect": 0.0978,
+    "threshold": 0.0094,
+    "significant": true
+   },
+   {
+    "key": "trees",
+    "before": 0.044,
+    "after": 0.052,
+    "effect": 0.0053,
+    "threshold": 0.01301,
+    "significant": false
+   },
+   {
+    "key": "bare",
+    "before": 0.067,
+    "after": 0.049,
+    "effect": -0.0168,
+    "threshold": 0.00538,
+    "significant": true
+   },
+   {
+    "key": "shrub",
+    "before": 0.052,
+    "after": 0.058,
+    "effect": 0.0037,
+    "threshold": 0.00465,
+    "significant": false
+   }
+  ],
+  "controls": [
+   {
+    "id": "21015A101",
+    "name": "GARE",
+    "name_nl": "STATION",
+    "dist_km": 4.5
+   },
+   {
+    "id": "21004E211",
+    "name": "RUE DE WAND",
+    "name_nl": "WANDSTRAAT",
+    "dist_km": 5.8
+   },
+   {
+    "id": "21009A22-",
+    "name": "UNIVERSITE",
+    "name_nl": "HOGESCHOOL",
+    "dist_km": 4.9
+   },
+   {
+    "id": "21015A22-",
+    "name": "MARBOTIN A. (RUE)",
+    "name_nl": "MARBOTIN A. STRAAT",
+    "dist_km": 4.6
+   },
+   {
+    "id": "21012A63-",
+    "name": "DUBRUCQ-NORD",
+    "name_nl": "DUBRUCQ-NOORD",
+    "dist_km": 2.2
+   },
+   {
+    "id": "21001B321",
+    "name": "ALBERT I- QUARTIER",
+    "name_nl": "ALBERT I - BUURT",
+    "dist_km": 1.5
+   },
+   {
+    "id": "21004B43-",
+    "name": "AMBIORIX-NORD (SQUARE)",
+    "name_nl": "AMBIORIXSQUARE-NOORD",
+    "dist_km": 3.5
+   },
+   {
+    "id": "21015A24-",
+    "name": "WAELHEM (RUE)",
+    "name_nl": "WAELHEMSTRAAT",
+    "dist_km": 3.9
+   },
+   {
+    "id": "21009A151",
+    "name": "A. DELPORTE-NORD",
+    "name_nl": "A. DELPORTE-NOORD",
+    "dist_km": 4.2
+   },
+   {
+    "id": "21009A652",
+    "name": "HOPITAUX",
+    "name_nl": "HOSPITALEN",
+    "dist_km": 4.1
+   },
+   {
+    "id": "21007A373",
+    "name": "CHARROI (RUE DE)",
+    "name_nl": "GERIJSTRAAT",
+    "dist_km": 2.7
+   },
+   {
+    "id": "21015A54-",
+    "name": "EMERAUDE (AVENUE)",
+    "name_nl": "SMARAGDLAAN",
+    "dist_km": 4.1
+   }
+  ],
+  "control_gap": 0.0005,
+  "defensible_effect": null,
+  "series": {
+   "threshold": 0.03618,
+   "seasons": [
+    {
+     "season": 2020,
+     "effect": 0.1126,
+     "scenes": 7
+    },
+    {
+     "season": 2021,
+     "effect": 0.278,
+     "scenes": 9
+    },
+    {
+     "season": 2022,
+     "effect": 0.0587,
+     "scenes": 9
+    },
+    {
+     "season": 2023,
+     "effect": 0.2095,
+     "scenes": 12
+    },
+    {
+     "season": 2024,
+     "effect": 0.3205,
+     "scenes": 6
+    },
+    {
+     "season": 2025,
+     "effect": 0.1076,
+     "scenes": 9
+    },
+    {
+     "season": 2026,
+     "effect": 0.1168,
+     "scenes": 12
+    }
+   ]
+  },
+  "images": {
+   "before": "cases/ninove-before.png",
+   "after": "cases/ninove-after.png",
+   "delta": "cases/ninove-delta.png"
+  },
+  "second_instrument": true
+ },
+ {
+  "slug": "droogdokkenpark",
+  "city": "antwerp",
+  "name": "Droogdokkenpark — Belvédère",
+  "area_ha": 1.58,
+  "completed": 2018,
+  "window_before": "2017–2019",
+  "window_after": "2021–2024",
+  "calibration_n": 457,
+  "instruments": [
+   {
+    "key": "ndvi",
+    "before": 0.224,
+    "after": 0.546,
+    "effect": 0.2892,
+    "threshold": 0.04585,
+    "significant": true
+   },
+   {
+    "key": "built",
+    "before": 0.408,
+    "after": 0.311,
+    "effect": -0.0948,
+    "threshold": 0.02766,
+    "significant": true
+   },
+   {
+    "key": "grass",
+    "before": 0.06,
+    "after": 0.133,
+    "effect": 0.0723,
+    "threshold": 0.01684,
+    "significant": true
+   },
+   {
+    "key": "trees",
+    "before": 0.053,
+    "after": 0.102,
+    "effect": 0.0471,
+    "threshold": 0.0273,
+    "significant": true
+   },
+   {
+    "key": "bare",
+    "before": 0.119,
+    "after": 0.064,
+    "effect": -0.0538,
+    "threshold": 0.00956,
+    "significant": true
+   },
+   {
+    "key": "shrub",
+    "before": 0.084,
+    "after": 0.08,
+    "effect": -0.0049,
+    "threshold": 0.00921,
+    "significant": false
+   }
+  ],
+  "controls": [
+   {
+    "id": "11002E551",
+    "name": "GERECHTSHOF (ZUIDWIJK)",
+    "dist_km": 3.1
+   },
+   {
+    "id": "11002S04-",
+    "name": "HET LAAR",
+    "dist_km": 2.9
+   },
+   {
+    "id": "11050A073",
+    "name": "DEN HOEK",
+    "dist_km": 6.3
+   },
+   {
+    "id": "11002S03-",
+    "name": "KROONSTRAAT-WEST",
+    "dist_km": 3.0
+   },
+   {
+    "id": "46013A0MV",
+    "name": "HOGENAKKERHOEK",
+    "dist_km": 7.4
+   },
+   {
+    "id": "11002S00-",
+    "name": "BORGERHOUT - GEMEENTEHUIS",
+    "dist_km": 3.3
+   },
+   {
+    "id": "11002R30-",
+    "name": "'T MESTPUTTEKE",
+    "dist_km": 5.2
+   },
+   {
+    "id": "11002E14-",
+    "name": "MUSEUMWIJK (ZUIDWIJK)",
+    "dist_km": 3.0
+   },
+   {
+    "id": "11002T02-",
+    "name": "HOFVELD",
+    "dist_km": 4.7
+   },
+   {
+    "id": "11002Q021",
+    "name": "LAATLOS",
+    "dist_km": 2.4
+   },
+   {
+    "id": "11002A21-",
+    "name": "ST.-ANDRIES (SPAANSE WALLEN)",
+    "dist_km": 2.4
+   },
+   {
+    "id": "11002T39-",
+    "name": "OOSTKWARTIER",
+    "dist_km": 4.1
+   }
+  ],
+  "control_gap": 0.0013,
+  "defensible_effect": 0.147,
+  "series": {
+   "threshold": 0.04585,
+   "seasons": [
+    {
+     "season": 2019,
+     "effect": 0.1175,
+     "scenes": 10
+    },
+    {
+     "season": 2020,
+     "effect": 0.1039,
+     "scenes": 7
+    },
+    {
+     "season": 2021,
+     "effect": 0.1638,
+     "scenes": 9
+    },
+    {
+     "season": 2022,
+     "effect": 0.1194,
+     "scenes": 9
+    },
+    {
+     "season": 2023,
+     "effect": 0.1323,
+     "scenes": 13
+    },
+    {
+     "season": 2024,
+     "effect": 0.1808,
+     "scenes": 6
+    },
+    {
+     "season": 2025,
+     "effect": 0.0293,
+     "scenes": 9
+    },
+    {
+     "season": 2026,
+     "effect": 0.1038,
+     "scenes": 12
+    }
+   ]
+  },
+  "images": {
+   "before": "cases/droogdokkenpark-before.png",
+   "after": "cases/droogdokkenpark-after.png",
+   "delta": "cases/droogdokkenpark-delta.png"
+  },
+  "second_instrument": true
+ },
+ {
+  "slug": "spoor-noord",
+  "city": "antwerp",
+  "name": "Park Spoor Noord",
+  "area_ha": 19.48,
+  "completed": 2009,
+  "window_before": "2006–2008",
+  "window_after": "2011–2014",
+  "calibration_n": 457,
+  "instruments": [
+   {
+    "key": "ndvi_landsat",
+    "before": 0.251,
+    "after": 0.435,
+    "effect": 0.1478,
+    "threshold": 0.0576,
+    "significant": true
+   }
+  ],
+  "controls": [
+   {
+    "id": "11002S00-",
+    "name": "BORGERHOUT - GEMEENTEHUIS",
+    "dist_km": 2.0
+   },
+   {
+    "id": "11002T39-",
+    "name": "OOSTKWARTIER",
+    "dist_km": 2.9
+   },
+   {
+    "id": "11002D33-",
+    "name": "STADSPARK-ZUID (OOSTWIJK)",
+    "dist_km": 2.5
+   },
+   {
+    "id": "11002F60-",
+    "name": "KIEL - CENTRUM (KIEL)",
+    "dist_km": 5.4
+   },
+   {
+    "id": "11029A232",
+    "name": "AGFA-GEVAERT",
+    "dist_km": 5.9
+   },
+   {
+    "id": "11002S03-",
+    "name": "KROONSTRAAT-WEST",
+    "dist_km": 1.9
+   },
+   {
+    "id": "11002F61-",
+    "name": "BOOMSE STWG-BEERSCHOT (KIEL)",
+    "dist_km": 5.6
+   },
+   {
+    "id": "11002E551",
+    "name": "GERECHTSHOF (ZUIDWIJK)",
+    "dist_km": 2.8
+   },
+   {
+    "id": "11002D41-",
+    "name": "STAPPAERTS - KRIJGSHOSPITAAL (OOSTWIJK)",
+    "dist_km": 3.0
+   },
+   {
+    "id": "11002S02-",
+    "name": "DEN BLEEKHOF",
+    "dist_km": 2.4
+   },
+   {
+    "id": "11002S05-",
+    "name": "KATTENBERG",
+    "dist_km": 1.9
+   },
+   {
+    "id": "11002T02-",
+    "name": "HOFVELD",
+    "dist_km": 3.8
+   }
+  ],
+  "control_gap": -0.0,
+  "defensible_effect": null,
+  "series": {
+   "threshold": 0.0576,
+   "seasons": [
+    {
+     "season": 2011,
+     "effect": 0.081,
+     "scenes": 2
+    },
+    {
+     "season": 2012,
+     "effect": 0.143,
+     "scenes": 3
+    },
+    {
+     "season": 2013,
+     "effect": 0.12,
+     "scenes": 4
+    },
+    {
+     "season": 2014,
+     "effect": 0.159,
+     "scenes": 6
+    },
+    {
+     "season": 2015,
+     "effect": 0.065,
+     "scenes": 6
+    },
+    {
+     "season": 2016,
+     "effect": 0.148,
+     "scenes": 5
+    },
+    {
+     "season": 2018,
+     "effect": 0.001,
+     "scenes": 8
+    },
+    {
+     "season": 2019,
+     "effect": 0.119,
+     "scenes": 6
+    },
+    {
+     "season": 2020,
+     "effect": 0.068,
+     "scenes": 8
+    },
+    {
+     "season": 2021,
+     "effect": 0.15,
+     "scenes": 5
+    },
+    {
+     "season": 2022,
+     "effect": 0.072,
+     "scenes": 15
+    },
+    {
+     "season": 2023,
+     "effect": 0.088,
+     "scenes": 9
+    },
+    {
+     "season": 2024,
+     "effect": 0.142,
+     "scenes": 8
+    },
+    {
+     "season": 2025,
+     "effect": 0.09,
+     "scenes": 5
+    },
+    {
+     "season": 2026,
+     "effect": 0.059,
+     "scenes": 6
+    }
+   ]
+  },
+  "images": {},
+  "second_instrument": false
+ }
+]

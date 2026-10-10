@@ -1,0 +1,5 @@
+contract_id,contract,commune,years,completion_proxy,budget_total_eur,park,osm,area_ha,ndvi_effect,verdict,timing_standard_window,own_window,contracts_on_same_park
+52,Portaels,Schaerbeek,2008–2012,2013,16351124.4,Parc Josaphat,way/31465238,27.27,0.0021,шум,сдан до окна «до» — обе базы после проекта,нет данных Sentinel-2 на окно «до»,1
+57,Midi,Anderlecht,2010–2014,2015,14984447.98,Parc Albert,way/15890328,2.57,0.0107,контроль несопоставим,сдан до окна «до» — обе базы после проекта,нет данных Sentinel-2 на окно «до»,1
+90,Anvers,Bruxelles,2021–2025,2026,13571589.0,Parc Maximilien,relation/5643127,7.37,0.0418,ПОЗЕЛЕНЕЛ,сдан в окне «после» — стандартное окно ловит стройку,нет данных Sentinel-2 на окно «до»,1
+93,Deux Cités,Forest,2022–2026,2027,13604413.99,Parc du Bempt,way/23782038,16.56,0.0543,контроль несопоставим,сдан в окне «после» — стандартное окно ловит стройку,нет данных Sentinel-2 на окно «до»,1

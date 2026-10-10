@@ -1,0 +1,176 @@
+{
+ "city": "charleroi",
+ "display_name": "Charleroi",
+ "baseline_year": 2024,
+ "window": "2017–2019 → 2021–2024",
+ "units_total": 291,
+ "units_measured": 287,
+ "units_comparable": 269,
+ "population": 203790,
+ "baseline": {
+  "ndvi_wmean": 0.5045604712168027,
+  "trees_wmean": 0.12904580383867778,
+  "grass_wmean": 0.05322101416166075,
+  "built_wmean": 0.5666859911043591
+ },
+ "trend": {
+  "ndvi_eff_median": 3.7310232720175196e-05,
+  "ndvi_loss_sectors": 7,
+  "ndvi_loss_pop": 1240,
+  "ndvi_gain_sectors": 5,
+  "ndvi_gain_pop": 679,
+  "trees_loss_sectors": 4,
+  "trees_loss_pop": 1566,
+  "trees_gain_sectors": 6,
+  "trees_gain_pop": 1241,
+  "built_up_sectors": 8,
+  "built_up_pop": 1051,
+  "built_down_sectors": 6,
+  "built_down_pop": 387
+ },
+ "thresholds": {
+  "ndvi": 0.04082,
+  "trees": 0.02628,
+  "built": 0.03389
+ },
+ "thresholds_source": {
+  "ndvi": "нулевое распределение по 287 единицам, 95-й процентиль, среднее -0.00098, ст. отклонение 0.01975",
+  "trees": "нулевое распределение по 287 единицам, 95-й процентиль, среднее +0.00009, ст. отклонение 0.01282",
+  "built": "нулевое распределение по 287 единицам, 95-й процентиль, среднее -0.00055, ст. отклонение 0.01636"
+ },
+ "thresholds_unbiased": {
+  "ndvi": true,
+  "trees": true,
+  "built": true
+ },
+ "thresholds_mean": {
+  "ndvi": -0.0009766945290036293,
+  "trees": 8.543178324181731e-05,
+  "built": -0.0005515679442508712
+ },
+ "thresholds_instrument_manifest": {
+  "ndvi": 0.03955,
+  "trees": 0.0249,
+  "built": 0.03448
+ },
+ "equity_income_terciles": [
+  {
+   "label": "нижний",
+   "n": 81,
+   "income_median": 21500.0,
+   "ndvi_2024_wmean": 0.4605182938599414,
+   "trees_2024_wmean": 0.10696670161912326,
+   "ndvi_eff_mean": 0.0007592079737653932,
+   "loss_sectors": 0,
+   "gain_sectors": 1
+  },
+  {
+   "label": "средний",
+   "n": 81,
+   "income_median": 24644.0,
+   "ndvi_2024_wmean": 0.5155719790426945,
+   "trees_2024_wmean": 0.1312454493538995,
+   "ndvi_eff_mean": 2.8071284288933926e-05,
+   "loss_sectors": 0,
+   "gain_sectors": 2
+  },
+  {
+   "label": "верхний",
+   "n": 82,
+   "income_median": 28683.5,
+   "ndvi_2024_wmean": 0.5864673828875243,
+   "trees_2024_wmean": 0.16286997449816526,
+   "ndvi_eff_mean": -0.0043383462957959,
+   "loss_sectors": 6,
+   "gain_sectors": 1
+  }
+ ],
+ "top_ndvi_loss": [
+  {
+   "id": "52011M0NH",
+   "name": "SOUS-LE-BOIS",
+   "commune": "Roux",
+   "eff": -0.103,
+   "population": 35,
+   "trees_eff": -0.0301
+  },
+  {
+   "id": "52011R09-",
+   "name": "BRIQUETERIE NORD",
+   "commune": "Ransart",
+   "eff": -0.064,
+   "population": 0,
+   "trees_eff": 0.0016
+  },
+  {
+   "id": "52011N6BX",
+   "name": "GLANE",
+   "commune": "Jumet",
+   "eff": -0.0549,
+   "population": 106,
+   "trees_eff": 0.0163
+  },
+  {
+   "id": "52011D0PR",
+   "name": "LES VIVIERS",
+   "commune": "Gilly",
+   "eff": -0.0451,
+   "population": 63,
+   "trees_eff": -0.0329
+  },
+  {
+   "id": "52011G511",
+   "name": "SART-SAINT-NICOLAS",
+   "commune": "Marcinelle",
+   "eff": -0.0437,
+   "population": 529,
+   "trees_eff": -0.0056
+  },
+  {
+   "id": "52011H234",
+   "name": "LES SABLIERES",
+   "commune": "Mont-sur-Marchienne",
+   "eff": -0.0426,
+   "population": 465,
+   "trees_eff": 0.0025
+  },
+  {
+   "id": "52011M081",
+   "name": "GARE DE FORMATION - INDONSART",
+   "commune": "Roux",
+   "eff": -0.0413,
+   "population": 42,
+   "trees_eff": 0.0051
+  }
+ ],
+ "top_trees_loss": [
+  {
+   "id": "52011N3BH",
+   "name": "TRIANOY",
+   "commune": "Jumet",
+   "eff": -0.1006,
+   "population": 59
+  },
+  {
+   "id": "52011K202",
+   "name": "GRANDS TRIEUX",
+   "commune": "Monceau-sur-Sambre",
+   "eff": -0.0376,
+   "population": 1409
+  },
+  {
+   "id": "52011D0PR",
+   "name": "LES VIVIERS",
+   "commune": "Gilly",
+   "eff": -0.0329,
+   "population": 63
+  },
+  {
+   "id": "52011M0NH",
+   "name": "SOUS-LE-BOIS",
+   "commune": "Roux",
+   "eff": -0.0301,
+   "population": 35
+  }
+ ]
+}

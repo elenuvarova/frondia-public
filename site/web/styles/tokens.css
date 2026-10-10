@@ -1,0 +1,318 @@
+/* ── Frondia landing · design system ─────────────────────────────────────────
+   The public page's own system, separate from the atlas's on purpose: the two will diverge,
+   so what they have in common is copied here, not shared. Values are the references', taken
+   literally — Figma dNvUEJQwB2R8dFPRmHctOp, page "Frondia · DS Landing" (112:2 spacing system,
+   85:4 principal layout, 108:5 masses by section, 96:4 David's system, 88:4 parts ↔ references;
+   86:4 type research stays on "Frondia · Concept"; the palette on "Frondia · Concept", 165:4):
+   colour  — "Satoyama + lilac · CADRO's hues", approved by Elena 26 Sep 2026: the Satoyama
+             brochure's base (143:193: cream page, cards, text #1D1D1B) with CADRO's greens and
+             lilac (143:189). Lines and hatching stay neutral grey: on the maps a greenish hatch
+             for "no fair comparison" would read as a measured gain;
+   type    — David's system (davidprotein.com, read live): Instrument Serif · Suisse Int'l → Geist ·
+             ABC Monument Grotesk Mono → Fragment Mono (closest free faces by glyph overlap and width);
+   layout  — anthropic.com measured live at 1440: inset 70, sections 96 / 144, the spacing ladder.
+   Data colours are derived, not referenced: the validated atlas ramps (dataviz validator).
+   Order: primitives (@frondia/shared/brand.css) → 1 roles → 2 type → 3 spacing → 4 components. */
+
+/* ── 1 · roles: what each primitive does on this page ──────────────────────── */
+:root {
+  /* Satoyama: the page, the cards, the text — almost all text in the brochure is #1D1D1B */
+  --paper: var(--sato-cream);
+  --paper-2: var(--sato-card);
+  --paper-3: var(--sato-card);
+  --ink: var(--sato-ink);               /* 14.2 : 1 on paper, 16.1 on cards */
+  --ink-2: var(--sato-ink);
+  --ink-3: var(--sato-ink);
+  --ink-4: var(--cloud-medium);         /* lines only, never text — neutral on purpose */
+  --hatch: var(--cloud-dark);           /* the "no fair comparison" hatch: 3.5 : 1 on its paper tile (WCAG 1.4.11); cloud-medium was 2.1 */
+  --rule: rgba(29, 29, 27, .14);
+  --rule-2: rgba(29, 29, 27, .32);
+
+  /* the dark surface: CADRO's forest-teal at Satoyama's forest lightness, and the inks on it */
+  --night: var(--cadro-night);
+  --night-ink: var(--cadro-cream-ink);  /* 8.1 : 1 */
+  --night-ink-2: var(--cadro-lime);     /* 7.3 : 1 */
+  --night-ink-3: var(--cadro-cream-ink);
+  --night-rule: rgba(240, 235, 221, .2);
+
+  /* CADRO's lilac: the light over the field and the notes — never data */
+  --note-bg: var(--cadro-lavender);     /* ink on it 8.1 : 1 */
+  --plaque: var(--cadro-lime);          /* ink on it 12.7 : 1 */
+  --glow-core: var(--cadro-pink-hot);
+  --glow-core-2: var(--cadro-pink);
+  --glow-halo: var(--cadro-lavender);
+  --glow-halo-2: var(--cadro-periwinkle);
+
+  /* taken as they are: --oat (the hero ground behind the field image) */
+  --noise: var(--cloud-light);          /* within noise: verdict chips, the few-residents fill */
+  --noise-bar: var(--cloud-dark);       /* within noise, a histogram's bars: 3.3 : 1 on paper (WCAG 1.4.11; cloud-light was 1.31) */
+
+  --ease: cubic-bezier(.2, .7, .1, 1);
+
+  color-scheme: light;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 16px/24px var(--sans);   /* David body: 16 / 24, +0.01em */
+  letter-spacing: .01em;
+  font-optical-sizing: auto;
+}
+/* the rubber band past either end (Elena, 10 Oct 2026): at the top the hero's photograph, at the bottom the footer's
+   green — never the cream of the page. On a desktop the root refuses the band (Chrome, Firefox, Safari 16+), so the photo
+   and the footer stay at the edges; where a browser bounces anyway it paints the gap with the root's colour, which EdgeTone.tsx
+   flips by the half of the page in view: the photo's top-edge tone (averaged from lilac-wind*.webp's top rows) or the
+   footer's --night. Pages without the photo or the footer keep the cream at that end. */
+/* the band is refused only where a mouse or a trackpad pulls it (Elena's Mac); a phone keeps pull-to-refresh, and its
+   bounce shows the root's colour, which EdgeTone sets (10 Oct, decided: refresh on a phone matters more than the band) */
+@media (hover: hover) and (pointer: fine) { html { overscroll-behavior-y: none; } }
+/* screen only: on paper the root stays white (round-1 re-check: a dossier printed after scrolling got a green band) */
+@media screen {
+  html { background-color: var(--edge-top, var(--paper)); }
+  html.edge-bottom { background-color: var(--edge-bottom, var(--paper)); }
+}
+:root:has(.photo-rustle.hero-rustle) { --edge-top: #c1d294; }
+@media (max-width: 720px) { :root:has(.photo-rustle.hero-rustle) { --edge-top: #dce69d; } }
+:root:has(.footer.night) { --edge-bottom: var(--night); }
+::selection { background: var(--ink); color: var(--paper); }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 2px; }
+.night :focus-visible { outline-color: var(--night-ink); }
+
+/* ── 2 · type — David's system (davidprotein.com, read live 25 Sep 2026) ───────
+   Instrument Serif for every heading: 400, +0.01em, line-height 1.05–1.1.
+   Geist (for Suisse Int'l) for text and UI, +0.01em. Fragment Mono (for Monument Mono)
+   for tags, labels and buttons: tracking 0, set as written — no capitals.
+   Capital labels are David's Suisse ones: 600 · 12 / 18, +0.1em ("Method"). */
+:root {
+  --serif: var(--font-instrument-serif);
+  --sans: var(--font-geist);           /* in place of Suisse Int'l */
+  --mono: var(--font-fragment-mono);   /* in place of Monument Grotesk Mono */
+
+  /* the hero is the one exception to David's scale (his largest style is 64 / 55): Instrument's
+     display-xl ratios instead. To follow David here too: --hero-size: 64px, line-height .86, +0.01em. */
+  --hero-size: clamp(58px, min(10vw, 17.5vh), 176px);
+}
+.display-xl, .display-l, .display-m, .display-s, h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  margin: 0;
+  text-wrap: balance;
+}
+.display-xl { font-size: var(--hero-size); line-height: .85; letter-spacing: -.05em; }   /* Instrument display-xl */
+.display-l { font-size: clamp(36px, 3.5vw, 50px); line-height: 1.1; letter-spacing: .01em; } /* David H2 50 / 55 */
+.display-m { font-size: clamp(32px, 3.2vw, 45px); line-height: 1.05; letter-spacing: .01em; } /* David H3 45 / 47.25 */
+.display-s { font-size: 24px; line-height: 1.125; letter-spacing: .01em; }                   /* David 24 / 27 */
+em, .it { font-style: italic; }
+.lede { font-size: clamp(18px, 1.5vw, 21px); line-height: 1.35; letter-spacing: .01em; color: var(--ink-2); max-width: 40ch; text-wrap: pretty; } /* David lead 21 / 28.35 */
+.body { max-width: 62ch; color: var(--ink-2); text-wrap: pretty; }
+.body p { margin: 0 0 1em; }
+.small { font-size: 14px; line-height: 20px; letter-spacing: .01em; color: var(--ink-3); }   /* David 14 / 20 */
+.mono {                                   /* David tag · label: Monument Mono 12 / 16.8, tracking 0 */
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 16.8px;
+  font-feature-settings: "tnum" 1;
+  letter-spacing: 0;
+}
+.label {                                  /* David caps label: Suisse 600 · 12 / 18, +0.1em */
+  font-family: var(--sans);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.night .label { color: var(--night-ink-3); }
+.num-xl, .num-l {                         /* David big number: 64 / 70, +0.5 px ("150 / 75") */
+  font-family: var(--serif); font-size: 64px; line-height: 70px; letter-spacing: .5px; font-variant-numeric: lining-nums;
+}
+.num-xl + .label, .num-l + .label {       /* David stat label under a big number: 16 / 22, +0.1em */
+  font-size: 16px; line-height: 22px; font-weight: 400; letter-spacing: .1em; text-transform: none; color: var(--ink-2);
+}
+.night .num-l + .label { color: var(--night-ink-2); }
+
+/* ── 3 · spacing — anthropic.com at 1440: content column 1285, sections 96, hero and dark band 144 ── */
+:root {
+  --gutter: clamp(16px, 4.86vw, 70px);
+  --maxw: 1440px;
+  --section: clamp(64px, 6.7vw, 96px);
+  --section-l: clamp(96px, 10vw, 144px);
+  --s-8: 8px; --s-12: 12px; --s-16: 16px; --s-20: 20px; --s-32: 32px; --s-48: 48px; --s-64: 64px; --s-96: 96px; --s-128: 128px;
+}
+.wrap { max-width: var(--maxw); margin: 0 auto; padding-inline: var(--gutter); }
+.section { padding-block: var(--section); position: relative; }
+/* /privacy opens on its section, under the bar: its heading (20 px into the section) keeps at least 10 px under the bar
+   as measured (--nav-h, Nav.tsx), which text spacing can wrap to more rows (WCAG 1.4.12; round-1 re-check, 6 Oct 2026) */
+main > #privacy:first-child { padding-top: max(var(--section), calc(var(--nav-h, 0px) - 10px)); }
+.section.night { padding-block: var(--section-l); }
+.night { background: var(--night); color: var(--night-ink); }
+.night .body, .night .lede { color: var(--night-ink-2); }
+.grid-12 { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; }
+
+/* ── 4 · components ──────────────────────────────────────────────────────── */
+
+/* grain: film texture over fields and night surfaces */
+.grain { position: relative; isolation: isolate; }
+.grain::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 3;
+  background-image: var(--grain); background-size: 240px 240px;
+  mix-blend-mode: overlay; opacity: .28;
+}
+.night.grain::after { opacity: .16; mix-blend-mode: soft-light; }
+
+/* label rule: MONO ——— MONO ——— MONO */
+.label-rule { display: flex; align-items: center; gap: 16px; }
+.label-rule > i { flex: 1; height: 1px; background: currentColor; opacity: .22; min-width: 16px; }
+.label-rule > span { white-space: nowrap; }
+/* on a phone the rule keeps number and title; the right-hand note would overflow */
+@media (max-width: 720px) {
+  .label-rule > span:nth-of-type(3), .label-rule > i:nth-of-type(2) { display: none; }
+}
+/* a title or a note that no longer fits its row wraps, flush right, instead of running past the screen: English's titles
+   at 320–360, and a longer language's (plan 5: the pseudo-language's titles ran 45 px past it at 390, the note 17 px at
+   768). A span that fits keeps its one line, so English is drawn as before */
+.label-rule > span:nth-of-type(n+2) { white-space: normal; text-align: right; }
+
+/* pills */
+.pill {
+  display: inline-flex; align-items: center; gap: 10px;
+  height: 42px; padding: 0 20px; border-radius: 999px;
+  font: 400 14px/14px var(--mono); letter-spacing: 0; text-decoration: none;   /* David button: Monument Mono 14 / 14 */
+  border: 1px solid transparent; cursor: pointer; white-space: nowrap;
+  transition: transform .35s var(--ease), background-color .25s, color .25s, border-color .25s;
+}
+.pill:hover { transform: translateY(-1px); }
+.pill .arr { font-family: var(--mono); font-size: 14px; transition: transform .35s var(--ease); }
+.pill:hover .arr { transform: translateX(3px); }
+.pill--ink { background: var(--ink); color: var(--paper); }
+.pill--paper { background: var(--paper); color: var(--ink); }
+.pill--ghost { border-color: var(--rule-2); color: var(--ink); background: rgba(240, 238, 230, .35); backdrop-filter: blur(6px); }
+.pill--ghost:hover { background: rgba(240, 238, 230, .7); }
+.pill--night { border-color: var(--night-rule); color: var(--night-ink); }
+.pill--night:hover { border-color: var(--night-ink-3); }
+.pill--sm { height: 34px; padding: 0 14px; }
+/* phone: 48 / 44 high. A reader's own text spacing (WCAG 1.4.12) can make a pill wider than the screen: then its words
+   wrap inside it instead of running past the edge, where html's overflow-x: clip cut them off (re-check 2; at the
+   site's own spacing every pill fits on one line, so nothing changes) */
+@media (max-width: 720px) {
+  .pill { max-width: 100%; white-space: normal; height: auto; min-height: 48px; padding-block: 6px; }
+  .pill--sm { min-height: 44px; }
+}
+
+/* numbered index with dotted leaders */
+.index { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; width: min(420px, 100%); }
+.index a {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: baseline; gap: 12px;
+  text-decoration: none; font-size: 14px; line-height: 19.6px; color: var(--ink);
+}
+.index .n { font-family: var(--mono); font-size: 12px; color: var(--ink-3); }
+.index .dots { border-bottom: 1px dotted var(--rule-2); transform: translateY(-4px); transition: border-color .3s; }
+.index a:hover .dots { border-bottom-color: var(--ink); }
+
+/* nav */
+.nav {
+  position: absolute; inset: 0 0 auto 0; z-index: 20;
+  padding-top: max(18px, env(safe-area-inset-top, 0px));
+}
+.nav .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 24px; min-height: 56px; }   /* wraps only under a reader's own text spacing (WCAG 1.4.12, re-check 2): the pill went 34 px past a 320 screen */
+.wordmark { font-family: var(--serif); font-size: 35px; line-height: 1; letter-spacing: .01em; text-decoration: none; padding-block: 8px; } /* David card title 35; padded to a 44-px target */
+.wordmark { transition: opacity .25s; }
+.wordmark:hover { opacity: .7; }
+.wordmark sup { font-family: var(--mono); font-size: 10px; letter-spacing: 0; vertical-align: 12px; margin-left: 4px; color: var(--ink-3); }
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a:not(.pill) { font-family: var(--sans); font-size: 14px; line-height: 19.6px; letter-spacing: .01em; text-decoration: none; color: var(--ink-2); } /* David UI 14 / 19.6 */
+.nav-links a:not(.pill):hover { color: var(--ink); }
+.nav--night .wordmark, .nav--night .nav-links a:not(.pill) { color: var(--night-ink); }
+.nav-narrow { display: none; }
+/* the language switch "EN · NL · FR" (components/LanguageSwitcher.tsx): its links look like the bar's own links (size,
+   colour, focus); the current language is underlined. Absent while only English is routed */
+.lang { display: inline-flex; gap: .4em; align-items: baseline; }
+.lang-sep { opacity: .5; }
+.lang a { display: inline-block; min-width: 24px; min-height: 24px; line-height: 24px; text-align: center; }   /* 24-px targets (WCAG 2.5.8) */
+.lang a[aria-current='true'] { text-decoration: underline; text-underline-offset: .2em; }
+/* phone: Method and Audits stay (a 19-screen page needs a way back), padded to 44 px; the pill says "Atlas" */
+@media (max-width: 720px) {
+  .nav-links { gap: 18px; }
+  .nav-links a:not(.pill) { display: inline-flex; align-items: center; min-height: 44px; }
+  .nav-wide, .nav-links a.nav-wide { display: none; }
+  .nav-narrow { display: inline; }
+}
+@media (max-width: 360px) { .nav .wrap { gap: 12px; } .nav-links { gap: 12px; } .nav-links .pill--sm { padding: 0 12px; } }
+/* with the language switch (a second language routed) a phone's bar has two rows (Elena, 5 Oct 2026): the wordmark and
+   EN · NL · FR, then every link, none hidden — Article 8, Method, Audits and the atlas pill (the one-row bar of plan 5
+   hid Method and Audits). The switch after the wordmark (.lang--top) is the phone's; the one at the end of the links is
+   the wider screens'. Each is drawn only where it stands in the reading order, so Tab follows what is read. No switch,
+   no change: the English production keeps its one row */
+.nav .lang--top { display: none; }
+@media (max-width: 560px) {
+  .nav .wrap:has(> .lang--top) { gap: 0 12px; }
+  .nav .lang--top { display: inline-flex; }
+  .nav .wrap:has(> .lang--top) > .nav-links { flex: 1 0 100%; flex-wrap: wrap; gap: 0 20px; }
+  .nav .wrap:has(> .lang--top) > .nav-links > .lang { display: none; }
+  .nav .wrap:has(> .lang--top) > .nav-links > a.nav-wide { display: inline-flex; }
+  .nav .wrap:has(> .lang--top) > .nav-links > .pill { margin-left: auto; }
+  /* the switch's own links, outside .nav-links: the bar's link type, 44-px rows (24 wide at least: 2.5.8) */
+  .nav .lang--top a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px;
+    font-family: var(--sans); font-size: 14px; line-height: 19.6px; letter-spacing: .01em; text-decoration: none; color: var(--ink-2); }
+  .nav .lang--top a:hover { color: var(--ink); }
+  .nav .lang--top a[aria-current='true'] { text-decoration: underline; text-underline-offset: .2em; }
+  .nav--night .lang--top a { color: var(--night-ink); }
+  /* the second row is 44 px: what clears the bar clears both rows */
+  html:has(.nav .lang--top) { scroll-padding-top: 116px; }
+  :root:has(.nav .lang--top) [id] { scroll-margin-top: 116px; }
+  /* /privacy opens on its section, straight under the bar: 44 more, as the document pages (dossier.css) */
+  :root:has(.nav .lang--top) main > #privacy:first-child { padding-top: max(calc(var(--section) + 44px), calc(var(--nav-h, 0px) - 10px)); }
+}
+@media (max-width: 360px) { .nav .wrap:has(> .lang--top) > .nav-links { gap: 0 12px; } }
+/* 320: at 35 px the wordmark pushed the pill 2 px past the screen's edge (a sideways scroll on every document page);
+   the stuck bar's 28 px leaves the pill inside the gutter (re-check 1, 3 Oct) */
+@media (max-width: 340px) { .nav .wordmark { font-size: 28px; } }
+/* landing: fixed, transparent over the field; past the hero a compact paper bar (review 26 Sep) */
+.nav--sticky { position: fixed; transition: background-color .3s var(--ease), padding .3s var(--ease), box-shadow .3s var(--ease); }
+.nav--sticky.is-stuck { padding-top: 0; background: var(--paper); box-shadow: 0 1px 0 var(--rule); }
+.nav--sticky.is-stuck .wrap { min-height: 56px; }
+.nav--sticky.is-stuck .wordmark { font-size: 28px; }
+[id] { scroll-margin-top: 72px; }
+html { scroll-padding-top: 72px; }   /* keyboard focus scrolled into view also clears the bar (WCAG 2.4.11) */   /* every in-page target clears the 56-px stuck bar: sections and FAQ items alike */
+
+/* verdict chip */
+.chip {
+  display: inline-flex; align-items: center; gap: 8px; height: 26px; padding: 0 11px 0 9px;
+  border-radius: 999px; font: 400 12px/16.8px var(--mono); border: 1px solid var(--rule);   /* David tag */
+  background: var(--paper); color: var(--ink); white-space: nowrap;
+}
+.chip i { width: 8px; height: 8px; border-radius: 50%; background: var(--noise); }
+.chip--up i { background: var(--gain-2); }
+.chip--down i { background: var(--loss-3); }
+.chip--refused i { background: transparent; border: 1.5px solid var(--ink-3); }
+
+/* segmented control */
+.seg { display: inline-flex; padding: 3px; border: 1px solid var(--rule); border-radius: 999px; background: rgba(240, 238, 230, .6); }
+.seg button {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 0; background: none; cursor: pointer; height: 32px; padding: 0 14px; border-radius: 999px;
+  font: 400 14px/14px var(--mono); color: var(--ink-2); white-space: nowrap; transition: background-color .25s, color .25s;   /* David button */
+}
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.seg button:not([aria-pressed="true"]):hover { color: var(--ink); background: rgba(29, 29, 27, .06); }   /* the course: every control answers the pointer */
+/* a longer language (plan 5: Dutch and French run up to a third longer): where the pair is given a limit (.hist-head), a
+   label that no longer fits wraps inside its pill instead of pushing the page sideways; a label that fits keeps its line */
+.seg button { min-width: 0; white-space: normal; text-align: center; }
+/* phone: the mono button face is a fifth wider than v1's sans; the pair drops to David's 12-px tag size to fit 390 */
+@media (max-width: 720px) { .seg button { height: 44px; } }
+@media (max-width: 480px) { .seg button { font-size: 12px; line-height: 12px; padding: 0 7px; height: 44px; } }
+/* 320–360 (WCAG 1.4.10 reflow): the pair becomes two equal halves whose labels may wrap */
+@media (max-width: 360px) {
+  .seg { display: flex; width: 100%; }
+  .seg button { flex: 1 1 0; min-width: 0; white-space: normal; text-align: center; justify-content: center; height: auto; min-height: 44px; line-height: 14px; padding: 5px 8px; }
+}
+
+/* reveal on scroll */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  * { scroll-behavior: auto !important; }
+}

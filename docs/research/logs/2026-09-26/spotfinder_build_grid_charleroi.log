@@ -1,0 +1,2 @@
+[build_grid] 503 Statbel sectors, 2679 points
+[build_grid] wrote 503 sectors -> /home/user/facta/pipelines/spotfinder/pipeline/data/charleroi_grid.geojson (232 scorable: n_food_area >= 1)

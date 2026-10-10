@@ -1,0 +1,3 @@
+[compute] loaded 524 sectors
+[compute] sectors with scores per type: {'cafe': 388, 'bakery': 388, 'confectionery': 388}
+[compute] wrote 524 features -> /home/user/facta/pipelines/spotfinder/backend/data/liege.geojson

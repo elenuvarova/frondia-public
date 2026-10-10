@@ -1,0 +1,39 @@
+{
+ "computed": "2026-10-09",
+ "source": "https://app.bruxellesenvironnement.be/carto/vegetation.zip",
+ "region_share_2021": 0.504914,
+ "region_share_2023": 0.487454,
+ "units": 686,
+ "comparable": 666,
+ "calibration": {
+  "threshold": 0.047277,
+  "mean": -0.000439,
+  "sd": 0.022264,
+  "unbiased": true,
+  "n": 686
+ },
+ "raw_median_delta": -0.0168,
+ "raw_beyond_threshold": 86,
+ "verdicts": {
+  "потеря": 10,
+  "шум": 638,
+  "прирост": 18
+ },
+ "raw_change_ha_comparable": -274.1,
+ "loss_beyond_noise_ha": -14.4,
+ "gain_beyond_noise_ha": 53.9,
+ "archive": {
+  "url": "https://app.bruxellesenvironnement.be/carto/vegetation.zip",
+  "sha256": "70eed1926e31b27f0c1d8bb61a1c539464b34479d4b181978c9c2cd32d55a54a",
+  "bytes": 9089860,
+  "read": "2026-10-09"
+ },
+ "example": {
+  "id": "21006A323",
+  "name": "GERMINAL II",
+  "area_ha": 8.6,
+  "veg_2021": 0.7144,
+  "veg_2023": 0.5192,
+  "effect": -0.1512
+ }
+}

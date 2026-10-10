@@ -1,0 +1,21 @@
+─── Loading data ───
+  184 sectors  |  6,251 POIs  |  2,633 transit stops
+  Loading walk graph (may take ~20 s) …
+  Graph: 27,278 nodes, 73,546 edges
+
+─── Snapping to graph nodes ───
+  Snapped: 184 sector centroids, 6,251 POIs, 2,633 transit stops
+
+─── Scoring 184 sectors × 3 scenarios ───
+  Running Dijkstra (2 passes/sector, ~5–10 min) …
+  100/184 …  184/184 …
+  ✓ 552 sector-scenario scores computed
+  ✓ scores.csv: 552 rows
+  ✓ scores_wide.csv: 184 rows
+
+─── Score summary ───
+  family    mean=0.560  σ=0.228  p5=0.117  p95=0.870
+  senior    mean=0.421  σ=0.219  p5=0.070  p95=0.811
+  remote    mean=0.505  σ=0.216  p5=0.126  p95=0.860
+
+Next: python 06_api_seed.py  (Week 3 — Express endpoint seed)

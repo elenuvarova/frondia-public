@@ -1,0 +1,16 @@
+{
+ "id": 25,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "da84974d888c7bd7",
+ "run_at": "2026-09-26T14:48:55+00:00",
+ "output": {
+  "measures": [],
+  "label": "no",
+  "why": "The text is only a budget summary and a list of menu/section headings (e.g. \"Dimension environnementale\", \"Critères techniques et environnementaux\") with no actual description of any greening action, intention, or state of green space."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.029916400000000003,
+ "duration_ms": 4256
+}

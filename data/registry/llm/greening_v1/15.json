@@ -1,0 +1,16 @@
+{
+ "id": 15,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "3c3a251d439d7242",
+ "run_at": "2026-09-26T14:48:37+00:00",
+ "output": {
+  "label": "no",
+  "measures": [],
+  "why": "The text only lists budget figures, funding sources and menu/section headings (e.g. \"Définition\", \"Chiffres-clés\") with no description of any actual greening measure."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.0289524,
+ "duration_ms": 2618
+}

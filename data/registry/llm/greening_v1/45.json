@@ -1,0 +1,31 @@
+{
+ "id": 45,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "d9ed2f3e0f471ce9",
+ "run_at": "2026-09-26T14:49:45+00:00",
+ "output": {
+  "label": "yes",
+  "measures": [
+   {
+    "quote": "réhabiliter et végétaliser le square Jacques Frank et les voiries qui l'entourent",
+    "kind": "park_redesign",
+    "status": "action",
+    "place": "square Jacques Frank",
+    "verbatim": true
+   },
+   {
+    "quote": "inciter les habitants à la rénovation, à la verdurisation des façades et aux économies d'énergie",
+    "kind": "green_roofs_facades",
+    "status": "intention",
+    "place": null,
+    "verbatim": true
+   }
+  ],
+  "why": "The clause \"réhabiliter et végétaliser le square Jacques Frank et les voiries qui l'entourent\" is listed among the firmly committed projects of the contract (\"développe les projets suivants\"), making it an action that changes vegetation cover, so the contract is labeled \"yes\"."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.0497824,
+ "duration_ms": 22723
+}

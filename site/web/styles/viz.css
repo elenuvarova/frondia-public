@@ -1,0 +1,87 @@
+/* ── Frondia · data viz ───────────────────────────────────────────────────────
+   Styles of the shared charts: viz/SectorMap, viz/NullHistogram, viz/Series. The data
+   encoding is one product language across the landing and the atlas, so it is written once.
+   Contract: these rules and the components read ROLES that every app's tokens.css defines —
+   --paper --paper-2 --ink --ink-3 --ink-4 --rule-2 --noise --mono (and --night-ink-3 for a
+   chart on a dark surface). The ramps --gain-* / --loss-* are brand primitives (brand.css).
+   A page may re-point a role for its own subtree (directions.css does). */
+
+/* ── sector map: field image under the vectors ───────────────────────────── */
+.sector-map { position: relative; overflow: hidden; }
+.sector-map > svg { position: relative; display: block; width: 100%; height: 100%; overflow: visible; }
+.sector-field { position: absolute; max-width: none; pointer-events: none; user-select: none; mix-blend-mode: multiply; }
+/* the atlas swipe: two true-colour summers in the field's frame, the upper one cut at --split */
+.sector-photo { position: absolute; max-width: none; pointer-events: none; user-select: none; }
+.sector-photo.is-after { clip-path: inset(0 0 0 max(0px, calc(var(--split, .5) * var(--map-w) - var(--img-left)))); }
+.photo-verdicts .pv-case { stroke: var(--paper); stroke-width: 3.6; stroke-opacity: .92; }
+.photo-verdicts .pv-up { stroke: var(--gain-3); stroke-width: 1.8; }
+.photo-verdicts .pv-down { stroke: var(--loss-3); stroke-width: 1.8; }
+
+/* ── null histogram: the method's own noise, threshold marked ────────────── */
+.hist { margin: 0; position: relative; }
+.hist svg { width: 100%; height: auto; display: block; overflow: visible; }
+.hist-band { fill: rgba(20, 20, 19, .05); }
+.hist--night .hist-band { fill: rgba(232, 230, 220, .06); }
+.hist-bar { transition: fill .5s; }
+.hist-thr { stroke: var(--ink); stroke-width: 1; stroke-dasharray: 3 3; vector-effect: non-scaling-stroke; }
+.hist-tick { stroke: var(--ink-3); }
+.hist-axis text { font: 400 12px var(--mono); fill: var(--ink-3); }
+.hist--compact .hist-axis text { font-size: 30px; }   /* ≈ 12 px at the panel's scale */
+.hist--compact .hist-axis .zero { display: none; }  /* at that size the three labels would collide */
+.hist-marker line, .hist-marker path { stroke: var(--gain-3); fill: none; stroke-width: 1.6; }
+.hist-marker-label { position: absolute; right: 0; transform: translateY(-120%); font-size: 12px; color: var(--gain-3); margin: 0; text-align: right; }
+.hist-marker-label b { font-weight: 400; color: var(--ink); }
+.hist--label-above { margin-top: 26px; }
+.series-year { font: 400 11px var(--mono); fill: var(--ink-3); }
+.series-year--gap { fill: var(--ink-3); }
+
+/* ── series: one intervention, summer by summer ──────────────────────────── */
+.series { margin: 0; }
+.series svg { width: 100%; height: auto; display: block; overflow: visible; }
+.series-band { fill: rgba(20, 20, 19, .06); }
+.series-zero { stroke: var(--rule-2); stroke-dasharray: 2 3; }
+.series-line { fill: none; stroke: var(--ink-3); stroke-width: 1.2; }
+.series-dot { fill: var(--paper); stroke: var(--ink-3); stroke-width: 1.3; }
+.series-dot.on { fill: var(--gain-2); stroke: var(--gain-3); }
+.series-axis { font: 400 12px var(--mono); fill: var(--ink-3); }
+.series figcaption { margin-top: 8px; }
+.series figcaption b { color: var(--ink); font-weight: 400; }
+
+/* ── rings: one audit as a cross-section of a trunk (Rings.jsx) ──────────────
+   Colour means measurement here too: only a summer beyond the threshold is drawn in the
+   gain ramp; noise, absent rings and scars are ink. Night is the 018 look: light lines on dark. */
+.rings { margin: 0; }
+.rings svg { width: 100%; height: auto; display: block; overflow: visible; }
+.ring path { fill: none; stroke: var(--ink-3); stroke-linejoin: round; stroke-linecap: round; }
+.ring--up > path:last-child { stroke: var(--gain-3); }
+.ring--noise path { stroke-dasharray: 3 3; }
+.ring--absent path { stroke-dasharray: 1 4; }
+.ring--absent circle { fill: var(--ink); }
+.ring--scar path { stroke: var(--ink); }
+.ring path.ring-wood { stroke: none; fill: var(--gain-1); opacity: .10; }
+.ring path.ring-wood.k2 { opacity: .16; }
+.ring path.ring-wood.k3 { opacity: .22; }
+.ring-pith { fill: var(--paper-3); stroke: var(--ink); stroke-width: 1; }
+.ring-ctrl { fill: var(--ink); }
+.ring-year { font: 400 11px var(--mono); fill: var(--ink-3); }
+.ring-year--pith { fill: var(--ink); }
+.ring-tag path { fill: none; stroke: var(--ink); stroke-width: .8; }
+.ring-tag circle { fill: var(--ink); }
+.ring-tag text { font: 400 11.5px var(--mono); fill: var(--ink-2); }
+.ring-tag-year { fill: var(--ink); }
+.rings--night .ring path { stroke: var(--night-ink-3); }
+.rings--night .ring--up > path:last-child { stroke: var(--gain-1); }
+.rings--night .ring--scar path, .rings--night .ring-tag path { stroke: var(--night-ink); }
+.rings--night .ring-pith { fill: rgba(250, 249, 245, .06); stroke: var(--night-ink); }
+.rings--night .ring-ctrl, .rings--night .ring--absent circle, .rings--night .ring-tag circle { fill: var(--night-ink); }
+.rings--night .ring-year, .rings--night .ring-tag text { fill: var(--night-ink-2); }
+.rings--night .ring-year--pith, .rings--night .ring-tag-year { fill: var(--night-ink); }
+/* mono: every line in the current colour (the WAVE study) — solid / dashed still carry the verdict */
+.rings--mono .ring path, .rings--mono .ring--up > path:last-child, .rings--mono .ring--scar path,
+.rings--mono .ring-tag path { stroke: currentColor; }
+.rings--mono .ring path.ring-wood { display: none; }
+.rings--mono .ring-pith { fill: none; stroke: currentColor; }
+.rings--mono .ring-ctrl, .rings--mono .ring--absent circle, .rings--mono .ring-tag circle { fill: currentColor; }
+.rings--mono .ring-year, .rings--mono .ring-tag text, .rings--mono .ring-year--pith, .rings--mono .ring-tag-year { fill: currentColor; }
+.ring-ruler path { fill: none; stroke: currentColor; stroke-width: .8; stroke-dasharray: 2 4; opacity: .8; }
+.ring-ruler text { font: 400 10.5px var(--mono); fill: currentColor; }

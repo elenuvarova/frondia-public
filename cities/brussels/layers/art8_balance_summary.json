@@ -1,0 +1,116 @@
+{
+ "city": "brussels",
+ "computed": "2026-09-26",
+ "base": 2024,
+ "seasons": {
+  "2025": {
+   "thresholds": {
+    "green": 0.04919,
+    "trees": 0.04572,
+    "built": 0.05154
+   },
+   "thresholds_source": {
+    "green": "нулевое распределение по 686 единицам, 95-й процентиль, среднее -0.00045, ст. отклонение 0.01734",
+    "trees": "нулевое распределение по 686 единицам, 95-й процентиль, среднее -0.00022, ст. отклонение 0.01544",
+    "built": "нулевое распределение по 686 единицам, 95-й процентиль, среднее +0.00027, ст. отклонение 0.01716"
+   },
+   "thresholds_unbiased": {
+    "green": true,
+    "trees": true,
+    "built": true
+   },
+   "units_comparable": 668,
+   "green": {
+    "lost_sectors": 16,
+    "gained_sectors": 6,
+    "lost_ha": -27.2,
+    "gained_ha": 16.9,
+    "raw_base_ha": 3722.4,
+    "raw_season_ha": 3587.9,
+    "net_ha": -10.3,
+    "raw_net_ha": -134.5
+   },
+   "trees": {
+    "lost_sectors": 16,
+    "gained_sectors": 4,
+    "lost_ha": -25.9,
+    "gained_ha": 4.4,
+    "raw_base_ha": 3367.7,
+    "raw_season_ha": 3251.5,
+    "net_ha": -21.5,
+    "raw_net_ha": -116.2
+   },
+   "built": {
+    "lost_sectors": 2,
+    "gained_sectors": 16,
+    "lost_ha": -2.4,
+    "gained_ha": 24.6,
+    "raw_base_ha": 12177.8,
+    "raw_season_ha": 12332.3,
+    "net_ha": 22.2,
+    "raw_net_ha": 154.5
+   }
+  },
+  "2026": {
+   "thresholds": {
+    "green": 0.04005,
+    "trees": 0.03429,
+    "built": 0.04828
+   },
+   "thresholds_source": {
+    "green": "нулевое распределение по 686 единицам, 95-й процентиль, среднее -0.00061, ст. отклонение 0.01706",
+    "trees": "нулевое распределение по 686 единицам, 95-й процентиль, среднее -0.00040, ст. отклонение 0.01606",
+    "built": "нулевое распределение по 686 единицам, 95-й процентиль, среднее +0.00025, ст. отклонение 0.01737"
+   },
+   "thresholds_unbiased": {
+    "green": true,
+    "trees": true,
+    "built": true
+   },
+   "units_comparable": 668,
+   "green": {
+    "lost_sectors": 16,
+    "gained_sectors": 8,
+    "lost_ha": -33.0,
+    "gained_ha": 16.1,
+    "raw_base_ha": 3722.4,
+    "raw_season_ha": 3607.9,
+    "net_ha": -16.9,
+    "raw_net_ha": -114.5
+   },
+   "trees": {
+    "lost_sectors": 17,
+    "gained_sectors": 9,
+    "lost_ha": -31.7,
+    "gained_ha": 11.5,
+    "raw_base_ha": 3367.7,
+    "raw_season_ha": 3280.6,
+    "net_ha": -20.2,
+    "raw_net_ha": -87.1
+   },
+   "built": {
+    "lost_sectors": 1,
+    "gained_sectors": 15,
+    "lost_ha": -1.7,
+    "gained_ha": 30.8,
+    "raw_base_ha": 12177.8,
+    "raw_season_ha": 12335.3,
+    "net_ha": 29.1,
+    "raw_net_ha": 157.5
+   }
+  }
+ },
+ "scenes": {
+  "2024": 24,
+  "2025": 28,
+  "2026": 24
+ },
+ "min_scenes": 8,
+ "preliminary": {
+  "2024": false,
+  "2025": false,
+  "2026": false
+ },
+ "green_classes": "water, trees, grass, flooded_vegetation, shrub_and_scrub (not crops)",
+ "units_measured": 686
+}

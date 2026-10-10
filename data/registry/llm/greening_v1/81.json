@@ -1,0 +1,24 @@
+{
+ "id": 81,
+ "version": "greening_v1",
+ "prompt_sha": "5ca244c733fb3ba1",
+ "schema_sha": "04b2f4f2e080bbb2",
+ "text_sha": "54e36037cfedcaca",
+ "run_at": "2026-09-26T14:47:17+00:00",
+ "output": {
+  "label": "weak",
+  "measures": [
+   {
+    "quote": "améliorer l’accessibilité aux espaces verts",
+    "kind": "other_greening",
+    "status": "intention",
+    "place": null,
+    "verbatim": true
+   }
+  ],
+  "why": "The text only names improving access to green spaces as an aim (\"améliorer l’accessibilité aux espaces verts\") without committing to any concrete creation, redesign, unsealing or planting action, so it qualifies as an intention rather than an action."
+ },
+ "model": "claude-sonnet-5",
+ "cost_usd": 0.041173,
+ "duration_ms": 8875
+}

@@ -1,0 +1,508 @@
+/* ── landing: the page's sections ───────────────────────────────────────────
+   The design system (roles, type, spacing, components) is in tokens.css; the charts are
+   styled once for both apps in @frondia/shared/viz.css. */
+
+/* ── hero: the real field ───────────────────────────────────────────────── */
+.field-hero {
+  position: relative; min-height: 100svh; display: flex; flex-direction: column; justify-content: center;
+  overflow: hidden; background: var(--oat);
+}
+.field-layers { position: absolute; inset: -3%; }
+.field-layers img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  filter: blur(3.5px) saturate(1.06);
+}
+.field-layers img.in { animation: fieldIn 1.9s var(--ease) both; }
+@keyframes fieldIn { from { opacity: 0; } to { opacity: 1; } }
+.field-veil {
+  position: absolute; inset: 0; pointer-events: none; z-index: 1;
+  background:
+    radial-gradient(ellipse 46% 50% at 50% 47%, rgba(240, 238, 230, .66), rgba(240, 238, 230, .22) 62%, rgba(240, 238, 230, 0) 82%),
+    linear-gradient(to bottom, rgba(240, 238, 230, .25) 0%, rgba(240, 238, 230, 0) 18%, rgba(240, 238, 230, 0) 78%, rgba(240, 238, 230, .9) 100%);
+}
+.hero {
+  position: relative; z-index: 4; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 20px;
+  padding-top: 104px; padding-bottom: 124px;
+}
+.hero-kicker { color: var(--ink-2); }
+.hero-title { max-width: 11ch; }
+.hero-title em { padding-right: .04em; }
+.hero-lede { max-width: 40ch; margin: 0; color: var(--ink); opacity: .82; }
+.hero-cta { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 12px; }
+@media (max-width: 720px) { .hero-cta { gap: 16px; } }
+.hero-cta--left { justify-content: flex-start; margin-top: 32px; }
+.hero-index { margin-top: 12px; text-align: left; }
+@media (max-height: 880px) { .hero-index { display: none; } }
+@media (max-width: 720px) {
+  .hero { padding-top: 104px; padding-bottom: 168px; gap: 20px; }
+  .hero-index { display: none; }
+}
+
+.field-bar {
+  position: absolute; left: 0; right: 0; bottom: max(18px, env(safe-area-inset-bottom, 0px)); z-index: 4;
+  display: flex; justify-content: space-between; align-items: flex-end; gap: 12px 24px; flex-wrap: wrap;
+}
+.field-caption { margin: 0; color: var(--ink-2); }
+.field-caption span { color: var(--ink); margin-right: 8px; }
+.field-caption b { font-weight: 400; color: var(--ink); }
+.field-caption-long { font-style: normal; }
+@media (max-width: 720px) { .field-caption-long { display: none; } }
+.field-years { display: flex; align-items: center; gap: 2px; flex-wrap: wrap; }
+.field-years button {
+  position: relative; border: 0; background: none; cursor: pointer; padding: 6px 7px;
+  font: 400 12px/12px var(--mono); color: var(--ink-3); letter-spacing: 0; border-radius: 999px;
+  transition: color .2s, background-color .2s;
+}
+.field-years button:hover { color: var(--ink); }
+.field-years button.on { color: var(--paper); background: var(--ink); }
+.field-years .tag {
+  position: absolute; left: 50%; bottom: calc(100% + 1px); transform: translateX(-50%);
+  font: 400 12px/16.8px var(--mono); letter-spacing: 0; color: var(--loss-3); pointer-events: none;
+}
+.field-years .play { margin-left: 6px; font-size: 10px; width: 28px; height: 24px; border: 1px solid var(--rule-2); }
+
+/* ── shared section scaffolding ────────────────────────────────────────── */
+.split {
+  display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, .9fr);
+  gap: clamp(32px, 5vw, 96px); align-items: end; margin: clamp(20px, 2.5vw, 32px) 0 clamp(48px, 5vw, 64px);
+}
+.split h2 { max-width: 22ch; }   /* David H2 at 50 px: three or four lines across the wide column */
+.split .body { justify-self: end; }
+@media (max-width: 900px) { .split { grid-template-columns: minmax(0, 1fr); } .split .body { justify-self: start; min-width: 0; max-width: min(62ch, 100%); overflow-wrap: anywhere; } }   /* minmax and anywhere: under a reader's text spacing a run of words tied by no-break spaces was wider than a 320 screen (WCAG 1.4.12, re-check 2); the 100% cap: Safari sized a start-aligned paragraph with text-wrap: pretty and soft hyphens
+   to its full 62ch, and the Dutch landing scrolled 287 px sideways at 390 (re-check 1 after plan 5) */
+
+.section--lime { background: var(--lime); }
+.section--about { background: var(--paper-2); }
+
+/* (1) twin maps */
+.twin { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 3vw, 48px); }
+.twin-map { margin: 0; }
+.twin-map .sector-map { width: 100%; height: auto; aspect-ratio: 1000 / 990; display: block; }
+.twin-map figcaption { display: flex; align-items: flex-end; gap: 16px; margin-top: 16px; border-top: 1px solid var(--rule); padding-top: 16px; }
+.twin-cap { display: flex; flex-direction: column; gap: 8px; font-size: 16px; line-height: 22.4px; color: var(--ink-2); padding-bottom: 8px; } /* David body-s */
+/* the rustle's count is not a measured change, so it takes no data colour (gain-1 was also 2.2 : 1
+   on cream); only the growth's count, a measurement, is teal (5.3 : 1) */
+.twin-map:first-child .num-xl { color: var(--ink); }
+.twin-map:last-child .num-xl { color: var(--gain-3); }
+/* phone: each caption sits above its own map, so "263" and "16" never read as one list */
+@media (max-width: 720px) {
+  .twin { grid-template-columns: 1fr; row-gap: 48px; }
+  .twin-map { display: flex; flex-direction: column; }
+  .twin-map figcaption { order: -1; margin: 0 0 16px; }
+}
+
+/* (2) steps + histogram */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.steps li { display: grid; grid-template-columns: 38px 1fr; gap: 12px; padding: 16px 0; border-top: 1px solid var(--rule-2); }
+.steps li:last-child { border-bottom: 1px solid var(--rule-2); }
+.steps .mono { font-size: 12px; color: var(--ink-3); padding-top: 4px; }
+.steps p { margin: 0; color: var(--ink-2); font-size: 16px; line-height: 24px; }
+
+.hist-block {
+  position: relative; background: rgba(250, 249, 245, .6); border: 1px solid var(--rule);   /* Ivory Light */
+  border-radius: 22px; --hist-pad: clamp(20px, 2.4vw, 32px); padding: var(--hist-pad);
+}
+.hist-head { display: flex; justify-content: space-between; align-items: center; gap: 12px 32px; flex-wrap: wrap; margin-bottom: 20px; }
+/* the pair keeps to its column at every width (design wave, 5 Oct; it used to run up to 1.5 paddings past it and at 375
+   reached 14 px into the card's padding). Where it no longer fits on one line (361–400 px) it takes the column's width as
+   two equal halves, as it does at 320–360, and a label may wrap inside its half */
+.hist-head .seg { flex-shrink: 0; max-width: 100%; }
+@media (max-width: 400px) {
+  .hist-head .seg { display: flex; width: 100%; }
+  .hist-head .seg button { flex: 1 1 0; min-width: 0; white-space: normal; text-align: center; justify-content: center; height: auto; min-height: 44px; line-height: 14px; padding: 5px 8px; }
+}
+.hist-head .label { margin: 0; }
+.hist-note { margin: 12px 0 0; }
+/* the histogram itself: @frondia/shared/viz.css; the segmented control: tokens.css */
+
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: clamp(48px, 5vw, 64px); }
+.stats > div { display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--rule-2); padding-top: 16px; }
+@media (max-width: 720px) { .stats { grid-template-columns: 1fr; } }
+
+/* (3) cases */
+.cases { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 48px); }
+@media (max-width: 1000px) { .cases { grid-template-columns: 1fr; max-width: 560px; } }
+.case { display: flex; flex-direction: column; gap: 12px; }
+.case-media { margin-bottom: 8px; }
+.case-img {
+  position: relative; display: block; width: 100%; aspect-ratio: 16 / 10.5; border: 0; padding: 0;
+  border-radius: 16px; overflow: hidden; background: var(--paper-3); cursor: pointer;
+}
+.case-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .7s var(--ease); image-rendering: pixelated; }
+.case-img img.on { opacity: 1; }
+.case-toggle {
+  position: absolute; left: 12px; bottom: 12px; background: var(--paper); color: var(--ink);
+  padding: 7px 10px; border-radius: 999px;
+}
+.case-img--none {
+  display: grid; place-items: center; padding: 24px; cursor: default; text-align: center;
+  background: var(--note-bg);   /* a note, not a picture: CADRO's lavender */
+}
+.case-img--none p { max-width: 30ch; margin: 0; color: var(--ink-2); }
+.case-meta { margin: 0; }
+.case-title { font-size: 35px; line-height: 36.75px; }   /* David card title */
+.readout { display: grid; grid-template-columns: repeat(auto-fit, minmax(84px, 1fr)); gap: 12px 16px; margin: 8px 0 0; border-top: 1px solid var(--rule); padding-top: 16px; }
+.readout div { display: flex; flex-direction: column; gap: 6px; }
+.readout dd { margin: 0; font-size: 14px; line-height: 17.5px; color: var(--ink); }   /* David numbers: mono 14 / 17.5 */
+.case-reading { margin: 0; color: var(--ink-2); }
+/* the series chart: @frondia/shared/viz.css */
+
+/* (4) refusals, on night */
+.refusals { list-style: none; margin: 0; padding: 0; }
+.refusals li {
+  display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .8fr) minmax(0, 1.4fr); gap: 16px 48px;
+  padding: 32px 0; border-top: 1px solid var(--night-rule); align-items: start;
+}
+.refusals li:last-child { border-bottom: 1px solid var(--night-rule); }
+.refusal-num { display: flex; flex-direction: column; gap: 8px; }
+.refusal-num .num-l { color: var(--night-ink); }
+.refusal-head { display: flex; flex-direction: column; gap: 12px; padding-top: 8px; }
+.refusal-head .icon { color: var(--night-ink-2); }
+.refusals .body { margin: 0; padding-top: 12px; }
+@media (max-width: 900px) { .refusals li { grid-template-columns: 1fr; gap: 12px; } .refusals h3, .refusals .body { padding-top: 0; } }
+
+/* (5) law */
+.stats--law { margin-top: 0; grid-template-columns: repeat(var(--n, 3), minmax(0, 1fr)); }   /* one column per figure up to four, then rows of three */
+@media (max-width: 960px) { .stats--law { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 720px) { .stats--law { grid-template-columns: 1fr; } }
+.law-close { margin-top: clamp(32px, 4vw, 48px); }
+
+/* footer */
+.footer { padding-block: var(--section) max(48px, env(safe-area-inset-bottom, 0px)); }
+.footer-top { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; padding-bottom: 32px; border-bottom: 1px solid var(--night-rule); }
+.footer-mark { font-family: var(--serif); font-size: clamp(45px, 5vw, 64px); line-height: .86; letter-spacing: .01em; margin: 0; } /* David page title 64 / 55 */
+.footer-mark .it { color: var(--night-ink-2); }
+.footer-links { display: flex; gap: 0 28px; flex-wrap: wrap; }   /* the links' own padding makes the rows' 44-px targets */
+.footer-links a { font: 400 14px/19.6px var(--sans); letter-spacing: .01em; text-decoration: none; color: var(--night-ink-2); padding: 12px 0; } /* David UI; padded to a 44-px target */
+.footer-links a:hover { color: var(--night-ink); }
+.footer-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px; padding-top: 32px; }
+.footer .small { color: var(--night-ink-3); margin: 0; }
+@media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr; gap: 20px; } }
+
+/* ── concept plate: tree rings (/rings) ────────────────────────────────── */
+.plate .section:first-child { padding-top: var(--section-l); }
+.plate-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 48px); align-items: end; }
+.plate-disc { margin: 0; display: flex; flex-direction: column; }
+.plate-cap { display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--rule); padding-top: 16px; margin-top: 12px; }
+.night .plate-cap { border-color: var(--night-rule); }
+.plate-legend { list-style: none; margin: clamp(40px, 5vw, 64px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px 32px; }
+.plate-legend li { display: flex; align-items: center; gap: 12px; font-size: 14px; line-height: 19.6px; color: var(--ink-2); }
+.plate-legend svg { flex: none; overflow: visible; }
+.plate-tall { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 96px); align-items: center; margin-top: clamp(48px, 6vw, 96px); }
+.plate-tall .body { color: var(--night-ink-2); }
+@media (max-width: 900px) {
+  .plate-row { grid-template-columns: 1fr; max-width: 460px; }
+  .plate-tall { grid-template-columns: 1fr; }
+}
+
+/* ── lab: the "rustle" hero (/lab/hero) ─────────────────────────────────── */
+.rustle-hero { position: relative; isolation: isolate; min-height: 100svh; display: flex; flex-direction: column; justify-content: center; overflow: hidden; background: var(--oat); }
+.rustle-field { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.rustle-hero .field-veil { z-index: 1; }
+.rustle-hero .hero { z-index: 4; }
+.fact-halo { fill: none; stroke: var(--paper); stroke-width: 3.6; stroke-linejoin: round; opacity: .92; }
+.fact { fill: none; stroke-width: 1.6; stroke-linejoin: round; }
+.fact--up { stroke: var(--gain-3); }
+.fact--down { stroke: var(--loss-3); }
+
+/* ── the landing's top: layout 1, "Rustle" (approved 26 Sep 2026, Figma 165:4) ──
+   References: Copilot / CopilotHealth (refs 130:96, 130:99) — a landscape smeared sideways;
+   Aeth (130:33) — a cream serif card floating on the blur; ABA (130:78) — number tiles on a
+   smeared strip. Palette: Satoyama base, CADRO's greens and lilac (tokens.css). */
+.hero-rustle { align-items: center; }
+.rustle-card {
+  position: relative; z-index: 4; width: min(560px, calc(100% - 32px)); margin: 96px auto;
+  padding: clamp(28px, 3vw, 44px); border-radius: 20px;
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  box-shadow: 0 20px 60px rgba(29, 29, 27, .18);        /* the one shadow: the card floats on the field (Aeth) */
+  display: flex; flex-direction: column; gap: 16px; text-align: center; align-items: center;
+}
+.rustle-title { font-family: var(--serif); font-weight: 400; font-size: clamp(44px, 5vw, 64px); line-height: 1; letter-spacing: .01em; margin: 0; }
+.rustle-title em { padding-right: .04em; }
+.rustle-lede { max-width: 40ch; margin: 0; color: var(--ink-2); }
+.rustle-card .hero-cta { margin-top: 8px; }
+/* the card starts at least 22 px under the bar, as under a one-row bar (74 + 22 = 96): a phone's two-row bar (≤ 560 px,
+   113 tall) ran over the card's top edge on a short screen (320 × 568: the pill sat on it), and a reader's text spacing
+   wraps the bar further (--nav-h, measured in Nav.tsx; round-1 re-check, 6 Oct 2026) */
+.rustle-card { margin-top: max(96px, calc(var(--nav-h, 0px) + 22px)); }
+@media (max-width: 560px) { :root:has(.nav .lang--top) .rustle-card { margin-top: max(136px, calc(var(--nav-h, 0px) + 22px)); } }
+/* the photo says what it is, quietly, under the card (Elena, 28 Sep: centred, shorter) */
+.rustle-caption {
+  position: absolute; left: 50%; transform: translateX(-50%); bottom: max(18px, env(safe-area-inset-bottom, 0px)); z-index: 4;
+  margin: 0; width: max-content; max-width: calc(100% - 32px); text-align: center;
+  color: var(--ink); background: color-mix(in srgb, var(--paper) 70%, transparent); padding: 4px 8px; border-radius: 6px;
+}
+
+/* the background photograph (27 Sep): a generated lilac bush panned sideways, in the field's wind
+   (PhotoRustle). The lilac of the old CADRO light now comes with the photo. The frame drifts
+   slowly sideways, a little oversized so its edges never show; reduced motion keeps it still. */
+.photo-rustle .rustle-field { transform: scale(1.06); }
+.photo-rustle--drift .rustle-field { animation: photo-drift 36s ease-in-out infinite alternate; }
+/* its pause button (WCAG 2.2.2: the hero moves for as long as it is on screen): a 32-px plate in the corner, the caption's
+   look, so it reads as part of the photo's furniture, not of the card. Pressed, the drift holds where it is */
+.photo-rustle--drift.is-paused .rustle-field { animation-play-state: paused; }
+.rustle-pause {
+  position: absolute; right: 16px; bottom: max(16px, env(safe-area-inset-bottom, 0px)); z-index: 4;
+  display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; padding: 0; border: 0; border-radius: 8px;
+  color: var(--ink); background: color-mix(in srgb, var(--paper) 70%, transparent); cursor: pointer;
+}
+.rustle-pause:hover { background: var(--paper); }
+@media print { .rustle-pause { display: none; } }
+/* the centred caption keeps clear of the button: 56 px each side (16 + 32 + 8), so on the narrowest phones it may take two lines */
+.photo-rustle:has(> .rustle-pause) .rustle-caption { max-width: calc(100% - 112px); }
+@keyframes photo-drift { from { transform: scale(1.06) translateX(-1.6%); } to { transform: scale(1.06) translateX(1.6%); } }
+
+/* (1) the band of numbers on the rustle, then the rustle and the growth */
+.rustle-band { min-height: 0; padding-block: clamp(48px, 7vw, 96px); }
+.rustle-tiles { position: relative; z-index: 4; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; width: 100%; }
+.rustle-tiles > div {
+  background: color-mix(in srgb, var(--paper) 94%, transparent); border-radius: 16px; padding: 24px;
+  display: flex; flex-direction: column; gap: 10px; min-height: 180px; justify-content: space-between;
+}
+@media (max-width: 900px) { .rustle-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) {   /* "±0.035" at 64 px set the column's minimum and pushed the grid off a phone */
+  .rustle-tiles { gap: 10px; }
+  .rustle-tiles > div { padding: 16px; min-height: 150px; }
+  .rustle-tiles .num-xl { font-size: clamp(34px, 11vw, 44px); line-height: 1.1; }
+  .rustle-tiles .num-xl + .label { font-size: 13px; line-height: 18px; letter-spacing: .06em; }
+}
+.section--band .twin { margin-top: clamp(48px, 5vw, 64px); }
+.twin-close { margin: clamp(32px, 4vw, 48px) 0 0; max-width: 52ch; }
+
+/* Osmo number odometer (components/Odometer.jsx) */
+.odometer { display: inline-flex; align-items: center; font-variant-numeric: tabular-nums lining-nums; }
+.odometer [data-odometer-part="mask"], .odometer [data-odometer-part="static"] { display: inline-block; height: 1.1em; line-height: 1.1; overflow: hidden; padding: 0 .05em; margin: 0 -.05em; }
+.odometer [data-odometer-part="roller"] { display: block; white-space: pre; text-align: center; line-height: 1.1; will-change: transform; }
+
+/* (2) the method on night; the chart stays on paper, so the noise bars keep their grey */
+.section--method .steps li { border-color: var(--night-rule); }
+.section--method .steps .mono { color: var(--night-ink-2); }
+.section--method .steps p { color: var(--night-ink); }
+.section--method .hist-block { background: var(--paper-2); color: var(--ink); border-color: transparent; }
+.section--method .hist-block .label, .section--method .hist-block .small { color: var(--ink-3); }
+
+/* (3) the atlas, as it is — a screenshot in a browser frame (the course's fallback for maps) */
+.showcase { margin: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 300px); gap: clamp(24px, 3vw, 48px); align-items: end; }
+.browser {
+  display: block; border-radius: 16px; overflow: hidden; border: 1px solid var(--rule-2); background: var(--paper-2);
+  text-decoration: none; color: inherit; transition: transform .35s var(--ease), border-color .25s;
+}
+.browser:hover { transform: translateY(-2px); border-color: var(--ink); }
+.browser-bar { display: flex; align-items: center; gap: 7px; height: 38px; padding: 0 14px; border-bottom: 1px solid var(--rule); }
+.browser-bar i { width: 10px; height: 10px; border-radius: 50%; background: var(--rule-2); }
+.browser-bar .mono { margin-left: 10px; color: var(--ink-3); }
+.browser img { display: block; width: 100%; height: auto; }
+.showcase-notes ol { list-style: none; margin: 0; padding: 0; display: grid; }
+.showcase-notes li { display: grid; grid-template-columns: 30px 1fr; gap: 10px; padding: 16px 0; border-top: 1px solid var(--rule-2); }
+.showcase-notes li:last-child { border-bottom: 1px solid var(--rule-2); }
+.showcase-notes .mono { padding-top: 3px; }
+.showcase-notes p { margin: 0; font-size: 14px; line-height: 20px; }
+.showcase-notes b { font-weight: 600; }
+@media (max-width: 1000px) { .showcase { grid-template-columns: 1fr; } }
+
+/* (4) Osmo before/after split slider (components/BeforeAfter.jsx) */
+.splitter { position: relative; aspect-ratio: 16 / 10.5; border-radius: 16px; overflow: hidden; background: var(--paper-3); touch-action: pan-y; user-select: none; isolation: isolate; }
+.splitter-content { position: absolute; inset: 0; }
+.splitter-content img { display: block; width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated; -webkit-user-drag: none; }
+.splitter-content.is--after { clip-path: inset(0 0 0 50%); }
+/* each tag rides in its own layer beside the split (BeforeAfter.jsx sets left / right) */
+.splitter-tag {
+  position: absolute; top: 12px; z-index: 1; display: flex; flex-direction: column; gap: 2px;
+  background: var(--paper); color: var(--ink); padding: 6px 10px; border-radius: 10px; pointer-events: none;
+  font: 400 12px/14px var(--mono); white-space: nowrap; transition: opacity .2s;
+}
+.splitter-tag b { font-weight: 400; color: var(--ink); }
+.splitter-tag.is-hidden { opacity: 0; }
+.splitter-handle {
+  position: absolute; z-index: 2; top: 0; bottom: 0; left: 0; width: 2px; margin-left: -1px;
+  background: var(--paper-2); display: flex; justify-content: center; align-items: center; cursor: ew-resize; outline: none;
+}
+.splitter-handle__center {   /* 44 px: NN/g's minimum touch target */
+  flex: none; position: relative; width: 44px; height: 44px; border-radius: 999px;
+  display: grid; place-items: center; background: var(--paper-2); color: var(--ink); border: 1px solid var(--rule-2);
+}
+.splitter-handle__center::after {
+  content: ''; position: absolute; inset: -1px; border-radius: 999px; border: 1px solid var(--paper-2);
+  transition: inset .4s cubic-bezier(.35, 1, .6, 1), opacity .4s cubic-bezier(.35, 1, .6, 1);
+}
+.splitter-handle:hover .splitter-handle__center::after { inset: -8px; opacity: .6; }
+.splitter-handle:focus-visible .splitter-handle__center { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+.case-num { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin: 4px 0 0; }
+
+/* (6) who it is for */
+.audiences { list-style: none; margin: clamp(48px, 5vw, 64px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.audiences li { border-top: 1px solid var(--rule-2); padding-top: 16px; display: flex; flex-direction: column; gap: 12px; }
+.audiences .body { margin: 0; }
+@media (max-width: 900px) { .audiences { grid-template-columns: 1fr; } }
+
+/* (7) questions: native <details>, one open at a time is not enforced — people compare answers */
+.faq-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(32px, 5vw, 96px); margin-top: clamp(20px, 2.5vw, 32px); align-items: start; }
+.faq-grid h2 { max-width: 12ch; }
+/* hairlines between questions only: the section's label rule is the line above the first one
+   (Elena, 26 Sep: a second line right under it read as a duplicate) */
+.faq-item + .faq-item { border-top: 1px solid var(--rule-2); }
+.faq-item summary { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 20px 0; cursor: pointer; list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .15em; }
+.faq-mark { font-size: 20px; line-height: 1; transition: transform .3s var(--ease); flex: none; width: 44px; height: 44px; display: grid; place-items: center; border-radius: 999px; border: 1px solid var(--rule-2); }
+.faq-item[open] .faq-mark { transform: rotate(45deg); }
+.faq-item .body { margin: 0 0 24px; max-width: 60ch; }
+@media (max-width: 900px) { .faq-grid { grid-template-columns: 1fr; } }
+
+/* ── review fixes, 26 Sep ─────────────────────────────────────────────────── */
+.footer-about { display: flex; flex-direction: column; gap: 12px; }
+.footer-about p { margin: 0; }
+
+/* the atlas screenshot: numbered marks match the notes; a phone gets the audit card alone */
+.browser-shot { position: relative; display: block; }
+.browser-shot picture { display: block; }
+.shot-mark {
+  position: absolute; transform: translate(-50%, -50%); width: 28px; height: 28px; border-radius: 999px;
+  display: grid; place-items: center; background: var(--ink); color: var(--paper);
+  font: 400 13px/1 var(--mono); box-shadow: 0 0 0 3px var(--paper); pointer-events: none;
+}
+@media (max-width: 720px) { .shot-mark { display: none; } }
+
+/* links out of a card or an audience into the atlas */
+.case-link {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; min-height: 44px;
+  font: 400 14px/19.6px var(--mono); color: var(--ink); text-decoration: none;   /* 19.6: a link that wraps (the communes' at 320) kept 14 and its underline ran through the next line (re-check 1) */
+}
+/* only the words are underlined: on the link itself the line broke at the gap and ran under the arrow */
+.case-link-t {
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .3em;
+  text-decoration-color: var(--rule-2); transition: text-decoration-color .25s;
+}
+.case-link:hover .case-link-t { text-decoration-color: var(--ink); }
+.case-link .arr { transition: transform .35s var(--ease); }
+.case-link:hover .arr { transform: translateX(3px); }
+.law-communes { display: inline-flex; margin-top: var(--s-32); }   /* the way from the law row to one commune (phase 2c) */
+
+/* the slider's knob sits low, where a thumb reaches it without covering the footprint */
+.splitter-handle { align-items: flex-end; padding-bottom: 14px; }
+
+.faq-next { margin-top: 32px; }
+
+/* while the four data files load, the footer does not sit under the hero and then jump */
+.load-hold { min-height: 100svh; }
+.load-error .body { margin: 0; }
+
+/* phone: the showcase shows the audit card alone, so the notes on the lens and the map would point
+   at nothing; only the audit's note stays, without its number */
+@media (max-width: 720px) {
+  .showcase-notes li:nth-child(-n+2) { display: none; }
+  .showcase-notes li { grid-template-columns: 1fr; }
+  .showcase-notes li > .mono { display: none; }
+}
+
+/* (4) one map, three questions: live mini-maps, the atlas's own component */
+/* three equal columns 32 apart: anthropic.com's "Latest releases" row, measured at 408 + 31 + 408 */
+.three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(var(--s-20), 2.2vw, var(--s-32)); margin-top: clamp(48px, 5vw, 64px); }
+.three-card { display: flex; flex-direction: column; gap: 12px; }
+.three-map {
+  display: block; border-radius: 16px; overflow: hidden; background: var(--paper-2); border: 1px solid var(--rule);
+  transition: transform .35s var(--ease), border-color .25s;
+}
+.three-map:hover { transform: translateY(-2px); border-color: var(--ink); }
+.three-map .sector-map { width: 100%; height: auto; aspect-ratio: 1000 / 990; display: block; }
+.three-n { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 4px 0 0; color: var(--ink-3); }
+.three-ramp { display: inline-flex; width: 96px; height: 8px; border-radius: 3px; overflow: hidden; }
+.three-ramp i { flex: 1; }
+.three-pts { display: inline-flex; align-items: center; gap: 8px; }
+.three-pts i { display: inline-block; border-radius: 50%; }
+.three-pts .pt-named { width: 10px; height: 10px; background: var(--ink); }
+.three-pts .pt-control { width: 10px; height: 10px; box-shadow: inset 0 0 0 1.6px var(--ink); }
+.three-pts .pt-more { width: 5px; height: 5px; background: var(--ink-3); }
+.three-card .small { margin: 0; }
+.three-pt { vector-effect: non-scaling-stroke; }
+.three-pt--named { fill: var(--ink); stroke: var(--paper); stroke-width: 1.2; }
+.three-pt--control { fill: var(--paper); stroke: var(--ink); stroke-width: 1.5; }
+.three-pt--more { fill: var(--ink-3); fill-opacity: .7; }
+.three-audit-rule { margin: clamp(64px, 7vw, 96px) 0 20px; border-top: 1px solid var(--rule-2); padding-top: 16px; }
+@media (max-width: 900px) { .three { grid-template-columns: 1fr; max-width: 560px; } }
+
+/* prose avoids a lone word on its last line, where the browser can (text-wrap: pretty) */
+p.small, .body p, .faq-item .body, .three-card .small { text-wrap: pretty; }
+
+/* (2) Maps rustle too — the proof band (9 Oct 2026; refs: docs/design/landing/refs/proof-band). Two figures, each a pair
+   of square aerial photos side by side, then the twin's two numbers, uncoloured: two sources compared, not an effect. */
+.proof-ring { margin: clamp(48px, 5vw, 64px) 0 0; max-width: 880px; }   /* the principal's figure width (anthropic.com research: 880) */
+.proof-pair { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(8px, 1vw, 12px); }
+.proof-photo { display: flex; flex-direction: column; gap: 8px; margin: 0; }
+.proof-place { margin: 0 0 12px; }
+.proof-photo img { width: 100%; height: auto; aspect-ratio: 1; display: block; border-radius: 16px; }   /* as the audits’ media (.case cards) */
+.proof-ring .twin { margin-top: 24px; }
+.proof-num .num-xl { white-space: nowrap; }
+.proof-num { display: flex; align-items: flex-end; gap: 16px; border-top: 1px solid var(--rule); padding-top: 16px; }
+.twin.twin--plain .twin-map .num-xl { color: var(--ink); }   /* beats .twin-map:last-child's gain colour by weight, not by order */
+.proof-close { margin: 24px 0 0; max-width: 64ch; color: var(--ink-2); }
+.proof-source { margin: 12px 0 0; font-size: 12px; color: var(--ink-3); }
+/* under ~900 px the caption beside a nowrap number shrank to 80–110 px and broke words (re-check 1): number above it */
+@media (max-width: 900px) {
+  .proof-num { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+
+/* a page printed before it was scrolled kept every .reveal at opacity 0: paper shows them (re-check 1, 9 Oct) */
+@media print {
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  /* an odometer never rolled on paper read 000: print its final value (the sr-only text), not the rollers (re-check 2) */
+  .odometer:not(.odometer--done) > :not(.sr-only) { display: none !important; }
+  .odometer:not(.odometer--done) > .sr-only { position: static; width: auto; height: auto; margin: 0; overflow: visible; clip: auto; white-space: normal; }
+  /* the sticky bar printed on top of every page, over maps and photos */
+  .nav--sticky, .nav.is-stuck { position: static !important; }
+  .proof-ring { break-inside: avoid; }
+}
+
+/* ── the 404 (10 Oct 2026): the hero's photograph, a giant 404 across the whole screen, the cream card in the middle ──
+   References: YLLW, Rivian (one huge number on a full-bleed photo), Amplemarket (the number out of focus); Elena, 10 Oct:
+   the card in the middle, the digits filling the screen. The number is the paper colour, blurred: rustle, not a fact; it
+   breathes a little with the wind and stands as still as the photo. On a landscape screen the digits run across the full
+   width, on a portrait one they stack 4 / 0 / 4 down the full height. One screen when it fits, never cut off when it does
+   not (round-1 re-check: a short or landscape phone, or a reader's text spacing, hid the buttons where they could not be
+   scrolled to — WCAG 1.4.10, 1.4.12): the section grows instead; the number, absolute, never adds height. The photo's
+   caption is in the flow under the card, so it never lies over the buttons. */
+.nf { min-height: 100svh; height: auto; flex-direction: column; justify-content: safe center;
+  padding: var(--nav-h, 74px) 0 max(18px, env(safe-area-inset-bottom, 0px)); }
+.nf-num {
+  position: absolute; inset: 0; z-index: 3; margin: 0; display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-weight: 400; font-style: italic; line-height: .78; letter-spacing: -.04em;
+  font-size: clamp(180px, min(56vw, 104svh), 1400px); color: var(--paper);
+  filter: blur(8px); opacity: .9; text-shadow: 0 0 60px rgba(15, 78, 55, .35);   /* the night green: the number holds on the light lilac too */
+  animation: nf-rustle 7s ease-in-out infinite alternate; user-select: none; pointer-events: none;
+}
+.nf-num span { display: block; }
+:root .photo-rustle.nf .rustle-card.nf-card { margin: auto; }
+.nf .rustle-caption { position: static; transform: none; margin: 16px auto 0; }
+@keyframes nf-rustle {
+  0%   { transform: translateX(-.6%) skewX(-1deg); }
+  50%  { transform: translateX(.4%) skewX(.6deg); }
+  100% { transform: translateX(.8%) skewX(-.4deg); }
+}
+/* still whenever the photo is still: reduced motion or ?clean (PhotoRustle's own switch), and with the pause button */
+.photo-rustle:not(.photo-rustle--drift) .nf-num { animation: none; }
+.is-paused .nf-num { animation-play-state: paused; }
+/* portrait: the three digits stacked, each a third of the height */
+@media (orientation: portrait) {
+  .nf-num { flex-direction: column; font-size: clamp(120px, min(36svh, 96vw), 900px); line-height: .82; }
+}
+@media (max-width: 720px) {
+  .nf { padding-top: calc(var(--nav-h, 113px) + 8px); padding-bottom: max(18px, calc(var(--nav-h, 113px) - 50px)); }
+  .nf-num { filter: blur(5px); }
+}
+/* the card in the middle of the screen, not of the box under the bar (round-2 re-check: it sat 8–31 px low): the bottom
+   padding is the bar's height less the caption (≈ 26 px, 42 on two lines) and its gap, so the two sides balance */
+@media (min-width: 721px) { .nf { padding-bottom: max(18px, calc(var(--nav-h, 74px) - 34px)); } }
+/* a short landscape screen: the card covers the number whole (round-2 re-check: 76–100 %), so it is not drawn */
+@media (max-height: 420px) and (orientation: landscape) { .nf-num { display: none; } .nf { padding-bottom: 12px; } }
+/* while the cookie card is up on a phone it sits over the lower screen: room under the caption, so the buttons can be
+   scrolled clear of it (round-2 re-check: 320–375 px wide, both buttons covered and no scroll) */
+@media (max-width: 720px), (max-height: 520px) { :root:has(.consent-banner) .nf { padding-bottom: var(--consent-room, 260px); } }
+/* a short screen: a tighter card */
+@media (max-height: 700px) {
+  .nf .rustle-card { gap: 8px; padding: 18px 20px; }
+  .nf .rustle-title { font-size: clamp(30px, 4.4vw, 52px); }
+  .nf .rustle-lede { font-size: 13px; line-height: 18px; }
+  .nf .hero-cta { gap: 8px; margin-top: 4px; }
+}

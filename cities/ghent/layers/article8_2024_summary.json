@@ -1,0 +1,131 @@
+{
+ "city": "ghent",
+ "display_name": "Gent",
+ "baseline_year": 2024,
+ "window": "2017–2019 → 2021–2024",
+ "units_total": 201,
+ "units_measured": 201,
+ "units_comparable": 185,
+ "population": 269299,
+ "baseline": {
+  "ndvi_wmean": 0.4280430453658505,
+  "trees_wmean": 0.0891821135644282,
+  "grass_wmean": 0.04311973493307622,
+  "built_wmean": 0.6276497363016394
+ },
+ "trend": {
+  "ndvi_eff_median": 1.2426987724439842e-05,
+  "ndvi_loss_sectors": 4,
+  "ndvi_loss_pop": 1360,
+  "ndvi_gain_sectors": 5,
+  "ndvi_gain_pop": 2431,
+  "trees_loss_sectors": 1,
+  "trees_loss_pop": 257,
+  "trees_gain_sectors": 5,
+  "trees_gain_pop": 503,
+  "built_up_sectors": 5,
+  "built_up_pop": 1979,
+  "built_down_sectors": 4,
+  "built_down_pop": 1084
+ },
+ "thresholds": {
+  "ndvi": 0.04038,
+  "trees": 0.03201,
+  "built": 0.0304
+ },
+ "thresholds_source": {
+  "ndvi": "нулевое распределение по 201 единицам, 95-й процентиль, среднее +0.00014, ст. отклонение 0.02258",
+  "trees": "нулевое распределение по 201 единицам, 95-й процентиль, среднее +0.00015, ст. отклонение 0.01370",
+  "built": "нулевое распределение по 201 единицам, 95-й процентиль, среднее +0.00009, ст. отклонение 0.01554"
+ },
+ "thresholds_unbiased": {
+  "ndvi": true,
+  "trees": true,
+  "built": true
+ },
+ "thresholds_mean": {
+  "ndvi": 0.0001380219786938104,
+  "trees": 0.00014958173540388514,
+  "built": 9.20398009950249e-05
+ },
+ "thresholds_instrument_manifest": {
+  "ndvi": 0.04813,
+  "trees": 0.02747,
+  "built": 0.03265
+ },
+ "equity_income_terciles": [
+  {
+   "label": "нижний",
+   "n": 56,
+   "income_median": 26317.0,
+   "ndvi_2024_wmean": 0.3488158700215353,
+   "trees_2024_wmean": 0.0725598649186377,
+   "ndvi_eff_mean": 0.0004685549741325051,
+   "loss_sectors": 1,
+   "gain_sectors": 2
+  },
+  {
+   "label": "средний",
+   "n": 56,
+   "income_median": 34071.0,
+   "ndvi_2024_wmean": 0.4734588930236963,
+   "trees_2024_wmean": 0.09463905360843144,
+   "ndvi_eff_mean": 0.0004308677919666637,
+   "loss_sectors": 1,
+   "gain_sectors": 0
+  },
+  {
+   "label": "верхний",
+   "n": 57,
+   "income_median": 40340.0,
+   "ndvi_2024_wmean": 0.5945374088115839,
+   "trees_2024_wmean": 0.132153259141534,
+   "ndvi_eff_mean": -4.478374991301813e-05,
+   "loss_sectors": 2,
+   "gain_sectors": 1
+  }
+ ],
+ "top_ndvi_loss": [
+  {
+   "id": "44021D69-",
+   "name": "MENDONK",
+   "commune": "Oostakker",
+   "eff": -0.0662,
+   "population": 257,
+   "trees_eff": -0.0354
+  },
+  {
+   "id": "44021J280",
+   "name": "KOUTER (SINT-DENIJS-WESTREM)",
+   "commune": "Sint-Denijs-Westrem, Afsnee",
+   "eff": -0.0597,
+   "population": 221,
+   "trees_eff": 0.0025
+  },
+  {
+   "id": "44021D084",
+   "name": "DRIE ZWAANTJES",
+   "commune": "Oostakker",
+   "eff": -0.0547,
+   "population": 693,
+   "trees_eff": -0.0051
+  },
+  {
+   "id": "44021H310",
+   "name": "KLOSSE",
+   "commune": "Zwijnaarde",
+   "eff": -0.0405,
+   "population": 189,
+   "trees_eff": -0.0173
+  }
+ ],
+ "top_trees_loss": [
+  {
+   "id": "44021D69-",
+   "name": "MENDONK",
+   "commune": "Oostakker",
+   "eff": -0.0354,
+   "population": 257
+  }
+ ]
+}
